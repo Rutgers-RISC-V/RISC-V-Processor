@@ -6,7 +6,7 @@ library IEEE;
 entity RV32I_single is
 Port(
 	--Error Signal
-		error: out std_logic;	--Timing and Reset
+		err_port: out std_logic;	--Timing and Reset
 		clk,rst : in std_logic; -- input clock and reset
 	--Instruction
 		instr: in std_logic_vector(31 downto 0);
@@ -42,7 +42,7 @@ begin
 	opcode <= instr(6 downto 0);
 	funct3 <= instr(14 downto 12);
 	funct7 <= instr(30);
-	error <= err;
+	err_port <= err;
 	RV32I_single_process : process(clk)
 		begin
 			if (rising_edge(clk)) then

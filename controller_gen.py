@@ -41,7 +41,7 @@ def main():
     dest.write("\topcode <= instr(6 downto 0);\n")
     dest.write("\tfunct3 <= instr(14 downto 12);\n")
     dest.write("\tfunct7 <= instr(30);\n")
-    dest.write("\terror <= err;\n")
+    dest.write("\terr_port <= err;\n")
     dest.write("\t%s : process(clk)\n\t\tbegin\n"%(processor_name+'_process'))
     dest.write("\t\t\tif (rising_edge(clk)) then\n")
     dest.write("\t\t\t\tcase opcode is\n ")
@@ -86,7 +86,7 @@ def generate_entity(dest,data):
     dest.write(heading)
     dest.write(libraries)
     dest.write("entity %s is\nPort(\n" % processor_name)
-    dest.write("\t--Error Signal\n\t\terror: out std_logic;")
+    dest.write("\t--Error Signal\n\t\terr_port: out std_logic;")
     dest.write("\t--Timing and Reset\n\t\tclk,rst : in std_logic; -- input clock and reset\n")#reset doesn't do anything at this point
     dest.write("\t--Instruction\n\t\tinstr: in std_logic_vector(31 downto 0);\n\n")
     dest.write("\t--Control Signals\n")
