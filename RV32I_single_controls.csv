@@ -1,4 +1,47 @@
-command_name,description,opcode,funct3,funct7,ALUOp[1:0],reg_write
-add,Adds two registers together and stores in a destination reg,0110011,000,0,01,1
-sub,can subtract,0110011,001,0,10,1
-addi,addis,0010011,000, ,00,1
+command_name,description,opcode,funct3,funct7,mux_pc[1:0],mux_reg_destvalue[1:0],mux_output,mux_reg_descr_alu,mux_reg_pc_alu,control_mem_writeenable,control_alu[3:0],control_reg_writeenable,control_branch[3:0]
+lui,"Load Upper Immediate - Writes sign extended 20 bit immediate, left-shifted by 12 bits to target register rd",0110111,---,-,10,11,1,0,0,0,0000,1,0010
+auipc,Add Upper Immediate to PC and store in register,0010111,---,-,10,11,0,1,0,0,0000,1,0010
+jal,Jump and link - add immediate to pc and change pc,1101111,---,-,11,01,1,0,0,0,0000,1,0011
+jalr,Jump and link register - pc becomes register + 5,1100111,000,-,01,01,0,1,1,0,0000,1,0001
+beq,Branch if Equal,1100011,000,-,11,10,0,1,1,0,1000,0,1000
+bne,Branch if not Equal,1100011,001,-,11,10,0,1,1,0,1000,0,1001
+blt,Branch if Less Than,1100011,100,-,11,10,0,1,1,0,1000,0,1100
+bge,Branch if Greater Than or Equal,1100011,101,-,11,10,0,1,1,0,1000,0,1101
+bltu,Branch if Less than Unsigned input,1100011,110,-,11,10,0,1,1,0,1000,0,1110
+bgeu,Branch if Greater Than or Equal Unisgned Input,1100011,111,-,11,10,0,1,1,0,1000,0,1111
+lb,Load Byte - load 1 byte into register,0000011,000,-,10,10,0,0,0,0,0000,0,0010
+lh,Load Half-word - load 2 bytes into register,0000011,001,-,10,10,0,0,0,0,0000,0,0010
+lw,Load Word - load 4 bytes into register,0000011,010,-,10,00,0,0,0,1,0000,1,0010
+lbu,Load Byte - load 1 byte that is sign extended into register,0000011,100,-,10,10,0,0,0,0,0000,0,0010
+lhu,Load Half-word - load 2 bytes that is sign extended into register,0000011,101,-,10,10,0,0,0,0,0000,0,0010
+sb,Store byte - store least significant bytes in register into memory,0100011,000,-,10,10,0,0,0,0,0000,0,0010
+sh,Store half-word - store least 2 significant bytes in register,0100011,001,-,10,10,0,0,0,0,0000,0,0010
+sw,Store word - store register (4 bytes) into memory,0100011,010,-,10,00,0,0,0,1,0000,1,0010
+addi,Add immediate - add register and immediate and store in a register,0010011,000,-,10,11,0,1,1,0,0000,1,0010
+slti,"Set If Less Than, immediate - set target register to 1 if register is less than sign-extended immediate",0010011,010,-,10,11,0,1,1,0,0010,1,0010
+sltiu,"Set If Less Than, immediate - set target register to 1 if register is less than zero-extended immediate",0010011,011,-,10,11,0,1,1,0,0011,1,0010
+xori,EXclusive OR immediate - Exclusive or register and immediate and store in a register,0010011,100,-,10,11,0,1,1,0,0100,1,0010
+ori,Or immediate - Bitwise-Or register and immediate and store in destination register,0010011,110,-,10,11,0,1,1,0,0110,1,0010
+andi,And Immediate - Bit-wise and immediate and store in destination register,0010011,111,-,10,11,0,1,1,0,0111,1,0010
+slli,Shift Less Than,0010011,001,0,10,11,0,1,1,0,0001,1,0010
+srli,,0010011,101,0,10,11,0,1,1,0,0101,1,0010
+srai,,0010011,101,1,10,11,0,1,1,0,1101,1,0010
+add,,0110011,000,0,10,11,0,1,0,0,0000,1,0010
+sub,,0110011,000,1,10,11,0,1,0,0,1000,1,0010
+sll,,0110011,001,0,10,11,0,1,0,0,0001,1,0010
+slt,,0110011,010,0,10,11,0,1,0,0,0010,1,0010
+sltu,,0110011,011,0,10,11,0,1,0,0,0011,1,0010
+xor,,0110011,100,0,10,11,0,1,0,0,0100,1,0010
+srl,,0110011,101,0,10,11,0,1,0,0,0101,1,0010
+sra,,0110011,101,1,10,11,0,1,0,0,1101,1,0010
+or,,0110011,110,0,10,11,0,1,0,0,0110,1,0010
+and,,0110011,111,0,10,11,0,1,0,0,0111,1,0010
+fence,,0001111,000,-,10,10,0,0,0,0,0000,0,0010
+fence.i,,0001111,001,-,10,10,0,0,0,0,0000,0,0010
+ebreak,,1110011,000,-,10,10,0,0,0,0,0000,0,0010
+csrrw,,1110011,001,-,10,10,0,0,0,0,0000,0,0010
+csrrs,,1110011,010,-,10,10,0,0,0,0,0000,0,0010
+csrrc,,1110011,011,-,10,10,0,0,0,0,0000,0,0010
+csrrwi,,1110011,101,-,10,10,0,0,0,0,0000,0,0010
+csrrsi,,1110011,110,-,10,10,0,0,0,0,0000,0,0010
+csrrci,,1110011,111,-,10,10,0,0,0,0,0000,0,0010
