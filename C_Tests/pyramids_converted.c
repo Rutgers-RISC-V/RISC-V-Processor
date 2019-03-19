@@ -1,18 +1,23 @@
-#include <stdio.h>
+#include "terminal.h"
 
 int main(){
 	int charCounter;
 	int direction = 1;
 	int xLimit = 0;
+	int a, y;
 
-	for(int a = 0; a < 10; a++){
-		for(int y=0; y<30; y++){
+	for(a = 0; a < 10; a++){
+		for(y=0; y<30; y++){
 			charCounter = 0;
 			while(charCounter <= xLimit){
-				writeChar(y, charCounter);
+				writeChar(y, charCounter, '0');
 				charCounter++;
 			}
-			if(xLimit >= 30){
+			while(charCounter < 80){
+				writeChar(y, charCounter, ' ');
+				charCounter++;
+			}
+			if(xLimit >= 80){
 				direction = -1;
 			}
 			if(xLimit <= 0){
@@ -21,4 +26,5 @@ int main(){
 			xLimit = xLimit + direction;
 		}
 	}
+	return 0;
 }
