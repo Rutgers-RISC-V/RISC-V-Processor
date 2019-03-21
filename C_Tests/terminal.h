@@ -1,6 +1,7 @@
 #ifndef TERMINAL
 #define TERMINAL
 #define TERMINAL_SIZE 2400
+#define TERMINAL_START 4096
 extern char terminal[TERMINAL_SIZE];
 void updateTerminal();
 int writeChar(int row, int col, char c);
