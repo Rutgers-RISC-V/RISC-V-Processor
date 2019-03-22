@@ -11,25 +11,37 @@ use IEEE . NUMERIC_STD .ALL;
 --use UNISIM . VComponents .all ;
 entity myALU is
 port (
-A : in std_logic_vector (31 downto 0);
-B : in std_logic_vector (31 downto 0);
-x : in std_logic_vector (3 downto 0);
-en :in std_logic ;
-clk :in std_logic ;
-sum : out std_logic_vector (31 downto 0)
-
--- add comparator output lines
+A:          in std_logic_vector (31 downto 0);
+B:          in std_logic_vector (31 downto 0);
+x:          in std_logic_vector (3 downto 0);
+en:         in std_logic ;
+clk:        in std_logic ;
+sum:        out std_logic_vector (31 downto 0);
+zero:       out std_logic;
+sign:       out std_logic;
+overflow:   out std_logic
 );
 end myALU ;
 architecture Behavioral of myALU is
+signal overflow_container : std_logic_vector(32 downto 0); --33 bits to contain overflows
     begin
+        
+        --opcode selection and execution of operations
         process (clk , en , x) is
             begin
             if rising_edge(clk) and en = '1' then
+            
+                --branch logic lines
+               if (A = "0") then zero <= '1'; else zero <= '0'; end if; --zero line
+               sign <= A(31); --sign line
+               
+            
                 case x is
                 -- add and addi operations
                     when x"0" =>
-                        sum <= std_logic_vector ( unsigned ( A )+ unsigned ( B ));
+                        overflow_container <= std_logic_vector ( unsigned ( A )+ unsigned ( B )); --add into a large buffer
+                        sum <= overflow_container (31 downto 0); --send the 32 lsb out from the buffer
+                        overflow <= overflow_container(32);      --read the msb to determine if an overflow happened
                 -- sll and slli operations
                     when x"1" =>
                         sum <= std_logic_vector ( (unsigned ( A )) sll (to_integer(unsigned ( B ))));
