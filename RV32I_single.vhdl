@@ -7,6 +7,8 @@ entity RV32I_single is
 Port(
 	--Error Signal
 		err_port: out std_logic;	--Timing and Reset
+		mem_stall: in std_logic;
+		reg_stall: in std_logic;
 		clk,rst : in std_logic; -- input clock and reset
 	--Instruction
 		instr: in std_logic_vector(31 downto 0);
@@ -24,18 +26,41 @@ Port(
 end RV32I_single;
 architecture Controls_Behavior of RV32I_single is
 
-	signal mux_pc_value : std_logic_vector(1 downto 0);
-	signal mux_reg_destvalue_value : std_logic_vector(1 downto 0);
-	signal mux_output_value : std_logic;
-	signal mux_reg_descr_alu_value : std_logic;
-	signal mux_reg_pc_alu_value : std_logic;
-	signal control_mem_writeenable_value : std_logic;
-	signal control_alu_value : std_logic_vector(3 downto 0);
-	signal control_reg_writeenable_value : std_logic;
-	signal control_branch_value : std_logic_vector(3 downto 0);
 	signal opcode: std_logic_vector(6 downto 0);
 	signal funct3: std_logic_vector(2 downto 0);
 	signal funct7: std_logic;
+	
+	
+	signal mux_pc_value_3 : std_logic_vector(1 downto 0);
+	signal mux_reg_destvalue_value_3 : std_logic_vector(1 downto 0);
+	signal mux_output_value_3 : std_logic;
+	signal mux_reg_descr_alu_value_3 : std_logic;
+	signal mux_reg_pc_alu_value_3 : std_logic;
+	signal control_mem_writeenable_value_3 : std_logic;
+	signal control_alu_value_3 : std_logic_vector(3 downto 0);
+	signal control_reg_writeenable_value_3 : std_logic;
+	signal control_branch_value_3 : std_logic_vector(3 downto 0);
+	
+    signal mux_pc_value_4 : std_logic_vector(1 downto 0);
+    signal mux_reg_destvalue_value_4 : std_logic_vector(1 downto 0);
+    signal mux_output_value_4 : std_logic;
+    signal mux_reg_descr_alu_value_4 : std_logic;
+    signal mux_reg_pc_alu_value_4 : std_logic;
+    signal control_mem_writeenable_value_4 : std_logic;
+    signal control_alu_value_4 : std_logic_vector(3 downto 0);
+    signal control_reg_writeenable_value_4 : std_logic;
+    signal control_branch_value_4 : std_logic_vector(3 downto 0);
+    
+    signal mux_pc_value : std_logic_vector(1 downto 0);
+    signal mux_reg_destvalue_value : std_logic_vector(1 downto 0);
+    signal mux_output_value : std_logic;
+    signal mux_reg_descr_alu_value : std_logic;
+    signal mux_reg_pc_alu_value : std_logic;
+    signal control_mem_writeenable_value : std_logic;
+    signal control_alu_value : std_logic_vector(3 downto 0);
+    signal control_reg_writeenable_value : std_logic;
+    signal control_branch_value : std_logic_vector(3 downto 0);
+    
 	signal err: std_logic := '0';
 
 begin
@@ -43,14 +68,17 @@ begin
 	funct3 <= instr(14 downto 12);
 	funct7 <= instr(30);
 	err_port <= err;
+	mux_pc_value_4 <= mux_pc_value_3 when mem_stall = '0' else mux_pc_value_4;
 	RV32I_single_process : process(clk)
 		begin
 			if (rising_edge(clk)) then
+			    --code added in start
+			    if(reg_stall = '1'
 				case opcode is
  					when "0000011" =>
 						case funct3 is
 							when "000" =>
-								mux_pc_value <= "10";
+								mux_pc_value <= "10" when reg_stall = '0' else mux_pc_default;
 								mux_reg_destvalue_value <= "10";
 								mux_output_value <= '0';
 								mux_reg_descr_alu_value <= '0';
@@ -595,6 +623,7 @@ begin
 				end case;
 			end if;
 	end process RV32I_single_process;
+	-- check if adds an extra 1 cycle delay -- i don't think so 
 	mux_pc <= mux_pc_value;
 	mux_reg_destvalue <= mux_reg_destvalue_value;
 	mux_output <= mux_output_value;
