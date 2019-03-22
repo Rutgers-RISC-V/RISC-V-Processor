@@ -15,7 +15,6 @@ A:          in std_logic_vector (31 downto 0);
 B:          in std_logic_vector (31 downto 0);
 x:          in std_logic_vector (3 downto 0);
 en:         in std_logic ;
-clk:        in std_logic ;
 sum:        out std_logic_vector (31 downto 0);
 zero:       out std_logic;
 sign:       out std_logic;
@@ -27,9 +26,9 @@ signal overflow_container : std_logic_vector(32 downto 0); --33 bits to contain 
     begin
         
         --opcode selection and execution of operations
-        process (clk , en , x) is
+        process (en , x) is
             begin
-            if rising_edge(clk) and en = '1' then
+            if en = '1' then
             
                 --branch logic lines
                if (A = "0") then zero <= '1'; else zero <= '0'; end if; --zero line
@@ -39,9 +38,7 @@ signal overflow_container : std_logic_vector(32 downto 0); --33 bits to contain 
                 case x is
                 -- add and addi operations
                     when x"0" =>
-                        overflow_container <= std_logic_vector ( unsigned ( A )+ unsigned ( B )); --add into a large buffer
-                        sum <= overflow_container (31 downto 0); --send the 32 lsb out from the buffer
-                        overflow <= overflow_container(32);      --read the msb to determine if an overflow happened
+                        sum <= std_logic_vector ( unsigned ( A )+ unsigned ( B ));
                 -- sll and slli operations
                     when x"1" =>
                         sum <= std_logic_vector ( (unsigned ( A )) sll (to_integer(unsigned ( B ))));
@@ -73,7 +70,9 @@ signal overflow_container : std_logic_vector(32 downto 0); --33 bits to contain 
                         sum <= A and B ;
                 -- sub operation
                     when x"8" =>
-                        sum <= std_logic_vector ( unsigned ( A )- unsigned ( B ));
+                        overflow_container <= std_logic_vector ( unsigned ( A ) - unsigned ( B ));
+			sum <= overflow_container (31 downto 0); --send the 32 lsb out
+			overflow <= overflow_container (32); --send the lsb as overflow indication
                 -- sra operation
                     when x"D" =>
                         sum <= std_logic_vector ( (signed ( A )) srl (to_integer(unsigned ( B ))));
