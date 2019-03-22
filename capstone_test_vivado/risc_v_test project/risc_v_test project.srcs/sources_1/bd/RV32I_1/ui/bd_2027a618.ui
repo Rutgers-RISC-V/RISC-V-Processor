@@ -1,0 +1,15 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace inst memory_0 -pg 1 -lvl 3 -y 20 -defaultsOSRD
+preplace inst RV32I_single_controls_0 -pg 1 -lvl 1 -y -190 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -y -150 -defaultsOSRD
+preplace inst memory_logic_0 -pg 1 -lvl 2 -y 150 -defaultsOSRD
+preplace netloc memory_logic_0_addr1_out 1 1 2 300 -310 690
+preplace netloc memory_logic_0_byte_enable 1 1 2 290 -300 680
+preplace netloc memory_logic_0_out1_out 1 1 2 310 -290 670
+levelinfo -pg 1 -40 130 490 810 940 -top -350 -bot 250
+"
+}
+

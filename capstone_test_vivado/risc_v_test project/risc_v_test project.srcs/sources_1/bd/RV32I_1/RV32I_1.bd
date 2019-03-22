@@ -1,0 +1,238 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z010clg400-1",
+      "name": "RV32I_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "memory_0": "",
+      "RV32I_single_controls_0": "",
+      "memory_logic_0": "",
+      "blk_mem_gen_0": ""
+    },
+    "components": {
+      "memory_0": {
+        "vlnv": "xilinx.com:module_ref:memory:1.0",
+        "xci_name": "RV32I_1_memory_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "memory",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "pc": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "addr1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wen": {
+            "direction": "I"
+          },
+          "instr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "out1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "RV32I_single_controls_0": {
+        "vlnv": "xilinx.com:module_ref:RV32I_single_controls:1.0",
+        "xci_name": "RV32I_1_RV32I_single_controls_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RV32I_single_controls",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "err_port": {
+            "direction": "O"
+          },
+          "instr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "mux_reg_write": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "mux_output": {
+            "direction": "O"
+          },
+          "mux_reg_descr_alu": {
+            "direction": "O"
+          },
+          "mux_reg_pc_alu": {
+            "direction": "O"
+          },
+          "control_mem_writeenable": {
+            "direction": "O"
+          },
+          "control_alu": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "control_reg_writeenable": {
+            "direction": "O"
+          },
+          "control_branch": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "memory_logic_0": {
+        "vlnv": "xilinx.com:module_ref:memory_logic:1.0",
+        "xci_name": "RV32I_1_memory_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "memory_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "stall": {
+            "direction": "O"
+          },
+          "control_mem": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "addr1_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "addr1_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "byte_enable": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "out1_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "out1_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "control_mem_writeenable": {
+            "direction": "O"
+          }
+        }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "RV32I_1_blk_mem_gen_0_0",
+        "parameters": {
+          "Byte_Size": {
+            "value": "8"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Operating_Mode_A": {
+            "value": "READ_FIRST"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Read_Width_B": {
+            "value": "32"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "true"
+          },
+          "Write_Width_A": {
+            "value": "32"
+          },
+          "Write_Width_B": {
+            "value": "32"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "nets": {
+      "memory_logic_0_addr1_out": {
+        "ports": [
+          "memory_logic_0/addr1_out",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "memory_logic_0_byte_enable": {
+        "ports": [
+          "memory_logic_0/byte_enable",
+          "blk_mem_gen_0/wea"
+        ]
+      },
+      "memory_logic_0_out1_out": {
+        "ports": [
+          "memory_logic_0/out1_out",
+          "blk_mem_gen_0/dina"
+        ]
+      }
+    }
+  }
+}

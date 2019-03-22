@@ -20,6 +20,7 @@ case_error = "\twhen others => err <= '1';\n"  # simple error check for now, wil
 
 def main():
     controller_data = pandas.read_csv(processor_name+"_controls.csv",sep=',',dtype=object)
+    signal_data = pandas.read_csv(processor_name+"_signals.csv",sep=',',dtype=object)
     #controller_data = controller_data.replace(r'\s+', None, regex=True) #not sure what this does?
     #controller_lines = pandas.read_csv(processor_name+"_control_lines.csv",sep=',')
     dest = open(processor_name+".vhd","w")
@@ -82,12 +83,12 @@ def main():
     #         dest.write("when %s =>\n"%)
 
 
-def generate_entity(dest,data):
+'''def generate_entity(dest,data):
     dest.write(heading)
     dest.write(libraries)
     dest.write("entity %s is\nPort(\n" % processor_name)
     dest.write("\t--Error Signal\n\t\terr_port: out std_logic;")
-    dest.write("\t--Timing and Reset\n\t\tclk,rst : in std_logic; -- input clock and reset\n")#reset doesn't do anything at this point
+    #dest.write("\t--Reset\n\t\trst : in std_logic; -- reset\n")#reset doesn't do anything at this point
     dest.write("\t--Instruction\n\t\tinstr: in std_logic_vector(31 downto 0);\n\n")
     dest.write("\t--Control Signals\n")
     for i,signal in enumerate(data[5:]): #check if -2 or -1
@@ -101,6 +102,53 @@ def generate_entity(dest,data):
                 dest.write("\t\t%s : out std_logic"%signal_re.group(1))
         else:
             signal_info.append({"name":signal_vector_re.group(1),"vector":True,"MSB":signal_vector_re.group(2),"LSB":signal_vector_re.group(3),"index":i})
+            dest.write("\t\t%s : out std_logic_vector(%s downto %s)" % (signal_vector_re.group(1),signal_vector_re.group(2),signal_vector_re.group(3)))
+        if i == len(data[5:])-1:
+            dest.write(");\n")
+        else:
+            dest.write(";\n")
+    dest.write("end %s;"%processor_name)'''
+
+
+def generate_entity(dest,data,signal_data):
+    dest.write(heading)
+    dest.write(libraries)
+    dest.write("entity %s is\nPort(\n" % processor_name)
+    dest.write("\t--Stalls\n\t\t mem_stall, reg_stall: in std_logic;\n")
+    dest.write("\t--Timing and Reset\n\t\tclk,rst : in std_logic; -- input clock and reset\n")#reset doesn't do anything at this
+    dest.write("\t--Error Signal\n\t\terr_port: out std_logic;")
+    dest.write("\t--Instruction\n\t\tinstr: in std_logic_vector(31 downto 0);\n\n")
+    dest.write("\t--Control Signals\n")
+    #replace iterating through signal list to iterating through new list
+    for i,signal in enumerate(data[5:]): #check if -2 or -1
+        signal_vector_re = re.match('([A-Za-z]\w*)\[(\d+):(\d+)\]',signal)
+        if signal_vector_re == None:
+            signal_re = re.match('([A-Za-z]\w*)',signal)
+            if(signal_re == None):
+                raise ValueError("%s at is an invalid signal name. Located in row 0, column %d in %s_controls.csv. Ensure that name matches the form [A-Za-z]\w* or [A-Za-z]\w*\[(\d+):(\d+)\]."%(signal,i,processor_name))
+            else:
+                specific_signal = signal_data.loc[signal_re.group(1) == signal_data[list(signal_data)[0]]]
+                if specific_signal.shape[0] != 1:
+                    raise ValueError(
+                        "%s at is an invalid signal name not found in signal chart. Located in row 0, column %d in %s_controls.csv. It is not in  %s_signals.csv." % (
+                            signal, i+5, processor_name, processor_name))
+                if specific_signal.iloc[0]["Number of Bits"] != '1':
+                    raise ValueError(
+                        "%s is not a single bit width in  %s_signals. Located in row 0, column %d in %s_controls.csv" % (
+                            signal, processor_name, i+5, processor_name))
+                signal_info.append({"name":signal_re.group(1), "pipeline_stage":specific_signal.iloc[0]["Pipeline Stage"], "default_option": specific_signal.iloc[0]["Default Option"], "vector":False,"index":i})
+                dest.write("\t\t%s : out std_logic"%signal_re.group(1))
+        else:
+            specific_signal = signal_data.loc[signal_vector_re.group(1) == signal_data[list(signal_data)[0]]]
+            if specific_signal.shape[0] != 1:
+                raise ValueError(
+                    "%s at is an invalid signal name not found in signal chart. Located in row 0, column %d in %s_controls.csv. It is not in  %s_signals.csv." % (
+                    signal, i+5, processor_name, processor_name))
+            if specific_signal.iloc[0]["MSB"] != signal_vector_re.group(2) and specific_signal.iloc[0]["LSB"] != signal_vector_re.group(3):
+                raise ValueError(
+                    "%s is different bit widths in %s_controls.csv vs %s_signals.csv. Located in row 0, column %d in %s_controls.csv" % (
+                        signal, processor_name, processor_name, i+5, processor_name))
+            signal_info.append({"name":signal_vector_re.group(1), "pipeline_stage":specific_signal.iloc[0]["Pipeline Stage"], "default_option": specific_signal.iloc[0]["Default Option"], "vector":True,"MSB":signal_vector_re.group(2),"LSB":signal_vector_re.group(3),"index":i})
             dest.write("\t\t%s : out std_logic_vector(%s downto %s)" % (signal_vector_re.group(1),signal_vector_re.group(2),signal_vector_re.group(3)))
         if i == len(data[5:])-1:
             dest.write(");\n")

@@ -21,64 +21,65 @@ sign:       out std_logic;
 overflow:   out std_logic
 );
 end ALU ;
+
 architecture Behavioral of ALU is
 signal overflow_container : std_logic_vector(32 downto 0); --33 bits to contain overflows
     begin
         
         --opcode selection and execution of operations
-        process (all) is
+        process (A,B,x) is
             begin
-            --if en = '1' then
-            
-                --branch logic lines
-               if (A = "0") then zero <= '1'; else zero <= '0'; end if; --zero line
-               sign <= A(31); --sign line
-               
             
                 case x is
                 -- add and addi operations
                     when x"0" =>
-                        sum <= std_logic_vector ( unsigned ( A )+ unsigned ( B ));
+                        overflow_container <= std_logic_vector ( unsigned ( '0' & A )+ unsigned ( '0' & B ));
                 -- sll and slli operations
                     when x"1" =>
-                        sum <= std_logic_vector ( (unsigned ( A )) sll (to_integer(unsigned ( B ))));
+                        overflow_container <= std_logic_vector ( (unsigned ( '0' & A )) sll (to_integer(unsigned ( B ))));
                 -- slt and slti operations
                     when x"2" =>
-                        if ( signed ( A ) < signed ( B )) then
-                            sum <= "0000000000000000000000000000000" & "1";
+                        if ( unsigned ( A ) < unsigned ( B )) then
+                            overflow_container <= '0' &"0000000000000000000000000000000" & '1';
                         else
-                            sum <= ( others => '0');
+                            overflow_container <= ( others => '0');
                         end if;
                 -- sltu and sltui operations
                     when x"3" =>
                         if (unsigned( A ) < unsigned( B )) then
-                            sum <= "0000000000000000000000000000000" & "1";
+                            overflow_container <= '0'&"0000000000000000000000000000000" & "1";
                         else
-                            sum <= ( others => '0');
+                            overflow_container <= ( others => '0');
                         end if;
                 -- xor opration
                     when x"4" =>
-                        sum <= A xor B ;
+                        overflow_container <= '0'&A xor '0'&B ;
                 -- srl operation
                     when x"5" =>
-                        sum <= std_logic_vector ( (unsigned ( A )) srl (to_integer(unsigned ( B ))));
+                        overflow_container <= std_logic_vector ( (unsigned ( '0'&A )) srl (to_integer(signed ( B ))));
                 -- or operation
                     when x"6" =>
-                        sum <= A or B ;
+                        overflow_container <= '0'&A or '0'&B ;
                 -- and operation
                     when x"7" =>
-                        sum <= A and B ;
+                        overflow_container <= '0'&A and '0'&B ;
                 -- sub operation
                     when x"8" =>
-                        overflow_container <= std_logic_vector ( unsigned ( A ) - unsigned ( B ));
-			sum <= overflow_container (31 downto 0); --send the 32 msb out
-			overflow <= overflow_container (32); --send the msb as overflow indication
+                        overflow_container <= std_logic_vector (unsigned ( '0'&A ) - unsigned ( '0'&B ));
                 -- sra operation
                     when x"D" =>
-                        sum <= std_logic_vector ( (signed ( A )) srl (to_integer(unsigned ( B ))));
+                        overflow_container <= std_logic_vector ( (unsigned ( '0'&A )) srl (to_integer(unsigned ( '0'&B ))));
             
-                    when others => sum <= "00000000000000000000000000000000";
+                    when others => overflow_container <= '0'&"00000000000000000000000000000000";
                 end case ;
+                sum <= overflow_container (31 downto 0); --send the 32 msb out
+                overflow <= overflow_container (32); --send the msb as overflow indication
+                sign <= overflow_container(31);
+                if( overflow_container = '0'& x"00000000" or overflow_container = '1'& x"00000000" ) then
+                    zero <= '1';
+                else
+                    zero <= '0';
+                 end if;
             --end if;
         end process ;
 end Behavioral ;

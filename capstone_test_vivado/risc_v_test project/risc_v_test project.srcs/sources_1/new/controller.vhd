@@ -3,7 +3,7 @@
 library IEEE;
  use IEEE.STD_LOGIC_1164.ALL;
  use IEEE.NUMERIC_STD.ALL;
-entity RV32I_single_controls is
+entity controls is
 Port(
 	--Error Signal
 		err_port: out std_logic;	--Reset
@@ -20,8 +20,8 @@ Port(
 		control_alu : out std_logic_vector(3 downto 0);
 		control_reg_writeenable : out std_logic;
 		control_branch : out std_logic_vector(3 downto 0));
-end RV32I_single_controls;
-architecture Controls_Behavior of RV32I_single_controls is
+end controls;
+architecture Behavior of controls is
 
 	signal mux_reg_write_value : std_logic_vector(1 downto 0);
 	signal mux_output_value : std_logic;
@@ -31,22 +31,21 @@ architecture Controls_Behavior of RV32I_single_controls is
 	signal control_alu_value : std_logic_vector(3 downto 0);
 	signal control_reg_writeenable_value : std_logic;
 	signal control_branch_value : std_logic_vector(3 downto 0);
-	--signal instr(6 downto 0): std_logic_vector(6 downto 0);
-	--signal instr(14 downto 12): std_logic_vector(2 downto 0);
-	--signal instr(30): std_logic;
+	signal opcode: std_logic_vector(6 downto 0);
+	signal funct3: std_logic_vector(2 downto 0);
+	signal funct7: std_logic;
 	signal err: std_logic := '0';
 
 begin
-	--instr(6 downto 0) <= instr(6 downto 0);
-	--instr(14 downto 12) <= instr(14 downto 12);
-	--instr(30) <= instr(30);
+	opcode <= instr(6 downto 0);
+	funct3 <= instr(14 downto 12);
+	funct7 <= instr(30);
 	err_port <= err;
-	
-	RV32I_single_process : process(instr)
+	RV32I_single_process : process(all)
 		begin
-				case instr(6 downto 0) is
+				case opcode is
  					when "0000011" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "000" =>
 								mux_reg_write_value <= "10";
 								mux_output_value <= '0';
@@ -95,7 +94,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "0001111" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "000" =>
 								mux_reg_write_value <= "10";
 								mux_output_value <= '0';
@@ -117,7 +116,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "0010011" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "000" =>
 								mux_reg_write_value <= "11";
 								mux_output_value <= '0';
@@ -128,7 +127,7 @@ begin
 								control_reg_writeenable_value <= '1';
 								control_branch_value <= "0010";
 							when "001" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -168,7 +167,7 @@ begin
 								control_reg_writeenable_value <= '1';
 								control_branch_value <= "0010";
 							when "101" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -210,7 +209,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "0010111" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "---" =>
 								mux_reg_write_value <= "11";
 								mux_output_value <= '0';
@@ -223,7 +222,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "0100011" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "000" =>
 								mux_reg_write_value <= "10";
 								mux_output_value <= '0';
@@ -254,9 +253,9 @@ begin
 							when others => err <= '1';
 						end case;
 					when "0110011" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "000" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -278,7 +277,7 @@ begin
 										when others => err <= '1';
 									end case;
 							when "001" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -291,7 +290,7 @@ begin
 										when others => err <= '1';
 									end case;
 							when "010" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -304,7 +303,7 @@ begin
 										when others => err <= '1';
 									end case;
 							when "011" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -317,7 +316,7 @@ begin
 										when others => err <= '1';
 									end case;
 							when "100" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -330,7 +329,7 @@ begin
 										when others => err <= '1';
 									end case;
 							when "101" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -352,7 +351,7 @@ begin
 										when others => err <= '1';
 									end case;
 							when "110" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -365,7 +364,7 @@ begin
 										when others => err <= '1';
 									end case;
 							when "111" =>
-									case instr(30) is
+									case funct7 is
  										when '0' =>
 											mux_reg_write_value <= "11";
 											mux_output_value <= '0';
@@ -380,7 +379,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "0110111" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "---" =>
 								mux_reg_write_value <= "11";
 								mux_output_value <= '1';
@@ -393,7 +392,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "1100011" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "000" =>
 								mux_reg_write_value <= "10";
 								mux_output_value <= '0';
@@ -451,7 +450,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "1100111" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "000" =>
 								mux_reg_write_value <= "01";
 								mux_output_value <= '0';
@@ -464,7 +463,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "1101111" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "---" =>
 								mux_reg_write_value <= "01";
 								mux_output_value <= '1';
@@ -477,7 +476,7 @@ begin
 							when others => err <= '1';
 						end case;
 					when "1110011" =>
-						case instr(14 downto 12) is
+						case funct3 is
 							when "000" =>
 								mux_reg_write_value <= "10";
 								mux_output_value <= '0';
@@ -554,4 +553,4 @@ begin
 	control_alu <= control_alu_value;
 	control_reg_writeenable <= control_reg_writeenable_value;
 	control_branch <= control_branch_value;
-end Controls_Behavior;
+end Behavior;
