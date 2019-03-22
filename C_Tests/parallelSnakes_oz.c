@@ -1,5 +1,4 @@
-#include "terminal.h"
-#include "stdio.h"
+#include "terminal_hardware.h"
 
 int main(){
 	int loops = 30;

@@ -22,7 +22,7 @@ def main():
     controller_data = pandas.read_csv(processor_name+"_controls.csv",sep=',',dtype=object)
     #controller_data = controller_data.replace(r'\s+', None, regex=True) #not sure what this does?
     #controller_lines = pandas.read_csv(processor_name+"_control_lines.csv",sep=',')
-    dest = open(processor_name+".vhdl","w")
+    dest = open(processor_name+".vhd","w")
     generate_entity(dest,list(controller_data))
     dest.write("\n")
     dest.write("architecture %s of %s is\n"% (architecture_name, processor_name))
@@ -42,8 +42,8 @@ def main():
     dest.write("\tfunct3 <= instr(14 downto 12);\n")
     dest.write("\tfunct7 <= instr(30);\n")
     dest.write("\terr_port <= err;\n")
-    dest.write("\t%s : process(clk)\n\t\tbegin\n"%(processor_name+'_process'))
-    dest.write("\t\t\tif (rising_edge(clk)) then\n")
+    dest.write("\t%s : process(all)\n\t\tbegin\n"%(processor_name+'_process'))
+    #dest.write("\t\t\tif (rising_edge(clk)) then\n")
     dest.write("\t\t\t\tcase opcode is\n ")
     organized_controller = controller_data.groupby('opcode')
     for opcode_index, opcode_group in organized_controller:
@@ -64,7 +64,7 @@ def main():
                     dest.write("\t\t\t\t\t\t\t\t\t%s\t\t\t\t\t\t\t\t\tend case;\n" % case_error)
             dest.write("\t\t\t\t\t\t%s\t\t\t\t\t\tend case;\n" % case_error)
     dest.write("\t\t\t\t%s\t\t\t\tend case;\n" % case_error)
-    dest.write("\t\t\tend if;\n")
+    #dest.write("\t\t\tend if;\n")
     dest.write("\tend process %s;\n" % (processor_name + '_process' ))
     for j, signal in enumerate(signal_info):
         dest.write("\t%s <= %s_value;\n" % (signal["name"] , signal["name"]))

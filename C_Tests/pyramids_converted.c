@@ -1,4 +1,4 @@
-#include "terminal.h"
+#include "terminal_hardware.h"
 
 int main(){
 	int charCounter;

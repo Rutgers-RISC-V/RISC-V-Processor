@@ -51,8 +51,6 @@ architecture Behavioral of memory_logic is
 type status is (start, load2,load,store,store2, extend, ready);
 signal current_state : status := start;
 signal reg : std_logic_vector (32 downto 0) := (others =>'0');
-signal write_to_mem
-
 
 begin
     process (clk)
