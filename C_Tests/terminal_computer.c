@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "terminal.h"
+#include "terminal_computer.h"
 
 //test version of terminal interface on computer
 char terminal[TERMINAL_SIZE];

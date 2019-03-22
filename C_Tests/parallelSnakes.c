@@ -20,4 +20,5 @@ int main(){
 		printf("%s\n", l2);
 		counter++;
 	}
+	return 0;
 }

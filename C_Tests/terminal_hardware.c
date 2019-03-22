@@ -3,7 +3,7 @@
 #include "terminal.h"
 
 //hardware terminal
-char *terminal = TERMINAL_START;
+char *terminal = (char *) TERMINAL_START;
 
 /*void updateTerminal(){
 	#ifdef WINDOWS

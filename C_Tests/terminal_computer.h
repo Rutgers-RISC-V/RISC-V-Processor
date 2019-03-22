@@ -2,7 +2,7 @@
 #define TERMINAL
 #define TERMINAL_SIZE 2400
 #define TERMINAL_START 1024
-extern char * terminal;
+extern char terminal[2400];
 void updateTerminal();
 int writeChar(int row, int col, char c);
 int writeLn(int row, char * s);
