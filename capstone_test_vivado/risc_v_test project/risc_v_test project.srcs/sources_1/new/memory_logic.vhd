@@ -154,7 +154,6 @@ begin
                     current_state <= ready;
                 when ready => --extra state for processor to complete operations
                     out1_out <= reg;
-                    control_mem_writeenable <= '0';
                     current_state <= start;
                 when store =>
                     case control_mem&addr1_in(2 downto 0) is
@@ -191,8 +190,7 @@ begin
 						when others =>
 							current_state <= ready;
 					end case;
-					addr1_out <= "00"&addr1_in(31 downto 2);
-                    control_mem_writeenable <= '1';     
+					addr1_out <= "00"&addr1_in(31 downto 2);  
                 when store2 =>
                     case control_mem&addr1_in(2 downto 0) is
                         when "100111" =>
@@ -220,7 +218,6 @@ begin
             
         end if;
     end process;
-    control_mem_writeenable <= write_to_mem;
                             
                     
                     

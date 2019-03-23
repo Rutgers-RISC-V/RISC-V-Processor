@@ -10,27 +10,24 @@ use IEEE . NUMERIC_STD .ALL;
 -- library UNISIM ;
 --use UNISIM . VComponents .all ;
 entity ALU is
-port (
-A:          in std_logic_vector (31 downto 0);
-B:          in std_logic_vector (31 downto 0);
-x:          in std_logic_vector (3 downto 0);
---en:         in std_logic ;
-sum:        out std_logic_vector (31 downto 0);
-zero:       out std_logic;
-sign:       out std_logic;
-overflow:   out std_logic
-);
+    port (
+        A:          in std_logic_vector (31 downto 0);
+        B:          in std_logic_vector (31 downto 0);
+        control_alu:          in std_logic_vector (3 downto 0);
+        sum:        out std_logic_vector (31 downto 0);
+        zero:       out std_logic;
+        sign:       out std_logic;
+        overflow:   out std_logic
+    );
 end ALU ;
 
 architecture Behavioral of ALU is
 signal overflow_container : std_logic_vector(32 downto 0); --33 bits to contain overflows
     begin
-        
         --opcode selection and execution of operations
-        process (A,B,x) is
+        process (A,B,control_alu) is
             begin
-            
-                case x is
+                case control_alu is
                 -- add and addi operations
                     when x"0" =>
                         overflow_container <= std_logic_vector ( unsigned ( '0' & A )+ unsigned ( '0' & B ));
@@ -80,6 +77,5 @@ signal overflow_container : std_logic_vector(32 downto 0); --33 bits to contain 
                 else
                     zero <= '0';
                  end if;
-            --end if;
         end process ;
 end Behavioral ;

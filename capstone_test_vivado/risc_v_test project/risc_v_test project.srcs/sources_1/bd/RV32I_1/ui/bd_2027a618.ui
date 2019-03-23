@@ -1,14 +1,21 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace inst memory_0 -pg 1 -lvl 1 -y 30 -defaultsOSRD
-preplace inst RV32I_single_0 -pg 1 -lvl 2 -y -220 -defaultsOSRD
-preplace inst memory_logic_0 -pg 1 -lvl 3 -y 0 -defaultsOSRD
-preplace inst registers_0 -pg 1 -lvl 2 -y 30 -defaultsOSRD
-preplace inst Descrambler_1 -pg 1 -lvl 2 -y 190 -defaultsOSRD
-preplace netloc memory_0_instr 1 1 1 220
-levelinfo -pg 1 -80 90 430 790 1260 -top -380 -bot 250
+preplace inst memory_0 -pg 1 -lvl 2 -y 160 -defaultsOSRD
+preplace inst RV32I_single_0 -pg 1 -lvl 4 -y -220 -defaultsOSRD
+preplace inst pre_memory_logic_0 -pg 1 -lvl 1 -y 170 -defaultsOSRD
+preplace inst ALU_0 -pg 1 -lvl 5 -y 20 -defaultsOSRD
+preplace inst post_memory_logic_0 -pg 1 -lvl 3 -y 220 -defaultsOSRD
+preplace inst registers_0 -pg 1 -lvl 4 -y 30 -defaultsOSRD
+preplace inst Descrambler_1 -pg 1 -lvl 4 -y 190 -defaultsOSRD
+preplace netloc RV32I_single_0_control_mem_logic 1 0 5 -790 280 N 280 -120 120 NJ 120 600
+preplace netloc memory_0_out1 1 2 1 -130
+preplace netloc pre_memory_logic_0_byte_enable 1 1 1 N
+preplace netloc memory_0_instr 1 2 2 -130 140 240
+preplace netloc Net 1 0 3 -780 240 -460J 270 -110
+preplace netloc RV32I_single_0_control_mem_writeenable 1 4 1 610
+levelinfo -pg 1 -810 -620 -260 90 430 950 1260 -top -380 -bot 300
 "
 }
 0

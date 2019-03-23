@@ -64,7 +64,7 @@ begin
                 mem_2(to_integer(unsigned(addr1(9 downto 0)))) <= data(23 downto 16);
             end if;
             if(write_bit(3) = '1') then
-            mem_3(to_integer(unsigned(addr1(9 downto 0)))) <= data(31 downto 24);
+                mem_3(to_integer(unsigned(addr1(9 downto 0)))) <= data(31 downto 24);
             end if;
         end if;
     end process;
