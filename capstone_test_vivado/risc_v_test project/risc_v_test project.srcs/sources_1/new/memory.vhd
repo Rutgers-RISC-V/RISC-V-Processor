@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity memory is
     Port ( clk : in STD_LOGIC;
-           --rst: in STD_LOGIC;
+           clk_en: in STD_LOGIC;
            pc : in STD_LOGIC_VECTOR (31 downto 0);
            addr1 : in STD_LOGIC_VECTOR (31 downto 0);
            write_bit: in STD_LOGIC_VECTOR (3 downto 0);
@@ -53,7 +53,7 @@ architecture Behavioral of memory is
     signal mem_3: mem := (others=>(others=>'0'));
 begin
     process (clk) begin
-        if(rising_edge(clk) and wen = '1') then
+        if(rising_edge(clk) and clk_en = '1' and wen = '1') then
             if(write_bit(0) = '1') then
               mem_0(to_integer(unsigned(addr1(9 downto 0)))) <= data(7 downto 0);
             end if;

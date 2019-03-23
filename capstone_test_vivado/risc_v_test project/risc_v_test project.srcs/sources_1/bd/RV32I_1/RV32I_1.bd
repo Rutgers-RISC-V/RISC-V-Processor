@@ -9,12 +9,19 @@
     },
     "design_tree": {
       "RV32I_single_0": "",
-      "registers_0": "",
       "Descrambler_1": "",
       "pre_memory_logic_0": "",
       "post_memory_logic_0": "",
       "ALU_0": "",
-      "memory_0": ""
+      "brach_logic_0": "",
+      "mux_output_0": "",
+      "mux_reg_descr_alu_0": "",
+      "mux_reg_pc_alu_0": "",
+      "mux_reg_write_0": "",
+      "clock_div_0": "",
+      "memory_0": "",
+      "registers_0": "",
+      "pc_logic_0": ""
     },
     "components": {
       "RV32I_single_0": {
@@ -65,49 +72,6 @@
             "right": "0"
           },
           "control_mem_logic": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        }
-      },
-      "registers_0": {
-        "vlnv": "xilinx.com:module_ref:registers:1.0",
-        "xci_name": "RV32I_1_registers_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "registers",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "instr": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "reg_write_input": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "reg_1_out": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "reg_2_out": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wen": {
-            "direction": "I"
-          },
-          "debug_leds": {
             "direction": "O",
             "left": "3",
             "right": "0"
@@ -232,6 +196,178 @@
           }
         }
       },
+      "brach_logic_0": {
+        "vlnv": "xilinx.com:module_ref:brach_logic:1.0",
+        "xci_name": "RV32I_1_brach_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "brach_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "control_branch": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "alu_zero": {
+            "direction": "I"
+          },
+          "alu_sign": {
+            "direction": "I"
+          },
+          "alu_overflow": {
+            "direction": "I"
+          },
+          "mux_next_pc": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "mux_output_0": {
+        "vlnv": "xilinx.com:module_ref:mux_output:1.0",
+        "xci_name": "RV32I_1_mux_output_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux_output",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "control_mux_output": {
+            "direction": "I"
+          },
+          "descrambler_output": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "alu_output": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "output_bus": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mux_reg_descr_alu_0": {
+        "vlnv": "xilinx.com:module_ref:mux_reg_descr_alu:1.0",
+        "xci_name": "RV32I_1_mux_reg_descr_alu_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux_reg_descr_alu",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "control_mux_reg_descr_alu": {
+            "direction": "I"
+          },
+          "descrambler_output": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "reg_2_out": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "alu_B": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mux_reg_pc_alu_0": {
+        "vlnv": "xilinx.com:module_ref:mux_reg_pc_alu:1.0",
+        "xci_name": "RV32I_1_mux_reg_pc_alu_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux_reg_pc_alu",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "control_mux_reg_pc_alu": {
+            "direction": "I"
+          },
+          "pc": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "reg_1_out": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "alu_A": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mux_reg_write_0": {
+        "vlnv": "xilinx.com:module_ref:mux_reg_write:1.0",
+        "xci_name": "RV32I_1_mux_reg_write_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux_reg_write",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "control_mux_reg_write": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "mem_output": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc_plus_4": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "output_bus": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "reg_write_input": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "clock_div_0": {
+        "vlnv": "xilinx.com:module_ref:clock_div:1.0",
+        "xci_name": "RV32I_1_clock_div_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock_div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "div_clk": {
+            "type": "clk",
+            "direction": "O"
+          }
+        }
+      },
       "memory_0": {
         "vlnv": "xilinx.com:module_ref:memory:1.0",
         "xci_name": "RV32I_1_memory_0_0",
@@ -243,6 +379,9 @@
         "ports": {
           "clk": {
             "type": "clk",
+            "direction": "I"
+          },
+          "clk_en": {
             "direction": "I"
           },
           "pc": {
@@ -279,6 +418,90 @@
             "right": "0"
           }
         }
+      },
+      "registers_0": {
+        "vlnv": "xilinx.com:module_ref:registers:1.0",
+        "xci_name": "RV32I_1_registers_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "registers",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "clk_en": {
+            "direction": "I"
+          },
+          "instr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "reg_write_input": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "reg_1_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "reg_2_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wen": {
+            "direction": "I"
+          },
+          "debug_leds": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "pc_logic_0": {
+        "vlnv": "xilinx.com:module_ref:pc_logic:1.0",
+        "xci_name": "RV32I_1_pc_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pc_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "clk_en": {
+            "direction": "I"
+          },
+          "control_mux_next_pc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "output_bus": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "pc_plus_4": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
@@ -286,8 +509,8 @@
         "ports": [
           "memory_0/instr",
           "RV32I_single_0/instr",
-          "registers_0/instr",
-          "Descrambler_1/scr_imm"
+          "Descrambler_1/scr_imm",
+          "registers_0/instr"
         ]
       },
       "pre_memory_logic_0_byte_enable": {
@@ -316,10 +539,155 @@
           "post_memory_logic_0/control_mem"
         ]
       },
+      "pc_logic_0_pc": {
+        "ports": [
+          "pc_logic_0/pc",
+          "mux_reg_pc_alu_0/pc",
+          "memory_0/pc"
+        ]
+      },
+      "RV32I_single_0_mux_output": {
+        "ports": [
+          "RV32I_single_0/mux_output",
+          "mux_output_0/control_mux_output"
+        ]
+      },
+      "Descrambler_1_descr_imm": {
+        "ports": [
+          "Descrambler_1/descr_imm",
+          "mux_output_0/descrambler_output",
+          "mux_reg_descr_alu_0/descrambler_output"
+        ]
+      },
+      "ALU_0_sum": {
+        "ports": [
+          "ALU_0/sum",
+          "mux_output_0/alu_output"
+        ]
+      },
+      "ALU_0_zero": {
+        "ports": [
+          "ALU_0/zero",
+          "brach_logic_0/alu_zero"
+        ]
+      },
+      "ALU_0_sign": {
+        "ports": [
+          "ALU_0/sign",
+          "brach_logic_0/alu_sign"
+        ]
+      },
+      "ALU_0_overflow": {
+        "ports": [
+          "ALU_0/overflow",
+          "brach_logic_0/alu_overflow"
+        ]
+      },
+      "RV32I_single_0_control_branch": {
+        "ports": [
+          "RV32I_single_0/control_branch",
+          "brach_logic_0/control_branch"
+        ]
+      },
+      "registers_0_reg_1_out": {
+        "ports": [
+          "registers_0/reg_1_out",
+          "mux_reg_pc_alu_0/reg_1_out"
+        ]
+      },
+      "mux_reg_pc_alu_0_alu_A": {
+        "ports": [
+          "mux_reg_pc_alu_0/alu_A",
+          "ALU_0/A"
+        ]
+      },
+      "mux_reg_descr_alu_0_alu_B": {
+        "ports": [
+          "mux_reg_descr_alu_0/alu_B",
+          "ALU_0/B"
+        ]
+      },
+      "RV32I_single_0_mux_reg_descr_alu": {
+        "ports": [
+          "RV32I_single_0/mux_reg_descr_alu",
+          "mux_reg_descr_alu_0/control_mux_reg_descr_alu"
+        ]
+      },
+      "RV32I_single_0_mux_reg_pc_alu": {
+        "ports": [
+          "RV32I_single_0/mux_reg_pc_alu",
+          "mux_reg_pc_alu_0/control_mux_reg_pc_alu"
+        ]
+      },
+      "RV32I_single_0_control_alu": {
+        "ports": [
+          "RV32I_single_0/control_alu",
+          "ALU_0/control_alu"
+        ]
+      },
       "RV32I_single_0_control_mem_writeenable": {
         "ports": [
           "RV32I_single_0/control_mem_writeenable",
-          "ALU_0/control_alu"
+          "memory_0/wen"
+        ]
+      },
+      "RV32I_single_0_control_reg_writeenable": {
+        "ports": [
+          "RV32I_single_0/control_reg_writeenable",
+          "registers_0/wen"
+        ]
+      },
+      "brach_logic_0_mux_next_pc": {
+        "ports": [
+          "brach_logic_0/mux_next_pc",
+          "pc_logic_0/control_mux_next_pc"
+        ]
+      },
+      "mux_output_0_output_bus": {
+        "ports": [
+          "mux_output_0/output_bus",
+          "mux_reg_write_0/output_bus",
+          "pc_logic_0/output_bus"
+        ]
+      },
+      "post_memory_logic_0_out1_out": {
+        "ports": [
+          "post_memory_logic_0/out1_out",
+          "mux_reg_write_0/mem_output"
+        ]
+      },
+      "RV32I_single_0_mux_reg_write": {
+        "ports": [
+          "RV32I_single_0/mux_reg_write",
+          "mux_reg_write_0/control_mux_reg_write"
+        ]
+      },
+      "pc_logic_0_pc_plus_4": {
+        "ports": [
+          "pc_logic_0/pc_plus_4",
+          "mux_reg_write_0/pc_plus_4"
+        ]
+      },
+      "mux_reg_write_0_reg_write_input": {
+        "ports": [
+          "mux_reg_write_0/reg_write_input",
+          "registers_0/reg_write_input"
+        ]
+      },
+      "clock_div_0_div_clk": {
+        "ports": [
+          "clock_div_0/div_clk",
+          "memory_0/clk_en",
+          "pc_logic_0/clk_en",
+          "registers_0/clk_en"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "registers_0/clk",
+          "clock_div_0/clk",
+          "pc_logic_0/clk",
+          "memory_0/clk"
         ]
       }
     }

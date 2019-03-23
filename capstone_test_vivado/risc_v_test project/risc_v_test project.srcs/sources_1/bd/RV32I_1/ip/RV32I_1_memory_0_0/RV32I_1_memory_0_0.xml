@@ -93,6 +93,18 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>clk_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>pc</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>

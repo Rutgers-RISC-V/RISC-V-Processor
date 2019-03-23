@@ -33,6 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity registers is
     Port ( clk : in STD_LOGIC;
+           clk_en : in STD_LOGIC;
            instr: in STD_LOGIC_VECTOR(31 downto 0);
            --rs1 : in STD_LOGIC_VECTOR(4 downto 0);
            --rs2 : in STD_LOGIC_VECTOR(4 downto 0);
@@ -56,7 +57,7 @@ architecture Behavioral of registers is
 begin
     process (clk) 
     begin
-       if(rising_edge(clk)) then
+       if(rising_edge(clk) and clk_en = '1') then
             if (wen = '1' and unsigned(instr(11 downto 7)) > 0) then
                 register_file_1(to_integer(unsigned(instr(11 downto 7)))) <= reg_write_input;
                 register_file_2(to_integer(unsigned(instr(11 downto 7)))) <= reg_write_input;
