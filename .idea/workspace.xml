@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controller_gen_combinational_new.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALU.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/ALU.vhd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RV32I_single.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/RV32I_single.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/gui_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/java_command_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/project.wpc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/synthesis.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/synthesis.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/webtalk_pa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/design_1/design_1.bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/design_1/design_1.bxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.veo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.vho" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/memory.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/memory.vhd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.xpr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller_gen_combinational.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller_gen_combinational.py" afterDir="false" />
     </list>
@@ -31,14 +16,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller_gen_combinational.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
+            <state relative-caret-position="326">
+              <caret line="183" selection-start-line="183" selection-end-line="183" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller_gen_combinational_new.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="183" selection-start-line="183" selection-end-line="191" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -57,7 +51,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RV32I_single.vhd">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-120">
+              <caret line="257" selection-start-line="257" selection-end-line="257" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -75,6 +73,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>case_error</find>
+      <find>error_value</find>
+      <find>others</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -82,11 +87,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/controller_gen_combinational.py" />
+        <option value="$PROJECT_DIR$/controller_gen_combinational_new.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -109,6 +115,11 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -121,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.controller_gen_combinational_new">
     <configuration name="controller_gen_combinational" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RISC-V-Processor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,8 +154,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="controller_gen_combinational_new" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RISC-V-Processor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/controller_gen_combinational_new.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.controller_gen_combinational_new" />
         <item itemvalue="Python.controller_gen_combinational" />
       </list>
     </recent_temporary>
@@ -167,20 +200,27 @@
       <option name="project" value="LOCAL" />
       <updated>1553283962484</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Removing issues that instantiate to latches in VHDL designs">
+      <created>1553294551209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553294551209</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12215759" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17028028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39910814" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -196,22 +236,31 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/zioz29/RISC-V-Processor&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Use a VHDL 2008 construct on the single cycles controls (process(all) instead of process clock)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use a VHDL 2008 construct on the single cycles controls (process(all) instead of process clock)" />
+    <MESSAGE value="Removing issues that instantiate to latches in VHDL designs" />
+    <MESSAGE value="Removing issues that instantiate to latches in VHDL designs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing issues that instantiate to latches in VHDL designs." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/controller_gen_combinational_new.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/controller_gen_combinational_new.py</url>
+          <line>188</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ALU.vhd">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RV32I_single_controls.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RV32I_single.vhdl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RV32I_single.vhd">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/controller_gen_pipelined.py">
@@ -224,13 +273,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RV32I_single_controls.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RV32I_single.vhd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="257" selection-start-line="257" selection-end-line="257" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller_gen_combinational.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
+        <state relative-caret-position="326">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller_gen_combinational_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="183" selection-start-line="183" selection-end-line="191" selection-end-column="64" />
         </state>
       </provider>
     </entry>

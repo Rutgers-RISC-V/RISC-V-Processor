@@ -36,6 +36,7 @@ entity memory is
            --rst: in STD_LOGIC;
            pc : in STD_LOGIC_VECTOR (31 downto 0);
            addr1 : in STD_LOGIC_VECTOR (31 downto 0);
+           write_bit: in STD_LOGIC_VECTOR (3 downto 0);
            wen : in STD_LOGIC;
            instr : out STD_LOGIC_VECTOR (31 downto 0);
            out1 : out STD_LOGIC_VECTOR (31 downto 0);

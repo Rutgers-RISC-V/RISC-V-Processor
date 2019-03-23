@@ -52,29 +52,26 @@ def main():
     for opcode_index, opcode_group in organized_controller:
         dest.write("\t\t\t\t\twhen \"%s\" =>\n" % opcode_index)
         if contains_dont_care(opcode_group, 'funct3'):
-            print_control_lines(dest,opcode_index,'-','-')
-            #print_control_lines(dest, opcode_group, "\t\t\t\t\t\t")
+            print_control_lines(dest, opcode_group, "\t\t\t\t\t\t")
         else:
-            #dest.write("\t\t\t\t\t\tcase %s is\n" % "instr(14 downto 12)")
+            dest.write("\t\t\t\t\t\tcase %s is\n" % "instr(14 downto 12)")
             for funct3_index,funct3_group in opcode_group.groupby('funct3'):
-                #dest.write("\t\t\t\t\t\t\twhen \"%s\" =>\n" % funct3_index)
+                dest.write("\t\t\t\t\t\t\twhen \"%s\" =>\n" % funct3_index)
                 if contains_dont_care(funct3_group, 'funct7'):
-                    print_control_lines(dest, opcode_index, funct3_index, '-')
-                    #print_control_lines(dest,funct3_group, "\t\t\t\t\t\t\t\t")
+                    print_control_lines(dest,funct3_group, "\t\t\t\t\t\t\t\t")
                 else:
-                    #dest.write("\t\t\t\t\t\t\t\t\tcase %s is\n " % "instr(30)")
+                    dest.write("\t\t\t\t\t\t\t\t\tcase %s is\n " % "instr(30)")
                     for funct7_index,funct7_group in funct3_group.groupby('funct7'):
-                        print_control_lines(dest, opcode_index, funct3_index, funct7_index)
-                        #dest.write("\t\t\t\t\t\t\t\t\t\twhen \'%s\' =>\n" % funct7_index)
-                        #print_control_lines(dest, funct7_group, "\t\t\t\t\t\t\t\t\t\t\t")
-                    #dest.write("\t\t\t\t\t\t\t\t\t\twhen others =>\n")
-                    #print_control_lines(dest, None, "\t\t\t\t\t\t\t\t\t\t\t", True)
-                    #dest.write("\t\t\t\t\t\t\t\t\tend case;\n")
-            #dest.write("\t\t\t\t\t\t\twhen others =>\n")
-            #print_control_lines(dest, None, "\t\t\t\t\t\t\t\t",True)
-            #dest.write("\t\t\t\t\t\tend case;\n")
+                        dest.write("\t\t\t\t\t\t\t\t\t\twhen \'%s\' =>\n" % funct7_index)
+                        print_control_lines(dest, funct7_group, "\t\t\t\t\t\t\t\t\t\t\t")
+                    dest.write("\t\t\t\t\t\t\t\t\t\twhen others =>\n")
+                    print_control_lines(dest, None, "\t\t\t\t\t\t\t\t\t\t\t", True)
+                    dest.write("\t\t\t\t\t\t\t\t\tend case;\n")
+            dest.write("\t\t\t\t\t\t\twhen others =>\n")
+            print_control_lines(dest, None, "\t\t\t\t\t\t\t\t",True)
+            dest.write("\t\t\t\t\t\tend case;\n")
     dest.write("\t\t\t\t\twhen others =>\n")
-    print_control_lines(dest, None, "\t\t\t\t\t\t", True) #fix this
+    print_control_lines(dest, None, "\t\t\t\t\t\t", True)
     dest.write("\t\t\t\tend case;\n")
 
 
@@ -171,31 +168,8 @@ def generate_entity(dest,data,signal_data):
             dest.write(";\n")
     dest.write("end %s;"%processor_name)
 
-def print_control_lines(dest, opcode_index, funct_3index,funct7_index, error=False):
-    if error:
-        for signal_index, signal_val in enumerate(signal_info):
-            if signal_val["vector"]:
-                dest.write(
-                    "%s%s <= \"%s\";\n" % (tabs, signal_val["name"], signal_val["default_option"]))
-            else:
-                dest.write("%s%s <= '%s';\n" % (tabs, signal_val["name"], signal_val["default_option"]))
-        dest.write("%s%s <= '%s';\n" % (tabs, "error", '1'))
-    else:
-        for row_index, row in input_data_frame.iterrows():
-            for signal_index, signal_val in enumerate(signal_info):
-                if signal_val["vector"]:
-                    # dest.write("%s%s_value <= \"%s\";\n" % (tabs, signal_val["name"], row[vector_signal_name(signal_val)]))
-                    dest.write(
-                        "%s%s <= \"%s\";\n" % (tabs, signal_val["name"], row[vector_signal_name(signal_val)]))
-                else:
-                    dest.write("%s%s <= '%s';\n" % (tabs, signal_val["name"], row[signal_val["name"]]))
-            dest.write("%s%s <= '%s';\n" % (tabs, "error", '0'))
 
-
-
-
-
-def print_control_lines_old(dest,input_data_frame,tabs,error=False):
+def print_control_lines(dest,input_data_frame,tabs,error=False):
         if error:
             for signal_index, signal_val in enumerate(signal_info):
                 if signal_val["vector"]:
@@ -205,14 +179,17 @@ def print_control_lines_old(dest,input_data_frame,tabs,error=False):
                     dest.write("%s%s <= '%s';\n" % (tabs, signal_val["name"], signal_val["default_option"]))
             dest.write("%s%s <= '%s';\n" % (tabs, "error", '1'))
         else:
-            for row_index, row in input_data_frame.iterrows():
-                for signal_index, signal_val in enumerate(signal_info):
-                    if signal_val["vector"]:
-                        #dest.write("%s%s_value <= \"%s\";\n" % (tabs, signal_val["name"], row[vector_signal_name(signal_val)]))
-                        dest.write("%s%s <= \"%s\";\n" % (tabs, signal_val["name"], row[vector_signal_name(signal_val)]))
-                    else:
-                        dest.write("%s%s <= '%s';\n" % (tabs, signal_val["name"], row[signal_val["name"]]))
-                dest.write("%s%s <= '%s';\n" % (tabs, "error", '0'))
+            #for row_index, row in input_data_frame.iterrows():
+            counter = 0
+            for signal_index, signal_val in enumerate(signal_info):
+                print("%d"%counter)
+                counter = counter + 1
+                if signal_val["vector"]:
+                    #dest.write("%s%s_value <= \"%s\";\n" % (tabs, signal_val["name"], [vector_signal_name(signal_val)]))
+                    dest.write("%s%s <= \"%s\";\n" % (tabs, signal_val["name"], input_data_frame.iloc[0][vector_signal_name(signal_val)]))
+                else:
+                    dest.write("%s%s <= '%s';\n" % (tabs, signal_val["name"], input_data_frame.iloc[0][signal_val["name"]]))
+            dest.write("%s%s <= '%s';\n" % (tabs, "error", '0'))
 
 
 def vector_signal_name(signal):
