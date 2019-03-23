@@ -42,8 +42,9 @@ entity memory_logic is
            byte_enable : out STD_LOGIC_VECTOR (3 downto 0);
            --data : in STD_LOGIC_VECTOR (31 downto 0); -- data will connect directly to the memory
            out1_in : in STD_LOGIC_VECTOR (31 downto 0);
-           out1_out : out STD_LOGIC_VECTOR (31 downto 0);
-           control_mem_writeenable : out STD_LOGIC);
+           out1_out : out STD_LOGIC_VECTOR (31 downto 0)
+           --control_mem_writeenable : out STD_LOGIC
+           );
 end memory_logic;
 
 architecture Behavioral of memory_logic is

@@ -1,9 +1,0 @@
-pc_mux,controls mux before pc,2,"[{00:pc},{01:general output},{10:pc+4},{11:jump}]"
-reg_vald_mux,controls mux before vald port on regfile,2,"[{00:mem1},{01:pc+4},{10:0},{11:general output}]"
-output_mux,controls mux after ALU and descrambler,1,"[{0:ALU},{1:descrambler}]"
-reg_descr_alu_mux,mux between reg file or descrambler before alu,1,"[{0:register file},{1:descrambler}]"
-reg_pc_alu_mux,mux between reg file or pc before alu,1,"[{0:program counter},{1:register file}]"
-mem_writeenable_control,control line for memory write enable,1,"[{0:write disabled},{1:write enabled}]"
-alu_control,controls the ALU operation,4,
-reg_writeenable_control,controls the register file write enable,1,"[{0:write disabled},{1:write enabled}]"
-branch_control,enables or disables the branch logic,1,"[{0:disabled},{1:enabled}]"

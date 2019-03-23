@@ -4,8 +4,7 @@ mux_output,controls mux after ALU and descrambler,4,0,1,,,"[{0:ALU},{1:descrambl
 mux_reg_descr_alu,mux between reg file or descrambler before alu,3,0,1,,,"[{0:register file},{1:descrambler}]"
 mux_reg_pc_alu,mux between reg file or pc before alu,3,1,1,,,"[{0:program counter},{1:register file}]"
 control_mem_writeenable,control line for memory write enable,4,0,1,,,"[{0:write disabled},{1:write enabled}]"
-control_mem_logic,control line for memory write enable,4,0000,4,3,0,"[{0:write disabled},{1:write enabled}]"
-control_alu,controls the ALU operation,3,0000,4,3,0,
+control_mem_logic, control line to control memory write,4,1111,4,3,0,"[{0000:lb},{0001:lh},{0010:lw},{0100:lbu},{0101:lhu},{1000:sb},{1001:sh},{1010:sw},{1111:no_access}]"
+control_alu,controls the ALU operation,3,0000,4,3,0,{"{0000:add}
 control_reg_writeenable,controls the register file write enable,5,0,1,,,"[{0:write disabled},{1:write enabled}]"
 control_branch,enables branching or jumping,5,0010,4,3,0,"[{0000: stall},{0001:jump(jalr)},{0010:pc+4},{0011:jal or branch},{1000:beq},{1001:bne},{1100:blt},{1101:bge},{1110:bltu},{1111:bgeu}]"
-,,,,,,,

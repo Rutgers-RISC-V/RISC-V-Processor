@@ -54,10 +54,18 @@ architecture Behavioral of memory is
 begin
     process (clk) begin
         if(rising_edge(clk) and wen = '1') then
-            mem_0(to_integer(unsigned(addr1(9 downto 0)))) <= data(7 downto 0);
-            mem_1(to_integer(unsigned(addr1(9 downto 0)))) <= data(15 downto 8);
-            mem_2(to_integer(unsigned(addr1(9 downto 0)))) <= data(23 downto 16);
+            if(write_bit(0) = '1') then
+              mem_0(to_integer(unsigned(addr1(9 downto 0)))) <= data(7 downto 0);
+            end if;
+            if(write_bit(1) = '1') then
+                mem_1(to_integer(unsigned(addr1(9 downto 0)))) <= data(15 downto 8);
+            end if;
+            if(write_bit(2) = '1') then
+                mem_2(to_integer(unsigned(addr1(9 downto 0)))) <= data(23 downto 16);
+            end if;
+            if(write_bit(3) = '1') then
             mem_3(to_integer(unsigned(addr1(9 downto 0)))) <= data(31 downto 24);
+            end if;
         end if;
     end process;
     out1 <= mem_3(to_integer(unsigned(addr1(bit_width downto 0)))) & mem_2(to_integer(unsigned(addr1(bit_width downto 0)))) & mem_1(to_integer(unsigned(addr1(bit_width downto 0)))) & mem_0(to_integer(unsigned(addr1(bit_width downto 0))));
