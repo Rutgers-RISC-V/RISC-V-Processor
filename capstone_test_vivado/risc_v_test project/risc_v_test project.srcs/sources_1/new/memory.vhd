@@ -45,7 +45,7 @@ end memory;
 
 architecture Behavioral of memory is
     constant bit_width: integer := 12;
-    constant array_size: integer := 2**bit_width - 1; -- 4095
+    constant array_size: integer := 2**bit_width - 1; -- 4095*4
     type mem is array(0 to array_size) of std_logic_vector(7 downto 0);
     signal mem_0: mem := (others=>(others=>'0'));
     signal mem_1: mem := (others=>(others=>'0'));

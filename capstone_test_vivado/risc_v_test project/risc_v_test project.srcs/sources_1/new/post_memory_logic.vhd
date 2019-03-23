@@ -32,9 +32,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity post_memory_logic is
-    Port ( --stall : out STD_LOGIC;
-           control_mem : in STD_LOGIC_VECTOR (3 downto 0);      
-           addr1 : in STD_LOGIC_VECTOR (31 downto 0);
+    Port ( control_mem : in STD_LOGIC_VECTOR (3 downto 0);      
+           addr1 : in STD_LOGIC_VECTOR (31 downto 0); -- from instr not the one from pre memory
 
            out1_in : in STD_LOGIC_VECTOR (31 downto 0);
            out1_out : out STD_LOGIC_VECTOR (31 downto 0)
@@ -42,9 +41,6 @@ entity post_memory_logic is
 end post_memory_logic;
 
 architecture Post_Behavioral of post_memory_logic is
-
--- used for loads
-signal reg : std_logic_vector (32 downto 0) := (others =>'0');
 
 begin
     process(out1_in)
