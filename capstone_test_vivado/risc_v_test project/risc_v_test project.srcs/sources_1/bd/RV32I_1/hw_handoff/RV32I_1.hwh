@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 24 00:31:49 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 24 00:52:06 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="clock_div_0" PORT="clk"/>
         <CONNECTION INSTANCE="registers_0" PORT="clk"/>
         <CONNECTION INSTANCE="pc_logic_0" PORT="clk"/>
+        <CONNECTION INSTANCE="clock_div_0" PORT="clk"/>
         <CONNECTION INSTANCE="memory_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>

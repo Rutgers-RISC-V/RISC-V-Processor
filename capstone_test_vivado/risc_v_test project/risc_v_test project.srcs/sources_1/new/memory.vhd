@@ -25,6 +25,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
+use STD.TEXTIO.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -47,8 +48,23 @@ architecture Behavioral of memory is
     constant bit_width: integer := 12;
     constant array_size: integer := 2**bit_width - 1; -- 4095*4
     type mem is array(0 to array_size) of std_logic_vector(7 downto 0);
-    signal mem_0: mem := (others=>(others=>'0'));
-    signal mem_1: mem := (others=>(others=>'0'));
+
+    impure function initialize_memory( input_file : in string; select_memory_bus : in integer) return mem is
+        file input_hex: text open read_mode is in input_file;
+        variable input_line: line;
+        variable input_vector: bit_vector(7 downto 0);
+        variable memory_initializing : mem;
+    begin
+        for counter in mem'range loop
+            readline(input_hex,input_line);
+            read(input_line, input_vector);
+            memory_initializing(counter) := to_stdlogicvector(input_vector((select_memory_bus * 8 + 7) downto (select_memory_bus * 8)));
+        end loop;
+        return memory_initializing;
+    end function;
+    
+    signal mem_0: mem := initialize_memory("",0);
+    signal mem_1: mem := initialize_memory("",0);
     signal mem_2: mem := (others=>(others=>'0'));
     signal mem_3: mem := (others=>(others=>'0'));
     

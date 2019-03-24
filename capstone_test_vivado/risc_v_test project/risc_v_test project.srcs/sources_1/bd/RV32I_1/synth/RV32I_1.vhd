@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Sun Mar 24 00:31:48 2019
+--Date        : Sun Mar 24 00:52:06 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_1.bd
 --Design      : RV32I_1
@@ -97,12 +97,6 @@ architecture STRUCTURE of RV32I_1 is
     reg_write_input : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_1_mux_reg_write_0_0;
-  component RV32I_1_clock_div_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    div_clk : out STD_LOGIC
-  );
-  end component RV32I_1_clock_div_0_0;
   component RV32I_1_registers_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -125,19 +119,6 @@ architecture STRUCTURE of RV32I_1 is
     pc_plus_4 : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_1_pc_logic_0_0;
-  component RV32I_1_memory_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    pc : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    addr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    write_bit : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    wen : in STD_LOGIC;
-    instr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    out1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    data : in STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_1_memory_0_0;
   component RV32I_1_pre_memory_logic_0_0 is
   port (
     control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -154,6 +135,25 @@ architecture STRUCTURE of RV32I_1 is
     out1_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_1_post_memory_logic_0_0;
+  component RV32I_1_clock_div_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    div_clk : out STD_LOGIC
+  );
+  end component RV32I_1_clock_div_0_0;
+  component RV32I_1_memory_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    pc : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    addr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    write_bit : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    wen : in STD_LOGIC;
+    instr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    out1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    data : in STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_1_memory_0_0;
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
   signal ALU_0_sum : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -189,7 +189,7 @@ architecture STRUCTURE of RV32I_1 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN RV32I_1_clk_0, FREQ_HZ 125000000, INSERT_VIP 0, PHASE 0.000";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN RV32I_1_clk, FREQ_HZ 125000000, INSERT_VIP 0, PHASE 0.000";
 begin
   clk_0_1 <= clk;
   led(3 downto 0) <= registers_0_debug_leds(3 downto 0);
