@@ -1,0 +1,13 @@
+li x31 1
+li x6 1
+li x7 2
+add x6 x6 x31
+beq x6 x7 success
+li x31 0
+beq x6 x6 end
+
+success:
+li x31 2
+
+end:
+li x7 1
