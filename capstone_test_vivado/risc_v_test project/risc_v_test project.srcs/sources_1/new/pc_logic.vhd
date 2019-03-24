@@ -45,6 +45,7 @@ end pc_logic;
 
 architecture Behavioral of pc_logic is
 signal pc_reg: std_logic_vector(31 downto 0) := (others => '0');
+signal out_reg: std_logic_vector(31 downto 0) := (others => '0');
 signal completed_cycle: std_logic := '0';
 signal gone_to_next_instruction_debug: std_logic := '0';
 signal clk_counter: std_logic_vector(1 downto 0) := "00";
@@ -52,7 +53,7 @@ signal control_mux_signal: std_logic_vector(1 downto 0) := "00";
 signal jump_address : std_logic_vector(31 downto 0) := (others => '0');
 
 begin
-pc <= pc_reg;
+pc <= out_reg;
 pc_plus_4 <= std_logic_vector(unsigned(pc_reg)+4); -- nop doesn't use pc+4 anyway
     
     process (clk)
@@ -66,12 +67,16 @@ pc_plus_4 <= std_logic_vector(unsigned(pc_reg)+4); -- nop doesn't use pc+4 anywa
                 case control_mux_signal is 
                     when "00" => -- stall
                         pc_reg <= pc_reg;
+                        out_reg <= pc_reg;
                     when "01" => -- jalr
                         pc_reg <= output_bus;
+                        out_reg <= output_bus;
                     when "10" =>
                         pc_reg <= std_logic_vector(unsigned(pc_reg)+4);
+                        out_reg <= std_logic_vector(unsigned(pc_reg)+4);
                     when "11" =>
                         pc_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(jump_address));-- value already will be sign extended so unsigned arithmetic is used
+                        out_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(jump_address));-- value already will be sign extended so unsigned arithmetic is used
                 end case;
             elsif( clk_en = '1' and clk_counter = "11" and debug_enable = '1' and debug_next_instr = '1' and gone_to_next_instruction_debug = '0') then -- button pressed and next instruction has not been executed yet
                 clk_counter <= "00";
@@ -80,12 +85,16 @@ pc_plus_4 <= std_logic_vector(unsigned(pc_reg)+4); -- nop doesn't use pc+4 anywa
                 case control_mux_signal is
                     when "00" => -- stall
                         pc_reg <= pc_reg;
+                        out_reg <= pc_reg;
                     when "01" => -- jalr
                         pc_reg <= output_bus;
+                        out_reg <= output_bus;
                     when "10" =>
                         pc_reg <= std_logic_vector(unsigned(pc_reg)+4);
+                        out_reg <= std_logic_vector(unsigned(pc_reg)+4);
                     when "11" =>
                         pc_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(jump_address));-- value already will be sign extended so unsigned arithmetic is used
+                        out_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(jump_address));-- value already will be sign extended so unsigned arithmetic is used
                 end case;
             elsif(clk_en = '1') then -- clk_counter != "11"
                 if(completed_cycle = '1' and clk_counter = "10") then -- on debug mode but button not pressed reset to allow button press)
@@ -101,7 +110,7 @@ pc_plus_4 <= std_logic_vector(unsigned(pc_reg)+4); -- nop doesn't use pc+4 anywa
                 else
                     clk_counter <= std_logic_vector(unsigned(clk_counter) + 1);
                 end if;
-                pc <= (others => '0');
+                out_reg <= (others => '0');
             end if;
         end if;
     end process;

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ALU, Descrambler, RV32I_single, brach_logic, clock_div, debounce, debounce, memory, mux_output, mux_reg_descr_alu, mux_reg_pc_alu, mux_reg_write, pc_logic, post_memory_logic, pre_memory_logic, registers
+# ALU, Descrambler, RV32I_single, brach_logic, debounce, debounce, multi_cycle_regs, mux_output, mux_reg_descr_alu, mux_reg_pc_alu, mux_reg_write, pc_logic, post_memory_logic, pre_memory_logic, registers
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -206,6 +206,36 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: blk_mem_gen_1, and set properties
+  set blk_mem_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_1 ]
+  set_property -dict [ list \
+   CONFIG.Assume_Synchronous_Clk {false} \
+   CONFIG.Byte_Size {8} \
+   CONFIG.Coe_File {../../../../../../../../Dumps_and_Assembly/Dumps/addTest_Dump.coe} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Enable_A {Always_Enabled} \
+   CONFIG.Enable_B {Always_Enabled} \
+   CONFIG.Fill_Remaining_Memory_Locations {true} \
+   CONFIG.Load_Init_File {true} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Operating_Mode_A {WRITE_FIRST} \
+   CONFIG.Port_B_Clock {100} \
+   CONFIG.Port_B_Enable_Rate {100} \
+   CONFIG.Port_B_Write_Rate {50} \
+   CONFIG.Read_Width_A {32} \
+   CONFIG.Read_Width_B {32} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
+   CONFIG.Use_Byte_Write_Enable {true} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {4096} \
+   CONFIG.Write_Width_A {32} \
+   CONFIG.Write_Width_B {32} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $blk_mem_gen_1
+
   # Create instance: brach_logic_0, and set properties
   set block_name brach_logic
   set block_cell_name brach_logic_0
@@ -217,20 +247,31 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: clock_div_0, and set properties
-  set block_name clock_div
-  set block_cell_name clock_div_0
-  if { [catch {set clock_div_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $clock_div_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {10e-5} \
- ] [get_bd_pins /clock_div_0/div_clk]
+   CONFIG.CLKIN1_JITTER_PS {80.0} \
+   CONFIG.CLKOUT1_DRIVES {BUFG} \
+   CONFIG.CLKOUT1_JITTER {394.794} \
+   CONFIG.CLKOUT1_PHASE_ERROR {258.220} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {10.000} \
+   CONFIG.CLKOUT2_DRIVES {BUFG} \
+   CONFIG.CLKOUT3_DRIVES {BUFG} \
+   CONFIG.CLKOUT4_DRIVES {BUFG} \
+   CONFIG.CLKOUT5_DRIVES {BUFG} \
+   CONFIG.CLKOUT6_DRIVES {BUFG} \
+   CONFIG.CLKOUT7_DRIVES {BUFG} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {34} \
+   CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
+   CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {85} \
+   CONFIG.MMCM_COMPENSATION {ZHOLD} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+   CONFIG.PRIMITIVE {PLL} \
+   CONFIG.PRIM_IN_FREQ {125.000} \
+   CONFIG.USE_LOCKED {false} \
+   CONFIG.USE_RESET {false} \
+ ] $clk_wiz_0
 
   # Create instance: debounce_0, and set properties
   set block_name debounce
@@ -254,13 +295,13 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: memory_0, and set properties
-  set block_name memory
-  set block_cell_name memory_0
-  if { [catch {set memory_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: multi_cycle_regs_0, and set properties
+  set block_name multi_cycle_regs
+  set block_cell_name multi_cycle_regs_0
+  if { [catch {set multi_cycle_regs_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $memory_0 eq "" } {
+   } elseif { $multi_cycle_regs_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -359,36 +400,40 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ALU_0_sum [get_bd_pins ALU_0/sum] [get_bd_pins mux_output_0/alu_output]
   connect_bd_net -net ALU_0_zero [get_bd_pins ALU_0/zero] [get_bd_pins brach_logic_0/alu_zero]
   connect_bd_net -net Descrambler_1_descr_imm [get_bd_pins Descrambler_1/descr_imm] [get_bd_pins mux_output_0/descrambler_output] [get_bd_pins mux_reg_descr_alu_0/descrambler_output]
+  connect_bd_net -net Net [get_bd_pins multi_cycle_regs_0/output_bus_in] [get_bd_pins mux_output_0/output_bus] [get_bd_pins pc_logic_0/output_bus] [get_bd_pins pre_memory_logic_0/addr1_in]
   connect_bd_net -net RV32I_single_0_control_alu [get_bd_pins ALU_0/control_alu] [get_bd_pins RV32I_single_0/control_alu]
   connect_bd_net -net RV32I_single_0_control_branch [get_bd_pins RV32I_single_0/control_branch] [get_bd_pins brach_logic_0/control_branch]
-  connect_bd_net -net RV32I_single_0_control_mem_logic [get_bd_pins RV32I_single_0/control_mem_logic] [get_bd_pins post_memory_logic_0/control_mem] [get_bd_pins pre_memory_logic_0/control_mem]
-  connect_bd_net -net RV32I_single_0_control_mem_writeenable [get_bd_pins RV32I_single_0/control_mem_writeenable] [get_bd_pins memory_0/wen]
-  connect_bd_net -net RV32I_single_0_control_reg_writeenable [get_bd_pins RV32I_single_0/control_reg_writeenable] [get_bd_pins registers_0/wen]
+  connect_bd_net -net RV32I_single_0_control_mem_logic [get_bd_pins RV32I_single_0/control_mem_logic] [get_bd_pins multi_cycle_regs_0/control_mem_logic_in] [get_bd_pins pre_memory_logic_0/control_mem]
+  connect_bd_net -net RV32I_single_0_control_reg_writeenable [get_bd_pins RV32I_single_0/control_reg_writeenable] [get_bd_pins multi_cycle_regs_0/reg_wen_in]
   connect_bd_net -net RV32I_single_0_mux_output [get_bd_pins RV32I_single_0/mux_output] [get_bd_pins mux_output_0/control_mux_output]
   connect_bd_net -net RV32I_single_0_mux_reg_descr_alu [get_bd_pins RV32I_single_0/mux_reg_descr_alu] [get_bd_pins mux_reg_descr_alu_0/control_mux_reg_descr_alu]
   connect_bd_net -net RV32I_single_0_mux_reg_pc_alu [get_bd_pins RV32I_single_0/mux_reg_pc_alu] [get_bd_pins mux_reg_pc_alu_0/control_mux_reg_pc_alu]
-  connect_bd_net -net RV32I_single_0_mux_reg_write [get_bd_pins RV32I_single_0/mux_reg_write] [get_bd_pins mux_reg_write_0/control_mux_reg_write]
+  connect_bd_net -net RV32I_single_0_mux_reg_write [get_bd_pins RV32I_single_0/mux_reg_write] [get_bd_pins multi_cycle_regs_0/reg_write_mux_in]
+  connect_bd_net -net blk_mem_gen_1_doutb [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins post_memory_logic_0/out1_in]
   connect_bd_net -net brach_logic_0_mux_next_pc [get_bd_pins brach_logic_0/mux_next_pc] [get_bd_pins pc_logic_0/control_mux_next_pc]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins clock_div_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins memory_0/clk] [get_bd_pins pc_logic_0/clk] [get_bd_pins registers_0/clk]
-  connect_bd_net -net clock_div_0_div_clk [get_bd_pins clock_div_0/div_clk] [get_bd_pins memory_0/clk_en] [get_bd_pins pc_logic_0/clk_en] [get_bd_pins registers_0/clk_en]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins blk_mem_gen_1/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins multi_cycle_regs_0/clk] [get_bd_pins pc_logic_0/clk] [get_bd_pins pc_logic_0/clk_en] [get_bd_pins registers_0/clk] [get_bd_pins registers_0/clk_en]
   connect_bd_net -net debounce_0_dbnc [get_bd_pins debounce_0/dbnc] [get_bd_pins pc_logic_0/debug_next_instr]
   connect_bd_net -net debounce_1_dbnc [get_bd_pins debounce_1/dbnc] [get_bd_pins pc_logic_0/rst]
   connect_bd_net -net debug_enable_0_1 [get_bd_ports sw0] [get_bd_pins pc_logic_0/debug_enable]
   connect_bd_net -net debug_next_instr_0_1 [get_bd_ports btn0] [get_bd_pins debounce_0/btn]
-  connect_bd_net -net memory_0_instr [get_bd_pins Descrambler_1/scr_imm] [get_bd_pins RV32I_single_0/instr] [get_bd_pins memory_0/instr] [get_bd_pins registers_0/instr]
-  connect_bd_net -net memory_0_out1 [get_bd_pins memory_0/out1] [get_bd_pins post_memory_logic_0/out1_in]
-  connect_bd_net -net mux_output_0_output_bus [get_bd_pins mux_output_0/output_bus] [get_bd_pins mux_reg_write_0/output_bus] [get_bd_pins pc_logic_0/output_bus] [get_bd_pins post_memory_logic_0/addr1] [get_bd_pins pre_memory_logic_0/addr1_in]
+  connect_bd_net -net memory_0_instr [get_bd_pins Descrambler_1/scr_imm] [get_bd_pins RV32I_single_0/instr] [get_bd_pins blk_mem_gen_1/douta] [get_bd_pins multi_cycle_regs_0/instr_in] [get_bd_pins registers_0/instr1]
+  connect_bd_net -net multi_cycle_regs_0_control_mem_logic_out [get_bd_pins multi_cycle_regs_0/control_mem_logic_out] [get_bd_pins post_memory_logic_0/control_mem]
+  connect_bd_net -net multi_cycle_regs_0_instr_out [get_bd_pins multi_cycle_regs_0/instr_out] [get_bd_pins registers_0/instr2]
+  connect_bd_net -net multi_cycle_regs_0_reg_wen_out [get_bd_pins multi_cycle_regs_0/reg_wen_out] [get_bd_pins registers_0/wen]
+  connect_bd_net -net multi_cycle_regs_0_reg_write_mux_out [get_bd_pins multi_cycle_regs_0/reg_write_mux_out] [get_bd_pins mux_reg_write_0/control_mux_reg_write]
+  connect_bd_net -net mux_output_0_output_bus [get_bd_pins multi_cycle_regs_0/output_bus_out] [get_bd_pins mux_reg_write_0/output_bus] [get_bd_pins post_memory_logic_0/addr1]
   connect_bd_net -net mux_reg_descr_alu_0_alu_B [get_bd_pins ALU_0/B] [get_bd_pins mux_reg_descr_alu_0/alu_B]
   connect_bd_net -net mux_reg_pc_alu_0_alu_A [get_bd_pins ALU_0/A] [get_bd_pins mux_reg_pc_alu_0/alu_A]
   connect_bd_net -net mux_reg_write_0_reg_write_input [get_bd_pins mux_reg_write_0/reg_write_input] [get_bd_pins registers_0/reg_write_input]
-  connect_bd_net -net pc_logic_0_pc [get_bd_pins memory_0/pc] [get_bd_pins mux_reg_pc_alu_0/pc] [get_bd_pins pc_logic_0/pc]
+  connect_bd_net -net pc_logic_0_pc [get_bd_pins blk_mem_gen_1/addra] [get_bd_pins mux_reg_pc_alu_0/pc] [get_bd_pins pc_logic_0/pc]
   connect_bd_net -net pc_logic_0_pc_plus_4 [get_bd_pins mux_reg_write_0/pc_plus_4] [get_bd_pins pc_logic_0/pc_plus_4]
   connect_bd_net -net post_memory_logic_0_out1_out [get_bd_pins mux_reg_write_0/mem_output] [get_bd_pins post_memory_logic_0/out1_out]
-  connect_bd_net -net pre_memory_logic_0_addr1_out [get_bd_pins memory_0/addr1] [get_bd_pins pre_memory_logic_0/addr1_out]
-  connect_bd_net -net pre_memory_logic_0_byte_enable [get_bd_pins memory_0/write_bit] [get_bd_pins pre_memory_logic_0/byte_enable]
+  connect_bd_net -net pre_memory_logic_0_addr1_out [get_bd_pins blk_mem_gen_1/addrb] [get_bd_pins pre_memory_logic_0/addr1_out]
+  connect_bd_net -net pre_memory_logic_0_byte_enable [get_bd_pins blk_mem_gen_1/web] [get_bd_pins pre_memory_logic_0/byte_enable]
   connect_bd_net -net registers_0_debug_leds [get_bd_ports led] [get_bd_pins registers_0/debug_leds]
   connect_bd_net -net registers_0_reg_1_out [get_bd_pins mux_reg_pc_alu_0/reg_1_out] [get_bd_pins registers_0/reg_1_out]
-  connect_bd_net -net registers_0_reg_2_out [get_bd_pins memory_0/data] [get_bd_pins mux_reg_descr_alu_0/reg_2_out] [get_bd_pins registers_0/reg_2_out]
+  connect_bd_net -net registers_0_reg_2_out [get_bd_pins blk_mem_gen_1/dinb] [get_bd_pins mux_reg_descr_alu_0/reg_2_out] [get_bd_pins registers_0/reg_2_out]
   connect_bd_net -net rst_0_1 [get_bd_ports btn3] [get_bd_pins debounce_1/btn]
 
   # Create address segments

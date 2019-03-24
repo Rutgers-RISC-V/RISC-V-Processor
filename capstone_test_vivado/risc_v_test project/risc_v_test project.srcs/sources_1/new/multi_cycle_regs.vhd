@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity multi_cycle_regs is
     Port ( clk : in STD_LOGIC;
-           clk_en : in STD_LOGIC;
+           --clk_en : in STD_LOGIC; --removed for timing testing
            instr_in : in STD_LOGIC_VECTOR (31 downto 0);
            instr_out : out STD_LOGIC_VECTOR (31 downto 0);
            control_mem_logic_in : in STD_LOGIC_VECTOR (3 downto 0);
@@ -51,7 +51,7 @@ architecture Behavioral of multi_cycle_regs is
 begin
     process(clk)
     begin
-        if(rising_edge(clk) and clk_en = '1') then
+        if(rising_edge(clk)) then
             instr_out <= instr_in;
             control_mem_logic_out <= control_mem_logic_in;
             reg_wen_out <= reg_wen_in;
