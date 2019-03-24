@@ -14,7 +14,6 @@ Port(
 		mux_output : out std_logic;
 		mux_reg_descr_alu : out std_logic;
 		mux_reg_pc_alu : out std_logic;
-		control_mem_writeenable : out std_logic;
 		control_alu : out std_logic_vector(3 downto 0);
 		control_reg_writeenable : out std_logic;
 		control_branch : out std_logic_vector(3 downto 0);
@@ -32,7 +31,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -43,7 +41,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -54,7 +51,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -65,7 +61,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -76,7 +71,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -87,7 +81,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -98,7 +91,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -109,7 +101,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -120,7 +111,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -131,7 +121,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -142,7 +131,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -153,7 +141,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -164,7 +151,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -175,7 +161,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -186,7 +171,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -197,7 +181,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -208,7 +191,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0001";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -219,7 +201,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0010";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -230,7 +211,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0010";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -241,7 +221,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0011";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -252,7 +231,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0011";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -263,7 +241,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0100";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -274,7 +251,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0100";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -285,7 +261,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0101";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -296,7 +271,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1101";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -307,7 +281,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0110";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -318,7 +291,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0110";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -329,7 +301,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0111";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -340,7 +311,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0111";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -351,7 +321,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -362,7 +331,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -373,7 +341,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -384,7 +351,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -395,7 +361,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -406,7 +371,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -417,7 +381,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -428,7 +391,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -439,7 +401,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -450,7 +411,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -461,7 +421,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -472,7 +431,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -483,7 +441,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -494,7 +451,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -505,7 +461,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -516,7 +471,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -527,7 +481,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '1';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -538,7 +491,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '1';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -549,7 +501,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '1';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -560,7 +511,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '1';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -571,7 +521,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '1';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -582,7 +531,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '1';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -593,7 +541,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -604,7 +551,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -615,7 +561,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0001";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -626,7 +571,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0010";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -637,7 +581,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0011";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -648,7 +591,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0100";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -659,7 +601,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0101";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -670,7 +611,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "1101";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -681,7 +621,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0110";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -692,7 +631,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0111";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -703,7 +641,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -714,7 +651,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -725,7 +661,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -736,7 +671,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -747,7 +681,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -758,7 +691,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -769,7 +701,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -780,7 +711,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -791,7 +721,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -802,7 +731,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -813,7 +741,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -824,7 +751,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -835,7 +761,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -846,7 +771,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -857,7 +781,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -868,7 +791,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0010";
@@ -879,7 +801,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1000";
@@ -890,7 +811,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1000";
@@ -901,7 +821,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1001";
@@ -912,7 +831,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1001";
@@ -923,7 +841,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1100";
@@ -934,7 +851,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1100";
@@ -945,7 +861,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1101";
@@ -956,7 +871,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1101";
@@ -967,7 +881,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1110";
@@ -978,7 +891,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1110";
@@ -989,7 +901,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1111";
@@ -1000,7 +911,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
 						control_branch <= "1111";
@@ -1011,7 +921,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0001";
@@ -1022,7 +931,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '1';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0001";
@@ -1033,7 +941,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1044,7 +951,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1055,7 +961,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1066,7 +971,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1077,7 +981,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1088,7 +991,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1099,7 +1001,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1110,7 +1011,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1121,7 +1021,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1132,7 +1031,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1143,7 +1041,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1154,7 +1051,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1165,7 +1061,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1176,7 +1071,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1187,7 +1081,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1198,7 +1091,6 @@ begin
 						mux_output <= '1';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '1';
 						control_branch <= "0011";
@@ -1209,7 +1101,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1220,7 +1111,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1231,7 +1121,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1242,7 +1131,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1253,7 +1141,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1264,7 +1151,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1275,7 +1161,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1286,7 +1171,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1297,7 +1181,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1308,7 +1191,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1319,7 +1201,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1330,7 +1211,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1341,7 +1221,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1352,7 +1231,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '0';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";
@@ -1363,7 +1241,6 @@ begin
 						mux_output <= '0';
 						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
-						control_mem_writeenable <= '0';
 						control_alu <= "0000";
 						control_reg_writeenable <= '0';
 						control_branch <= "0010";

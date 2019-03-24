@@ -49,6 +49,7 @@ signal completed_cycle: std_logic := '0';
 signal gone_to_next_instruction_debug: std_logic := '0';
 signal clk_counter: std_logic_vector(1 downto 0) := "00";
 signal control_mux_signal: std_logic_vector(1 downto 0) := "00";
+signal jump_address : std_logic_vector(31 downto 0) := (others => '0');
 
 begin
 pc <= pc_reg;
@@ -70,7 +71,7 @@ pc_plus_4 <= std_logic_vector(unsigned(pc_reg)+4); -- nop doesn't use pc+4 anywa
                     when "10" =>
                         pc_reg <= std_logic_vector(unsigned(pc_reg)+4);
                     when "11" =>
-                        pc_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(output_bus));-- value already will be sign extended so unsigned arithmetic is used
+                        pc_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(jump_address));-- value already will be sign extended so unsigned arithmetic is used
                 end case;
             elsif( clk_en = '1' and clk_counter = "11" and debug_enable = '1' and debug_next_instr = '1' and gone_to_next_instruction_debug = '0') then -- button pressed and next instruction has not been executed yet
                 clk_counter <= "00";
@@ -84,11 +85,12 @@ pc_plus_4 <= std_logic_vector(unsigned(pc_reg)+4); -- nop doesn't use pc+4 anywa
                     when "10" =>
                         pc_reg <= std_logic_vector(unsigned(pc_reg)+4);
                     when "11" =>
-                        pc_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(output_bus));-- value already will be sign extended so unsigned arithmetic is used
+                        pc_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(jump_address));-- value already will be sign extended so unsigned arithmetic is used
                 end case;
             elsif(clk_en = '1') then -- clk_counter != "11"
                 if(completed_cycle = '1' and clk_counter = "10") then -- on debug mode but button not pressed reset to allow button press)
                     control_mux_signal <= control_mux_next_pc;
+                    jump_address <= output_bus;
                     completed_cycle <= '0';
                 end if;
                 if(gone_to_next_instruction_debug = '1' and clk_counter = "11") then

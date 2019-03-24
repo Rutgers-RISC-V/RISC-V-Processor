@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="">
+    <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="Changing memory to block ram.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RV32I_single.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/RV32I_single.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RV32I_single_controls.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RV32I_single_controls.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RV32I_single_signals.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RV32I_single_signals.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/gui_handlers.wdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/java_command_handlers.wdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/project.wpc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/synthesis.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/synthesis.wdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/webtalk_pa.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bd" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bxml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xci" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xci" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/sim/RV32I_1_pc_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/synth/RV32I_1_pc_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/memory/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/memory/xgui/memory_v1_0.tcl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.dcp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xci" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0_sim_netlist.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0_sim_netlist.vhdl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0_stub.v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0_stub.vhdl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/sim/RV32I_1_registers_0_0.vhd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/synth/RV32I_1_registers_0_0.vhd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ui/bd_2027a618.ui" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ui/bd_2027a618.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/pc_logic/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/pc_logic/component.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/registers/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/registers/component.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/pc_logic.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/pc_logic.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/registers.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/registers.vhd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.xpr" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,40 +39,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/old_controller_gen/controller_gen_pipelined.py">
+        <entry file="file://$PROJECT_DIR$/controller_gen_combinational.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RV32I_single_controls.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-              <column index="0" width="100" />
-              <column index="1" width="100" />
-              <column index="2" width="100" />
-              <column index="3" width="100" />
-              <column index="4" width="100" />
-              <column index="5" width="100" />
-              <column index="6" width="100" />
-              <column index="7" width="100" />
-              <column index="8" width="100" />
-              <column index="9" width="100" />
-              <column index="10" width="100" />
-              <column index="11" width="100" />
-              <column index="12" width="100" />
-              <column index="13" width="100" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="492">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="-880">
+              <caret line="104" column="52" lean-forward="true" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -88,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RV32I_single_signals.csv">
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
@@ -103,8 +80,34 @@
             </state>
           </provider>
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="120">
+              <caret line="6" column="167" selection-start-line="6" selection-start-column="167" selection-end-line="6" selection-end-column="167" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RV32I_single_controls.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
+              <column index="0" width="100" />
+              <column index="1" width="100" />
+              <column index="2" width="100" />
+              <column index="3" width="100" />
+              <column index="4" width="100" />
+              <column index="5" width="100" />
+              <column index="6" width="100" />
+              <column index="7" width="100" />
+              <column index="8" width="100" />
+              <column index="9" width="100" />
+              <column index="10" width="100" />
+              <column index="11" width="100" />
+              <column index="12" width="100" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -112,6 +115,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.hex">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RV32I_single.vhd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="88" column="41" lean-forward="true" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -129,11 +141,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-5795" />
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.bin">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -162,9 +169,9 @@
       <list>
         <option value="$PROJECT_DIR$/controller_gen_combinational_new.py" />
         <option value="$PROJECT_DIR$/controller_gen_combinational.py" />
-        <option value="$PROJECT_DIR$/RV32I_single_controls.csv" />
-        <option value="$PROJECT_DIR$/RV32I_single_signals.csv" />
         <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py" />
+        <option value="$PROJECT_DIR$/RV32I_single_signals.csv" />
+        <option value="$PROJECT_DIR$/RV32I_single_controls.csv" />
       </list>
     </option>
   </component>
@@ -212,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hex2bin">
+  <component name="RunManager" selected="Python.controller_gen_combinational">
     <configuration name="controller_gen_combinational" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RISC-V-Processor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -278,8 +285,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hex2bin" />
         <item itemvalue="Python.controller_gen_combinational" />
+        <item itemvalue="Python.hex2bin" />
         <item itemvalue="Python.controller_gen_combinational_new" />
       </list>
     </recent_temporary>
@@ -393,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553452664787</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Changing memory to block ram.">
+      <created>1553457368610</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1553457368610</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -405,12 +419,12 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32664436" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32664436" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40315315" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32664436" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32664436" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32995495" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32995495" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -419,19 +433,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17028028" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34637758" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39910814" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32664436" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40315315" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32664436" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32995495" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32995495" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -512,58 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RV32I_single.vhd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller_gen_combinational.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RV32I_single_controls.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="492">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old_controller_gen/controller_gen_pipelined.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.bin">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -602,8 +564,63 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="120">
+          <caret line="6" column="167" selection-start-line="6" selection-start-column="167" selection-end-line="6" selection-end-column="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RV32I_single_controls.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
+          <column index="0" width="100" />
+          <column index="1" width="100" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+          <column index="4" width="100" />
+          <column index="5" width="100" />
+          <column index="6" width="100" />
+          <column index="7" width="100" />
+          <column index="8" width="100" />
+          <column index="9" width="100" />
+          <column index="10" width="100" />
+          <column index="11" width="100" />
+          <column index="12" width="100" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old_controller_gen/controller_gen_pipelined.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2076">
+          <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller_gen_combinational.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-880">
+          <caret line="104" column="52" lean-forward="true" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RV32I_single.vhd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="88" column="41" lean-forward="true" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
         </state>
       </provider>
     </entry>

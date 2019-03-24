@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="RV32I_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1553457025"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1553457025"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1553457025"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1553457025"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1553459444"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1553459444"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1553459444"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1553459444"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\RV32I_1_Descrambler_1_0\RV32I_1_Descrambler_1_0.xci" Type="IP">
         <Instance HierarchyPath="Descrambler_1"/>
@@ -166,6 +166,14 @@
       </File>
       <File Name="ip\RV32I_1_blk_mem_gen_1_0\RV32I_1_blk_mem_gen_1_0.xci" Type="IP">
         <Instance HierarchyPath="blk_mem_gen_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\RV32I_1_multi_cycle_regs_0_0\RV32I_1_multi_cycle_regs_0_0.xci" Type="IP">
+        <Instance HierarchyPath="multi_cycle_regs_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
