@@ -34,7 +34,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity registers is
     Port ( clk : in STD_LOGIC;
            clk_en : in STD_LOGIC;
-           instr: in STD_LOGIC_VECTOR(31 downto 0);
+           instr1: in STD_LOGIC_VECTOR(31 downto 0);
+           instr2: in STD_LOGIC_VECTOR(31 downto 0);
            --rs1 : in STD_LOGIC_VECTOR(4 downto 0);
            --rs2 : in STD_LOGIC_VECTOR(4 downto 0);
            --rd : in STD_LOGIC_VECTOR(4 downto 0);
@@ -58,13 +59,13 @@ begin
     process (clk) 
     begin
        if(rising_edge(clk) and clk_en = '1') then
-            if (wen = '1' and unsigned(instr(11 downto 7)) > 0) then
-                register_file_1(to_integer(unsigned(instr(11 downto 7)))) <= reg_write_input;
-                register_file_2(to_integer(unsigned(instr(11 downto 7)))) <= reg_write_input;
+            if (wen = '1' and unsigned(instr2(11 downto 7)) > 0) then
+                register_file_1(to_integer(unsigned(instr2(11 downto 7)))) <= reg_write_input;
+                register_file_2(to_integer(unsigned(instr2(11 downto 7)))) <= reg_write_input;
            end if;
        end if;
     end process;
-    reg_1_out <= std_logic_vector(register_file_1(to_integer(unsigned(instr(19 downto 15)))));
-    reg_2_out <= std_logic_vector(register_file_2(to_integer(unsigned(instr(24 downto 20)))));
-    debug_leds <= register_file_1(6)(3 downto 0);
+    reg_1_out <= std_logic_vector(register_file_1(to_integer(unsigned(instr1(19 downto 15)))));
+    reg_2_out <= std_logic_vector(register_file_2(to_integer(unsigned(instr1(24 downto 20)))));
+    debug_leds <= register_file_1(31)(3 downto 0);
 end Behavioral;

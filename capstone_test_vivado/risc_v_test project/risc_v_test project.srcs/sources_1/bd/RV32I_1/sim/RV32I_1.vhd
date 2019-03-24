@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Sun Mar 24 00:31:48 2019
+--Date        : Sun Mar 24 13:34:00 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_1.bd
 --Design      : RV32I_1
@@ -13,13 +13,16 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity RV32I_1 is
   port (
+    btn0 : in STD_LOGIC;
+    btn3 : in STD_LOGIC;
     clk : in STD_LOGIC;
-    led : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw0 : in STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of RV32I_1 : entity is "RV32I_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=RV32I_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=14,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=14,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of RV32I_1 : entity is "RV32I_1.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of RV32I_1 : entity is "RV32I_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=RV32I_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=16,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of RV32I_1 : entity is "RV32I_1.hwdef";
 end RV32I_1;
 
 architecture STRUCTURE of RV32I_1 is
@@ -97,12 +100,22 @@ architecture STRUCTURE of RV32I_1 is
     reg_write_input : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_1_mux_reg_write_0_0;
-  component RV32I_1_clock_div_0_0 is
+  component RV32I_1_pre_memory_logic_0_0 is
   port (
-    clk : in STD_LOGIC;
-    div_clk : out STD_LOGIC
+    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addr1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    addr1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    byte_enable : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  end component RV32I_1_clock_div_0_0;
+  end component RV32I_1_pre_memory_logic_0_0;
+  component RV32I_1_post_memory_logic_0_0 is
+  port (
+    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    out1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    out1_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_1_post_memory_logic_0_0;
   component RV32I_1_registers_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -115,10 +128,27 @@ architecture STRUCTURE of RV32I_1 is
     debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_1_registers_0_0;
+  component RV32I_1_debounce_0_0 is
+  port (
+    btn : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    dbnc : out STD_LOGIC
+  );
+  end component RV32I_1_debounce_0_0;
+  component RV32I_1_debounce_1_0 is
+  port (
+    btn : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    dbnc : out STD_LOGIC
+  );
+  end component RV32I_1_debounce_1_0;
   component RV32I_1_pc_logic_0_0 is
   port (
     clk : in STD_LOGIC;
     clk_en : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    debug_enable : in STD_LOGIC;
+    debug_next_instr : in STD_LOGIC;
     control_mux_next_pc : in STD_LOGIC_VECTOR ( 1 downto 0 );
     output_bus : in STD_LOGIC_VECTOR ( 31 downto 0 );
     pc : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -138,22 +168,12 @@ architecture STRUCTURE of RV32I_1 is
     data : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_1_memory_0_0;
-  component RV32I_1_pre_memory_logic_0_0 is
+  component RV32I_1_clock_div_0_0 is
   port (
-    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addr1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    addr1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    byte_enable : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    clk : in STD_LOGIC;
+    div_clk : out STD_LOGIC
   );
-  end component RV32I_1_pre_memory_logic_0_0;
-  component RV32I_1_post_memory_logic_0_0 is
-  port (
-    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    out1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    out1_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_1_post_memory_logic_0_0;
+  end component RV32I_1_clock_div_0_0;
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
   signal ALU_0_sum : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -171,6 +191,10 @@ architecture STRUCTURE of RV32I_1 is
   signal brach_logic_0_mux_next_pc : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal clk_0_1 : STD_LOGIC;
   signal clock_div_0_div_clk : STD_LOGIC;
+  signal debounce_0_dbnc : STD_LOGIC;
+  signal debounce_1_dbnc : STD_LOGIC;
+  signal debug_enable_0_1 : STD_LOGIC;
+  signal debug_next_instr_0_1 : STD_LOGIC;
   signal memory_0_instr : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal memory_0_out1 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal mux_output_0_output_bus : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -185,14 +209,20 @@ architecture STRUCTURE of RV32I_1 is
   signal registers_0_debug_leds : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal registers_0_reg_1_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal registers_0_reg_2_out : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal rst_0_1 : STD_LOGIC;
   signal NLW_RV32I_single_0_error_UNCONNECTED : STD_LOGIC;
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN RV32I_1_clk_0, FREQ_HZ 125000000, INSERT_VIP 0, PHASE 0.000";
+  attribute x_interface_info : string;
+  attribute x_interface_info of btn3 : signal is "xilinx.com:signal:reset:1.0 RST.BTN3 RST";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of btn3 : signal is "XIL_INTERFACENAME RST.BTN3, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN RV32I_1_clk, FREQ_HZ 125000000, INSERT_VIP 0, PHASE 0.000";
 begin
   clk_0_1 <= clk;
+  debug_enable_0_1 <= sw0;
+  debug_next_instr_0_1 <= btn0;
   led(3 downto 0) <= registers_0_debug_leds(3 downto 0);
+  rst_0_1 <= btn3;
 ALU_0: component RV32I_1_ALU_0_0
      port map (
       A(31 downto 0) => mux_reg_pc_alu_0_alu_A(31 downto 0),
@@ -234,6 +264,18 @@ clock_div_0: component RV32I_1_clock_div_0_0
      port map (
       clk => clk_0_1,
       div_clk => clock_div_0_div_clk
+    );
+debounce_0: component RV32I_1_debounce_0_0
+     port map (
+      btn => debug_next_instr_0_1,
+      clk => clk_0_1,
+      dbnc => debounce_0_dbnc
+    );
+debounce_1: component RV32I_1_debounce_1_0
+     port map (
+      btn => rst_0_1,
+      clk => clk_0_1,
+      dbnc => debounce_1_dbnc
     );
 memory_0: component RV32I_1_memory_0_0
      port map (
@@ -281,9 +323,12 @@ pc_logic_0: component RV32I_1_pc_logic_0_0
       clk => clk_0_1,
       clk_en => clock_div_0_div_clk,
       control_mux_next_pc(1 downto 0) => brach_logic_0_mux_next_pc(1 downto 0),
+      debug_enable => debug_enable_0_1,
+      debug_next_instr => debounce_0_dbnc,
       output_bus(31 downto 0) => mux_output_0_output_bus(31 downto 0),
       pc(31 downto 0) => pc_logic_0_pc(31 downto 0),
-      pc_plus_4(31 downto 0) => pc_logic_0_pc_plus_4(31 downto 0)
+      pc_plus_4(31 downto 0) => pc_logic_0_pc_plus_4(31 downto 0),
+      rst => debounce_1_dbnc
     );
 post_memory_logic_0: component RV32I_1_post_memory_logic_0_0
      port map (
