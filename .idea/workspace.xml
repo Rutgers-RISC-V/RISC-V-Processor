@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="" />
+    <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/gui_handlers.wdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/java_command_handlers.wdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/project.wpc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/synthesis.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/synthesis.wdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/webtalk_pa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bd" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bxml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xci" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xci" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ui/bd_2027a618.ui" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ui/bd_2027a618.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/clock_div/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/clock_div/component.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/memory/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/memory/component.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/post_memory_logic/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/post_memory_logic/component.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/pre_memory_logic/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/pre_memory_logic/component.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/clock_div.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/clock_div.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/memory.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/memory.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.xpr" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/old_controller_gen/controller_gen_clocked.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="120">
               <caret line="9" column="27" selection-end-line="147" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -54,11 +85,6 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RV32I_single_controls.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="520">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-            </state>
-          </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
               <column index="0" width="100" />
@@ -77,15 +103,15 @@
               <column index="13" width="100" />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="520">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RV32I_single_signals.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-            </state>
-          </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
               <column index="0" width="100" />
@@ -96,6 +122,11 @@
               <column index="5" width="100" />
               <column index="6" width="100" />
               <column index="7" width="100" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -143,25 +174,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
-              <item name="old_controller_gen" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -307,11 +320,19 @@
       <option name="project" value="LOCAL" />
       <updated>1553384351932</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added addr1_out to pre_memory_logic">
+      <created>1553399239498</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1553399239498</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.34660926" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -407,6 +428,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/old_controller_gen/controller_gen_clocked.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="27" selection-end-line="147" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/old_controller_gen/controller_gen_combinational_old.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3300">
@@ -425,11 +456,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RV32I_single_controls.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-        </state>
-      </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -448,6 +474,11 @@
           <column index="13" width="100" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RV32I_single.vhd">
       <provider selected="true" editor-type-id="text-editor">
@@ -456,22 +487,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old_controller_gen/controller_gen_clocked.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="27" selection-end-line="147" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RV32I_single_signals.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -482,6 +498,11 @@
           <column index="5" width="100" />
           <column index="6" width="100" />
           <column index="7" width="100" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
     </entry>

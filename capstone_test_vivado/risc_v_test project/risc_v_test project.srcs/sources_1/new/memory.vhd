@@ -51,6 +51,13 @@ architecture Behavioral of memory is
     signal mem_1: mem := (others=>(others=>'0'));
     signal mem_2: mem := (others=>(others=>'0'));
     signal mem_3: mem := (others=>(others=>'0'));
+    
+    
+--    mem_0(0) <= x"13";
+--    mem_1(0) <= x"03";
+--    mem_2(0) <= x"50";
+--    mem_3(0) <= x"00";
+     
 begin
     process (clk) begin
         if(rising_edge(clk) and clk_en = '1' and wen = '1') then
@@ -69,5 +76,5 @@ begin
         end if;
     end process;
     out1 <= mem_3(to_integer(unsigned(addr1(bit_width downto 0)))) & mem_2(to_integer(unsigned(addr1(bit_width downto 0)))) & mem_1(to_integer(unsigned(addr1(bit_width downto 0)))) & mem_0(to_integer(unsigned(addr1(bit_width downto 0))));
-    instr <= mem_3(to_integer(unsigned(pc(bit_width downto 0)))) & mem_2(to_integer(unsigned(pc(bit_width downto 0)))) & mem_1(to_integer(unsigned(pc(bit_width downto 0)))) & mem_0(to_integer(unsigned(pc(bit_width downto 0))));
+    instr <= x"00500313"; --mem_3(to_integer(unsigned(pc(bit_width downto 0)))) & mem_2(to_integer(unsigned(pc(bit_width downto 0)))) & mem_1(to_integer(unsigned(pc(bit_width downto 0)))) & mem_0(to_integer(unsigned(pc(bit_width downto 0))));
 end Behavioral;
