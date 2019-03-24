@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="RV32I_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1553450207"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1553450207"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1553450207"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1553450207"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1553457025"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1553457025"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1553457025"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1553457025"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\RV32I_1_Descrambler_1_0\RV32I_1_Descrambler_1_0.xci" Type="IP">
         <Instance HierarchyPath="Descrambler_1"/>

@@ -21,9 +21,9 @@
       "registers_0": "",
       "debounce_0": "",
       "debounce_1": "",
-      "pc_logic_0": "",
       "clock_div_0": "",
-      "blk_mem_gen_1": ""
+      "blk_mem_gen_1": "",
+      "pc_logic_0": ""
     },
     "ports": {
       "clk": {
@@ -470,54 +470,6 @@
           }
         }
       },
-      "pc_logic_0": {
-        "vlnv": "xilinx.com:module_ref:pc_logic:1.0",
-        "xci_name": "RV32I_1_pc_logic_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pc_logic",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clk_en": {
-            "direction": "I"
-          },
-          "debug_enable": {
-            "direction": "I"
-          },
-          "debug_next_instr": {
-            "direction": "I"
-          },
-          "control_mux_next_pc": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "output_bus": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "pc": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "pc_plus_4": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
       "clock_div_0": {
         "vlnv": "xilinx.com:module_ref:clock_div:1.0",
         "xci_name": "RV32I_1_clock_div_0_0",
@@ -608,6 +560,54 @@
           },
           "use_bram_block": {
             "value": "Stand_Alone"
+          }
+        }
+      },
+      "pc_logic_0": {
+        "vlnv": "xilinx.com:module_ref:pc_logic:1.0",
+        "xci_name": "RV32I_1_pc_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pc_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_en": {
+            "direction": "I"
+          },
+          "debug_enable": {
+            "direction": "I"
+          },
+          "debug_next_instr": {
+            "direction": "I"
+          },
+          "control_mux_next_pc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "output_bus": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "pc_plus_4": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         }
       }
@@ -779,10 +779,10 @@
           "registers_0/clk",
           "debounce_1/clk",
           "debounce_0/clk",
-          "pc_logic_0/clk",
           "clock_div_0/clk",
           "blk_mem_gen_1/clka",
-          "blk_mem_gen_1/clkb"
+          "blk_mem_gen_1/clkb",
+          "pc_logic_0/clk"
         ]
       },
       "registers_0_debug_leds": {
