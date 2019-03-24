@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Mar 24 00:34:33 2019
+// Date        : Sun Mar 24 12:15:12 2019
 // Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub {C:/Users/Oz
 //               Bejerano/PycharmProjects/RISC-V-Processor/capstone_test_vivado/risc_v_test project/risc_v_test

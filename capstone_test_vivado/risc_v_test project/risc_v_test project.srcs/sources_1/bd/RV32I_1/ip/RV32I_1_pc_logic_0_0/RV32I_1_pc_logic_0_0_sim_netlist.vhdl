@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 24 00:34:19 2019
+-- Date        : Sun Mar 24 12:15:07 2019
 -- Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim {C:/Users/Oz
 --               Bejerano/PycharmProjects/RISC-V-Processor/capstone_test_vivado/risc_v_test project/risc_v_test
@@ -22,16 +22,22 @@ entity RV32I_1_pc_logic_0_0_pc_logic is
     clk : in STD_LOGIC;
     control_mux_next_pc : in STD_LOGIC_VECTOR ( 1 downto 0 );
     output_bus : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    clk_en : in STD_LOGIC
+    clk_en : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    debug_next_instr : in STD_LOGIC;
+    debug_enable : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of RV32I_1_pc_logic_0_0_pc_logic : entity is "pc_logic";
 end RV32I_1_pc_logic_0_0_pc_logic;
 
 architecture STRUCTURE of RV32I_1_pc_logic_0_0_pc_logic is
+  signal instruction_changed_i_1_n_0 : STD_LOGIC;
+  signal instruction_changed_reg_n_0 : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^pc\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^pc_plus_4\ : STD_LOGIC_VECTOR ( 30 downto 0 );
+  signal pc_reg : STD_LOGIC;
   signal pc_reg0 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal pc_reg0_0 : STD_LOGIC;
   signal \pc_reg0_carry__0_i_1_n_0\ : STD_LOGIC;
@@ -134,6 +140,29 @@ architecture STRUCTURE of RV32I_1_pc_logic_0_0_pc_logic is
 begin
   pc(31 downto 0) <= \^pc\(31 downto 0);
   pc_plus_4(30 downto 0) <= \^pc_plus_4\(30 downto 0);
+instruction_changed_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FD20FF00"
+    )
+        port map (
+      I0 => clk_en,
+      I1 => rst,
+      I2 => debug_next_instr,
+      I3 => instruction_changed_reg_n_0,
+      I4 => debug_enable,
+      O => instruction_changed_i_1_n_0
+    );
+instruction_changed_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => instruction_changed_i_1_n_0,
+      Q => instruction_changed_reg_n_0,
+      R => '0'
+    );
 pc_reg0_carry: unisim.vcomponents.CARRY4
      port map (
       CI => '0',
@@ -831,17 +860,29 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
       I4 => control_mux_next_pc(1),
       O => p_0_in(30)
     );
-\pc_reg[31]_i_1\: unisim.vcomponents.LUT3
+\pc_reg[31]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"A8"
+      INIT => X"8"
     )
         port map (
       I0 => clk_en,
-      I1 => control_mux_next_pc(1),
-      I2 => control_mux_next_pc(0),
+      I1 => rst,
       O => pc_reg0_0
     );
-\pc_reg[31]_i_2\: unisim.vcomponents.LUT5
+\pc_reg[31]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2F002F002F000000"
+    )
+        port map (
+      I0 => debug_next_instr,
+      I1 => instruction_changed_reg_n_0,
+      I2 => debug_enable,
+      I3 => clk_en,
+      I4 => control_mux_next_pc(1),
+      I5 => control_mux_next_pc(0),
+      O => pc_reg
+    );
+\pc_reg[31]_i_3\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8B8FF00"
     )
@@ -943,10 +984,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(0),
       Q => \^pc\(0),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[10]\: unisim.vcomponents.FDRE
     generic map(
@@ -954,10 +995,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(10),
       Q => \^pc\(10),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[11]\: unisim.vcomponents.FDRE
     generic map(
@@ -965,10 +1006,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(11),
       Q => \^pc\(11),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[12]\: unisim.vcomponents.FDRE
     generic map(
@@ -976,10 +1017,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(12),
       Q => \^pc\(12),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[13]\: unisim.vcomponents.FDRE
     generic map(
@@ -987,10 +1028,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(13),
       Q => \^pc\(13),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[14]\: unisim.vcomponents.FDRE
     generic map(
@@ -998,10 +1039,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(14),
       Q => \^pc\(14),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[15]\: unisim.vcomponents.FDRE
     generic map(
@@ -1009,10 +1050,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(15),
       Q => \^pc\(15),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[16]\: unisim.vcomponents.FDRE
     generic map(
@@ -1020,10 +1061,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(16),
       Q => \^pc\(16),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[17]\: unisim.vcomponents.FDRE
     generic map(
@@ -1031,10 +1072,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(17),
       Q => \^pc\(17),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[18]\: unisim.vcomponents.FDRE
     generic map(
@@ -1042,10 +1083,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(18),
       Q => \^pc\(18),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[19]\: unisim.vcomponents.FDRE
     generic map(
@@ -1053,10 +1094,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(19),
       Q => \^pc\(19),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -1064,10 +1105,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(1),
       Q => \^pc\(1),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[20]\: unisim.vcomponents.FDRE
     generic map(
@@ -1075,10 +1116,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(20),
       Q => \^pc\(20),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[21]\: unisim.vcomponents.FDRE
     generic map(
@@ -1086,10 +1127,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(21),
       Q => \^pc\(21),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[22]\: unisim.vcomponents.FDRE
     generic map(
@@ -1097,10 +1138,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(22),
       Q => \^pc\(22),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[23]\: unisim.vcomponents.FDRE
     generic map(
@@ -1108,10 +1149,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(23),
       Q => \^pc\(23),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[24]\: unisim.vcomponents.FDRE
     generic map(
@@ -1119,10 +1160,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(24),
       Q => \^pc\(24),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[25]\: unisim.vcomponents.FDRE
     generic map(
@@ -1130,10 +1171,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(25),
       Q => \^pc\(25),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[26]\: unisim.vcomponents.FDRE
     generic map(
@@ -1141,10 +1182,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(26),
       Q => \^pc\(26),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[27]\: unisim.vcomponents.FDRE
     generic map(
@@ -1152,10 +1193,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(27),
       Q => \^pc\(27),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[28]\: unisim.vcomponents.FDRE
     generic map(
@@ -1163,10 +1204,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(28),
       Q => \^pc\(28),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[29]\: unisim.vcomponents.FDRE
     generic map(
@@ -1174,10 +1215,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(29),
       Q => \^pc\(29),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -1185,10 +1226,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(2),
       Q => \^pc\(2),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[30]\: unisim.vcomponents.FDRE
     generic map(
@@ -1196,10 +1237,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(30),
       Q => \^pc\(30),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[31]\: unisim.vcomponents.FDRE
     generic map(
@@ -1207,10 +1248,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(31),
       Q => \^pc\(31),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[3]\: unisim.vcomponents.FDRE
     generic map(
@@ -1218,10 +1259,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(3),
       Q => \^pc\(3),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -1229,10 +1270,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(4),
       Q => \^pc\(4),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[5]\: unisim.vcomponents.FDRE
     generic map(
@@ -1240,10 +1281,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(5),
       Q => \^pc\(5),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[6]\: unisim.vcomponents.FDRE
     generic map(
@@ -1251,10 +1292,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(6),
       Q => \^pc\(6),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[7]\: unisim.vcomponents.FDRE
     generic map(
@@ -1262,10 +1303,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(7),
       Q => \^pc\(7),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[8]\: unisim.vcomponents.FDRE
     generic map(
@@ -1273,10 +1314,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(8),
       Q => \^pc\(8),
-      R => '0'
+      R => pc_reg0_0
     );
 \pc_reg_reg[9]\: unisim.vcomponents.FDRE
     generic map(
@@ -1284,10 +1325,10 @@ pc_reg0_carry_i_4: unisim.vcomponents.LUT2
     )
         port map (
       C => clk,
-      CE => pc_reg0_0,
+      CE => pc_reg,
       D => p_0_in(9),
       Q => \^pc\(9),
-      R => '0'
+      R => pc_reg0_0
     );
 plusOp_carry: unisim.vcomponents.CARRY4
      port map (
@@ -1407,6 +1448,9 @@ entity RV32I_1_pc_logic_0_0 is
   port (
     clk : in STD_LOGIC;
     clk_en : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    debug_enable : in STD_LOGIC;
+    debug_next_instr : in STD_LOGIC;
     control_mux_next_pc : in STD_LOGIC_VECTOR ( 1 downto 0 );
     output_bus : in STD_LOGIC_VECTOR ( 31 downto 0 );
     pc : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1430,7 +1474,9 @@ architecture STRUCTURE of RV32I_1_pc_logic_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk_0, INSERT_VIP 0";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk, INSERT_VIP 0";
+  attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
+  attribute x_interface_parameter of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
   pc(31 downto 0) <= \^pc\(31 downto 0);
   pc_plus_4(31 downto 1) <= \^pc_plus_4\(31 downto 1);
@@ -1440,8 +1486,11 @@ U0: entity work.RV32I_1_pc_logic_0_0_pc_logic
       clk => clk,
       clk_en => clk_en,
       control_mux_next_pc(1 downto 0) => control_mux_next_pc(1 downto 0),
+      debug_enable => debug_enable,
+      debug_next_instr => debug_next_instr,
       output_bus(31 downto 0) => output_bus(31 downto 0),
       pc(31 downto 0) => \^pc\(31 downto 0),
-      pc_plus_4(30 downto 0) => \^pc_plus_4\(31 downto 1)
+      pc_plus_4(30 downto 0) => \^pc_plus_4\(31 downto 1),
+      rst => rst
     );
 end STRUCTURE;

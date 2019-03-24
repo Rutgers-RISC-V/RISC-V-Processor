@@ -66,5 +66,5 @@ begin
     end process;
     reg_1_out <= std_logic_vector(register_file_1(to_integer(unsigned(instr(19 downto 15)))));
     reg_2_out <= std_logic_vector(register_file_2(to_integer(unsigned(instr(24 downto 20)))));
-    debug_leds <= register_file_1(6)(3 downto 0);
+    debug_leds <= register_file_1(31)(3 downto 0);
 end Behavioral;

@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Mar 24 00:34:33 2019
+// Date        : Sun Mar 24 12:15:12 2019
 // Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {C:/Users/Oz
 //               Bejerano/PycharmProjects/RISC-V-Processor/capstone_test_vivado/risc_v_test project/risc_v_test
@@ -25,7 +25,7 @@ module RV32I_1_registers_0_0
     reg_2_out,
     wen,
     debug_leds);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk_0, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk, INSERT_VIP 0" *) input clk;
   input clk_en;
   input [31:0]instr;
   input [31:0]reg_write_input;
@@ -466,8 +466,8 @@ module RV32I_1_registers_0_0_registers
   wire [31:0]reg_2_out;
   wire [31:0]reg_write_input;
   wire \register_file_1[2][31]_i_2_n_0 ;
+  wire \register_file_1[31][3]_i_2_n_0 ;
   wire \register_file_1[4][31]_i_2_n_0 ;
-  wire \register_file_1[6][3]_i_2_n_0 ;
   wire [31:0]\register_file_1_reg[10] ;
   wire \register_file_1_reg[10]0 ;
   wire [31:0]\register_file_1_reg[11] ;
@@ -514,7 +514,7 @@ module RV32I_1_registers_0_0_registers
   wire \register_file_1_reg[2]0 ;
   wire [31:0]\register_file_1_reg[30] ;
   wire \register_file_1_reg[30]0 ;
-  wire [31:0]\register_file_1_reg[31] ;
+  wire [31:4]\register_file_1_reg[31] ;
   wire \register_file_1_reg[31]0 ;
   wire [31:0]\register_file_1_reg[3] ;
   wire \register_file_1_reg[3]0 ;
@@ -522,7 +522,7 @@ module RV32I_1_registers_0_0_registers
   wire \register_file_1_reg[4]0 ;
   wire [31:0]\register_file_1_reg[5] ;
   wire \register_file_1_reg[5]0 ;
-  wire [31:4]\register_file_1_reg[6] ;
+  wire [31:0]\register_file_1_reg[6] ;
   wire \register_file_1_reg[6]0 ;
   wire [31:0]\register_file_1_reg[7] ;
   wire \register_file_1_reg[7]0 ;
@@ -579,7 +579,7 @@ module RV32I_1_registers_0_0_registers
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \reg_1_out[0]_INST_0_i_12 
        (.I0(\register_file_1_reg[7] [0]),
-        .I1(debug_leds[0]),
+        .I1(\register_file_1_reg[6] [0]),
         .I2(instr[6]),
         .I3(\register_file_1_reg[5] [0]),
         .I4(instr[5]),
@@ -613,7 +613,7 @@ module RV32I_1_registers_0_0_registers
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \reg_1_out[0]_INST_0_i_6 
-       (.I0(\register_file_1_reg[31] [0]),
+       (.I0(debug_leds[0]),
         .I1(\register_file_1_reg[30] [0]),
         .I2(instr[6]),
         .I3(\register_file_1_reg[29] [0]),
@@ -1778,7 +1778,7 @@ module RV32I_1_registers_0_0_registers
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \reg_1_out[1]_INST_0_i_12 
        (.I0(\register_file_1_reg[7] [1]),
-        .I1(debug_leds[1]),
+        .I1(\register_file_1_reg[6] [1]),
         .I2(instr[6]),
         .I3(\register_file_1_reg[5] [1]),
         .I4(instr[5]),
@@ -1812,7 +1812,7 @@ module RV32I_1_registers_0_0_registers
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \reg_1_out[1]_INST_0_i_6 
-       (.I0(\register_file_1_reg[31] [1]),
+       (.I0(debug_leds[1]),
         .I1(\register_file_1_reg[30] [1]),
         .I2(instr[6]),
         .I3(\register_file_1_reg[29] [1]),
@@ -2977,7 +2977,7 @@ module RV32I_1_registers_0_0_registers
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \reg_1_out[2]_INST_0_i_12 
        (.I0(\register_file_1_reg[7] [2]),
-        .I1(debug_leds[2]),
+        .I1(\register_file_1_reg[6] [2]),
         .I2(instr[6]),
         .I3(\register_file_1_reg[5] [2]),
         .I4(instr[5]),
@@ -3011,7 +3011,7 @@ module RV32I_1_registers_0_0_registers
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \reg_1_out[2]_INST_0_i_6 
-       (.I0(\register_file_1_reg[31] [2]),
+       (.I0(debug_leds[2]),
         .I1(\register_file_1_reg[30] [2]),
         .I2(instr[6]),
         .I3(\register_file_1_reg[29] [2]),
@@ -3304,7 +3304,7 @@ module RV32I_1_registers_0_0_registers
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \reg_1_out[3]_INST_0_i_12 
        (.I0(\register_file_1_reg[7] [3]),
-        .I1(debug_leds[3]),
+        .I1(\register_file_1_reg[6] [3]),
         .I2(instr[6]),
         .I3(\register_file_1_reg[5] [3]),
         .I4(instr[5]),
@@ -3338,7 +3338,7 @@ module RV32I_1_registers_0_0_registers
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \reg_1_out[3]_INST_0_i_6 
-       (.I0(\register_file_1_reg[31] [3]),
+       (.I0(debug_leds[3]),
         .I1(\register_file_1_reg[30] [3]),
         .I2(instr[6]),
         .I3(\register_file_1_reg[29] [3]),
@@ -4077,7 +4077,7 @@ module RV32I_1_registers_0_0_registers
         .I2(instr[0]),
         .I3(instr[3]),
         .I4(instr[4]),
-        .I5(\register_file_1[6][3]_i_2_n_0 ),
+        .I5(\register_file_1[31][3]_i_2_n_0 ),
         .O(\register_file_1_reg[14]0 ));
   LUT6 #(
     .INIT(64'h0000800000000000)) 
@@ -4087,7 +4087,7 @@ module RV32I_1_registers_0_0_registers
         .I2(instr[0]),
         .I3(instr[3]),
         .I4(instr[4]),
-        .I5(\register_file_1[6][3]_i_2_n_0 ),
+        .I5(\register_file_1[31][3]_i_2_n_0 ),
         .O(\register_file_1_reg[15]0 ));
   LUT6 #(
     .INIT(64'h0000000000000800)) 
@@ -4167,7 +4167,7 @@ module RV32I_1_registers_0_0_registers
         .I2(instr[0]),
         .I3(instr[4]),
         .I4(instr[3]),
-        .I5(\register_file_1[6][3]_i_2_n_0 ),
+        .I5(\register_file_1[31][3]_i_2_n_0 ),
         .O(\register_file_1_reg[22]0 ));
   LUT6 #(
     .INIT(64'h0000800000000000)) 
@@ -4177,7 +4177,7 @@ module RV32I_1_registers_0_0_registers
         .I2(instr[0]),
         .I3(instr[4]),
         .I4(instr[3]),
-        .I5(\register_file_1[6][3]_i_2_n_0 ),
+        .I5(\register_file_1[31][3]_i_2_n_0 ),
         .O(\register_file_1_reg[23]0 ));
   LUT6 #(
     .INIT(64'h0000000008000000)) 
@@ -4264,18 +4264,25 @@ module RV32I_1_registers_0_0_registers
         .I2(instr[0]),
         .I3(instr[3]),
         .I4(instr[4]),
-        .I5(\register_file_1[6][3]_i_2_n_0 ),
+        .I5(\register_file_1[31][3]_i_2_n_0 ),
         .O(\register_file_1_reg[30]0 ));
   LUT6 #(
     .INIT(64'h8000000000000000)) 
-    \register_file_1[31][31]_i_1 
+    \register_file_1[31][3]_i_1 
        (.I0(wen),
         .I1(clk_en),
         .I2(instr[0]),
         .I3(instr[3]),
         .I4(instr[4]),
-        .I5(\register_file_1[6][3]_i_2_n_0 ),
+        .I5(\register_file_1[31][3]_i_2_n_0 ),
         .O(\register_file_1_reg[31]0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \register_file_1[31][3]_i_2 
+       (.I0(instr[1]),
+        .I1(instr[2]),
+        .O(\register_file_1[31][3]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h1000000000000000)) 
     \register_file_1[3][31]_i_1 
@@ -4315,21 +4322,14 @@ module RV32I_1_registers_0_0_registers
         .O(\register_file_1_reg[5]0 ));
   LUT6 #(
     .INIT(64'h0010000000000000)) 
-    \register_file_1[6][3]_i_1 
+    \register_file_1[6][31]_i_1 
        (.I0(instr[3]),
         .I1(instr[4]),
-        .I2(\register_file_1[6][3]_i_2_n_0 ),
+        .I2(\register_file_1[31][3]_i_2_n_0 ),
         .I3(instr[0]),
         .I4(clk_en),
         .I5(wen),
         .O(\register_file_1_reg[6]0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \register_file_1[6][3]_i_2 
-       (.I0(instr[1]),
-        .I1(instr[2]),
-        .O(\register_file_1[6][3]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h1000000000000000)) 
     \register_file_1[7][31]_i_1 
@@ -4338,7 +4338,7 @@ module RV32I_1_registers_0_0_registers
         .I2(wen),
         .I3(clk_en),
         .I4(instr[0]),
-        .I5(\register_file_1[6][3]_i_2_n_0 ),
+        .I5(\register_file_1[31][3]_i_2_n_0 ),
         .O(\register_file_1_reg[7]0 ));
   LUT6 #(
     .INIT(64'h0000000000000800)) 
@@ -10254,7 +10254,7 @@ module RV32I_1_registers_0_0_registers
        (.C(clk),
         .CE(\register_file_1_reg[31]0 ),
         .D(reg_write_input[0]),
-        .Q(\register_file_1_reg[31] [0]),
+        .Q(debug_leds[0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -10342,7 +10342,7 @@ module RV32I_1_registers_0_0_registers
        (.C(clk),
         .CE(\register_file_1_reg[31]0 ),
         .D(reg_write_input[1]),
-        .Q(\register_file_1_reg[31] [1]),
+        .Q(debug_leds[1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -10430,7 +10430,7 @@ module RV32I_1_registers_0_0_registers
        (.C(clk),
         .CE(\register_file_1_reg[31]0 ),
         .D(reg_write_input[2]),
-        .Q(\register_file_1_reg[31] [2]),
+        .Q(debug_leds[2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -10454,7 +10454,7 @@ module RV32I_1_registers_0_0_registers
        (.C(clk),
         .CE(\register_file_1_reg[31]0 ),
         .D(reg_write_input[3]),
-        .Q(\register_file_1_reg[31] [3]),
+        .Q(debug_leds[3]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -11278,7 +11278,7 @@ module RV32I_1_registers_0_0_registers
        (.C(clk),
         .CE(\register_file_1_reg[6]0 ),
         .D(reg_write_input[0]),
-        .Q(debug_leds[0]),
+        .Q(\register_file_1_reg[6] [0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -11366,7 +11366,7 @@ module RV32I_1_registers_0_0_registers
        (.C(clk),
         .CE(\register_file_1_reg[6]0 ),
         .D(reg_write_input[1]),
-        .Q(debug_leds[1]),
+        .Q(\register_file_1_reg[6] [1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -11454,7 +11454,7 @@ module RV32I_1_registers_0_0_registers
        (.C(clk),
         .CE(\register_file_1_reg[6]0 ),
         .D(reg_write_input[2]),
-        .Q(debug_leds[2]),
+        .Q(\register_file_1_reg[6] [2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -11478,7 +11478,7 @@ module RV32I_1_registers_0_0_registers
        (.C(clk),
         .CE(\register_file_1_reg[6]0 ),
         .D(reg_write_input[3]),
-        .Q(debug_leds[3]),
+        .Q(\register_file_1_reg[6] [3]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 

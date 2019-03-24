@@ -37,12 +37,12 @@ entity clock_div is -- slows down the clock by 10000x to 12.5 KHz
 end clock_div;
 
 architecture Behavioral of clock_div is
-signal counter: std_logic_vector(13 downto 0) := "00000000000000";
+signal counter: std_logic_vector(31 downto 0) := x"00000000";
 begin
     process(clk)
     begin
         if(rising_edge(clk)) then
-            if(unsigned(counter) < 9999) then
+            if(unsigned(counter) < 12_499_999) then
                 counter <= std_logic_vector(unsigned(counter)+1);
                 div_clk <= '0';
             else

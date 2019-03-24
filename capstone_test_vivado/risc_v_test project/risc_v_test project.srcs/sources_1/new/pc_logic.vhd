@@ -34,6 +34,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity pc_logic is
     Port ( clk: in STD_LOGIC;
            clk_en: in STD_LOGIC;
+           rst: in STD_LOGIC;
+           debug_enable: in STD_LOGIC;
+           debug_next_instr: in STD_LOGIC;
            control_mux_next_pc : in STD_LOGIC_VECTOR (1 downto 0);
            output_bus : in STD_LOGIC_VECTOR (31 downto 0);
            pc : out STD_LOGIC_VECTOR (31 downto 0);
@@ -42,6 +45,7 @@ end pc_logic;
 
 architecture Behavioral of pc_logic is
 signal pc_reg: std_logic_vector(31 downto 0) := (others => '0');
+signal instruction_changed: std_logic := '0';
 
 begin
 pc <= pc_reg;
@@ -49,17 +53,26 @@ pc_plus_4 <= std_logic_vector(unsigned(pc_reg)+4);
     
     process (clk)
     begin
-        if(rising_edge(clk) and clk_en = '1') then
-            case control_mux_next_pc is
-                when "00" => -- stall
-                    pc_reg <= pc_reg;
-                when "01" => -- jalr
-                    pc_reg <= output_bus;
-                when "10" =>
-                    pc_reg <= std_logic_vector(unsigned(pc_reg)+4);
-                when "11" =>
-                    pc_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(output_bus));-- value already will be sign extended so unsigned arithmetic is used
-            end case;
+        if(rising_edge(clk)) then
+            if(clk_en = '1' and rst = '1') then
+                pc_reg <= x"00000000";
+            elsif( clk_en = '1' and ( (debug_enable = '0') or (debug_enable = '1' and debug_next_instr = '1' and instruction_changed = '0'))) then
+                if(debug_enable = '1') then
+                    instruction_changed <= '1';
+                end if;
+                case control_mux_next_pc is
+                    when "00" => -- stall
+                        pc_reg <= pc_reg;
+                    when "01" => -- jalr
+                        pc_reg <= output_bus;
+                    when "10" =>
+                        pc_reg <= std_logic_vector(unsigned(pc_reg)+4);
+                    when "11" =>
+                        pc_reg <= std_logic_vector(unsigned(pc_reg)+unsigned(output_bus));-- value already will be sign extended so unsigned arithmetic is used
+                end case;
+            elsif( clk_en = '1' and debug_enable = '1' and debug_next_instr = '0') then
+                instruction_changed <= '0';
+            end if;
         end if;
     end process;
 end Behavioral;

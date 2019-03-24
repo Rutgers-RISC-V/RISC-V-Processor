@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Mar 24 00:34:19 2019
+// Date        : Sun Mar 24 12:15:07 2019
 // Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {C:/Users/Oz
 //               Bejerano/PycharmProjects/RISC-V-Processor/capstone_test_vivado/risc_v_test project/risc_v_test
@@ -19,12 +19,18 @@
 module RV32I_1_pc_logic_0_0
    (clk,
     clk_en,
+    rst,
+    debug_enable,
+    debug_next_instr,
     control_mux_next_pc,
     output_bus,
     pc,
     pc_plus_4);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk_0, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk, INSERT_VIP 0" *) input clk;
   input clk_en;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
+  input debug_enable;
+  input debug_next_instr;
   input [1:0]control_mux_next_pc;
   input [31:0]output_bus;
   output [31:0]pc;
@@ -33,9 +39,12 @@ module RV32I_1_pc_logic_0_0
   wire clk;
   wire clk_en;
   wire [1:0]control_mux_next_pc;
+  wire debug_enable;
+  wire debug_next_instr;
   wire [31:0]output_bus;
   wire [31:0]pc;
   wire [31:1]\^pc_plus_4 ;
+  wire rst;
 
   assign pc_plus_4[31:1] = \^pc_plus_4 [31:1];
   assign pc_plus_4[0] = pc[0];
@@ -43,9 +52,12 @@ module RV32I_1_pc_logic_0_0
        (.clk(clk),
         .clk_en(clk_en),
         .control_mux_next_pc(control_mux_next_pc),
+        .debug_enable(debug_enable),
+        .debug_next_instr(debug_next_instr),
         .output_bus(output_bus),
         .pc(pc),
-        .pc_plus_4(\^pc_plus_4 ));
+        .pc_plus_4(\^pc_plus_4 ),
+        .rst(rst));
 endmodule
 
 (* ORIG_REF_NAME = "pc_logic" *) 
@@ -55,21 +67,32 @@ module RV32I_1_pc_logic_0_0_pc_logic
     clk,
     control_mux_next_pc,
     output_bus,
-    clk_en);
+    clk_en,
+    rst,
+    debug_next_instr,
+    debug_enable);
   output [31:0]pc;
   output [30:0]pc_plus_4;
   input clk;
   input [1:0]control_mux_next_pc;
   input [31:0]output_bus;
   input clk_en;
+  input rst;
+  input debug_next_instr;
+  input debug_enable;
 
   wire clk;
   wire clk_en;
   wire [1:0]control_mux_next_pc;
+  wire debug_enable;
+  wire debug_next_instr;
+  wire instruction_changed_i_1_n_0;
+  wire instruction_changed_reg_n_0;
   wire [31:0]output_bus;
   wire [31:0]p_0_in;
   wire [31:0]pc;
   wire [30:0]pc_plus_4;
+  wire pc_reg;
   wire [31:0]pc_reg0;
   wire pc_reg0_0;
   wire pc_reg0_carry__0_i_1_n_0;
@@ -166,10 +189,28 @@ module RV32I_1_pc_logic_0_0_pc_logic
   wire plusOp_carry_n_1;
   wire plusOp_carry_n_2;
   wire plusOp_carry_n_3;
+  wire rst;
   wire [3:3]NLW_pc_reg0_carry__6_CO_UNCONNECTED;
   wire [3:2]NLW_plusOp_carry__6_CO_UNCONNECTED;
   wire [3:3]NLW_plusOp_carry__6_O_UNCONNECTED;
 
+  LUT5 #(
+    .INIT(32'hFD20FF00)) 
+    instruction_changed_i_1
+       (.I0(clk_en),
+        .I1(rst),
+        .I2(debug_next_instr),
+        .I3(instruction_changed_reg_n_0),
+        .I4(debug_enable),
+        .O(instruction_changed_i_1_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    instruction_changed_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(instruction_changed_i_1_n_0),
+        .Q(instruction_changed_reg_n_0),
+        .R(1'b0));
   CARRY4 pc_reg0_carry
        (.CI(1'b0),
         .CO({pc_reg0_carry_n_0,pc_reg0_carry_n_1,pc_reg0_carry_n_2,pc_reg0_carry_n_3}),
@@ -634,16 +675,25 @@ module RV32I_1_pc_logic_0_0_pc_logic
         .I3(output_bus[30]),
         .I4(control_mux_next_pc[1]),
         .O(p_0_in[30]));
-  LUT3 #(
-    .INIT(8'hA8)) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \pc_reg[31]_i_1 
        (.I0(clk_en),
-        .I1(control_mux_next_pc[1]),
-        .I2(control_mux_next_pc[0]),
+        .I1(rst),
         .O(pc_reg0_0));
+  LUT6 #(
+    .INIT(64'h2F002F002F000000)) 
+    \pc_reg[31]_i_2 
+       (.I0(debug_next_instr),
+        .I1(instruction_changed_reg_n_0),
+        .I2(debug_enable),
+        .I3(clk_en),
+        .I4(control_mux_next_pc[1]),
+        .I5(control_mux_next_pc[0]),
+        .O(pc_reg));
   LUT5 #(
     .INIT(32'hB8B8FF00)) 
-    \pc_reg[31]_i_2 
+    \pc_reg[31]_i_3 
        (.I0(pc_reg0[31]),
         .I1(control_mux_next_pc[0]),
         .I2(pc_plus_4[30]),
@@ -717,258 +767,258 @@ module RV32I_1_pc_logic_0_0_pc_logic
     .INIT(1'b0)) 
     \pc_reg_reg[0] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[0]),
         .Q(pc[0]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[10] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[10]),
         .Q(pc[10]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[11] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[11]),
         .Q(pc[11]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[12] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[12]),
         .Q(pc[12]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[13] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[13]),
         .Q(pc[13]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[14] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[14]),
         .Q(pc[14]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[15] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[15]),
         .Q(pc[15]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[16] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[16]),
         .Q(pc[16]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[17] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[17]),
         .Q(pc[17]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[18] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[18]),
         .Q(pc[18]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[19] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[19]),
         .Q(pc[19]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[1] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[1]),
         .Q(pc[1]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[20] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[20]),
         .Q(pc[20]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[21] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[21]),
         .Q(pc[21]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[22] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[22]),
         .Q(pc[22]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[23] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[23]),
         .Q(pc[23]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[24] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[24]),
         .Q(pc[24]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[25] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[25]),
         .Q(pc[25]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[26] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[26]),
         .Q(pc[26]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[27] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[27]),
         .Q(pc[27]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[28] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[28]),
         .Q(pc[28]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[29] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[29]),
         .Q(pc[29]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[2] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[2]),
         .Q(pc[2]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[30] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[30]),
         .Q(pc[30]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[31] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[31]),
         .Q(pc[31]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[3] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[3]),
         .Q(pc[3]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[4] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[4]),
         .Q(pc[4]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[5] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[5]),
         .Q(pc[5]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[6] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[6]),
         .Q(pc[6]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[7] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[7]),
         .Q(pc[7]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[8] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[8]),
         .Q(pc[8]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[9] 
        (.C(clk),
-        .CE(pc_reg0_0),
+        .CE(pc_reg),
         .D(p_0_in[9]),
         .Q(pc[9]),
-        .R(1'b0));
+        .R(pc_reg0_0));
   CARRY4 plusOp_carry
        (.CI(1'b0),
         .CO({plusOp_carry_n_0,plusOp_carry_n_1,plusOp_carry_n_2,plusOp_carry_n_3}),

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ALU, Descrambler, RV32I_single, brach_logic, clock_div, memory, mux_output, mux_reg_descr_alu, mux_reg_pc_alu, mux_reg_write, pc_logic, post_memory_logic, pre_memory_logic, registers
+# ALU, Descrambler, RV32I_single, brach_logic, clock_div, debounce, debounce, memory, mux_output, mux_reg_descr_alu, mux_reg_pc_alu, mux_reg_write, pc_logic, post_memory_logic, pre_memory_logic, registers
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -164,11 +164,14 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
+  set btn0 [ create_bd_port -dir I btn0 ]
+  set btn3 [ create_bd_port -dir I -type rst btn3 ]
   set clk [ create_bd_port -dir I -type clk clk ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {125000000} \
  ] $clk
   set led [ create_bd_port -dir O -from 3 -to 0 led ]
+  set sw0 [ create_bd_port -dir I sw0 ]
 
   # Create instance: ALU_0, and set properties
   set block_name ALU
@@ -221,6 +224,32 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $clock_div_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {10e-5} \
+ ] [get_bd_pins /clock_div_0/div_clk]
+
+  # Create instance: debounce_0, and set properties
+  set block_name debounce
+  set block_cell_name debounce_0
+  if { [catch {set debounce_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $debounce_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: debounce_1, and set properties
+  set block_name debounce
+  set block_cell_name debounce_1
+  if { [catch {set debounce_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $debounce_1 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -340,8 +369,12 @@ proc create_root_design { parentCell } {
   connect_bd_net -net RV32I_single_0_mux_reg_pc_alu [get_bd_pins RV32I_single_0/mux_reg_pc_alu] [get_bd_pins mux_reg_pc_alu_0/control_mux_reg_pc_alu]
   connect_bd_net -net RV32I_single_0_mux_reg_write [get_bd_pins RV32I_single_0/mux_reg_write] [get_bd_pins mux_reg_write_0/control_mux_reg_write]
   connect_bd_net -net brach_logic_0_mux_next_pc [get_bd_pins brach_logic_0/mux_next_pc] [get_bd_pins pc_logic_0/control_mux_next_pc]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins clock_div_0/clk] [get_bd_pins memory_0/clk] [get_bd_pins pc_logic_0/clk] [get_bd_pins registers_0/clk]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins clock_div_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins memory_0/clk] [get_bd_pins pc_logic_0/clk] [get_bd_pins registers_0/clk]
   connect_bd_net -net clock_div_0_div_clk [get_bd_pins clock_div_0/div_clk] [get_bd_pins memory_0/clk_en] [get_bd_pins pc_logic_0/clk_en] [get_bd_pins registers_0/clk_en]
+  connect_bd_net -net debounce_0_dbnc [get_bd_pins debounce_0/dbnc] [get_bd_pins pc_logic_0/debug_next_instr]
+  connect_bd_net -net debounce_1_dbnc [get_bd_pins debounce_1/dbnc] [get_bd_pins pc_logic_0/rst]
+  connect_bd_net -net debug_enable_0_1 [get_bd_ports sw0] [get_bd_pins pc_logic_0/debug_enable]
+  connect_bd_net -net debug_next_instr_0_1 [get_bd_ports btn0] [get_bd_pins debounce_0/btn]
   connect_bd_net -net memory_0_instr [get_bd_pins Descrambler_1/scr_imm] [get_bd_pins RV32I_single_0/instr] [get_bd_pins memory_0/instr] [get_bd_pins registers_0/instr]
   connect_bd_net -net memory_0_out1 [get_bd_pins memory_0/out1] [get_bd_pins post_memory_logic_0/out1_in]
   connect_bd_net -net mux_output_0_output_bus [get_bd_pins mux_output_0/output_bus] [get_bd_pins mux_reg_write_0/output_bus] [get_bd_pins pc_logic_0/output_bus] [get_bd_pins post_memory_logic_0/addr1] [get_bd_pins pre_memory_logic_0/addr1_in]
@@ -356,6 +389,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net registers_0_debug_leds [get_bd_ports led] [get_bd_pins registers_0/debug_leds]
   connect_bd_net -net registers_0_reg_1_out [get_bd_pins mux_reg_pc_alu_0/reg_1_out] [get_bd_pins registers_0/reg_1_out]
   connect_bd_net -net registers_0_reg_2_out [get_bd_pins memory_0/data] [get_bd_pins mux_reg_descr_alu_0/reg_2_out] [get_bd_pins registers_0/reg_2_out]
+  connect_bd_net -net rst_0_1 [get_bd_ports btn3] [get_bd_pins debounce_1/btn]
 
   # Create address segments
 

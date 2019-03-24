@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 24 00:34:33 2019
+-- Date        : Sun Mar 24 12:15:12 2019
 -- Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim {C:/Users/Oz
 --               Bejerano/PycharmProjects/RISC-V-Processor/capstone_test_vivado/risc_v_test project/risc_v_test
@@ -418,8 +418,8 @@ architecture STRUCTURE of RV32I_1_registers_0_0_registers is
   signal \reg_1_out[9]_INST_0_i_8_n_0\ : STD_LOGIC;
   signal \reg_1_out[9]_INST_0_i_9_n_0\ : STD_LOGIC;
   signal \register_file_1[2][31]_i_2_n_0\ : STD_LOGIC;
+  signal \register_file_1[31][3]_i_2_n_0\ : STD_LOGIC;
   signal \register_file_1[4][31]_i_2_n_0\ : STD_LOGIC;
-  signal \register_file_1[6][3]_i_2_n_0\ : STD_LOGIC;
   signal \register_file_1_reg[10]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \register_file_1_reg[10]0\ : STD_LOGIC;
   signal \register_file_1_reg[11]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -466,7 +466,7 @@ architecture STRUCTURE of RV32I_1_registers_0_0_registers is
   signal \register_file_1_reg[2]0\ : STD_LOGIC;
   signal \register_file_1_reg[30]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \register_file_1_reg[30]0\ : STD_LOGIC;
-  signal \register_file_1_reg[31]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \register_file_1_reg[31]\ : STD_LOGIC_VECTOR ( 31 downto 4 );
   signal \register_file_1_reg[31]0\ : STD_LOGIC;
   signal \register_file_1_reg[3]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \register_file_1_reg[3]0\ : STD_LOGIC;
@@ -474,7 +474,7 @@ architecture STRUCTURE of RV32I_1_registers_0_0_registers is
   signal \register_file_1_reg[4]0\ : STD_LOGIC;
   signal \register_file_1_reg[5]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \register_file_1_reg[5]0\ : STD_LOGIC;
-  signal \register_file_1_reg[6]\ : STD_LOGIC_VECTOR ( 31 downto 4 );
+  signal \register_file_1_reg[6]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \register_file_1_reg[6]0\ : STD_LOGIC;
   signal \register_file_1_reg[7]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \register_file_1_reg[7]0\ : STD_LOGIC;
@@ -493,8 +493,8 @@ architecture STRUCTURE of RV32I_1_registers_0_0_registers is
   signal NLW_register_file_2_reg_0_31_6_11_DOD_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \register_file_1[2][31]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \register_file_1[31][3]_i_2\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \register_file_1[4][31]_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \register_file_1[6][3]_i_2\ : label is "soft_lutpair1";
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of register_file_2_reg_0_31_0_5 : label is "";
   attribute ram_addr_begin : integer;
@@ -584,7 +584,7 @@ begin
     )
         port map (
       I0 => \register_file_1_reg[7]\(0),
-      I1 => \^debug_leds\(0),
+      I1 => \register_file_1_reg[6]\(0),
       I2 => instr(6),
       I3 => \register_file_1_reg[5]\(0),
       I4 => instr(5),
@@ -630,7 +630,7 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \register_file_1_reg[31]\(0),
+      I0 => \^debug_leds\(0),
       I1 => \register_file_1_reg[30]\(0),
       I2 => instr(6),
       I3 => \register_file_1_reg[29]\(0),
@@ -2168,7 +2168,7 @@ begin
     )
         port map (
       I0 => \register_file_1_reg[7]\(1),
-      I1 => \^debug_leds\(1),
+      I1 => \register_file_1_reg[6]\(1),
       I2 => instr(6),
       I3 => \register_file_1_reg[5]\(1),
       I4 => instr(5),
@@ -2214,7 +2214,7 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \register_file_1_reg[31]\(1),
+      I0 => \^debug_leds\(1),
       I1 => \register_file_1_reg[30]\(1),
       I2 => instr(6),
       I3 => \register_file_1_reg[29]\(1),
@@ -3752,7 +3752,7 @@ begin
     )
         port map (
       I0 => \register_file_1_reg[7]\(2),
-      I1 => \^debug_leds\(2),
+      I1 => \register_file_1_reg[6]\(2),
       I2 => instr(6),
       I3 => \register_file_1_reg[5]\(2),
       I4 => instr(5),
@@ -3798,7 +3798,7 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \register_file_1_reg[31]\(2),
+      I0 => \^debug_leds\(2),
       I1 => \register_file_1_reg[30]\(2),
       I2 => instr(6),
       I3 => \register_file_1_reg[29]\(2),
@@ -4184,7 +4184,7 @@ begin
     )
         port map (
       I0 => \register_file_1_reg[7]\(3),
-      I1 => \^debug_leds\(3),
+      I1 => \register_file_1_reg[6]\(3),
       I2 => instr(6),
       I3 => \register_file_1_reg[5]\(3),
       I4 => instr(5),
@@ -4230,7 +4230,7 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \register_file_1_reg[31]\(3),
+      I0 => \^debug_leds\(3),
       I1 => \register_file_1_reg[30]\(3),
       I2 => instr(6),
       I3 => \register_file_1_reg[29]\(3),
@@ -5203,7 +5203,7 @@ begin
       I2 => instr(0),
       I3 => instr(3),
       I4 => instr(4),
-      I5 => \register_file_1[6][3]_i_2_n_0\,
+      I5 => \register_file_1[31][3]_i_2_n_0\,
       O => \register_file_1_reg[14]0\
     );
 \register_file_1[15][31]_i_1\: unisim.vcomponents.LUT6
@@ -5216,7 +5216,7 @@ begin
       I2 => instr(0),
       I3 => instr(3),
       I4 => instr(4),
-      I5 => \register_file_1[6][3]_i_2_n_0\,
+      I5 => \register_file_1[31][3]_i_2_n_0\,
       O => \register_file_1_reg[15]0\
     );
 \register_file_1[16][31]_i_1\: unisim.vcomponents.LUT6
@@ -5320,7 +5320,7 @@ begin
       I2 => instr(0),
       I3 => instr(4),
       I4 => instr(3),
-      I5 => \register_file_1[6][3]_i_2_n_0\,
+      I5 => \register_file_1[31][3]_i_2_n_0\,
       O => \register_file_1_reg[22]0\
     );
 \register_file_1[23][31]_i_1\: unisim.vcomponents.LUT6
@@ -5333,7 +5333,7 @@ begin
       I2 => instr(0),
       I3 => instr(4),
       I4 => instr(3),
-      I5 => \register_file_1[6][3]_i_2_n_0\,
+      I5 => \register_file_1[31][3]_i_2_n_0\,
       O => \register_file_1_reg[23]0\
     );
 \register_file_1[24][31]_i_1\: unisim.vcomponents.LUT6
@@ -5446,10 +5446,10 @@ begin
       I2 => instr(0),
       I3 => instr(3),
       I4 => instr(4),
-      I5 => \register_file_1[6][3]_i_2_n_0\,
+      I5 => \register_file_1[31][3]_i_2_n_0\,
       O => \register_file_1_reg[30]0\
     );
-\register_file_1[31][31]_i_1\: unisim.vcomponents.LUT6
+\register_file_1[31][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"8000000000000000"
     )
@@ -5459,8 +5459,17 @@ begin
       I2 => instr(0),
       I3 => instr(3),
       I4 => instr(4),
-      I5 => \register_file_1[6][3]_i_2_n_0\,
+      I5 => \register_file_1[31][3]_i_2_n_0\,
       O => \register_file_1_reg[31]0\
+    );
+\register_file_1[31][3]_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => instr(1),
+      I1 => instr(2),
+      O => \register_file_1[31][3]_i_2_n_0\
     );
 \register_file_1[3][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -5510,27 +5519,18 @@ begin
       I5 => \register_file_1[4][31]_i_2_n_0\,
       O => \register_file_1_reg[5]0\
     );
-\register_file_1[6][3]_i_1\: unisim.vcomponents.LUT6
+\register_file_1[6][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0010000000000000"
     )
         port map (
       I0 => instr(3),
       I1 => instr(4),
-      I2 => \register_file_1[6][3]_i_2_n_0\,
+      I2 => \register_file_1[31][3]_i_2_n_0\,
       I3 => instr(0),
       I4 => clk_en,
       I5 => wen,
       O => \register_file_1_reg[6]0\
-    );
-\register_file_1[6][3]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => instr(1),
-      I1 => instr(2),
-      O => \register_file_1[6][3]_i_2_n_0\
     );
 \register_file_1[7][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -5542,7 +5542,7 @@ begin
       I2 => wen,
       I3 => clk_en,
       I4 => instr(0),
-      I5 => \register_file_1[6][3]_i_2_n_0\,
+      I5 => \register_file_1[31][3]_i_2_n_0\,
       O => \register_file_1_reg[7]0\
     );
 \register_file_1[8][31]_i_1\: unisim.vcomponents.LUT6
@@ -13675,7 +13675,7 @@ begin
       C => clk,
       CE => \register_file_1_reg[31]0\,
       D => reg_write_input(0),
-      Q => \register_file_1_reg[31]\(0),
+      Q => \^debug_leds\(0),
       R => '0'
     );
 \register_file_1_reg[31][10]\: unisim.vcomponents.FDRE
@@ -13796,7 +13796,7 @@ begin
       C => clk,
       CE => \register_file_1_reg[31]0\,
       D => reg_write_input(1),
-      Q => \register_file_1_reg[31]\(1),
+      Q => \^debug_leds\(1),
       R => '0'
     );
 \register_file_1_reg[31][20]\: unisim.vcomponents.FDRE
@@ -13917,7 +13917,7 @@ begin
       C => clk,
       CE => \register_file_1_reg[31]0\,
       D => reg_write_input(2),
-      Q => \register_file_1_reg[31]\(2),
+      Q => \^debug_leds\(2),
       R => '0'
     );
 \register_file_1_reg[31][30]\: unisim.vcomponents.FDRE
@@ -13950,7 +13950,7 @@ begin
       C => clk,
       CE => \register_file_1_reg[31]0\,
       D => reg_write_input(3),
-      Q => \register_file_1_reg[31]\(3),
+      Q => \^debug_leds\(3),
       R => '0'
     );
 \register_file_1_reg[31][4]\: unisim.vcomponents.FDRE
@@ -15083,7 +15083,7 @@ begin
       C => clk,
       CE => \register_file_1_reg[6]0\,
       D => reg_write_input(0),
-      Q => \^debug_leds\(0),
+      Q => \register_file_1_reg[6]\(0),
       R => '0'
     );
 \register_file_1_reg[6][10]\: unisim.vcomponents.FDRE
@@ -15204,7 +15204,7 @@ begin
       C => clk,
       CE => \register_file_1_reg[6]0\,
       D => reg_write_input(1),
-      Q => \^debug_leds\(1),
+      Q => \register_file_1_reg[6]\(1),
       R => '0'
     );
 \register_file_1_reg[6][20]\: unisim.vcomponents.FDRE
@@ -15325,7 +15325,7 @@ begin
       C => clk,
       CE => \register_file_1_reg[6]0\,
       D => reg_write_input(2),
-      Q => \^debug_leds\(2),
+      Q => \register_file_1_reg[6]\(2),
       R => '0'
     );
 \register_file_1_reg[6][30]\: unisim.vcomponents.FDRE
@@ -15358,7 +15358,7 @@ begin
       C => clk,
       CE => \register_file_1_reg[6]0\,
       D => reg_write_input(3),
-      Q => \^debug_leds\(3),
+      Q => \register_file_1_reg[6]\(3),
       R => '0'
     );
 \register_file_1_reg[6][4]\: unisim.vcomponents.FDRE
@@ -16675,7 +16675,7 @@ architecture STRUCTURE of RV32I_1_registers_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk_0, INSERT_VIP 0";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk, INSERT_VIP 0";
 begin
 U0: entity work.RV32I_1_registers_0_0_registers
      port map (
