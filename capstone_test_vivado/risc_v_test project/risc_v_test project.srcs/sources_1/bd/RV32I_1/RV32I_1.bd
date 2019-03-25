@@ -23,9 +23,9 @@
       "blk_mem_gen_1": "",
       "registers_0": "",
       "RV32I_single_0": "",
-      "pc_logic_0": "",
       "clk_wiz_0": "",
-      "multi_cycle_regs_0": ""
+      "multi_cycle_regs_0": "",
+      "pc_logic_0": ""
     },
     "ports": {
       "clk": {
@@ -636,86 +636,6 @@
           }
         }
       },
-      "pc_logic_0": {
-        "vlnv": "xilinx.com:module_ref:pc_logic:1.0",
-        "xci_name": "RV32I_1_pc_logic_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pc_logic",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "10000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clk_en": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "10000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "debug_enable": {
-            "direction": "I"
-          },
-          "debug_next_instr": {
-            "direction": "I"
-          },
-          "control_mux_next_pc": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "output_bus": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "pc": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "pc_plus_4": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "RV32I_1_clk_wiz_0_0",
@@ -856,6 +776,69 @@
           "reg_write_mux_out": {
             "direction": "O",
             "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "pc_logic_0": {
+        "vlnv": "xilinx.com:module_ref:pc_logic:1.0",
+        "xci_name": "RV32I_1_pc_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pc_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "debug_enable": {
+            "direction": "I"
+          },
+          "debug_next_instr": {
+            "direction": "I"
+          },
+          "control_mux_next_pc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "output_bus": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "pc_plus_4": {
+            "direction": "O",
+            "left": "31",
             "right": "0"
           }
         }
@@ -1072,8 +1055,8 @@
         "ports": [
           "mux_output_0/output_bus",
           "pre_memory_logic_0/addr1_in",
-          "pc_logic_0/output_bus",
-          "multi_cycle_regs_0/output_bus_in"
+          "multi_cycle_regs_0/output_bus_in",
+          "pc_logic_0/output_bus"
         ]
       },
       "multi_cycle_regs_0_control_mem_logic_out": {
@@ -1109,15 +1092,14 @@
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "pc_logic_0/clk",
-          "pc_logic_0/clk_en",
           "blk_mem_gen_1/clka",
           "blk_mem_gen_1/clkb",
           "registers_0/clk",
           "registers_0/clk_en",
           "debounce_1/clk",
           "debounce_0/clk",
-          "multi_cycle_regs_0/clk"
+          "multi_cycle_regs_0/clk",
+          "pc_logic_0/clk"
         ]
       }
     }

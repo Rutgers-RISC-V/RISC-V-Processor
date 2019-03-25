@@ -56,7 +56,6 @@ USE ieee.numeric_std.ALL;
 ENTITY RV32I_1_pc_logic_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    clk_en : IN STD_LOGIC;
     rst : IN STD_LOGIC;
     debug_enable : IN STD_LOGIC;
     debug_next_instr : IN STD_LOGIC;
@@ -73,7 +72,6 @@ ARCHITECTURE RV32I_1_pc_logic_0_0_arch OF RV32I_1_pc_logic_0_0 IS
   COMPONENT pc_logic IS
     PORT (
       clk : IN STD_LOGIC;
-      clk_en : IN STD_LOGIC;
       rst : IN STD_LOGIC;
       debug_enable : IN STD_LOGIC;
       debug_next_instr : IN STD_LOGIC;
@@ -95,13 +93,12 @@ ARCHITECTURE RV32I_1_pc_logic_0_0_arch OF RV32I_1_pc_logic_0_0 IS
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF rst: SIGNAL IS "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF rst: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN RV32I_1_clk, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : pc_logic
     PORT MAP (
       clk => clk,
-      clk_en => clk_en,
       rst => rst,
       debug_enable => debug_enable,
       debug_next_instr => debug_next_instr,

@@ -412,7 +412,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net blk_mem_gen_1_doutb [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins post_memory_logic_0/out1_in]
   connect_bd_net -net brach_logic_0_mux_next_pc [get_bd_pins brach_logic_0/mux_next_pc] [get_bd_pins pc_logic_0/control_mux_next_pc]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins blk_mem_gen_1/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins multi_cycle_regs_0/clk] [get_bd_pins pc_logic_0/clk] [get_bd_pins pc_logic_0/clk_en] [get_bd_pins registers_0/clk] [get_bd_pins registers_0/clk_en]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins blk_mem_gen_1/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins debounce_0/clk] [get_bd_pins debounce_1/clk] [get_bd_pins multi_cycle_regs_0/clk] [get_bd_pins pc_logic_0/clk] [get_bd_pins registers_0/clk] [get_bd_pins registers_0/clk_en]
   connect_bd_net -net debounce_0_dbnc [get_bd_pins debounce_0/dbnc] [get_bd_pins pc_logic_0/debug_next_instr]
   connect_bd_net -net debounce_1_dbnc [get_bd_pins debounce_1/dbnc] [get_bd_pins pc_logic_0/rst]
   connect_bd_net -net debug_enable_0_1 [get_bd_ports sw0] [get_bd_pins pc_logic_0/debug_enable]

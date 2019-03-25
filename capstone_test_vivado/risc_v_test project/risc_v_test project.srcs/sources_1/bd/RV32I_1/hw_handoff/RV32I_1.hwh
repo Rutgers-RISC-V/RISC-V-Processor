@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 24 17:46:16 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 24 18:22:03 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1003,8 +1003,6 @@
         </PORT>
         <PORT CLKFREQUENCY="10000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="pc_logic_0" PORT="clk"/>
-            <CONNECTION INSTANCE="pc_logic_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="clka"/>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="clkb"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk"/>
@@ -1012,6 +1010,7 @@
             <CONNECTION INSTANCE="debounce_1" PORT="clk"/>
             <CONNECTION INSTANCE="debounce_0" PORT="clk"/>
             <CONNECTION INSTANCE="multi_cycle_regs_0" PORT="clk"/>
+            <CONNECTION INSTANCE="pc_logic_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1158,8 +1157,8 @@
         <PORT DIR="O" LEFT="31" NAME="output_bus" RIGHT="0" SIGIS="undef" SIGNAME="mux_output_0_output_bus">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pre_memory_logic_0" PORT="addr1_in"/>
-            <CONNECTION INSTANCE="pc_logic_0" PORT="output_bus"/>
             <CONNECTION INSTANCE="multi_cycle_regs_0" PORT="output_bus_in"/>
+            <CONNECTION INSTANCE="pc_logic_0" PORT="output_bus"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1268,11 +1267,6 @@
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="10000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="clk_en" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>

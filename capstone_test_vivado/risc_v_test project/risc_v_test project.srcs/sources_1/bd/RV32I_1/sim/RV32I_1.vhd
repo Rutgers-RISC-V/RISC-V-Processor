@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Sun Mar 24 17:46:15 2019
+--Date        : Sun Mar 24 18:22:02 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_1.bd
 --Design      : RV32I_1
@@ -156,19 +156,6 @@ architecture STRUCTURE of RV32I_1 is
     control_mem_logic : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_1_RV32I_single_0_0;
-  component RV32I_1_pc_logic_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    debug_enable : in STD_LOGIC;
-    debug_next_instr : in STD_LOGIC;
-    control_mux_next_pc : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    output_bus : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pc : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    pc_plus_4 : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_1_pc_logic_0_0;
   component RV32I_1_clk_wiz_0_0 is
   port (
     clk_in1 : in STD_LOGIC;
@@ -190,6 +177,18 @@ architecture STRUCTURE of RV32I_1 is
     reg_write_mux_out : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component RV32I_1_multi_cycle_regs_0_0;
+  component RV32I_1_pc_logic_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    debug_enable : in STD_LOGIC;
+    debug_next_instr : in STD_LOGIC;
+    control_mux_next_pc : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    output_bus : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    pc : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    pc_plus_4 : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_1_pc_logic_0_0;
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
   signal ALU_0_sum : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -355,7 +354,6 @@ mux_reg_write_0: component RV32I_1_mux_reg_write_0_0
 pc_logic_0: component RV32I_1_pc_logic_0_0
      port map (
       clk => clk_wiz_0_clk_out1,
-      clk_en => clk_wiz_0_clk_out1,
       control_mux_next_pc(1 downto 0) => brach_logic_0_mux_next_pc(1 downto 0),
       debug_enable => debug_enable_0_1,
       debug_next_instr => debounce_0_dbnc,

@@ -59,9 +59,9 @@ pc_plus_4 <= std_logic_vector(unsigned(pc_reg)+4); -- nop doesn't use pc+4 anywa
     process (clk)
     begin
         if(rising_edge(clk)) then
-            if(clk_en = '1' and rst = '1') then
+            if(rst = '1') then
                 pc_reg <= x"00000000";
-            elsif( clk_en = '1' and clk_counter = "11" and debug_enable = '0') then
+            elsif( clk_counter = "11" and debug_enable = '0') then
                 clk_counter <= "00";
                 completed_cycle <= '1';
                 case control_mux_signal is 

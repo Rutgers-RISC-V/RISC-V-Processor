@@ -19,8 +19,8 @@ preplace inst blk_mem_gen_1 -pg 1 -lvl 4 -y 580 -defaultsOSRD
 preplace inst debounce_1 -pg 1 -lvl 1 -y 360 -defaultsOSRD
 preplace inst registers_0 -pg 1 -lvl 6 -y 500 -defaultsOSRD
 preplace inst mux_reg_descr_alu_0 -pg 1 -lvl 7 -y 440 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 260 -defaultsOSRD
 preplace inst pc_logic_0 -pg 1 -lvl 3 -y 660 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 260 -defaultsOSRD
 preplace inst mux_reg_pc_alu_0 -pg 1 -lvl 7 -y 300 -defaultsOSRD
 preplace inst Descrambler_1 -pg 1 -lvl 6 -y 650 -defaultsOSRD
 preplace inst brach_logic_0 -pg 1 -lvl 9 -y 320 -defaultsOSRD
