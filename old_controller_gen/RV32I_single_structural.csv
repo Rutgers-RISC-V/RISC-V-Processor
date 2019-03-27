@@ -1,0 +1,4 @@
+line name,alias(es),vector Description
+clk, , 0, clock operating at 50Mhz
+div_clk, , 0,  clock operating at 12Mhz
+alu_op, ,1:0, logic vector for alu
