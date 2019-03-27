@@ -2,260 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/old_controller_gen/RV32I_single_controls.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_controller_gen/RV32I_single_signals.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_controller_gen/controller_gen_combinational.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RV32I_single.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/old_controller_gen/RV32I_single.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RV32I_single_controls.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RV32I_controls.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RV32I_single_pipelined.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/old_controller_gen/RV32I_single_pipelined.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RV32I_single_signals.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RV32I_signals.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RV32I_single_structural.csv" beforeDir="false" afterPath="$PROJECT_DIR$/old_controller_gen/RV32I_single_structural.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/ip_upgrade.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/gui_handlers.wdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/java_command_handlers.wdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/project.wpc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/synthesis.wdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/synthesis_details.wdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.cache/wt/webtalk_pa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.hw/risc_v_test project.lpr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.ip_user_files/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.ip_user_files/mem_init_files/summary.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.runs/.jobs/vrs_config_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.runs/.jobs/vrs_config_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.runs/.jobs/vrs_config_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.runs/.jobs/vrs_config_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/constrs_1/new/ZYBO_MASTER.xdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1.bxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/RV32I_1_ooc.xdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/hdl/RV32I_1_wrapper.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/hw_handoff/RV32I_1.hwh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/hw_handoff/RV32I_1_bd.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/RV32I_1_ALU_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/sim/RV32I_1_ALU_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_ALU_0_0/synth/RV32I_1_ALU_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/RV32I_1_Descrambler_1_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/sim/RV32I_1_Descrambler_1_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_Descrambler_1_0/synth/RV32I_1_Descrambler_1_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/RV32I_1_RV32I_single_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/sim/RV32I_1_RV32I_single_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_RV32I_single_0_0/synth/RV32I_1_RV32I_single_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0.mif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0_ooc.xdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/RV32I_1_blk_mem_gen_1_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/sim/RV32I_1_blk_mem_gen_1_0.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_blk_mem_gen_1_0/synth/RV32I_1_blk_mem_gen_1_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/RV32I_1_brach_logic_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/sim/RV32I_1_brach_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_brach_logic_0_0/synth/RV32I_1_brach_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0.xdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0_board.xdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0_clk_wiz.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0_ooc.xdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_clk_wiz_0_0/RV32I_1_clk_wiz_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/RV32I_1_debounce_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/RV32I_1_debounce_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/RV32I_1_debounce_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/RV32I_1_debounce_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/RV32I_1_debounce_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/RV32I_1_debounce_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/RV32I_1_debounce_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/sim/RV32I_1_debounce_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_0_0/synth/RV32I_1_debounce_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/RV32I_1_debounce_1_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/RV32I_1_debounce_1_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/RV32I_1_debounce_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/RV32I_1_debounce_1_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/RV32I_1_debounce_1_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/RV32I_1_debounce_1_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/RV32I_1_debounce_1_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/sim/RV32I_1_debounce_1_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_debounce_1_0/synth/RV32I_1_debounce_1_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/RV32I_1_multi_cycle_regs_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/RV32I_1_multi_cycle_regs_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/RV32I_1_multi_cycle_regs_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/RV32I_1_multi_cycle_regs_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/RV32I_1_multi_cycle_regs_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/RV32I_1_multi_cycle_regs_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/RV32I_1_multi_cycle_regs_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/sim/RV32I_1_multi_cycle_regs_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_multi_cycle_regs_0_0/synth/RV32I_1_multi_cycle_regs_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/RV32I_1_mux_output_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/sim/RV32I_1_mux_output_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_output_0_0/synth/RV32I_1_mux_output_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/RV32I_1_mux_reg_descr_alu_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/sim/RV32I_1_mux_reg_descr_alu_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_descr_alu_0_0/synth/RV32I_1_mux_reg_descr_alu_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/RV32I_1_mux_reg_pc_alu_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/sim/RV32I_1_mux_reg_pc_alu_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_pc_alu_0_0/synth/RV32I_1_mux_reg_pc_alu_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/RV32I_1_mux_reg_write_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/sim/RV32I_1_mux_reg_write_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_mux_reg_write_0_0/synth/RV32I_1_mux_reg_write_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/RV32I_1_pc_logic_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/sim/RV32I_1_pc_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pc_logic_0_0/synth/RV32I_1_pc_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/RV32I_1_post_memory_logic_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/sim/RV32I_1_post_memory_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_post_memory_logic_0_0/synth/RV32I_1_post_memory_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/RV32I_1_pre_memory_logic_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/sim/RV32I_1_pre_memory_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_pre_memory_logic_0_0/synth/RV32I_1_pre_memory_logic_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.dcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0_sim_netlist.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0_sim_netlist.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0_stub.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/RV32I_1_registers_0_0_stub.vhdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/sim/RV32I_1_registers_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ip/RV32I_1_registers_0_0/synth/RV32I_1_registers_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ipshared/37c2/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ipshared/37c2/simulation/blk_mem_gen_v8_4.v" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ipshared/85a3/mmcm_pll_drp_func_7s_mmcm.vh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ipshared/85a3/mmcm_pll_drp_func_7s_pll.vh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ipshared/85a3/mmcm_pll_drp_func_us_mmcm.vh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ipshared/85a3/mmcm_pll_drp_func_us_pll.vh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ipshared/85a3/mmcm_pll_drp_func_us_plus_mmcm.vh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ipshared/85a3/mmcm_pll_drp_func_us_plus_pll.vh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/sim/RV32I_1.protoinst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/sim/RV32I_1.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/synth/RV32I_1.hwdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/synth/RV32I_1.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/RV32I_1/ui/bd_2027a618.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/ALU/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/ALU/xgui/ALU_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/Descrambler_1/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/Descrambler_1/xgui/Descrambler_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/RV32I_single/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/RV32I_single/xgui/RV32I_single_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/RV32I_single_controls/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/RV32I_single_controls/xgui/RV32I_single_controls_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/brach_logic/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/brach_logic/xgui/brach_logic_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/debounce/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/debounce/xgui/debounce_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/descrambler/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/descrambler/xgui/descrambler_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/memory_logic/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/memory_logic/xgui/memory_logic_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/multi_cycle_regs/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/multi_cycle_regs/xgui/multi_cycle_regs_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/mux_output/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/mux_output/xgui/mux_output_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/mux_reg_descr_alu/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/mux_reg_descr_alu/xgui/mux_reg_descr_alu_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/mux_reg_pc_alu/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/mux_reg_pc_alu/xgui/mux_reg_pc_alu_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/mux_reg_write/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/mux_reg_write/xgui/mux_reg_write_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/pc_logic/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/pc_logic/xgui/pc_logic_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/post_memory_logic/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/post_memory_logic/xgui/post_memory_logic_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/pre_memory_logic/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/pre_memory_logic/xgui/pre_memory_logic_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/registers/component.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/bd/mref/registers/xgui/registers_v1_0.tcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/imports/RISC-V-Processor/ALU.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/imports/RISC-V-Processor/Descrambler.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/imports/RISC-V-Processor/RV32I_single.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/RV32I_processor.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/brach_logic.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/clock_div.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/debounce.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/descrambler.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/hazard_logic.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/hazard_shift_counter.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/memory.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/memory_logic.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/multi_cycle_regs.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/mux_output.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/mux_reg_descr_alu.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/mux_reg_pc_alu.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/mux_reg_write.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/pc_logic.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/pre_memory_logic.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.srcs/sources_1/new/registers.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_test_vivado/risc_v_test project/risc_v_test project.xpr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller_gen_combinational.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller_gen.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -265,27 +12,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/old_controller_gen/RV32I_single_signals.csv">
-          <provider editor-type-id="csv-text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="102" selection-start-line="4" selection-start-column="102" selection-end-line="4" selection-end-column="102" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-              <column index="0" width="293" />
-              <column index="1" width="409" />
-              <column index="2" width="100" />
-              <column index="3" width="100" />
-              <column index="4" width="100" />
-              <column index="5" width="100" />
-              <column index="6" width="100" />
-              <column index="7" width="685" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/old_controller_gen/RV32I_single_pipelined.vhdl">
           <provider selected="true" editor-type-id="text-editor" />
@@ -316,19 +42,14 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RV32I_controls.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RV32I_signals.csv">
-          <provider editor-type-id="csv-text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-            </state>
-          </provider>
           <provider selected="true" editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
               <column index="0" width="100" />
@@ -341,15 +62,20 @@
               <column index="7" width="100" />
             </state>
           </provider>
+          <provider editor-type-id="csv-text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/addTest.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/old_controller_gen/RV32I_single_controls.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
-            </state>
-          </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
               <column index="0" width="100" />
@@ -365,6 +91,11 @@
               <column index="10" width="100" />
               <column index="11" width="100" />
               <column index="12" width="100" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -430,6 +161,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -446,13 +178,18 @@
               <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
               <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
               <item name="Dumps_and_Assembly" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic Code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="Dumps_and_Assembly" type="462c0819:PsiDirectoryNode" />
               <item name="Dumps" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RecentsManager">
@@ -699,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553490720252</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Implemented the pipelined design for the processor in Vivado. Starting to debug the design in hardware and with a testbench.">
+      <created>1553682992499</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1553682992499</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -759,7 +503,8 @@
     <MESSAGE value="Changing memory to block ram." />
     <MESSAGE value="Changing memory to block ram, updated pc_logic to support multi-cycle operation and added in a multi_cycle register file." />
     <MESSAGE value="Working on pipelining processor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on pipelining processor" />
+    <MESSAGE value="Implemented the pipelined design for the processor in Vivado. Starting to debug the design in hardware and with a testbench." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the pipelined design for the processor in Vivado. Starting to debug the design in hardware and with a testbench." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -883,11 +628,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/old_controller_gen/RV32I_single_signals.csv">
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="102" selection-start-line="4" selection-start-column="102" selection-end-line="4" selection-end-column="102" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="293" />
@@ -898,6 +638,11 @@
           <column index="5" width="100" />
           <column index="6" width="100" />
           <column index="7" width="685" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="102" selection-start-line="4" selection-start-column="102" selection-end-line="4" selection-end-column="102" />
         </state>
       </provider>
     </entry>
@@ -922,17 +667,31 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/RV32I_controls.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/old_controller_gen/RV32I_single_controls.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+    <entry file="file://$PROJECT_DIR$/RV32I_signals.csv">
+      <provider selected="true" editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
+          <column index="0" width="100" />
+          <column index="1" width="100" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+          <column index="4" width="100" />
+          <column index="5" width="100" />
+          <column index="6" width="100" />
+          <column index="7" width="100" />
         </state>
       </provider>
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old_controller_gen/RV32I_single_controls.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -950,6 +709,11 @@
           <column index="12" width="100" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/old_controller_gen/RV32I_single.vhd">
       <provider selected="true" editor-type-id="text-editor">
@@ -961,24 +725,8 @@
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.bin">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RV32I_signals.csv">
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/addTest.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
