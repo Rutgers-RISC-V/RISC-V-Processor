@@ -5,16 +5,16 @@ compile:
 	gcc $(FLAGS) -S terminal_computer.c parallelSnakes.c
 	
 snakes:
-	gcc $(FLAGS) terminal_hardware.c parallelSnakes_converted.c -o snakes
+	gcc $(FLAGS) -S terminal_hardware.c parallelSnakes_converted.c
 	
 pyramids:
-	gcc $(FLAGS) terminal_hardware.c pyramids_converted.c -o pyramids	
+	gcc $(FLAGS) -S terminal_hardware.c pyramids_converted.c	
 	
 pyramids_Oz:
-	gcc $(FLAGS) terminal_hardware.c pyramids_Oz.c -o pyramids_Oz
+	gcc $(FLAGS) -S terminal_hardware.c pyramids_Oz.c
 	
 old_pyramids:
-	gcc $(FLAGS) terminal_hardware.c pyramids.c -o old_pyramids
+	gcc $(FLAGS) -S terminal_hardware.c pyramids.c
 	
 clean:
 	rm -rf test
