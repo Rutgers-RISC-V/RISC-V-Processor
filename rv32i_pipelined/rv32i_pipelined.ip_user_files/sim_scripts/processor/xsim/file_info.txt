@@ -1,0 +1,2 @@
+processor.vhd,vhdl,xil_defaultlib,../../../bd/processor/sim/processor.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

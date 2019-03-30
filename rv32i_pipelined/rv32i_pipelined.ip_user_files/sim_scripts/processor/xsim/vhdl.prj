@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/processor/sim/processor.vhd" \
+
+nosort

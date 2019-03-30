@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ipshared/85a3" \
+"../../../../rv32i_pipelined.ip_user_files/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/sim/RV32I_pipelined_blk_mem_gen_0_0.v" \
+"../../../../rv32i_pipelined.ip_user_files/bd/RV32I_pipelined/ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0_clk_wiz.v" \
+"../../../../rv32i_pipelined.ip_user_files/bd/RV32I_pipelined/ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
