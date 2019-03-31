@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="481500001fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
+      <Cursor1Time time="404100000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="61" />
+   <WVObjectSize size="58" />
    <wvobject fp_name="/RV32I_pipelined_tb/btn3" type="logic">
       <obj_property name="ElementShortName">btn3</obj_property>
       <obj_property name="ObjectShortName">btn3</obj_property>
@@ -178,26 +178,6 @@
       <obj_property name="ElementShortName">control_alu[3:0]</obj_property>
       <obj_property name="ObjectShortName">control_alu[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/sum" type="array">
-      <obj_property name="ElementShortName">sum[31:0]</obj_property>
-      <obj_property name="ObjectShortName">sum[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/zero" type="logic">
-      <obj_property name="ElementShortName">zero</obj_property>
-      <obj_property name="ObjectShortName">zero</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/sign" type="logic">
-      <obj_property name="ElementShortName">sign</obj_property>
-      <obj_property name="ObjectShortName">sign</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/overflow" type="logic">
-      <obj_property name="ElementShortName">overflow</obj_property>
-      <obj_property name="ObjectShortName">overflow</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/temp" type="array">
-      <obj_property name="ElementShortName">temp[32:0]</obj_property>
-      <obj_property name="ObjectShortName">temp[32:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/Descrambler_0/U0/scr_imm" type="array">
       <obj_property name="ElementShortName">scr_imm[31:0]</obj_property>
       <obj_property name="ObjectShortName">scr_imm[31:0]</obj_property>
@@ -266,5 +246,13 @@
    <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/register_file_2" type="array">
       <obj_property name="ElementShortName">register_file_2[0:31][31:0]</obj_property>
       <obj_property name="ObjectShortName">register_file_2[0:31][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/alu_out_33" type="array">
+      <obj_property name="ElementShortName">alu_out_33[32:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out_33[32:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/clk_wiz_0/inst/locked" type="logic">
+      <obj_property name="ElementShortName">locked</obj_property>
+      <obj_property name="ObjectShortName">locked</obj_property>
    </wvobject>
 </wave_config>

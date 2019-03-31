@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Sun Mar 31 17:06:31 2019
+--Date        : Sun Mar 31 18:56:46 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -90,12 +90,14 @@ architecture STRUCTURE of RV32I_pipelined is
   component RV32I_pipelined_clk_wiz_0_0 is
   port (
     clk_in1 : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC
+    clk_out1 : out STD_LOGIC;
+    locked : out STD_LOGIC
   );
   end component RV32I_pipelined_clk_wiz_0_0;
   component RV32I_pipelined_clock_div_0_0 is
   port (
     clk : in STD_LOGIC;
+    locked : in STD_LOGIC;
     div_clk : out STD_LOGIC
   );
   end component RV32I_pipelined_clock_div_0_0;
@@ -323,6 +325,7 @@ architecture STRUCTURE of RV32I_pipelined is
   signal btn_0_1 : STD_LOGIC;
   signal clk_2 : STD_LOGIC;
   signal clk_in1_0_1 : STD_LOGIC;
+  signal clk_wiz_0_locked : STD_LOGIC;
   signal clock_div_0_div_clk : STD_LOGIC;
   signal debounce_0_dbnc : STD_LOGIC;
   signal hazard_logic_0_hazard_stage : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -437,12 +440,14 @@ brach_logic_0: component RV32I_pipelined_brach_logic_0_0
 clk_wiz_0: component RV32I_pipelined_clk_wiz_0_0
      port map (
       clk_in1 => clk_in1_0_1,
-      clk_out1 => clk_2
+      clk_out1 => clk_2,
+      locked => clk_wiz_0_locked
     );
 clock_div_0: component RV32I_pipelined_clock_div_0_0
      port map (
       clk => clk_2,
-      div_clk => clock_div_0_div_clk
+      div_clk => clock_div_0_div_clk,
+      locked => clk_wiz_0_locked
     );
 debounce_0: component RV32I_pipelined_debounce_0_0
      port map (

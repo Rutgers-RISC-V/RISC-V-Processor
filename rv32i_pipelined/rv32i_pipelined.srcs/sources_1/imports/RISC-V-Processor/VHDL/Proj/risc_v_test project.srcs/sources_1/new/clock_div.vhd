@@ -33,6 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity clock_div is -- slows down the clock by 5 to 10 MHz
     Port ( clk : in STD_LOGIC;
+           locked: in STD_LOGIC;
            div_clk : out STD_LOGIC);
 end clock_div;
 
@@ -42,7 +43,7 @@ signal div_clk_reg: std_logic := '0';
 begin
     process(clk)
     begin
-        if(rising_edge(clk)) then
+        if(rising_edge(clk) and locked = '1') then
             if(unsigned(counter) < 4) then -- 10 MHz
                 counter <= std_logic_vector(unsigned(counter)+1);
                 div_clk_reg <= '0';
