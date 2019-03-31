@@ -57,9 +57,9 @@ RV32I_pipelined_i: component RV32I_pipelined_wrapper
 process
 begin
     clk <= '0';
-    wait for 20ns;
+    wait for 4ns;
     clk <= '1';
-    wait for 20ns;
+    wait for 4ns;
 end process;
 
 

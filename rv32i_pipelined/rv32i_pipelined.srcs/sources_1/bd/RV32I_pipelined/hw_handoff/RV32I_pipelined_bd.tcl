@@ -164,7 +164,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set btn3 [ create_bd_port -dir I -type rst btn3 ]
+  set btn3 [ create_bd_port -dir I btn3 ]
   set clk [ create_bd_port -dir I -type clk clk ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {125000000} \
@@ -242,6 +242,22 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
+  set_property -dict [ list \
+   CONFIG.CLKIN1_JITTER_PS {80.0} \
+   CONFIG.CLKOUT1_JITTER {143.688} \
+   CONFIG.CLKOUT1_PHASE_ERROR {96.948} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} \
+   CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+   CONFIG.PRIM_IN_FREQ {125.000} \
+   CONFIG.USE_LOCKED {false} \
+   CONFIG.USE_RESET {false} \
+ ] $clk_wiz_0
+
   # Create instance: clock_div_0, and set properties
   set block_name clock_div
   set block_cell_name clock_div_0
@@ -470,8 +486,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins post_memory_logic_0/memory_access_out1_in]
   connect_bd_net -net brach_logic_0_branch [get_bd_pins brach_logic_0/branch] [get_bd_pins stage_DE_0/branch_logic] [get_bd_pins stage_FD_0/branch]
   connect_bd_net -net brach_logic_0_mux_next_pc [get_bd_pins brach_logic_0/mux_next_pc] [get_bd_pins pc_logic_0/mux_next_pc]
-  connect_bd_net -net btn3_1 [get_bd_ports btn3] [get_bd_pins debounce_0/btn]
-  connect_bd_net -net clk_2 [get_bd_ports clk] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clock_div_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins hazard_count_0/clk] [get_bd_pins program_counter_1/clk] [get_bd_pins registers_0/clk] [get_bd_pins stage_DE_0/clk] [get_bd_pins stage_EM_0/clk] [get_bd_pins stage_FD_0/clk] [get_bd_pins stage_MW_0/clk]
+  connect_bd_net -net btn_0_1 [get_bd_ports btn3] [get_bd_pins debounce_0/btn]
+  connect_bd_net -net clk_2 [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins clock_div_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins hazard_count_0/clk] [get_bd_pins program_counter_1/clk] [get_bd_pins registers_0/clk] [get_bd_pins stage_DE_0/clk] [get_bd_pins stage_EM_0/clk] [get_bd_pins stage_FD_0/clk] [get_bd_pins stage_MW_0/clk]
+  connect_bd_net -net clk_in1_0_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clock_div_0_div_clk [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins clock_div_0/div_clk] [get_bd_pins hazard_count_0/clk_en] [get_bd_pins program_counter_1/clk_en] [get_bd_pins registers_0/clk_en] [get_bd_pins stage_DE_0/clk_en] [get_bd_pins stage_EM_0/clk_en] [get_bd_pins stage_FD_0/clk_en] [get_bd_pins stage_MW_0/clk_en]
   connect_bd_net -net debounce_0_dbnc [get_bd_pins debounce_0/dbnc] [get_bd_pins program_counter_1/rst]
   connect_bd_net -net hazard_logic_0_hazard_stage [get_bd_pins hazard_count_0/hazard_stage] [get_bd_pins hazard_logic_0/hazard_stage]
