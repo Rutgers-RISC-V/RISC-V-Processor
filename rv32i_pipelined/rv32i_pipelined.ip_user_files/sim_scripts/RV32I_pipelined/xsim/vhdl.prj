@@ -15,12 +15,12 @@ vhdl xil_defaultlib  \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_pc_logic_0_0/sim/RV32I_pipelined_pc_logic_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/sim/RV32I_pipelined_post_memory_logic_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_pre_memory_logic_0_0/sim/RV32I_pipelined_pre_memory_logic_0_0.vhd" \
-"../../../bd/RV32I_pipelined/ip/RV32I_pipelined_program_counter_0_0/sim/RV32I_pipelined_program_counter_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_registers_0_0/sim/RV32I_pipelined_registers_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_stage_DE_0_0/sim/RV32I_pipelined_stage_DE_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_stage_EM_0_0/sim/RV32I_pipelined_stage_EM_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_stage_FD_0_0/sim/RV32I_pipelined_stage_FD_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_stage_MW_0_0/sim/RV32I_pipelined_stage_MW_0_0.vhd" \
+"../../../bd/RV32I_pipelined/ip/RV32I_pipelined_program_counter_1_0/sim/RV32I_pipelined_program_counter_1_0.vhd" \
 "../../../bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" \
 
 nosort

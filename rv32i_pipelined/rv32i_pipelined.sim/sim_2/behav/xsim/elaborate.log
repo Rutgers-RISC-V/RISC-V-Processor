@@ -1,0 +1,9 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto bd6bf5eee7d641d489ebaa473494efaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot RV32I_pipelined_tb_behav xil_defaultlib.RV32I_pipelined_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3009] 'rv32i_pipelined_blk_mem_gen_0_0' remains a black-box since it has no binding entity [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.ip_user_files/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd:396]
+WARNING: [VRFC 10-3009] 'rv32i_pipelined_clk_wiz_0_0' remains a black-box since it has no binding entity [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.ip_user_files/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd:420]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

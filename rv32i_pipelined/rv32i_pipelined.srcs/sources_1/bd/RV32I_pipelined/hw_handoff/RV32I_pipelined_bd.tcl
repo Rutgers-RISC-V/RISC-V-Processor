@@ -209,7 +209,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.Assume_Synchronous_Clk {false} \
    CONFIG.Byte_Size {8} \
-   CONFIG.Coe_File {../../../../../../../../PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/addTest_Dump.coe} \
+   CONFIG.Coe_File {../../../../../../../Dumps_and_Assembly/Dumps/addTest_Dump.coe} \
    CONFIG.EN_SAFETY_CKT {false} \
    CONFIG.Enable_32bit_Address {false} \
    CONFIG.Enable_A {Use_ENA_Pin} \
@@ -249,8 +249,8 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.CLKIN1_JITTER_PS {80.0} \
    CONFIG.CLKOUT1_DRIVES {BUFG} \
-   CONFIG.CLKOUT1_JITTER {143.688} \
-   CONFIG.CLKOUT1_PHASE_ERROR {96.948} \
+   CONFIG.CLKOUT1_JITTER {288.707} \
+   CONFIG.CLKOUT1_PHASE_ERROR {258.220} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.0} \
    CONFIG.CLKOUT2_DRIVES {BUFG} \
    CONFIG.CLKOUT2_JITTER {130.958} \
@@ -261,15 +261,17 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT5_DRIVES {BUFG} \
    CONFIG.CLKOUT6_DRIVES {BUFG} \
    CONFIG.CLKOUT7_DRIVES {BUFG} \
+   CONFIG.ENABLE_CLOCK_MONITOR {false} \
    CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {34} \
    CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} \
+   CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {17} \
    CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
    CONFIG.MMCM_COMPENSATION {ZHOLD} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {5} \
    CONFIG.NUM_OUT_CLKS {1} \
-   CONFIG.PRIMITIVE {MMCM} \
+   CONFIG.PRIMITIVE {PLL} \
    CONFIG.PRIM_IN_FREQ {125.000} \
    CONFIG.USE_LOCKED {false} \
    CONFIG.USE_RESET {false} \
@@ -407,13 +409,13 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: program_counter_0, and set properties
+  # Create instance: program_counter_1, and set properties
   set block_name program_counter
-  set block_cell_name program_counter_0
-  if { [catch {set program_counter_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  set block_cell_name program_counter_1
+  if { [catch {set program_counter_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $program_counter_0 eq "" } {
+   } elseif { $program_counter_1 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -493,10 +495,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net brach_logic_0_branch [get_bd_pins brach_logic_0/branch] [get_bd_pins stage_DE_0/branch_logic] [get_bd_pins stage_FD_0/branch]
   connect_bd_net -net brach_logic_0_mux_next_pc [get_bd_pins brach_logic_0/mux_next_pc] [get_bd_pins pc_logic_0/mux_next_pc]
   connect_bd_net -net btn3_1 [get_bd_ports btn3] [get_bd_pins debounce_0/btn]
-  connect_bd_net -net clk_0_1 [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins clock_div_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins hazard_count_0/clk] [get_bd_pins program_counter_0/clk] [get_bd_pins registers_0/clk] [get_bd_pins stage_DE_0/clk] [get_bd_pins stage_EM_0/clk] [get_bd_pins stage_FD_0/clk] [get_bd_pins stage_MW_0/clk]
-  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clock_div_0_div_clk [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins clock_div_0/div_clk] [get_bd_pins hazard_count_0/clk_en] [get_bd_pins program_counter_0/clk_en] [get_bd_pins registers_0/clk_en] [get_bd_pins stage_DE_0/clk_en] [get_bd_pins stage_EM_0/clk_en] [get_bd_pins stage_FD_0/clk_en] [get_bd_pins stage_MW_0/clk_en]
-  connect_bd_net -net debounce_0_dbnc [get_bd_pins debounce_0/dbnc] [get_bd_pins program_counter_0/rst]
+  connect_bd_net -net clk_1 [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins clock_div_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins hazard_count_0/clk] [get_bd_pins program_counter_1/clk] [get_bd_pins registers_0/clk] [get_bd_pins stage_DE_0/clk] [get_bd_pins stage_EM_0/clk] [get_bd_pins stage_FD_0/clk] [get_bd_pins stage_MW_0/clk]
+  connect_bd_net -net clk_2 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net clock_div_0_div_clk [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins clock_div_0/div_clk] [get_bd_pins hazard_count_0/clk_en] [get_bd_pins program_counter_1/clk_en] [get_bd_pins registers_0/clk_en] [get_bd_pins stage_DE_0/clk_en] [get_bd_pins stage_EM_0/clk_en] [get_bd_pins stage_FD_0/clk_en] [get_bd_pins stage_MW_0/clk_en]
+  connect_bd_net -net debounce_0_dbnc [get_bd_pins debounce_0/dbnc] [get_bd_pins program_counter_1/rst]
   connect_bd_net -net hazard_logic_0_hazard_stage [get_bd_pins hazard_count_0/hazard_stage] [get_bd_pins hazard_logic_0/hazard_stage]
   connect_bd_net -net hazard_logic_0_new_hazard [get_bd_pins hazard_count_0/new_hazard] [get_bd_pins hazard_logic_0/new_hazard] [get_bd_pins stage_DE_0/hazard_logic]
   connect_bd_net -net hazard_shift_counter_0_hazard [get_bd_pins hazard_count_0/hazard] [get_bd_pins pc_logic_0/hazard] [get_bd_pins stage_FD_0/hazard]
@@ -504,12 +506,11 @@ proc create_root_design { parentCell } {
   connect_bd_net -net mux_reg_descr_alu_0_alu_B [get_bd_pins ALU_0/B] [get_bd_pins mux_reg_descr_alu_0/alu_B]
   connect_bd_net -net mux_reg_pc_alu_0_alu_A [get_bd_pins ALU_0/A] [get_bd_pins mux_reg_pc_alu_0/alu_A]
   connect_bd_net -net mux_reg_write_0_reg_write_input [get_bd_pins mux_reg_write_0/reg_write_input] [get_bd_pins registers_0/reg_write_input]
-  connect_bd_net -net pc_logic_0_PC_out [get_bd_pins pc_logic_0/PC_out] [get_bd_pins program_counter_0/next_PC]
+  connect_bd_net -net pc_logic_0_PC_out [get_bd_pins pc_logic_0/PC_out] [get_bd_pins program_counter_1/next_PC]
   connect_bd_net -net post_memory_logic_0_memory_access_out1_out [get_bd_pins post_memory_logic_0/memory_access_out1_out] [get_bd_pins stage_MW_0/memory_access_out1_EM]
   connect_bd_net -net pre_memory_logic_0_addr1_out [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins pre_memory_logic_0/addr1_out]
   connect_bd_net -net pre_memory_logic_0_byte_enable [get_bd_pins blk_mem_gen_0/web] [get_bd_pins pre_memory_logic_0/byte_enable]
-  connect_bd_net -net program_counter_0_PC [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins pc_logic_0/PC] [get_bd_pins program_counter_0/PC] [get_bd_pins stage_FD_0/PC]
-  connect_bd_net -net program_counter_0_rst_counter [get_bd_pins program_counter_0/rst_counter] [get_bd_pins stage_DE_0/rst_counter] [get_bd_pins stage_FD_0/rst_counter]
+  connect_bd_net -net program_counter_0_PC [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins pc_logic_0/PC] [get_bd_pins program_counter_1/PC] [get_bd_pins stage_FD_0/PC]
   connect_bd_net -net registers_0_debug_leds [get_bd_ports led] [get_bd_pins registers_0/debug_leds]
   connect_bd_net -net registers_0_reg_1_out [get_bd_pins registers_0/reg_1_out] [get_bd_pins stage_DE_0/reg_1_FD]
   connect_bd_net -net registers_0_reg_2_out [get_bd_pins registers_0/reg_2_out] [get_bd_pins stage_DE_0/reg_2_FD]

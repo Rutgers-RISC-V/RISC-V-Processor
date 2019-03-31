@@ -1,7 +1,7 @@
-Running: xsim.dir/RV32I_pipelined_tb_behav/xsimk.exe -simmode gui -wdb RV32I_pipelined_tb_behav.wdb -simrunnum 0 -socket 50740
+Running: xsim.dir/RV32I_pipelined_tb_behav/xsimk.exe -simmode gui -wdb RV32I_pipelined_tb_behav.wdb -simrunnum 0 -socket 51502
 Design successfully loaded
-Design Loading Memory Usage: 5596 KB (Peak: 5596 KB)
+Design Loading Memory Usage: 5624 KB (Peak: 5624 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 7348 KB (Peak: 7348 KB)
-Simulation CPU Usage: 281 ms
+Simulation Memory Usage: 5936 KB (Peak: 5936 KB)
+Simulation CPU Usage: 15 ms

@@ -36,8 +36,7 @@ entity program_counter is
            clk_en : in STD_LOGIC;
            rst: in STD_LOGIC;
            next_PC : in STD_LOGIC_VECTOR (31 downto 0);
-           PC : out STD_LOGIC_VECTOR (31 downto 0);
-           rst_counter: out STD_LOGIC_VECTOR(1 downto 0));
+           PC : out STD_LOGIC_VECTOR (31 downto 0));
 end program_counter;
 
 architecture Behavioral of program_counter is
@@ -59,5 +58,4 @@ begin
         end if;
     end process;
     PC <= pc_reg;
-    rst_counter <= start_pc_count;
 end Behavioral;

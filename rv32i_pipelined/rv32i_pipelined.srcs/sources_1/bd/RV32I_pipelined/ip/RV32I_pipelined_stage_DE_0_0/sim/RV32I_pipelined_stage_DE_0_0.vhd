@@ -57,7 +57,6 @@ ENTITY RV32I_pipelined_stage_DE_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
     clk_en : IN STD_LOGIC;
-    rst_counter : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     branch_logic : IN STD_LOGIC;
     hazard_logic : IN STD_LOGIC;
     pc_FD : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -96,7 +95,6 @@ ARCHITECTURE RV32I_pipelined_stage_DE_0_0_arch OF RV32I_pipelined_stage_DE_0_0 I
     PORT (
       clk : IN STD_LOGIC;
       clk_en : IN STD_LOGIC;
-      rst_counter : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       branch_logic : IN STD_LOGIC;
       hazard_logic : IN STD_LOGIC;
       pc_FD : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -138,7 +136,6 @@ BEGIN
     PORT MAP (
       clk => clk,
       clk_en => clk_en,
-      rst_counter => rst_counter,
       branch_logic => branch_logic,
       hazard_logic => hazard_logic,
       pc_FD => pc_FD,

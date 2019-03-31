@@ -57,18 +57,30 @@ Port (
 end stage_MW;
 
 architecture Behavioral of stage_MW is
-
+    signal PC_MW_reg:                  std_logic_vector(31 downto 0) := (others => '0');
+    signal output_bus_MW_reg:          std_logic_vector(31 downto 0) := (others => '0');
+    signal instruction_MW_reg:         std_logic_vector(31 downto 0) := x"00000013";
+    signal mux_reg_write_MW_reg :      std_logic_vector(1 downto 0) := "10";
+    signal control_reg_writeenable_MW_reg :  std_logic := '0';
+    signal memory_access_out1_MW_reg:  std_logic_vector(31 downto 0) := (others => '0');
 begin
  process(clk,clk_en)
     begin
        if(rising_edge(clk) and clk_en = '1') then
-            PC_MW <= PC_EM;
-            output_bus_MW <= output_bus_EM;
-            instruction_MW <= instruction_EM;
-            mux_reg_write_MW <= mux_reg_write_EM;
-            control_reg_writeenable_MW <= control_reg_writeenable_EM;
-            memory_access_out1_MW <= memory_access_out1_EM;
+            PC_MW_reg <= PC_EM;
+            output_bus_MW_reg <= output_bus_EM;
+            instruction_MW_reg <= instruction_EM;
+            mux_reg_write_MW_reg <= mux_reg_write_EM;
+            control_reg_writeenable_MW_reg <= control_reg_writeenable_EM;
+            memory_access_out1_MW_reg <= memory_access_out1_EM;
        end if;
    end process;
+   
+    PC_MW <= PC_MW_reg;
+    output_bus_MW <= output_bus_MW_reg;
+    instruction_MW <= instruction_MW_reg;
+    mux_reg_write_MW <= mux_reg_write_MW_reg;
+    control_reg_writeenable_MW <= control_reg_writeenable_MW_reg;
+    memory_access_out1_MW <= memory_access_out1_MW_reg;
 
 end Behavioral;

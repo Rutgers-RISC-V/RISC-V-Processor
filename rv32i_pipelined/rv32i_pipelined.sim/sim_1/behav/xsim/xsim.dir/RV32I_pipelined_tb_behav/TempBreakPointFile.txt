@@ -1,1 +1,5 @@
 Breakpoint File Version 1.0
+80 true C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/rv32i/rv32i.srcs/sources_1/imports/RISC-V-Processor/stage_DE.vhd
+82 true C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/rv32i/rv32i.srcs/sources_1/imports/RISC-V-Processor/stage_DE.vhd
+86 true C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/rv32i/rv32i.srcs/sources_1/imports/RISC-V-Processor/stage_DE.vhd
+87 true C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/rv32i/rv32i.srcs/sources_1/imports/RISC-V-Processor/stage_DE.vhd

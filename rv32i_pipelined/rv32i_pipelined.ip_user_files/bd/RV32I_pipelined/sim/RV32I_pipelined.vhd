@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Sat Mar 30 16:35:26 2019
---Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
+--Date        : Sat Mar 30 21:46:52 2019
+--Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
 --Purpose     : IP block netlist
@@ -186,16 +186,6 @@ architecture STRUCTURE of RV32I_pipelined is
     byte_enable : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_pipelined_pre_memory_logic_0_0;
-  component RV32I_pipelined_program_counter_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    next_PC : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    PC : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    rst_counter : out STD_LOGIC_VECTOR ( 1 downto 0 )
-  );
-  end component RV32I_pipelined_program_counter_0_0;
   component RV32I_pipelined_registers_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -209,11 +199,57 @@ architecture STRUCTURE of RV32I_pipelined is
     debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_pipelined_registers_0_0;
+  component RV32I_pipelined_stage_EM_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    PC_DE : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    output_bus_DE : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    instruction_DE : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    mux_reg_write_DE : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    control_reg_writeenable_DE : in STD_LOGIC;
+    control_mem_logic_DE : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    PC_EM : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    output_bus_EM : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    instruction_EM : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    mux_reg_write_EM : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    control_reg_writeenable_EM : out STD_LOGIC;
+    control_mem_logic_EM : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_stage_EM_0_0;
+  component RV32I_pipelined_stage_FD_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    PC : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    hazard : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    branch : in STD_LOGIC;
+    PC_FD : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    instruction_clear_out : out STD_LOGIC
+  );
+  end component RV32I_pipelined_stage_FD_0_0;
+  component RV32I_pipelined_stage_MW_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    PC_EM : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    output_bus_EM : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    instruction_EM : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    mux_reg_write_EM : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    control_reg_writeenable_EM : in STD_LOGIC;
+    memory_access_out1_EM : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PC_MW : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    output_bus_MW : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    instruction_MW : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    mux_reg_write_MW : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    control_reg_writeenable_MW : out STD_LOGIC;
+    memory_access_out1_MW : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_stage_MW_0_0;
   component RV32I_pipelined_stage_DE_0_0 is
   port (
     clk : in STD_LOGIC;
     clk_en : in STD_LOGIC;
-    rst_counter : in STD_LOGIC_VECTOR ( 1 downto 0 );
     branch_logic : in STD_LOGIC;
     hazard_logic : in STD_LOGIC;
     pc_FD : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -244,54 +280,15 @@ architecture STRUCTURE of RV32I_pipelined is
     instruction_DE : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_stage_DE_0_0;
-  component RV32I_pipelined_stage_EM_0_0 is
+  component RV32I_pipelined_program_counter_1_0 is
   port (
     clk : in STD_LOGIC;
     clk_en : in STD_LOGIC;
-    PC_DE : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    output_bus_DE : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    instruction_DE : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    mux_reg_write_DE : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    control_reg_writeenable_DE : in STD_LOGIC;
-    control_mem_logic_DE : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    PC_EM : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    output_bus_EM : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    instruction_EM : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    mux_reg_write_EM : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    control_reg_writeenable_EM : out STD_LOGIC;
-    control_mem_logic_EM : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    rst : in STD_LOGIC;
+    next_PC : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PC : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  end component RV32I_pipelined_stage_EM_0_0;
-  component RV32I_pipelined_stage_FD_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    rst_counter : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    PC : in STD_LOGIC;
-    hazard : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    branch : in STD_LOGIC;
-    PC_FD : out STD_LOGIC;
-    instruction_clear_out : out STD_LOGIC
-  );
-  end component RV32I_pipelined_stage_FD_0_0;
-  component RV32I_pipelined_stage_MW_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    PC_EM : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    output_bus_EM : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    instruction_EM : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    mux_reg_write_EM : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    control_reg_writeenable_EM : in STD_LOGIC;
-    memory_access_out1_EM : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    PC_MW : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    output_bus_MW : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    instruction_MW : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    mux_reg_write_MW : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    control_reg_writeenable_MW : out STD_LOGIC;
-    memory_access_out1_MW : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_pipelined_stage_MW_0_0;
+  end component RV32I_pipelined_program_counter_1_0;
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
   signal ALU_0_sum : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -327,7 +324,6 @@ architecture STRUCTURE of RV32I_pipelined is
   signal pre_memory_logic_0_addr1_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal pre_memory_logic_0_byte_enable : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal program_counter_0_PC : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal program_counter_0_rst_counter : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal registers_0_debug_leds : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal registers_0_reg_1_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal registers_0_reg_2_out : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -350,7 +346,7 @@ architecture STRUCTURE of RV32I_pipelined is
   signal stage_EM_0_instruction_EM : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal stage_EM_0_mux_reg_write_EM : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal stage_EM_0_output_bus_EM : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal stage_FD_0_PC_FD : STD_LOGIC;
+  signal stage_FD_0_PC_FD : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal stage_FD_0_instruction_clear_out : STD_LOGIC;
   signal stage_MW_0_PC_MW : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal stage_MW_0_control_reg_writeenable_MW : STD_LOGIC;
@@ -493,38 +489,7 @@ pc_logic_0: component RV32I_pipelined_pc_logic_0_0
      port map (
       PC(31 downto 0) => program_counter_0_PC(31 downto 0),
       PC_DE(31 downto 0) => stage_DE_0_pc_DE(31 downto 0),
-      PC_FD(31) => stage_FD_0_PC_FD,
-      PC_FD(30) => stage_FD_0_PC_FD,
-      PC_FD(29) => stage_FD_0_PC_FD,
-      PC_FD(28) => stage_FD_0_PC_FD,
-      PC_FD(27) => stage_FD_0_PC_FD,
-      PC_FD(26) => stage_FD_0_PC_FD,
-      PC_FD(25) => stage_FD_0_PC_FD,
-      PC_FD(24) => stage_FD_0_PC_FD,
-      PC_FD(23) => stage_FD_0_PC_FD,
-      PC_FD(22) => stage_FD_0_PC_FD,
-      PC_FD(21) => stage_FD_0_PC_FD,
-      PC_FD(20) => stage_FD_0_PC_FD,
-      PC_FD(19) => stage_FD_0_PC_FD,
-      PC_FD(18) => stage_FD_0_PC_FD,
-      PC_FD(17) => stage_FD_0_PC_FD,
-      PC_FD(16) => stage_FD_0_PC_FD,
-      PC_FD(15) => stage_FD_0_PC_FD,
-      PC_FD(14) => stage_FD_0_PC_FD,
-      PC_FD(13) => stage_FD_0_PC_FD,
-      PC_FD(12) => stage_FD_0_PC_FD,
-      PC_FD(11) => stage_FD_0_PC_FD,
-      PC_FD(10) => stage_FD_0_PC_FD,
-      PC_FD(9) => stage_FD_0_PC_FD,
-      PC_FD(8) => stage_FD_0_PC_FD,
-      PC_FD(7) => stage_FD_0_PC_FD,
-      PC_FD(6) => stage_FD_0_PC_FD,
-      PC_FD(5) => stage_FD_0_PC_FD,
-      PC_FD(4) => stage_FD_0_PC_FD,
-      PC_FD(3) => stage_FD_0_PC_FD,
-      PC_FD(2) => stage_FD_0_PC_FD,
-      PC_FD(1) => stage_FD_0_PC_FD,
-      PC_FD(0) => stage_FD_0_PC_FD,
+      PC_FD(31 downto 0) => stage_FD_0_PC_FD(31 downto 0),
       PC_out(31 downto 0) => pc_logic_0_PC_out(31 downto 0),
       hazard(1 downto 0) => hazard_shift_counter_0_hazard(1 downto 0),
       mux_next_pc(1 downto 0) => brach_logic_0_mux_next_pc(1 downto 0),
@@ -544,14 +509,13 @@ pre_memory_logic_0: component RV32I_pipelined_pre_memory_logic_0_0
       byte_enable(3 downto 0) => pre_memory_logic_0_byte_enable(3 downto 0),
       control_mem(3 downto 0) => stage_DE_0_control_mem_logic_DE(3 downto 0)
     );
-program_counter_0: component RV32I_pipelined_program_counter_0_0
+program_counter_1: component RV32I_pipelined_program_counter_1_0
      port map (
       PC(31 downto 0) => program_counter_0_PC(31 downto 0),
       clk => clk_0_1,
       clk_en => clock_div_0_div_clk,
       next_PC(31 downto 0) => pc_logic_0_PC_out(31 downto 0),
-      rst => debounce_0_dbnc,
-      rst_counter(1 downto 0) => program_counter_0_rst_counter(1 downto 0)
+      rst => debounce_0_dbnc
     );
 registers_0: component RV32I_pipelined_registers_0_0
      port map (
@@ -592,43 +556,11 @@ stage_DE_0: component RV32I_pipelined_stage_DE_0_0
       mux_reg_write_DE(1 downto 0) => stage_DE_0_mux_reg_write_DE(1 downto 0),
       mux_reg_write_FD(1 downto 0) => RV32I_0_mux_reg_write(1 downto 0),
       pc_DE(31 downto 0) => stage_DE_0_pc_DE(31 downto 0),
-      pc_FD(31) => stage_FD_0_PC_FD,
-      pc_FD(30) => stage_FD_0_PC_FD,
-      pc_FD(29) => stage_FD_0_PC_FD,
-      pc_FD(28) => stage_FD_0_PC_FD,
-      pc_FD(27) => stage_FD_0_PC_FD,
-      pc_FD(26) => stage_FD_0_PC_FD,
-      pc_FD(25) => stage_FD_0_PC_FD,
-      pc_FD(24) => stage_FD_0_PC_FD,
-      pc_FD(23) => stage_FD_0_PC_FD,
-      pc_FD(22) => stage_FD_0_PC_FD,
-      pc_FD(21) => stage_FD_0_PC_FD,
-      pc_FD(20) => stage_FD_0_PC_FD,
-      pc_FD(19) => stage_FD_0_PC_FD,
-      pc_FD(18) => stage_FD_0_PC_FD,
-      pc_FD(17) => stage_FD_0_PC_FD,
-      pc_FD(16) => stage_FD_0_PC_FD,
-      pc_FD(15) => stage_FD_0_PC_FD,
-      pc_FD(14) => stage_FD_0_PC_FD,
-      pc_FD(13) => stage_FD_0_PC_FD,
-      pc_FD(12) => stage_FD_0_PC_FD,
-      pc_FD(11) => stage_FD_0_PC_FD,
-      pc_FD(10) => stage_FD_0_PC_FD,
-      pc_FD(9) => stage_FD_0_PC_FD,
-      pc_FD(8) => stage_FD_0_PC_FD,
-      pc_FD(7) => stage_FD_0_PC_FD,
-      pc_FD(6) => stage_FD_0_PC_FD,
-      pc_FD(5) => stage_FD_0_PC_FD,
-      pc_FD(4) => stage_FD_0_PC_FD,
-      pc_FD(3) => stage_FD_0_PC_FD,
-      pc_FD(2) => stage_FD_0_PC_FD,
-      pc_FD(1) => stage_FD_0_PC_FD,
-      pc_FD(0) => stage_FD_0_PC_FD,
+      pc_FD(31 downto 0) => stage_FD_0_PC_FD(31 downto 0),
       reg_1_DE(31 downto 0) => stage_DE_0_reg_1_DE(31 downto 0),
       reg_1_FD(31 downto 0) => registers_0_reg_1_out(31 downto 0),
       reg_2_DE(31 downto 0) => stage_DE_0_reg_2_DE(31 downto 0),
-      reg_2_FD(31 downto 0) => registers_0_reg_2_out(31 downto 0),
-      rst_counter(1 downto 0) => program_counter_0_rst_counter(1 downto 0)
+      reg_2_FD(31 downto 0) => registers_0_reg_2_out(31 downto 0)
     );
 stage_EM_0: component RV32I_pipelined_stage_EM_0_0
      port map (
@@ -649,14 +581,13 @@ stage_EM_0: component RV32I_pipelined_stage_EM_0_0
     );
 stage_FD_0: component RV32I_pipelined_stage_FD_0_0
      port map (
-      PC => program_counter_0_PC(0),
-      PC_FD => stage_FD_0_PC_FD,
+      PC(31 downto 0) => program_counter_0_PC(31 downto 0),
+      PC_FD(31 downto 0) => stage_FD_0_PC_FD(31 downto 0),
       branch => brach_logic_0_branch,
       clk => clk_0_1,
       clk_en => clock_div_0_div_clk,
       hazard(1 downto 0) => hazard_shift_counter_0_hazard(1 downto 0),
-      instruction_clear_out => stage_FD_0_instruction_clear_out,
-      rst_counter(1 downto 0) => program_counter_0_rst_counter(1 downto 0)
+      instruction_clear_out => stage_FD_0_instruction_clear_out
     );
 stage_MW_0: component RV32I_pipelined_stage_MW_0_0
      port map (

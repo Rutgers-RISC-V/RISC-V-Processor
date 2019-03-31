@@ -57,11 +57,10 @@ ENTITY RV32I_pipelined_stage_FD_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
     clk_en : IN STD_LOGIC;
-    rst_counter : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    PC : IN STD_LOGIC;
+    PC : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     hazard : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     branch : IN STD_LOGIC;
-    PC_FD : OUT STD_LOGIC;
+    PC_FD : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     instruction_clear_out : OUT STD_LOGIC
   );
 END RV32I_pipelined_stage_FD_0_0;
@@ -73,11 +72,10 @@ ARCHITECTURE RV32I_pipelined_stage_FD_0_0_arch OF RV32I_pipelined_stage_FD_0_0 I
     PORT (
       clk : IN STD_LOGIC;
       clk_en : IN STD_LOGIC;
-      rst_counter : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-      PC : IN STD_LOGIC;
+      PC : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       hazard : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       branch : IN STD_LOGIC;
-      PC_FD : OUT STD_LOGIC;
+      PC_FD : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       instruction_clear_out : OUT STD_LOGIC
     );
   END COMPONENT stage_FD;
@@ -92,7 +90,6 @@ BEGIN
     PORT MAP (
       clk => clk,
       clk_en => clk_en,
-      rst_counter => rst_counter,
       PC => PC,
       hazard => hazard,
       branch => branch,

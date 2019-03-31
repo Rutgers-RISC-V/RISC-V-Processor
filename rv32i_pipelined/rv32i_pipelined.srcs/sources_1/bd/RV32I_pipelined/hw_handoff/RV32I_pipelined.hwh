@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 30 16:51:20 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 30 22:34:47 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -269,7 +269,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../../PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/addTest_Dump.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/addTest_Dump.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="true"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -311,9 +311,9 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="wea" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="11" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_0_PC">
+        <PORT DIR="I" LEFT="11" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_1_PC">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="program_counter_0" PORT="PC"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="PC"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="dina" RIGHT="0" SIGIS="undef"/>
@@ -422,8 +422,8 @@
         </PORT>
         <PORT DIR="O" NAME="branch" SIGIS="undef" SIGNAME="brach_logic_0_branch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stage_DE_0" PORT="branch_logic"/>
             <CONNECTION INSTANCE="stage_FD_0" PORT="branch"/>
+            <CONNECTION INSTANCE="stage_DE_0" PORT="branch_logic"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -506,7 +506,7 @@
         <PARAMETER NAME="C_INCLK_SUM_ROW2" VALUE="no_secondary_input_clock"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1____50.000______0.000______50.0______143.688_____96.948"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1____50.000______0.000______50.0______288.707____258.220"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="no_CLK_OUT2_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="no_CLK_OUT3_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="no_CLK_OUT4_output"/>
@@ -566,17 +566,17 @@
         <PARAMETER NAME="C_CLKOUT7_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_NOTES" VALUE="None"/>
         <PARAMETER NAME="C_MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
-        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="8.000"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="34.000"/>
         <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="8.000"/>
-        <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
         <PARAMETER NAME="C_MMCM_CLKOUT4_CASCADE" VALUE="FALSE"/>
         <PARAMETER NAME="C_MMCM_CLOCK_HOLD" VALUE="FALSE"/>
         <PARAMETER NAME="C_MMCM_COMPENSATION" VALUE="ZHOLD"/>
-        <PARAMETER NAME="C_MMCM_DIVCLK_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_DIVCLK_DIVIDE" VALUE="5"/>
         <PARAMETER NAME="C_MMCM_REF_JITTER1" VALUE="0.010"/>
         <PARAMETER NAME="C_MMCM_REF_JITTER2" VALUE="0.010"/>
         <PARAMETER NAME="C_MMCM_STARTUP_WAIT" VALUE="FALSE"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="20.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="17.000"/>
         <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT2_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT3_DIVIDE" VALUE="1"/>
@@ -672,7 +672,7 @@
         <PARAMETER NAME="C_CLKFB_STOPPED_PORT" VALUE="clkfb_stopped"/>
         <PARAMETER NAME="C_CLKIN1_JITTER_PS" VALUE="80.0"/>
         <PARAMETER NAME="C_CLKIN2_JITTER_PS" VALUE="100.0"/>
-        <PARAMETER NAME="C_PRIMITIVE" VALUE="MMCM"/>
+        <PARAMETER NAME="C_PRIMITIVE" VALUE="PLL"/>
         <PARAMETER NAME="C_SS_MODE" VALUE="CENTER_HIGH"/>
         <PARAMETER NAME="C_SS_MOD_PERIOD" VALUE="4000"/>
         <PARAMETER NAME="C_SS_MOD_TIME" VALUE="0.004"/>
@@ -755,7 +755,7 @@
         <PARAMETER NAME="Enable_PLL1" VALUE="false"/>
         <PARAMETER NAME="REF_CLK_FREQ" VALUE="100.0"/>
         <PARAMETER NAME="PRECISION" VALUE="1"/>
-        <PARAMETER NAME="PRIMITIVE" VALUE="MMCM"/>
+        <PARAMETER NAME="PRIMITIVE" VALUE="PLL"/>
         <PARAMETER NAME="PRIMTYPE_SEL" VALUE="mmcm_adv"/>
         <PARAMETER NAME="CLOCK_MGR_TYPE" VALUE="auto"/>
         <PARAMETER NAME="USE_FREQ_SYNTH" VALUE="true"/>
@@ -887,20 +887,20 @@
         <PARAMETER NAME="SS_MOD_TIME" VALUE="0.004"/>
         <PARAMETER NAME="OVERRIDE_MMCM" VALUE="false"/>
         <PARAMETER NAME="MMCM_NOTES" VALUE="None"/>
-        <PARAMETER NAME="MMCM_DIVCLK_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_DIVCLK_DIVIDE" VALUE="5"/>
         <PARAMETER NAME="MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
-        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="8.000"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="34"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_USE_FINE_PS" VALUE="false"/>
         <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="8.000"/>
-        <PARAMETER NAME="MMCM_CLKIN2_PERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
         <PARAMETER NAME="MMCM_CLKOUT4_CASCADE" VALUE="false"/>
         <PARAMETER NAME="MMCM_CLOCK_HOLD" VALUE="false"/>
         <PARAMETER NAME="MMCM_COMPENSATION" VALUE="ZHOLD"/>
         <PARAMETER NAME="MMCM_REF_JITTER1" VALUE="0.010"/>
         <PARAMETER NAME="MMCM_REF_JITTER2" VALUE="0.010"/>
         <PARAMETER NAME="MMCM_STARTUP_WAIT" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKOUT0_DIVIDE_F" VALUE="20.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_DIVIDE_F" VALUE="17"/>
         <PARAMETER NAME="MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT0_USE_FINE_PS" VALUE="false"/>
@@ -978,8 +978,8 @@
         <PARAMETER NAME="CDDCREQ_PORT" VALUE="cddcreq"/>
         <PARAMETER NAME="ENABLE_CLKOUTPHY" VALUE="false"/>
         <PARAMETER NAME="CLKOUTPHY_REQUESTED_FREQ" VALUE="600.000"/>
-        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="143.688"/>
-        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="96.948"/>
+        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="288.707"/>
+        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="258.220"/>
         <PARAMETER NAME="CLKOUT2_JITTER" VALUE="130.958"/>
         <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="98.575"/>
         <PARAMETER NAME="CLKOUT3_JITTER" VALUE="0.0"/>
@@ -1011,12 +1011,12 @@
             <CONNECTION INSTANCE="clock_div_0" PORT="clk"/>
             <CONNECTION INSTANCE="debounce_0" PORT="clk"/>
             <CONNECTION INSTANCE="hazard_count_0" PORT="clk"/>
-            <CONNECTION INSTANCE="program_counter_0" PORT="clk"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk"/>
-            <CONNECTION INSTANCE="stage_DE_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_EM_0" PORT="clk"/>
-            <CONNECTION INSTANCE="stage_FD_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_MW_0" PORT="clk"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="clk"/>
+            <CONNECTION INSTANCE="stage_FD_0" PORT="clk"/>
+            <CONNECTION INSTANCE="stage_DE_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1039,12 +1039,12 @@
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="ena"/>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="enb"/>
             <CONNECTION INSTANCE="hazard_count_0" PORT="clk_en"/>
-            <CONNECTION INSTANCE="program_counter_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk_en"/>
-            <CONNECTION INSTANCE="stage_DE_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_EM_0" PORT="clk_en"/>
-            <CONNECTION INSTANCE="stage_FD_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_MW_0" PORT="clk_en"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="clk_en"/>
+            <CONNECTION INSTANCE="stage_FD_0" PORT="clk_en"/>
+            <CONNECTION INSTANCE="stage_DE_0" PORT="clk_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1069,7 +1069,7 @@
         </PORT>
         <PORT DIR="O" NAME="dbnc" SIGIS="undef" SIGNAME="debounce_0_dbnc">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="program_counter_0" PORT="rst"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1335,9 +1335,9 @@
             <CONNECTION INSTANCE="mux_output_0" PORT="output_bus"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_0_PC">
+        <PORT DIR="I" LEFT="31" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_1_PC">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="program_counter_0" PORT="PC"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="PC"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="PC_FD" RIGHT="0" SIGIS="undef" SIGNAME="stage_FD_0_PC_FD">
@@ -1347,7 +1347,7 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="PC_out" RIGHT="0" SIGIS="undef" SIGNAME="pc_logic_0_PC_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="program_counter_0" PORT="next_PC"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="next_PC"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1413,10 +1413,10 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/program_counter_0" HWVERSION="1.0" INSTANCE="program_counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="program_counter" VLNV="xilinx.com:module_ref:program_counter:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/program_counter_1" HWVERSION="1.0" INSTANCE="program_counter_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="program_counter" VLNV="xilinx.com:module_ref:program_counter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="RV32I_pipelined_program_counter_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="RV32I_pipelined_program_counter_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1440,17 +1440,11 @@
             <CONNECTION INSTANCE="pc_logic_0" PORT="PC_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_0_PC">
+        <PORT DIR="O" LEFT="31" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_1_PC">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
             <CONNECTION INSTANCE="pc_logic_0" PORT="PC"/>
             <CONNECTION INSTANCE="stage_FD_0" PORT="PC"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="rst_counter" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_0_rst_counter">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="stage_DE_0" PORT="rst_counter"/>
-            <CONNECTION INSTANCE="stage_FD_0" PORT="rst_counter"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1526,11 +1520,6 @@
         <PORT DIR="I" NAME="clk_en" SIGIS="undef" SIGNAME="clock_div_0_div_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clock_div_0" PORT="div_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="rst_counter" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_0_rst_counter">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="program_counter_0" PORT="rst_counter"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="branch_logic" SIGIS="undef" SIGNAME="brach_logic_0_branch">
@@ -1781,14 +1770,9 @@
             <CONNECTION INSTANCE="clock_div_0" PORT="div_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="rst_counter" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_0_rst_counter">
+        <PORT DIR="I" LEFT="31" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_1_PC">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="program_counter_0" PORT="rst_counter"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="PC" SIGIS="undef" SIGNAME="program_counter_0_PC">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="program_counter_0" PORT="PC"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="PC"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="hazard" RIGHT="0" SIGIS="undef" SIGNAME="hazard_count_0_hazard">
@@ -1801,7 +1785,7 @@
             <CONNECTION INSTANCE="brach_logic_0" PORT="branch"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="PC_FD" SIGIS="undef" SIGNAME="stage_FD_0_PC_FD">
+        <PORT DIR="O" LEFT="31" NAME="PC_FD" RIGHT="0" SIGIS="undef" SIGNAME="stage_FD_0_PC_FD">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pc_logic_0" PORT="PC_FD"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="pc_FD"/>
