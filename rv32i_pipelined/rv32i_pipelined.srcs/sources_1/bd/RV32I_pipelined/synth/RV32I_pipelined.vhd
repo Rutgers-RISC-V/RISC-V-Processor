@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Sun Mar 31 05:49:29 2019
+--Date        : Sun Mar 31 17:26:56 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -18,23 +18,57 @@ entity RV32I_pipelined is
     led : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of RV32I_pipelined : entity is "RV32I_pipelined,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=RV32I_pipelined,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=25,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=23,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of RV32I_pipelined : entity is "RV32I_pipelined,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=RV32I_pipelined,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=26,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=24,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of RV32I_pipelined : entity is "RV32I_pipelined.hwdef";
 end RV32I_pipelined;
 
 architecture STRUCTURE of RV32I_pipelined is
-  component RV32I_pipelined_ALU_0_0 is
+  component RV32I_pipelined_Descrambler_0_0 is
   port (
-    A : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    B : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    control_alu : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    sum : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    scr_imm : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    descr_imm : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_Descrambler_0_0;
+  component RV32I_pipelined_RV32I_0_0 is
+  port (
+    error : out STD_LOGIC;
+    instr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    mux_reg_write : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    mux_output : out STD_LOGIC;
+    mux_reg_descr_alu : out STD_LOGIC;
+    mux_reg_pc_alu : out STD_LOGIC;
+    control_alu : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    control_reg_writeenable : out STD_LOGIC;
+    control_branch : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    control_mem_logic : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_RV32I_0_0;
+  component RV32I_pipelined_alu_signals_0_0 is
+  port (
+    alu_output_33 : in STD_LOGIC_VECTOR ( 32 downto 0 );
+    alu_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
     zero : out STD_LOGIC;
     sign : out STD_LOGIC;
     overflow : out STD_LOGIC
   );
-  end component RV32I_pipelined_ALU_0_0;
+  end component RV32I_pipelined_alu_signals_0_0;
+  component RV32I_pipelined_blk_mem_gen_0_0 is
+  port (
+    clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
+    wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    web : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    dinb : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_blk_mem_gen_0_0;
   component RV32I_pipelined_brach_logic_0_0 is
   port (
     control_branch : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -45,6 +79,12 @@ architecture STRUCTURE of RV32I_pipelined is
     branch : out STD_LOGIC
   );
   end component RV32I_pipelined_brach_logic_0_0;
+  component RV32I_pipelined_clk_wiz_0_0 is
+  port (
+    clk_in1 : in STD_LOGIC;
+    clk_out1 : out STD_LOGIC
+  );
+  end component RV32I_pipelined_clk_wiz_0_0;
   component RV32I_pipelined_clock_div_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -58,6 +98,25 @@ architecture STRUCTURE of RV32I_pipelined is
     dbnc : out STD_LOGIC
   );
   end component RV32I_pipelined_debounce_0_0;
+  component RV32I_pipelined_hazard_count_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    new_hazard : in STD_LOGIC;
+    hazard_stage : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    hazard : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component RV32I_pipelined_hazard_count_0_0;
+  component RV32I_pipelined_hazard_logic_0_0 is
+  port (
+    instr_f_d : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    instr_d_e : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    instr_e_m : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    instr_m_w : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    hazard_stage : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    new_hazard : out STD_LOGIC
+  );
+  end component RV32I_pipelined_hazard_logic_0_0;
   component RV32I_pipelined_instruction_clear_0_0 is
   port (
     instruction_clear_signal : in STD_LOGIC;
@@ -109,6 +168,12 @@ architecture STRUCTURE of RV32I_pipelined is
     PC_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_pc_logic_0_0;
+  component RV32I_pipelined_pc_shift_down_0_0 is
+  port (
+    pc_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    pc_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_pc_shift_down_0_0;
   component RV32I_pipelined_post_memory_logic_0_0 is
   port (
     control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -228,73 +293,15 @@ architecture STRUCTURE of RV32I_pipelined is
     memory_access_out1_MW : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_stage_MW_0_0;
-  component RV32I_pipelined_blk_mem_gen_0_0 is
+  component RV32I_pipelined_ALU_0_0 is
   port (
-    clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
-    wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    clkb : in STD_LOGIC;
-    enb : in STD_LOGIC;
-    web : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    dinb : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    doutb : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    A : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    B : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    control_alu : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    alu_out_33 : out STD_LOGIC_VECTOR ( 32 downto 0 )
   );
-  end component RV32I_pipelined_blk_mem_gen_0_0;
-  component RV32I_pipelined_pc_shift_down_0_0 is
-  port (
-    pc_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pc_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_pipelined_pc_shift_down_0_0;
-  component RV32I_pipelined_hazard_count_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    new_hazard : in STD_LOGIC;
-    hazard_stage : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    hazard : out STD_LOGIC_VECTOR ( 1 downto 0 )
-  );
-  end component RV32I_pipelined_hazard_count_0_0;
-  component RV32I_pipelined_RV32I_0_0 is
-  port (
-    error : out STD_LOGIC;
-    instr : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    mux_reg_write : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    mux_output : out STD_LOGIC;
-    mux_reg_descr_alu : out STD_LOGIC;
-    mux_reg_pc_alu : out STD_LOGIC;
-    control_alu : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    control_reg_writeenable : out STD_LOGIC;
-    control_branch : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    control_mem_logic : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component RV32I_pipelined_RV32I_0_0;
-  component RV32I_pipelined_Descrambler_0_0 is
-  port (
-    scr_imm : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    descr_imm : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_pipelined_Descrambler_0_0;
-  component RV32I_pipelined_hazard_logic_0_0 is
-  port (
-    instr_f_d : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    instr_d_e : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    instr_e_m : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    instr_m_w : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    hazard_stage : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    new_hazard : out STD_LOGIC
-  );
-  end component RV32I_pipelined_hazard_logic_0_0;
-  component RV32I_pipelined_clk_wiz_0_0 is
-  port (
-    clk_in1 : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC
-  );
-  end component RV32I_pipelined_clk_wiz_0_0;
+  end component RV32I_pipelined_ALU_0_0;
+  signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
   signal ALU_0_sum : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -365,7 +372,7 @@ architecture STRUCTURE of RV32I_pipelined is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN RV32I_pipelined_clk_in1_0, FREQ_HZ 125000000, INSERT_VIP 0, PHASE 0.000";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN RV32I_pipelined_clk, FREQ_HZ 125000000, INSERT_VIP 0, PHASE 0.000";
 begin
   btn_0_1 <= btn3;
   clk_in1_0_1 <= clk;
@@ -374,11 +381,8 @@ ALU_0: component RV32I_pipelined_ALU_0_0
      port map (
       A(31 downto 0) => mux_reg_pc_alu_0_alu_A(31 downto 0),
       B(31 downto 0) => mux_reg_descr_alu_0_alu_B(31 downto 0),
-      control_alu(3 downto 0) => stage_DE_0_control_alu_DE(3 downto 0),
-      overflow => ALU_0_overflow,
-      sign => ALU_0_sign,
-      sum(31 downto 0) => ALU_0_sum(31 downto 0),
-      zero => ALU_0_zero
+      alu_out_33(32 downto 0) => ALU_0_alu_out_33(32 downto 0),
+      control_alu(3 downto 0) => stage_DE_0_control_alu_DE(3 downto 0)
     );
 Descrambler_0: component RV32I_pipelined_Descrambler_0_0
      port map (
@@ -397,6 +401,14 @@ RV32I_0: component RV32I_pipelined_RV32I_0_0
       mux_reg_descr_alu => RV32I_0_mux_reg_descr_alu,
       mux_reg_pc_alu => RV32I_0_mux_reg_pc_alu,
       mux_reg_write(1 downto 0) => RV32I_0_mux_reg_write(1 downto 0)
+    );
+alu_signals_0: component RV32I_pipelined_alu_signals_0_0
+     port map (
+      alu_output(31 downto 0) => ALU_0_sum(31 downto 0),
+      alu_output_33(32 downto 0) => ALU_0_alu_out_33(32 downto 0),
+      overflow => ALU_0_overflow,
+      sign => ALU_0_sign,
+      zero => ALU_0_zero
     );
 blk_mem_gen_0: component RV32I_pipelined_blk_mem_gen_0_0
      port map (

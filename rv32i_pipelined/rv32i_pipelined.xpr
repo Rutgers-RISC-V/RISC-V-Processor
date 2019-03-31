@@ -32,20 +32,20 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="91"/>
+    <Option Name="WTXSimLaunchSim" Val="99"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="47"/>
-    <Option Name="WTModelSimExportSim" Val="47"/>
-    <Option Name="WTQuestaExportSim" Val="47"/>
-    <Option Name="WTIesExportSim" Val="46"/>
-    <Option Name="WTVcsExportSim" Val="46"/>
-    <Option Name="WTRivieraExportSim" Val="46"/>
-    <Option Name="WTActivehdlExportSim" Val="46"/>
+    <Option Name="WTXSimExportSim" Val="54"/>
+    <Option Name="WTModelSimExportSim" Val="54"/>
+    <Option Name="WTQuestaExportSim" Val="54"/>
+    <Option Name="WTIesExportSim" Val="53"/>
+    <Option Name="WTVcsExportSim" Val="53"/>
+    <Option Name="WTRivieraExportSim" Val="53"/>
+    <Option Name="WTActivehdlExportSim" Val="53"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -79,7 +79,13 @@
       <File Path="$PSRCDIR/sources_1/imports/RISC-V-Processor/rv32i/rv32i.srcs/sources_1/imports/RISC-V-Processor/RV32I.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../RV32I.vhd"/>
-          <Attr Name="ImportTime" Val="1554022676"/>
+          <Attr Name="ImportTime" Val="1554060070"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/alu_signals.vhd">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -172,6 +178,12 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/pc_shift_down.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../PycharmProjects/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd"/>
@@ -236,92 +248,86 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/pc_shift_down.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_brach_logic_0_0/RV32I_pipelined_brach_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_brach_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clock_div_0_0/RV32I_pipelined_clock_div_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_clock_div_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pre_memory_logic_0_0/RV32I_pipelined_pre_memory_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_pre_memory_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_pc_alu_0_0/RV32I_pipelined_mux_reg_pc_alu_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_mux_reg_pc_alu_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_MW_0_0/RV32I_pipelined_stage_MW_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_stage_MW_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_blk_mem_gen_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_output_0_0/RV32I_pipelined_mux_output_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_mux_output_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pc_logic_0_0/RV32I_pipelined_pc_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_pc_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_hazard_logic_0_0/RV32I_pipelined_hazard_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_hazard_logic_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_registers_0_0/RV32I_pipelined_registers_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_registers_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_EM_0_0/RV32I_pipelined_stage_EM_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_stage_EM_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_DE_0_0/RV32I_pipelined_stage_DE_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_stage_DE_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pc_shift_down_0_0/RV32I_pipelined_pc_shift_down_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_pc_shift_down_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_write_0_0/RV32I_pipelined_mux_reg_write_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_mux_reg_write_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pc_shift_down_0_0/RV32I_pipelined_pc_shift_down_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_pc_shift_down_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_pc_alu_0_0/RV32I_pipelined_mux_reg_pc_alu_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_mux_reg_pc_alu_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_post_memory_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pre_memory_logic_0_0/RV32I_pipelined_pre_memory_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_pre_memory_logic_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_FD_0_0/RV32I_pipelined_stage_FD_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_stage_FD_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_hazard_count_0_0/RV32I_pipelined_hazard_count_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_hazard_count_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_MW_0_0/RV32I_pipelined_stage_MW_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_stage_MW_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_debounce_0_0/RV32I_pipelined_debounce_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_debounce_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_ALU_0_0/RV32I_pipelined_ALU_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_ALU_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_RV32I_0_0/RV32I_pipelined_RV32I_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_RV32I_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_instruction_clear_0_0/RV32I_pipelined_instruction_clear_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_instruction_clear_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_Descrambler_0_0/RV32I_pipelined_Descrambler_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_Descrambler_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_descr_alu_0_0/RV32I_pipelined_mux_reg_descr_alu_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_mux_reg_descr_alu_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_EM_0_0/RV32I_pipelined_stage_EM_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_stage_EM_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_program_counter_1_0/RV32I_pipelined_program_counter_1_0.xci">
           <Proxy FileSetName="RV32I_pipelined_program_counter_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_hazard_logic_0_0/RV32I_pipelined_hazard_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_hazard_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_descr_alu_0_0/RV32I_pipelined_mux_reg_descr_alu_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_mux_reg_descr_alu_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_clk_wiz_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pc_logic_0_0/RV32I_pipelined_pc_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_pc_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_DE_0_0/RV32I_pipelined_stage_DE_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_stage_DE_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_post_memory_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_instruction_clear_0_0/RV32I_pipelined_instruction_clear_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_instruction_clear_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_ALU_0_0/RV32I_pipelined_ALU_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_ALU_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_Descrambler_0_0/RV32I_pipelined_Descrambler_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_Descrambler_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_RV32I_0_0/RV32I_pipelined_RV32I_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_RV32I_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_alu_signals_0_0/RV32I_pipelined_alu_signals_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_alu_signals_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_brach_logic_0_0/RV32I_pipelined_brach_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_brach_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_output_0_0/RV32I_pipelined_mux_output_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_mux_output_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clock_div_0_0/RV32I_pipelined_clock_div_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_clock_div_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_debounce_0_0/RV32I_pipelined_debounce_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_debounce_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_hazard_count_0_0/RV32I_pipelined_hazard_count_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_hazard_count_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd">
@@ -352,6 +358,14 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/addTest_Dump.coe"/>
           <Attr Name="ImportTime" Val="1553461696"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Dumps/FPGA_Critical_Dump.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe"/>
+          <Attr Name="ImportTime" Val="1553461700"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -467,8 +481,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/RV32I_pipelined_tb_behav3.wcfg">
+      <File Path="$PSRCDIR/sim_4/imports/rv32i_pipelined/RV32I_pipelined_tb_behav3.wcfg">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/RV32I_pipelined_tb_behav3.wcfg"/>
+          <Attr Name="ImportTime" Val="1554062524"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -483,51 +499,9 @@
         <Option Name="XSimWcfgFile" Val="$PPRDIR/RV32I_pipelined_tb_behav3.wcfg"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_brach_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_brach_logic_0_0">
+    <FileSet Name="RV32I_pipelined_hazard_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_hazard_logic_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_brach_logic_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_clock_div_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_clock_div_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_clock_div_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_pre_memory_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_pre_memory_logic_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_pre_memory_logic_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_mux_reg_pc_alu_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_mux_reg_pc_alu_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_mux_reg_pc_alu_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_stage_MW_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_stage_MW_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_stage_MW_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_blk_mem_gen_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_blk_mem_gen_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_mux_output_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_mux_output_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_mux_output_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_pc_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_pc_logic_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_pc_logic_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_hazard_logic_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -537,15 +511,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_stage_EM_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_stage_EM_0_0">
+    <FileSet Name="RV32I_pipelined_pc_shift_down_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_pc_shift_down_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_stage_EM_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_stage_DE_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_stage_DE_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_stage_DE_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_pc_shift_down_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -555,15 +523,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_pc_shift_down_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_pc_shift_down_0_0">
+    <FileSet Name="RV32I_pipelined_mux_reg_pc_alu_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_mux_reg_pc_alu_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_pc_shift_down_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_mux_reg_pc_alu_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_post_memory_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_post_memory_logic_0_0">
+    <FileSet Name="RV32I_pipelined_pre_memory_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_pre_memory_logic_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_post_memory_logic_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_pre_memory_logic_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -573,27 +541,45 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_hazard_count_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_hazard_count_0_0">
+    <FileSet Name="RV32I_pipelined_stage_MW_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_stage_MW_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_hazard_count_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_stage_MW_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_debounce_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_debounce_0_0">
+    <FileSet Name="RV32I_pipelined_stage_EM_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_stage_EM_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_debounce_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_stage_EM_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_ALU_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_ALU_0_0">
+    <FileSet Name="RV32I_pipelined_program_counter_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_program_counter_1_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_ALU_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_program_counter_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_RV32I_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_RV32I_0_0">
+    <FileSet Name="RV32I_pipelined_mux_reg_descr_alu_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_mux_reg_descr_alu_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_RV32I_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_mux_reg_descr_alu_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="RV32I_pipelined_pc_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_pc_logic_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_pc_logic_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="RV32I_pipelined_stage_DE_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_stage_DE_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_stage_DE_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="RV32I_pipelined_post_memory_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_post_memory_logic_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_post_memory_logic_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -609,27 +595,57 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_mux_reg_descr_alu_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_mux_reg_descr_alu_0_0">
+    <FileSet Name="RV32I_pipelined_RV32I_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_RV32I_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_mux_reg_descr_alu_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_RV32I_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_program_counter_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_program_counter_1_0">
+    <FileSet Name="RV32I_pipelined_alu_signals_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_alu_signals_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_program_counter_1_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_alu_signals_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_hazard_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_hazard_logic_0_0">
+    <FileSet Name="RV32I_pipelined_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_blk_mem_gen_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_hazard_logic_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_blk_mem_gen_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="RV32I_pipelined_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_clk_wiz_0_0">
+    <FileSet Name="RV32I_pipelined_brach_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_brach_logic_0_0">
       <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_clk_wiz_0_0"/>
+        <Option Name="TopModule" Val="RV32I_pipelined_brach_logic_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="RV32I_pipelined_mux_output_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_mux_output_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_mux_output_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="RV32I_pipelined_clock_div_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_clock_div_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_clock_div_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="RV32I_pipelined_debounce_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_debounce_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_debounce_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="RV32I_pipelined_hazard_count_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_hazard_count_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_hazard_count_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="RV32I_pipelined_ALU_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_ALU_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_ALU_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -662,84 +678,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_brach_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_brach_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_brach_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_brach_logic_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_clock_div_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_clock_div_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_clock_div_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_clock_div_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_pre_memory_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_pre_memory_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pre_memory_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_pre_memory_logic_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_mux_reg_pc_alu_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_mux_reg_pc_alu_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_reg_pc_alu_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_mux_reg_pc_alu_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_stage_MW_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_stage_MW_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_MW_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_stage_MW_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_blk_mem_gen_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_blk_mem_gen_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_mux_output_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_mux_output_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_output_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_mux_output_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_pc_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_pc_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pc_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_pc_logic_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_hazard_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_hazard_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_hazard_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_hazard_logic_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -761,18 +700,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_stage_EM_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_stage_EM_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_EM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_stage_EM_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_stage_DE_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_stage_DE_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_DE_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_stage_DE_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_pc_shift_down_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_pc_shift_down_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pc_shift_down_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_pc_shift_down_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -794,7 +722,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_pc_shift_down_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_pc_shift_down_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pc_shift_down_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_pc_shift_down_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_mux_reg_pc_alu_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_mux_reg_pc_alu_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_reg_pc_alu_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_mux_reg_pc_alu_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -805,7 +733,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_post_memory_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_post_memory_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_post_memory_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_post_memory_logic_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_pre_memory_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_pre_memory_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pre_memory_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_pre_memory_logic_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -827,7 +755,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_hazard_count_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_hazard_count_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_hazard_count_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_hazard_count_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_stage_MW_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_stage_MW_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_MW_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_stage_MW_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -838,7 +766,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_debounce_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_debounce_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_debounce_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_debounce_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_stage_EM_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_stage_EM_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_EM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_stage_EM_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -849,7 +777,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_ALU_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_ALU_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_ALU_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_ALU_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_program_counter_1_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_program_counter_1_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_program_counter_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_program_counter_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -860,7 +788,40 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_RV32I_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_RV32I_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_RV32I_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_RV32I_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_mux_reg_descr_alu_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_mux_reg_descr_alu_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_reg_descr_alu_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_mux_reg_descr_alu_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_pc_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_pc_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pc_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_pc_logic_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_stage_DE_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_stage_DE_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_DE_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_stage_DE_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_post_memory_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_post_memory_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_post_memory_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_post_memory_logic_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -893,7 +854,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_mux_reg_descr_alu_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_mux_reg_descr_alu_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_reg_descr_alu_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_mux_reg_descr_alu_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_RV32I_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_RV32I_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_RV32I_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_RV32I_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -904,7 +865,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_program_counter_1_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_program_counter_1_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_program_counter_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_program_counter_1_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_alu_signals_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_alu_signals_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_alu_signals_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_alu_signals_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -915,7 +876,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_hazard_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_hazard_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_hazard_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_hazard_logic_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_blk_mem_gen_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_blk_mem_gen_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -926,7 +887,62 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_clk_wiz_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_clk_wiz_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="RV32I_pipelined_brach_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_brach_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_brach_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_brach_logic_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_mux_output_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_mux_output_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_output_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_mux_output_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_clock_div_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_clock_div_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_clock_div_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_clock_div_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_debounce_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_debounce_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_debounce_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_debounce_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_hazard_count_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_hazard_count_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_hazard_count_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_hazard_count_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_ALU_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_ALU_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_ALU_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_ALU_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -954,133 +970,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_brach_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_brach_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_brach_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_clock_div_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_clock_div_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_clock_div_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_pre_memory_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pre_memory_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_pre_memory_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_mux_reg_pc_alu_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_reg_pc_alu_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_mux_reg_pc_alu_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_stage_MW_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_MW_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_stage_MW_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_mux_output_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_output_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_mux_output_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_pc_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pc_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_pc_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_hazard_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_hazard_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_hazard_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1116,25 +1006,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_stage_EM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_EM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_stage_EM_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_stage_DE_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_DE_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_stage_DE_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_pc_shift_down_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pc_shift_down_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_pc_shift_down_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1170,7 +1042,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_pc_shift_down_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pc_shift_down_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_pc_shift_down_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_mux_reg_pc_alu_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_reg_pc_alu_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_mux_reg_pc_alu_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1188,7 +1060,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_post_memory_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_post_memory_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_post_memory_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_pre_memory_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pre_memory_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_pre_memory_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1224,7 +1096,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_hazard_count_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_hazard_count_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_hazard_count_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_stage_MW_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_MW_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_stage_MW_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1242,7 +1114,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_debounce_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_debounce_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_debounce_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_stage_EM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_EM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_stage_EM_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1260,7 +1132,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_ALU_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_ALU_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_ALU_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_program_counter_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_program_counter_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_program_counter_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1278,7 +1150,61 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_RV32I_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_RV32I_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_RV32I_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_mux_reg_descr_alu_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_reg_descr_alu_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_mux_reg_descr_alu_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_pc_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pc_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_pc_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_stage_DE_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_stage_DE_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_stage_DE_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_post_memory_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_post_memory_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_post_memory_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1332,7 +1258,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_mux_reg_descr_alu_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_reg_descr_alu_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_mux_reg_descr_alu_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_RV32I_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_RV32I_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_RV32I_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1350,7 +1276,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_program_counter_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_program_counter_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_program_counter_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_alu_signals_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_alu_signals_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_alu_signals_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1368,7 +1294,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_hazard_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_hazard_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_hazard_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -1386,7 +1312,97 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="RV32I_pipelined_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="RV32I_pipelined_brach_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_brach_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_brach_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_mux_output_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_mux_output_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_mux_output_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_clock_div_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_clock_div_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_clock_div_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_debounce_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_debounce_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_debounce_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_hazard_count_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_hazard_count_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_hazard_count_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_ALU_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_ALU_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_ALU_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>

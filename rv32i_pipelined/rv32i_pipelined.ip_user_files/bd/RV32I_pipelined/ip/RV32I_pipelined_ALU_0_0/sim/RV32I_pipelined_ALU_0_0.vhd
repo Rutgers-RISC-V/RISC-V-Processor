@@ -58,10 +58,7 @@ ENTITY RV32I_pipelined_ALU_0_0 IS
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     control_alu : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    sum : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    zero : OUT STD_LOGIC;
-    sign : OUT STD_LOGIC;
-    overflow : OUT STD_LOGIC
+    alu_out_33 : OUT STD_LOGIC_VECTOR(32 DOWNTO 0)
   );
 END RV32I_pipelined_ALU_0_0;
 
@@ -73,10 +70,7 @@ ARCHITECTURE RV32I_pipelined_ALU_0_0_arch OF RV32I_pipelined_ALU_0_0 IS
       A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       control_alu : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      sum : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      zero : OUT STD_LOGIC;
-      sign : OUT STD_LOGIC;
-      overflow : OUT STD_LOGIC
+      alu_out_33 : OUT STD_LOGIC_VECTOR(32 DOWNTO 0)
     );
   END COMPONENT ALU;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -87,9 +81,6 @@ BEGIN
       A => A,
       B => B,
       control_alu => control_alu,
-      sum => sum,
-      zero => zero,
-      sign => sign,
-      overflow => overflow
+      alu_out_33 => alu_out_33
     );
 END RV32I_pipelined_ALU_0_0_arch;

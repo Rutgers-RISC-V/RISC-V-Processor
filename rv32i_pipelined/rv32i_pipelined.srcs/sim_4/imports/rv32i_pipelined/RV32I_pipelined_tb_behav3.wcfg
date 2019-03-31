@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="RV32I_pipelined_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="RV32I_pipelined_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="481500001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="61" />
+   <wvobject fp_name="/RV32I_pipelined_tb/btn3" type="logic">
+      <obj_property name="ElementShortName">btn3</obj_property>
+      <obj_property name="ObjectShortName">btn3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/led" type="array">
+      <obj_property name="ElementShortName">led[3:0]</obj_property>
+      <obj_property name="ObjectShortName">led[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/next_PC" type="array">
+      <obj_property name="ElementShortName">next_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/PC" type="array">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/pc_reg" type="array">
+      <obj_property name="ElementShortName">pc_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/start_pc_count" type="array">
+      <obj_property name="ElementShortName">start_pc_count[1:0]</obj_property>
+      <obj_property name="ObjectShortName">start_pc_count[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_logic_0/U0/instr_f_d" type="array">
+      <obj_property name="ElementShortName">instr_f_d[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_f_d[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_logic_0/U0/instr_d_e" type="array">
+      <obj_property name="ElementShortName">instr_d_e[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_d_e[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_logic_0/U0/instr_e_m" type="array">
+      <obj_property name="ElementShortName">instr_e_m[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_e_m[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_logic_0/U0/instr_m_w" type="array">
+      <obj_property name="ElementShortName">instr_m_w[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_m_w[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_logic_0/U0/hazard_stage" type="array">
+      <obj_property name="ElementShortName">hazard_stage[2:0]</obj_property>
+      <obj_property name="ObjectShortName">hazard_stage[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_logic_0/U0/new_hazard" type="logic">
+      <obj_property name="ElementShortName">new_hazard</obj_property>
+      <obj_property name="ObjectShortName">new_hazard</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_count_0/U0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_count_0/U0/clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_count_0/U0/new_hazard" type="logic">
+      <obj_property name="ElementShortName">new_hazard</obj_property>
+      <obj_property name="ObjectShortName">new_hazard</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_count_0/U0/hazard_stage" type="array">
+      <obj_property name="ElementShortName">hazard_stage[2:0]</obj_property>
+      <obj_property name="ObjectShortName">hazard_stage[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_count_0/U0/hazard" type="array">
+      <obj_property name="ElementShortName">hazard[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hazard[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_count_0/U0/hazard_counter" type="array">
+      <obj_property name="ElementShortName">hazard_counter[2:0]</obj_property>
+      <obj_property name="ObjectShortName">hazard_counter[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/hazard_count_0/U0/current_hazard" type="logic">
+      <obj_property name="ElementShortName">current_hazard</obj_property>
+      <obj_property name="ObjectShortName">current_hazard</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/brach_logic_0/U0/control_branch" type="array">
+      <obj_property name="ElementShortName">control_branch[3:0]</obj_property>
+      <obj_property name="ObjectShortName">control_branch[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/brach_logic_0/U0/alu_zero" type="logic">
+      <obj_property name="ElementShortName">alu_zero</obj_property>
+      <obj_property name="ObjectShortName">alu_zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/brach_logic_0/U0/alu_sign" type="logic">
+      <obj_property name="ElementShortName">alu_sign</obj_property>
+      <obj_property name="ObjectShortName">alu_sign</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/brach_logic_0/U0/alu_overflow" type="logic">
+      <obj_property name="ElementShortName">alu_overflow</obj_property>
+      <obj_property name="ObjectShortName">alu_overflow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/brach_logic_0/U0/mux_next_pc" type="array">
+      <obj_property name="ElementShortName">mux_next_pc[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_next_pc[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/brach_logic_0/U0/branch" type="logic">
+      <obj_property name="ElementShortName">branch</obj_property>
+      <obj_property name="ObjectShortName">branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/mux_next_pc" type="array">
+      <obj_property name="ElementShortName">mux_next_pc[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_next_pc[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/hazard" type="array">
+      <obj_property name="ElementShortName">hazard[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hazard[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/PC_DE" type="array">
+      <obj_property name="ElementShortName">PC_DE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_DE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/output_bus_E" type="array">
+      <obj_property name="ElementShortName">output_bus_E[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_bus_E[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/PC" type="array">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/PC_FD" type="array">
+      <obj_property name="ElementShortName">PC_FD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_FD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/PC_out" type="array">
+      <obj_property name="ElementShortName">PC_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/control_alu" type="array">
+      <obj_property name="ElementShortName">control_alu[3:0]</obj_property>
+      <obj_property name="ObjectShortName">control_alu[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/sum" type="array">
+      <obj_property name="ElementShortName">sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/sign" type="logic">
+      <obj_property name="ElementShortName">sign</obj_property>
+      <obj_property name="ObjectShortName">sign</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/overflow" type="logic">
+      <obj_property name="ElementShortName">overflow</obj_property>
+      <obj_property name="ObjectShortName">overflow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/ALU_0/U0/temp" type="array">
+      <obj_property name="ElementShortName">temp[32:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[32:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/Descrambler_0/U0/scr_imm" type="array">
+      <obj_property name="ElementShortName">scr_imm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">scr_imm[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/Descrambler_0/U0/descr_imm" type="array">
+      <obj_property name="ElementShortName">descr_imm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">descr_imm[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/mux_output_0/U0/control_mux_output" type="logic">
+      <obj_property name="ElementShortName">control_mux_output</obj_property>
+      <obj_property name="ObjectShortName">control_mux_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/mux_output_0/U0/descrambler_output" type="array">
+      <obj_property name="ElementShortName">descrambler_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">descrambler_output[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/mux_output_0/U0/alu_output" type="array">
+      <obj_property name="ElementShortName">alu_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_output[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/mux_output_0/U0/output_bus" type="array">
+      <obj_property name="ElementShortName">output_bus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_bus[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/instr1" type="array">
+      <obj_property name="ElementShortName">instr1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/instr2" type="array">
+      <obj_property name="ElementShortName">instr2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/reg_write_input" type="array">
+      <obj_property name="ElementShortName">reg_write_input[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_write_input[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/reg_1_out" type="array">
+      <obj_property name="ElementShortName">reg_1_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_1_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/reg_2_out" type="array">
+      <obj_property name="ElementShortName">reg_2_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_2_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/wen" type="logic">
+      <obj_property name="ElementShortName">wen</obj_property>
+      <obj_property name="ObjectShortName">wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/debug_leds" type="array">
+      <obj_property name="ElementShortName">debug_leds[3:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_leds[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/register_file_1" type="array">
+      <obj_property name="ElementShortName">register_file_1[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">register_file_1[0:31][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/register_file_2" type="array">
+      <obj_property name="ElementShortName">register_file_2[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">register_file_2[0:31][31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -799,7 +799,7 @@ begin
 					when "11000110000" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -809,7 +809,7 @@ begin
 					when "11000110001" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -819,7 +819,7 @@ begin
 					when "11000110010" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -829,7 +829,7 @@ begin
 					when "11000110011" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -839,7 +839,7 @@ begin
 					when "11000111000" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -849,7 +849,7 @@ begin
 					when "11000111001" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -859,7 +859,7 @@ begin
 					when "11000111010" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -869,7 +869,7 @@ begin
 					when "11000111011" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -879,7 +879,7 @@ begin
 					when "11000111100" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -889,7 +889,7 @@ begin
 					when "11000111101" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -899,7 +899,7 @@ begin
 					when "11000111110" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';
@@ -909,7 +909,7 @@ begin
 					when "11000111111" =>
 						mux_reg_write <= "10";
 						mux_output <= '1';
-						mux_reg_descr_alu <= '1';
+						mux_reg_descr_alu <= '0';
 						mux_reg_pc_alu <= '1';
 						control_alu <= "1000";
 						control_reg_writeenable <= '0';

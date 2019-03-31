@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 31 05:49:29 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 31 17:26:57 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -46,24 +46,9 @@
             <CONNECTION INSTANCE="stage_DE_0" PORT="control_alu_DE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="sum" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_sum">
+        <PORT DIR="O" LEFT="32" NAME="alu_out_33" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_alu_out_33">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mux_output_0" PORT="alu_output"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="zero" SIGIS="undef" SIGNAME="ALU_0_zero">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="brach_logic_0" PORT="alu_zero"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="sign" SIGIS="undef" SIGNAME="ALU_0_sign">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="brach_logic_0" PORT="alu_sign"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="overflow" SIGIS="undef" SIGNAME="ALU_0_overflow">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="brach_logic_0" PORT="alu_overflow"/>
+            <CONNECTION INSTANCE="alu_signals_0" PORT="alu_output_33"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -140,6 +125,41 @@
         <PORT DIR="O" LEFT="3" NAME="control_mem_logic" RIGHT="0" SIGIS="undef" SIGNAME="RV32I_0_control_mem_logic">
           <CONNECTIONS>
             <CONNECTION INSTANCE="stage_DE_0" PORT="control_mem_logic_FD"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/alu_signals_0" HWVERSION="1.0" INSTANCE="alu_signals_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="alu_signals" VLNV="xilinx.com:module_ref:alu_signals:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="RV32I_pipelined_alu_signals_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="32" NAME="alu_output_33" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_alu_out_33">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="alu_out_33"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="alu_output" RIGHT="0" SIGIS="undef" SIGNAME="alu_signals_0_alu_output">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mux_output_0" PORT="alu_output"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="zero" SIGIS="undef" SIGNAME="alu_signals_0_zero">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="brach_logic_0" PORT="alu_zero"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sign" SIGIS="undef" SIGNAME="alu_signals_0_sign">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="brach_logic_0" PORT="alu_sign"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="overflow" SIGIS="undef" SIGNAME="alu_signals_0_overflow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="brach_logic_0" PORT="alu_overflow"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -269,7 +289,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../imports/Dumps/addTest_Dump.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="true"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -400,19 +420,19 @@
             <CONNECTION INSTANCE="stage_DE_0" PORT="control_branch_DE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="alu_zero" SIGIS="undef" SIGNAME="ALU_0_zero">
+        <PORT DIR="I" NAME="alu_zero" SIGIS="undef" SIGNAME="alu_signals_0_zero">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ALU_0" PORT="zero"/>
+            <CONNECTION INSTANCE="alu_signals_0" PORT="zero"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="alu_sign" SIGIS="undef" SIGNAME="ALU_0_sign">
+        <PORT DIR="I" NAME="alu_sign" SIGIS="undef" SIGNAME="alu_signals_0_sign">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ALU_0" PORT="sign"/>
+            <CONNECTION INSTANCE="alu_signals_0" PORT="sign"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="alu_overflow" SIGIS="undef" SIGNAME="ALU_0_overflow">
+        <PORT DIR="I" NAME="alu_overflow" SIGIS="undef" SIGNAME="alu_signals_0_overflow">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ALU_0" PORT="overflow"/>
+            <CONNECTION INSTANCE="alu_signals_0" PORT="overflow"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="mux_next_pc" RIGHT="0" SIGIS="undef" SIGNAME="brach_logic_0_mux_next_pc">
@@ -1006,17 +1026,17 @@
         </PORT>
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
             <CONNECTION INSTANCE="clock_div_0" PORT="clk"/>
             <CONNECTION INSTANCE="debounce_0" PORT="clk"/>
+            <CONNECTION INSTANCE="hazard_count_0" PORT="clk"/>
             <CONNECTION INSTANCE="program_counter_1" PORT="clk"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_EM_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_FD_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_MW_0" PORT="clk"/>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
-            <CONNECTION INSTANCE="hazard_count_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1036,15 +1056,15 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="div_clk" SIGIS="clk" SIGNAME="clock_div_0_div_clk">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="ena"/>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="enb"/>
+            <CONNECTION INSTANCE="hazard_count_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="program_counter_1" PORT="clk_en"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_EM_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_FD_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_MW_0" PORT="clk_en"/>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="enb"/>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="ena"/>
-            <CONNECTION INSTANCE="hazard_count_0" PORT="clk_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1145,8 +1165,8 @@
         </PORT>
         <PORT DIR="O" NAME="new_hazard" SIGIS="undef" SIGNAME="hazard_logic_0_new_hazard">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stage_DE_0" PORT="hazard_logic"/>
             <CONNECTION INSTANCE="hazard_count_0" PORT="new_hazard"/>
+            <CONNECTION INSTANCE="stage_DE_0" PORT="hazard_logic"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1171,11 +1191,11 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="instruction_out" RIGHT="0" SIGIS="undef" SIGNAME="instruction_clear_0_instruction_out">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="Descrambler_0" PORT="scr_imm"/>
+            <CONNECTION INSTANCE="RV32I_0" PORT="instr"/>
+            <CONNECTION INSTANCE="hazard_logic_0" PORT="instr_f_d"/>
             <CONNECTION INSTANCE="registers_0" PORT="instr1"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="instruction_FD"/>
-            <CONNECTION INSTANCE="RV32I_0" PORT="instr"/>
-            <CONNECTION INSTANCE="Descrambler_0" PORT="scr_imm"/>
-            <CONNECTION INSTANCE="hazard_logic_0" PORT="instr_f_d"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1198,9 +1218,9 @@
             <CONNECTION INSTANCE="stage_DE_0" PORT="immediate_DE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="alu_output" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_sum">
+        <PORT DIR="I" LEFT="31" NAME="alu_output" RIGHT="0" SIGIS="undef" SIGNAME="alu_signals_0_alu_output">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ALU_0" PORT="sum"/>
+            <CONNECTION INSTANCE="alu_signals_0" PORT="alu_output"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="output_bus" RIGHT="0" SIGIS="undef" SIGNAME="mux_output_0_output_bus">
@@ -1463,8 +1483,8 @@
         <PORT DIR="O" LEFT="31" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="program_counter_1_PC">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pc_logic_0" PORT="PC"/>
-            <CONNECTION INSTANCE="stage_FD_0" PORT="PC"/>
             <CONNECTION INSTANCE="pc_shift_down_0" PORT="pc_in"/>
+            <CONNECTION INSTANCE="stage_FD_0" PORT="PC"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1672,8 +1692,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="reg_2_DE" RIGHT="0" SIGIS="undef" SIGNAME="stage_DE_0_reg_2_DE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mux_reg_descr_alu_0" PORT="reg_2_out"/>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dinb"/>
+            <CONNECTION INSTANCE="mux_reg_descr_alu_0" PORT="reg_2_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="immediate_DE" RIGHT="0" SIGIS="undef" SIGNAME="stage_DE_0_immediate_DE">
@@ -1684,8 +1704,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="instruction_DE" RIGHT="0" SIGIS="undef" SIGNAME="stage_DE_0_instruction_DE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stage_EM_0" PORT="instruction_DE"/>
             <CONNECTION INSTANCE="hazard_logic_0" PORT="instr_d_e"/>
+            <CONNECTION INSTANCE="stage_EM_0" PORT="instruction_DE"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1751,8 +1771,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="instruction_EM" RIGHT="0" SIGIS="undef" SIGNAME="stage_EM_0_instruction_EM">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stage_MW_0" PORT="instruction_EM"/>
             <CONNECTION INSTANCE="hazard_logic_0" PORT="instr_e_m"/>
+            <CONNECTION INSTANCE="stage_MW_0" PORT="instruction_EM"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="mux_reg_write_EM" RIGHT="0" SIGIS="undef" SIGNAME="stage_EM_0_mux_reg_write_EM">
@@ -1878,8 +1898,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="instruction_MW" RIGHT="0" SIGIS="undef" SIGNAME="stage_MW_0_instruction_MW">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="registers_0" PORT="instr2"/>
             <CONNECTION INSTANCE="hazard_logic_0" PORT="instr_m_w"/>
+            <CONNECTION INSTANCE="registers_0" PORT="instr2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="mux_reg_write_MW" RIGHT="0" SIGIS="undef" SIGNAME="stage_MW_0_mux_reg_write_MW">

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 31 05:41:13 2019
+-- Date        : Sun Mar 31 05:41:12 2019
 -- Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {c:/Users/Oz
---               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top RV32I_pipelined_clk_wiz_0_0 -prefix
+--               RV32I_pipelined_clk_wiz_0_0_ RV32I_pipelined_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : RV32I_pipelined_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity RV32I_pipelined_clk_wiz_0_0_RV32I_pipelined_clk_wiz_0_0_clk_wiz is
     clk_out1 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of RV32I_pipelined_clk_wiz_0_0_RV32I_pipelined_clk_wiz_0_0_clk_wiz : entity is "RV32I_pipelined_clk_wiz_0_0_clk_wiz";
 end RV32I_pipelined_clk_wiz_0_0_RV32I_pipelined_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of RV32I_pipelined_clk_wiz_0_0_RV32I_pipelined_clk_wiz_0_0_clk_wiz is

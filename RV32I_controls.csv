@@ -3,12 +3,12 @@ lui,"Load Upper Immediate - Writes sign extended 20 bit immediate, left-shifted 
 auipc,Add Upper Immediate to PC and store in register,0010111,---,-,11,0,1,0,0000,1,0010,1111
 jal,Jump and link - add immediate to pc and change pc,1101111,---,-,01,1,0,0,0000,1,0011,1111
 jalr,Jump and link register - pc becomes register + 5,1100111,000,-,01,0,1,1,0000,1,0001,1111
-beq,Branch if Equal,1100011,000,-,10,1,1,1,1000,0,1000,1111
-bne,Branch if not Equal,1100011,001,-,10,1,1,1,1000,0,1001,1111
-blt,Branch if Less Than,1100011,100,-,10,1,1,1,1000,0,1100,1111
-bge,Branch if Greater Than or Equal,1100011,101,-,10,1,1,1,1000,0,1101,1111
-bltu,Branch if Less than Unsigned input,1100011,110,-,10,1,1,1,1000,0,1110,1111
-bgeu,Branch if Greater Than or Equal Unisgned Input,1100011,111,-,10,1,1,1,1000,0,1111,1111
+beq,Branch if Equal,1100011,000,-,10,1,0,1,1000,0,1000,1111
+bne,Branch if not Equal,1100011,001,-,10,1,0,1,1000,0,1001,1111
+blt,Branch if Less Than,1100011,100,-,10,1,0,1,1000,0,1100,1111
+bge,Branch if Greater Than or Equal,1100011,101,-,10,1,0,1,1000,0,1101,1111
+bltu,Branch if Less than Unsigned input,1100011,110,-,10,1,0,1,1000,0,1110,1111
+bgeu,Branch if Greater Than or Equal Unisgned Input,1100011,111,-,10,1,0,1,1000,0,1111,1111
 lb,Load Byte - load 1 byte into register,0000011,000,-,10,0,0,0,0000,1,0010,0000
 lh,Load Half-word - load 2 bytes into register,0000011,001,-,10,0,0,0,0000,1,0010,0001
 lw,Load Word - load 4 bytes into register,0000011,010,-,00,0,0,0,0000,1,0010,0010

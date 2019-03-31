@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ALU, Descrambler, RV32I, brach_logic, clock_div, debounce, hazard_count, hazard_logic, instruction_clear, mux_output, mux_reg_descr_alu, mux_reg_pc_alu, mux_reg_write, pc_logic, pc_shift_down, post_memory_logic, pre_memory_logic, program_counter, registers, stage_DE, stage_EM, stage_FD, stage_MW
+# ALU, Descrambler, RV32I, alu_signals, brach_logic, clock_div, debounce, hazard_count, hazard_logic, instruction_clear, mux_output, mux_reg_descr_alu, mux_reg_pc_alu, mux_reg_write, pc_logic, pc_shift_down, post_memory_logic, pre_memory_logic, program_counter, registers, stage_DE, stage_EM, stage_FD, stage_MW
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -204,11 +204,22 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: alu_signals_0, and set properties
+  set block_name alu_signals
+  set block_cell_name alu_signals_0
+  if { [catch {set alu_signals_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $alu_signals_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
   set_property -dict [ list \
    CONFIG.Byte_Size {8} \
-   CONFIG.Coe_File {../../../../imports/Dumps/addTest_Dump.coe} \
+   CONFIG.Coe_File {../../../../../../../Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe} \
    CONFIG.EN_SAFETY_CKT {false} \
    CONFIG.Enable_32bit_Address {false} \
    CONFIG.Enable_A {Use_ENA_Pin} \
@@ -468,10 +479,11 @@ proc create_root_design { parentCell } {
    }
   
   # Create port connections
-  connect_bd_net -net ALU_0_overflow [get_bd_pins ALU_0/overflow] [get_bd_pins brach_logic_0/alu_overflow]
-  connect_bd_net -net ALU_0_sign [get_bd_pins ALU_0/sign] [get_bd_pins brach_logic_0/alu_sign]
-  connect_bd_net -net ALU_0_sum [get_bd_pins ALU_0/sum] [get_bd_pins mux_output_0/alu_output]
-  connect_bd_net -net ALU_0_zero [get_bd_pins ALU_0/zero] [get_bd_pins brach_logic_0/alu_zero]
+  connect_bd_net -net ALU_0_alu_out_33 [get_bd_pins ALU_0/alu_out_33] [get_bd_pins alu_signals_0/alu_output_33]
+  connect_bd_net -net ALU_0_overflow [get_bd_pins alu_signals_0/overflow] [get_bd_pins brach_logic_0/alu_overflow]
+  connect_bd_net -net ALU_0_sign [get_bd_pins alu_signals_0/sign] [get_bd_pins brach_logic_0/alu_sign]
+  connect_bd_net -net ALU_0_sum [get_bd_pins alu_signals_0/alu_output] [get_bd_pins mux_output_0/alu_output]
+  connect_bd_net -net ALU_0_zero [get_bd_pins alu_signals_0/zero] [get_bd_pins brach_logic_0/alu_zero]
   connect_bd_net -net Descrambler_0_descr_imm [get_bd_pins Descrambler_0/descr_imm] [get_bd_pins stage_DE_0/immediate_FD]
   connect_bd_net -net RV32I_0_control_alu [get_bd_pins RV32I_0/control_alu] [get_bd_pins stage_DE_0/control_alu_FD]
   connect_bd_net -net RV32I_0_control_branch [get_bd_pins RV32I_0/control_branch] [get_bd_pins stage_DE_0/control_branch_FD]
