@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="RV32I_pipelined" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1553999687"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1553999687"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1553999687"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1553999687"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1554024203"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1554024203"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1554024203"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1554024203"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\RV32I_pipelined_ALU_0_0\RV32I_pipelined_ALU_0_0.xci" Type="IP">
         <Instance HierarchyPath="ALU_0"/>
@@ -31,24 +31,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\RV32I_pipelined_blk_mem_gen_0_0\RV32I_pipelined_blk_mem_gen_0_0.xci" Type="IP">
-        <Instance HierarchyPath="blk_mem_gen_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\RV32I_pipelined_brach_logic_0_0\RV32I_pipelined_brach_logic_0_0.xci" Type="IP">
         <Instance HierarchyPath="brach_logic_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\RV32I_pipelined_clk_wiz_0_0\RV32I_pipelined_clk_wiz_0_0.xci" Type="IP">
-        <Instance HierarchyPath="clk_wiz_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -151,6 +135,14 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip\RV32I_pipelined_program_counter_1_0\RV32I_pipelined_program_counter_1_0.xci" Type="IP">
+        <Instance HierarchyPath="program_counter_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip\RV32I_pipelined_registers_0_0\RV32I_pipelined_registers_0_0.xci" Type="IP">
         <Instance HierarchyPath="registers_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -191,8 +183,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\RV32I_pipelined_program_counter_1_0\RV32I_pipelined_program_counter_1_0.xci" Type="IP">
-        <Instance HierarchyPath="program_counter_1"/>
+      <File Name="ip\RV32I_pipelined_blk_mem_gen_0_0\RV32I_pipelined_blk_mem_gen_0_0.xci" Type="IP">
+        <Instance HierarchyPath="blk_mem_gen_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\RV32I_pipelined_pc_shift_down_0_0\RV32I_pipelined_pc_shift_down_0_0.xci" Type="IP">
+        <Instance HierarchyPath="pc_shift_down_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

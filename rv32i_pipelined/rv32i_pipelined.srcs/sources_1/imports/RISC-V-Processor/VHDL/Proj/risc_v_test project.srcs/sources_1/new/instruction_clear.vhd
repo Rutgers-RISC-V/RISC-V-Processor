@@ -40,7 +40,7 @@ end instruction_clear;
 architecture Behavioral of instruction_clear is
 
 begin
-    process(instruction_clear_signal)
+    process(instruction_clear_signal, instruction_in )
     begin
         if(instruction_clear_signal = '1') then
             instruction_out <= x"00000013"; -- No operation (nop)

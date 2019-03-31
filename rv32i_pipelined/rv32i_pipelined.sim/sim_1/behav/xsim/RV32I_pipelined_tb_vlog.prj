@@ -1,4 +1,6 @@
 # compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../rv32i_pipelined.ip_user_files/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_1/sim/RV32I_pipelined_blk_mem_gen_0_1.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

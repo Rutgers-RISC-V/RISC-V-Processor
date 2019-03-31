@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.sim/sim_2/behav/xsim/xsim.dir/RV32I_pipelined_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sat Mar 30 22:36:54 2019" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Sun Mar 31 01:31:55 2019" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "b94a6892-6efb-4217-8158-e85ad4fdcb2e" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "bd6bf5eee7d641d489ebaa473494efaf" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "12" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "50" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz" -context "user_environment"
@@ -23,10 +23,9 @@ webtalk_add_data -client project -key total_processors -value "1" -context "user
 webtalk_add_data -client project -key system_ram -value "16.000 GB" -context "user_environment"
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
-webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "1 us" -context "xsim\\usage"
-webtalk_add_data -client xsim -key iteration -value "3" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.06_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "6012_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1415065548 -regid "" -xml C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.sim/sim_2/behav/xsim/xsim.dir/RV32I_pipelined_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.sim/sim_2/behav/xsim/xsim.dir/RV32I_pipelined_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.sim/sim_2/behav/xsim/xsim.dir/RV32I_pipelined_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key runtime -value "0 ps" -context "xsim\\usage"
+webtalk_add_data -client xsim -key iteration -value "0" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.01_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "5756_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3519371754 -regid "" -xml C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.sim/sim_2/behav/xsim/xsim.dir/RV32I_pipelined_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.sim/sim_2/behav/xsim/xsim.dir/RV32I_pipelined_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.sim/sim_2/behav/xsim/xsim.dir/RV32I_pipelined_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

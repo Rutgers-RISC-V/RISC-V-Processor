@@ -48,10 +48,11 @@ begin
         if(rising_edge(clk) and clk_en = '1') then
             if(new_hazard = '1' and (hazard_stage(2) ='1' or hazard_stage(1) ='1')) then -- 111 101 110 011 010
                 current_hazard <= '1';
-            elsif(hazard_counter = "001") then
+                hazard_counter <= '0' & hazard_stage(2 downto 1);
+            elsif(hazard_counter = "000") then
                 current_hazard <= '0';
             end if;
-            hazard_counter <= '0' & hazard_stage(2 downto 1);
+            hazard_counter <= '0' & hazard_counter(2 downto 1);
         end if;
     end process;
     hazard <= new_hazard & current_hazard;

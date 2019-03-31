@@ -38,17 +38,19 @@ end clock_div;
 
 architecture Behavioral of clock_div is
 signal counter: std_logic_vector(31 downto 0) := x"00000000";
+signal div_clk_reg: std_logic := '0';
 begin
     process(clk)
     begin
         if(rising_edge(clk)) then
             if(unsigned(counter) < 4) then -- 10 MHz
                 counter <= std_logic_vector(unsigned(counter)+1);
-                div_clk <= '0';
+                div_clk_reg <= '0';
             else
                 counter <= (others => '0');
-                div_clk <= '1';
+                div_clk_reg <= '1';
             end if;
         end if;
     end process;
+    div_clk <= div_clk_reg;
 end Behavioral;

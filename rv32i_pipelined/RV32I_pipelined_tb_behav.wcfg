@@ -3,99 +3,31 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="RV32I_pipelined_tb_behav.wdb" id="1">
+      <db_ref path="clk_div_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="RV32I_pipelined_tb" />
+            <top_module name="clk_div_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="100000000000001fs"></ZoomEndTime>
-      <Cursor1Time time="100000000000000fs"></Cursor1Time>
+      <ZoomEndTime time="335000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
-   <wvobject fp_name="/RV32I_pipelined_tb/btn3" type="logic">
-      <obj_property name="ElementShortName">btn3</obj_property>
-      <obj_property name="ObjectShortName">btn3</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/clk" type="logic">
+   <WVObjectSize size="3" />
+   <wvobject fp_name="/clk_div_tb/divider/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/led" type="array">
-      <obj_property name="ElementShortName">led[3:0]</obj_property>
-      <obj_property name="ObjectShortName">led[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/mux_next_pc" type="array">
-      <obj_property name="ElementShortName">mux_next_pc[1:0]</obj_property>
-      <obj_property name="ObjectShortName">mux_next_pc[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/hazard" type="array">
-      <obj_property name="ElementShortName">hazard[1:0]</obj_property>
-      <obj_property name="ObjectShortName">hazard[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/PC_DE" type="array">
-      <obj_property name="ElementShortName">PC_DE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC_DE[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/output_bus_E" type="array">
-      <obj_property name="ElementShortName">output_bus_E[31:0]</obj_property>
-      <obj_property name="ObjectShortName">output_bus_E[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/PC" type="array">
-      <obj_property name="ElementShortName">PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/PC_FD" type="array">
-      <obj_property name="ElementShortName">PC_FD[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC_FD[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pc_logic_0/U0/PC_out" type="array">
-      <obj_property name="ElementShortName">PC_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/clk_en" type="logic">
-      <obj_property name="ElementShortName">clk_en</obj_property>
-      <obj_property name="ObjectShortName">clk_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/next_PC" type="array">
-      <obj_property name="ElementShortName">next_PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">next_PC[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/PC" type="array">
-      <obj_property name="ElementShortName">PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/pc_reg" type="array">
-      <obj_property name="ElementShortName">pc_reg[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_reg[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/program_counter_1/U0/start_pc_count" type="array">
-      <obj_property name="ElementShortName">start_pc_count[1:0]</obj_property>
-      <obj_property name="ObjectShortName">start_pc_count[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/clock_div_0/U0/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/clock_div_0/U0/div_clk" type="logic">
+   <wvobject fp_name="/clk_div_tb/divider/div_clk" type="logic">
       <obj_property name="ElementShortName">div_clk</obj_property>
       <obj_property name="ObjectShortName">div_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/clock_div_0/U0/counter" type="array">
+   <wvobject fp_name="/clk_div_tb/divider/counter" type="array">
       <obj_property name="ElementShortName">counter[31:0]</obj_property>
       <obj_property name="ObjectShortName">counter[31:0]</obj_property>
    </wvobject>

@@ -46,7 +46,7 @@ end pc_logic;
 architecture Behavioral of pc_logic is
 
 begin
-    process(mux_next_pc,hazard) -- may need to update
+    process(mux_next_pc,hazard, PC_DE, output_bus_E, PC, PC_FD) -- may need to update
     begin
             case mux_next_pc&hazard is
                 when "0000"|"0001"|"0010"|"0011" => -- caught error on instruction being decoded

@@ -46,13 +46,13 @@ architecture Behavioral of Descrambler is
             begin
                     case scr_imm(6 downto 0) is
                         when "0110111"|"0010111" =>       -- U type instruction Load Upper Immediate, - U type instruction auipc
-                            descr_imm <= std_logic_vector(resize(signed(scr_imm(31 downto 12)&"000000000000"),32));
+                            descr_imm <= std_logic_vector(resize(signed(scr_imm(31 downto 12)&x"000"),32));
                         when "1101111" =>       -- J type instruction jal    
-                            descr_imm <= std_logic_vector(resize(signed(scr_imm(31) & scr_imm(19 downto 12) & scr_imm(20) & scr_imm(30 downto 21)),32));
+                            descr_imm <= std_logic_vector(resize(signed(scr_imm(31) & scr_imm(19 downto 12) & scr_imm(20) & scr_imm(30 downto 21)& '0'),32));
                         when "1100111"|"0000011" =>       -- I type instruction jalr
                             descr_imm <= std_logic_vector(resize(signed(scr_imm(31 downto 20)),32));
                         when "1100011" =>       -- All B type instructions
-                            descr_imm <= std_logic_vector(resize(signed(scr_imm(31) & scr_imm(7) & scr_imm(30 downto 25) & scr_imm(11 downto 8)),32));
+                            descr_imm <= std_logic_vector(resize(signed(scr_imm(31) & scr_imm(7) & scr_imm(30 downto 25) & scr_imm(11 downto 8) & '0'),32));
                         when "0100011" =>       -- All S type instructions
                             descr_imm <= std_logic_vector(resize(signed(scr_imm(31 downto 25) & scr_imm(11 downto 7)),32));
                         when "0010011" =>       -- I type immediate operation instructions
