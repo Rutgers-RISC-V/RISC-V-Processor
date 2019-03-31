@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 31 17:26:57 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 31 18:56:48 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -289,7 +289,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="true"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -507,7 +507,7 @@
         <PARAMETER NAME="C_CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
         <PARAMETER NAME="C_USE_RESET" VALUE="0"/>
         <PARAMETER NAME="C_RESET_LOW" VALUE="0"/>
-        <PARAMETER NAME="C_USE_LOCKED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_LOCKED" VALUE="1"/>
         <PARAMETER NAME="C_USE_INCLK_STOPPED" VALUE="0"/>
         <PARAMETER NAME="C_USE_CLKFB_STOPPED" VALUE="0"/>
         <PARAMETER NAME="C_USE_POWER_DOWN" VALUE="0"/>
@@ -885,7 +885,7 @@
         <PARAMETER NAME="CLKFB_OUT_N_PORT" VALUE="clkfb_out_n"/>
         <PARAMETER NAME="PLATFORM" VALUE="UNKNOWN"/>
         <PARAMETER NAME="SUMMARY_STRINGS" VALUE="empty"/>
-        <PARAMETER NAME="USE_LOCKED" VALUE="false"/>
+        <PARAMETER NAME="USE_LOCKED" VALUE="true"/>
         <PARAMETER NAME="CALC_DONE" VALUE="empty"/>
         <PARAMETER NAME="USE_RESET" VALUE="false"/>
         <PARAMETER NAME="USE_POWER_DOWN" VALUE="false"/>
@@ -1039,6 +1039,11 @@
             <CONNECTION INSTANCE="stage_MW_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_div_0" PORT="locked"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -1052,6 +1057,11 @@
         <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="locked"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="div_clk" SIGIS="clk" SIGNAME="clock_div_0_div_clk">

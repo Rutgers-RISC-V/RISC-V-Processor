@@ -70,6 +70,8 @@ module RV32I_pipelined_clk_wiz_0_0_clk_wiz
  (// Clock in ports
   // Clock out ports
   output        clk_out1,
+  // Status and control signals
+  output        locked,
   input         clk_in1
  );
   // Input buffering
@@ -174,6 +176,7 @@ wire clk_in2_RV32I_pipelined_clk_wiz_0_0;
     .PWRDWN              (1'b0),
     .RST                 (1'b0));
 
+  assign locked = locked_int;
 // Clock Monitor clock assigning
 //--------------------------------------
  // Output buffering

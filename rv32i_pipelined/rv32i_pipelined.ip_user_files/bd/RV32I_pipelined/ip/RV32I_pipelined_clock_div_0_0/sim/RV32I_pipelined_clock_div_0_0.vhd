@@ -56,6 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY RV32I_pipelined_clock_div_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
+    locked : IN STD_LOGIC;
     div_clk : OUT STD_LOGIC
   );
 END RV32I_pipelined_clock_div_0_0;
@@ -66,6 +67,7 @@ ARCHITECTURE RV32I_pipelined_clock_div_0_0_arch OF RV32I_pipelined_clock_div_0_0
   COMPONENT clock_div IS
     PORT (
       clk : IN STD_LOGIC;
+      locked : IN STD_LOGIC;
       div_clk : OUT STD_LOGIC
     );
   END COMPONENT clock_div;
@@ -81,6 +83,7 @@ BEGIN
   U0 : clock_div
     PORT MAP (
       clk => clk,
+      locked => locked,
       div_clk => div_clk
     );
 END RV32I_pipelined_clock_div_0_0_arch;
