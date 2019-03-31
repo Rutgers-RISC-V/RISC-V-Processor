@@ -45,8 +45,42 @@ end terminal_top;
 
 architecture Behavioral of terminal_top is
 component vga_ctrl
+Port(  
+        clk, enable : in std_logic;
+        hcount, vcount : out std_logic_vector (9 downto 0);
+        vid, hs, vs : out std_logic
+    );
+end component;
+
+component fontROM
+generic(
+		addrWidth: integer := 11;
+		dataWidth: integer := 8
+	);
+Port(
+		clkA: in std_logic;
+		writeEnableA: in std_logic;
+		addrA: in std_logic_vector(addrWidth-1 downto 0);
+		dataOutA: out std_logic_vector(dataWidth-1 downto 0);
+		dataInA: in std_logic_vector(dataWidth-1 downto 0)
+	);
+end component;
+
+component character_memaddress
+Port(  
+        hcount : in STD_LOGIC_VECTOR (9 downto 0);
+        vcount : in STD_LOGIC_VECTOR (9 downto 0);
+        addr : out STD_LOGIC_VECTOR (31 downto 0)
+    );
+end component;
 
 begin
-
+font: fontROM
+port map (
+    clkA => clk,
+    --addrA => fRomAddr,
+    --dataOutA => character_strip
+    );
+    
 
 end Behavioral;
