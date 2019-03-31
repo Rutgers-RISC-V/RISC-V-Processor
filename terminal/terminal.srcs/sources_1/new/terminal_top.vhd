@@ -74,13 +74,44 @@ Port(
     );
 end component;
 
+component Font_Rom_Addr_Gen
+Port(
+        vcount : in std_logic_vector(9 downto 0);
+        Ascii_Val : in std_logic_vector(7 downto 0);
+        fRom_addr : out std_logic_vector(10 downto 0)
+    );
+end component;
+signal character_Strip : std_logic_vector (7 downto 0);
+signal fRom_addr : std_logic_vector (10 downto 0);
+signal vcount, hcount : std_logic_vector (9 downto 0);
+signal vid : std_logic;
+
 begin
+
 font: fontROM
 port map (
     clkA => clk,
-    --addrA => fRomAddr,
-    --dataOutA => character_strip
+    addrA => fRom_addr,
+    dataOutA => character_strip,
+    writeenableA => '0',
+    datainA => (others => '0')
     );
-    
 
+vgacontrol : vga_ctrl
+port map (
+    clk => clk,
+    enable => term_en,
+    hcount => hcount,
+    vcount => vcount,
+    vid => vid,
+    hs => hs,
+    vs => vs
+    );
+
+
+--addressgenerator: character_memaddress
+--port map (
+
+--);
+    
 end Behavioral;
