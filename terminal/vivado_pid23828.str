@@ -514,3 +514,325 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schemat
 // WARNING: HEventQueue.dispatchEvent() is taking  1275 ms.
 // WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 683 ms to process. Increasing delay to 2000 ms.
 // WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 607 ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 41704 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+selectCodeEditor("terminal_top.vhd", 159, 251); // cl (w, cp)
+// Elapsed time: 20 seconds
+selectCodeEditor("terminal_top.vhd", 180, 123); // cl (w, cp)
+// [GUI Memory]: 143 MB (+2703kb) [13:27:14]
+// Elapsed time: 28 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true, false, false, false, true, false); // u (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_RTL_DESIGN, "New Elaborated Design..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_RTL_DESIGN
+// M (cp): Open Elaborated Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (M)
+// al (cp): Save Project: addNotify
+selectButton("PAResourceOtoP.OpenDesignDialog_DESIGN_ALREADY_OPEN_OPEN_NEW_OK", "OK"); // JButton (C, J)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bx (cp):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bx (cp):  Open Elaborated Design : addNotify
+dismissDialog("Save Project"); // al (cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: synth_design -rtl -name rtl_2 
+// Tcl Message: Command: synth_design -rtl -name rtl_2 Starting synth_design Using part: xc7z010clg400-2 Top: terminal_top 
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,009 MB. GUI used memory: 82 MB. Current time: 4/1/19, 11:33:43 AM EDT
+// TclEventType: DESIGN_NEW
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  5303 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1184.555 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'terminal_top' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:45] INFO: [Synth 8-3491] module 'clock_div' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:35' bound to instance 'div' of component 'clock_div' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:118] INFO: [Synth 8-638] synthesizing module 'clock_div' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:40] INFO: [Synth 8-256] done synthesizing module 'clock_div' (1#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:40] 
+// Tcl Message: 	Parameter addrWidth bound to: 11 - type: integer  	Parameter dataWidth bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-3491] module 'fontROM' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:27' bound to instance 'font' of component 'fontROM' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:123] INFO: [Synth 8-638] synthesizing module 'fontROM' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:41] 
+// Tcl Message: 	Parameter addrWidth bound to: 11 - type: integer  	Parameter dataWidth bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'fontROM' (2#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:41] 
+// Tcl Message: INFO: [Synth 8-3491] module 'vga_ctrl' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd:5' bound to instance 'vgacontrol' of component 'vga_ctrl' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:132] INFO: [Synth 8-638] synthesizing module 'vga_ctrl' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd:13] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'terminal_top' (7#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:45] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:28 . Memory (MB): peak = 1207.059 ; gain = 22.504 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:30 . Memory (MB): peak = 1207.059 ; gain = 22.504 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:30 . Memory (MB): peak = 1207.059 ; gain = 22.504 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/constrs_1/imports/2/ZYBO_Master.xdc] Finished Parsing XDC File [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/constrs_1/imports/2/ZYBO_Master.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1342.188 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Elapsed time: 51 seconds
+floatView(PAResourceOtoP.PAViews_CODE, "vga_ctrl.vhd"); // ax (aI, cp)
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.4s
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:49 . Memory (MB): peak = 1342.188 ; gain = 157.633 
+// Tcl Message: 23 Infos, 87 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:51 . Memory (MB): peak = 1342.188 ; gain = 157.633 
+// 'c' command handler elapsed time: 59 seconds
+dismissDialog("Open Elaborated Design"); // bx (cp)
+// Elapsed time: 434 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 4); // k (j, cp)
+// Elapsed time: 21 seconds
+selectCodeEditor("fontROM.vhd", 502, 308); // cl (w, cp)
+selectCodeEditor("fontROM.vhd", 502, 308, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("fontROM.vhd", 502, 308); // cl (w, cp)
+selectCodeEditor("fontROM.vhd", 562, 168); // cl (w, cp)
+// Elapsed time: 48 seconds
+floatView(PAResourceOtoP.PAViews_CODE, "fontROM.vhd"); // ax (aI, cp)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+dockFrame(PAResourceOtoP.PAViews_CODE, "fontROM.vhd"); // ax (aI, aK)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (aF, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1, false, true); // k (j, cp) - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1083 ms.
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (aF, cp)
+dockFrame(PAResourceOtoP.PAViews_CODE, "vga_ctrl.vhd"); // ax (aI, aK)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+// [GUI Memory]: 150 MB (+180kb) [13:37:22]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 6); // k (j, cp)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (aF, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "character_memaddress.vhd", 5); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 6); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "character_memaddress.vhd", 5); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 6); // k (j, cp)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // ax
+// Elapsed time: 416 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("terminal_top.vhd", 191, 422); // cl (w, cp)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga_ctrl.vhd", 7); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 6); // k (j, cp)
+// [GUI Memory]: 172 MB (+15682kb) [13:49:24]
+// Elapsed time: 268 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga_ctrl.vhd", 7); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
+selectCodeEditor("terminal_top.vhd", 192, 438); // cl (w, cp)
+selectCodeEditor("terminal_top.vhd", 131, 411); // cl (w, cp)
+selectCodeEditor("terminal_top.vhd", 131, 411, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("terminal_top.vhd", 140, 85); // cl (w, cp)
+selectCodeEditor("terminal_top.vhd", 140, 85, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("terminal_top.vhd", 150, 67); // cl (w, cp)
+selectCodeEditor("terminal_top.vhd", 150, 67, false, false, false, false, true); // cl (w, cp) - Double Click
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga_ctrl.vhd", 7); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 6); // k (j, cp)
+// Elapsed time: 121 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 3); // k (j, cp)
+selectCodeEditor("terminal_top.vhd", 120, 461); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("terminal_top.vhd", 178, 258); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga_ctrl.vhd", 7); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 2); // k (j, cp)
+// Elapsed time: 104 seconds
+selectCodeEditor("fontROM.vhd", 102, 520, false, false, false, true, false); // cl (w, cp) - Popup Trigger
+selectCodeEditor("fontROM.vhd", 62, 520); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,009 MB. GUI used memory: 91 MB. Current time: 4/1/19, 12:03:45 PM EDT
+// Elapsed time: 65 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 3); // k (j, cp)
+// Elapsed time: 63 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 2); // k (j, cp)
+// Elapsed time: 76 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "datain", true); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "datain"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "datain"); // l (aT, cp)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 3); // k (j, cp)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 3); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fontROM.vhd", 2); // k (j, cp)
+selectCodeEditor("fontROM.vhd", 287, 288); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 3); // k (j, cp)
+// WARNING: HEventQueue.dispatchEvent() is taking  1060 ms.
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true, false, false, false, true, false); // u (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_RTL_DESIGN, "New Elaborated Design..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_RTL_DESIGN
+// M (cp): Open Elaborated Design: addNotify
+applyEnter(PAResourceOtoP.OpenDesignDialog_DESIGN_NAME, "rtl_3"); // Y (Q, M)
+// bx (cp):  Open Elaborated Design : addNotify
+selectButton("PAResourceOtoP.OpenDesignDialog_DESIGN_ALREADY_OPEN_OPEN_NEW_OK", "OK"); // JButton (C, J)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_3 
+// Tcl Message: Command: synth_design -rtl -name rtl_3 Starting synth_design Using part: xc7z010clg400-2 Top: terminal_top 
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1422.492 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'terminal_top' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:45] INFO: [Synth 8-3491] module 'clock_div' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:35' bound to instance 'div' of component 'clock_div' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:118] INFO: [Synth 8-638] synthesizing module 'clock_div' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:40] INFO: [Synth 8-256] done synthesizing module 'clock_div' (1#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:40] 
+// Tcl Message: 	Parameter addrWidth bound to: 11 - type: integer  	Parameter dataWidth bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-3491] module 'fontROM' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:27' bound to instance 'font' of component 'fontROM' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:123] INFO: [Synth 8-638] synthesizing module 'fontROM' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:41] 
+// Tcl Message: 	Parameter addrWidth bound to: 11 - type: integer  	Parameter dataWidth bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'fontROM' (2#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:41] 
+// Tcl Message: INFO: [Synth 8-3491] module 'vga_ctrl' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd:5' bound to instance 'vgacontrol' of component 'vga_ctrl' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:132] INFO: [Synth 8-638] synthesizing module 'vga_ctrl' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd:13] 
+// Tcl Message: ERROR: [Synth 8-549] port width mismatch for port 'Ascii_Val': port width = 8, actual width = 9 [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:164] ERROR: [Synth 8-285] failed synthesizing module 'terminal_top' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:45] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:22 . Memory (MB): peak = 1452.695 ; gain = 30.203 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: 19 Infos, 5 Warnings, 0 Critical Warnings and 3 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// S (cp): Critical Messages: addNotify
+// Elapsed time: 27 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (M)
+// 'c' command handler elapsed time: 30 seconds
+dismissDialog("Open Elaborated Design"); // bx (cp)
+// Elapsed time: 13 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (cp)
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax
+// WARNING: HEventQueue.dispatchEvent() is taking  3306 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2117 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1587 ms.
+// Elapsed time: 883 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true, false, false, false, true, false); // u (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_RTL_DESIGN, "New Elaborated Design..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_RTL_DESIGN
+// M (cp): Open Elaborated Design: addNotify
+applyEnter(PAResourceOtoP.OpenDesignDialog_DESIGN_NAME, "rtl_3"); // Y (Q, M)
+// bx (cp):  Open Elaborated Design : addNotify
+selectButton("PAResourceOtoP.OpenDesignDialog_DESIGN_ALREADY_OPEN_OPEN_NEW_OK", "OK"); // JButton (C, J)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_3 
+// Tcl Message: Command: synth_design -rtl -name rtl_3 Starting synth_design Using part: xc7z010clg400-2 Top: terminal_top 
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1459.270 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'terminal_top' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:45] INFO: [Synth 8-3491] module 'clock_div' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:35' bound to instance 'div' of component 'clock_div' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:118] INFO: [Synth 8-638] synthesizing module 'clock_div' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:40] INFO: [Synth 8-256] done synthesizing module 'clock_div' (1#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:40] 
+// Tcl Message: 	Parameter addrWidth bound to: 11 - type: integer  	Parameter dataWidth bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-3491] module 'fontROM' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:27' bound to instance 'font' of component 'fontROM' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:123] INFO: [Synth 8-638] synthesizing module 'fontROM' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:41] 
+// Tcl Message: 	Parameter addrWidth bound to: 11 - type: integer  	Parameter dataWidth bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'fontROM' (2#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:41] 
+// Tcl Message: INFO: [Synth 8-3491] module 'vga_ctrl' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd:5' bound to instance 'vgacontrol' of component 'vga_ctrl' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:132] INFO: [Synth 8-638] synthesizing module 'vga_ctrl' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd:13] 
+// Tcl Message: ERROR: [Synth 8-549] port width mismatch for port 'Ascii_Val': port width = 8, actual width = 9 [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:164] ERROR: [Synth 8-285] failed synthesizing module 'terminal_top' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:45] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1459.270 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: 19 Infos, 5 Warnings, 0 Critical Warnings and 3 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// S (cp): Critical Messages: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (M)
+// 'c' command handler elapsed time: 10 seconds
+dismissDialog("Open Elaborated Design"); // bx (cp)
+// Elapsed time: 11 seconds
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aR, cp): FALSE
+// WARNING: HEventQueue.dispatchEvent() is taking  1142 ms.
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aR, cp): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aR, cp): FALSE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-549] port width mismatch for port 'Ascii_Val': port width = 8, actual width = 9 [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:164]. ]", 2, false); // ah (Q, cp)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Alex\Documents\RISC-V-Processor\terminal\terminal.srcs\sources_1\new\terminal_top.vhd;-;;-;16;-;line;-;164;-;;-;16;-;"); // ah (Q, cp)
+dismissDialog("Critical Messages"); // S (cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("terminal_top.vhd", 397, 263); // cl (w, cp)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true, false, false, false, true, false); // u (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_RTL_DESIGN, "New Elaborated Design..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_RTL_DESIGN
+// M (cp): Open Elaborated Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (M)
+// bx (cp):  Open Elaborated Design : addNotify
+selectButton("PAResourceOtoP.OpenDesignDialog_DESIGN_ALREADY_OPEN_OPEN_NEW_OK", "OK"); // JButton (C, J)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_3 
+// Tcl Message: Command: synth_design -rtl -name rtl_3 Starting synth_design Using part: xc7z010clg400-2 Top: terminal_top 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,009 MB. GUI used memory: 91 MB. Current time: 4/1/19, 12:24:01 PM EDT
+// TclEventType: DESIGN_NEW
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (terminal_top.vhd) elapsed time: 0.2s
+// WARNING: HEventQueue.dispatchEvent() is taking  3929 ms.
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.2s
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1474.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'terminal_top' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:45] INFO: [Synth 8-3491] module 'clock_div' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:35' bound to instance 'div' of component 'clock_div' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:118] INFO: [Synth 8-638] synthesizing module 'clock_div' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:40] INFO: [Synth 8-256] done synthesizing module 'clock_div' (1#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd:40] 
+// Tcl Message: 	Parameter addrWidth bound to: 11 - type: integer  	Parameter dataWidth bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-3491] module 'fontROM' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:27' bound to instance 'font' of component 'fontROM' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:123] INFO: [Synth 8-638] synthesizing module 'fontROM' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:41] 
+// Tcl Message: 	Parameter addrWidth bound to: 11 - type: integer  	Parameter dataWidth bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'fontROM' (2#1) [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd:41] 
+// Tcl Message: INFO: [Synth 8-3491] module 'vga_ctrl' declared at 'D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd:5' bound to instance 'vgacontrol' of component 'vga_ctrl' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd:132] INFO: [Synth 8-638] synthesizing module 'vga_ctrl' [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd:13] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1474.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1474.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1474.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/constrs_1/imports/2/ZYBO_Master.xdc] Finished Parsing XDC File [D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/constrs_1/imports/2/ZYBO_Master.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1594.672 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1594.672 ; gain = 119.754 
+// Tcl Message: 23 Infos, 60 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1594.672 ; gain = 119.754 
+// 'c' command handler elapsed time: 33 seconds
+// Elapsed time: 29 seconds
+dismissDialog("Open Elaborated Design"); // bx (cp)
+// Elapsed time: 624 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_div.vhd", 3); // k (j, cp)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aI (aF, cp)
+// Elapsed time: 280 seconds
+selectCodeEditor("clock_div.vhd", 709, 288); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "terminal_top.vhd", 2); // k (j, cp)
