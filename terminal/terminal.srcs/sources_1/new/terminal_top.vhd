@@ -33,7 +33,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity terminal_top is
     Port ( clk : in STD_LOGIC;
-           term_en : in STD_LOGIC;
            memaddr : out STD_LOGIC_VECTOR (31 downto 0);
            ascii_in : in STD_LOGIC_VECTOR (8 downto 0);
            R : out STD_LOGIC_VECTOR(4 downto 0);
@@ -81,12 +80,43 @@ Port(
         fRom_addr : out std_logic_vector(10 downto 0)
     );
 end component;
+
+component clock_div
+    Port ( clk_in : in STD_LOGIC;
+        div : out STD_LOGIC);
+
+end component;
+
+component pixel_pusher Port(
+    clk : in STD_LOGIC;
+           en : in STD_LOGIC;
+           vs, vid : in STD_LOGIC;
+           pixel : in STD_LOGIC_VECTOR (7 downto 0);
+           hcount, vcount : in STD_LOGIC_VECTOR (9 downto 0);
+           R, B : out STD_LOGIC_VECTOR (4 downto 0);
+           G : out STD_LOGIC_VECTOR (5 downto 0);
+           addr : out STD_LOGIC_VECTOR (31 downto 0));
+end component;
+
+component pixel_selector Port(
+    hcount : in STD_LOGIC_VECTOR (9 downto 0); 
+    strip : in std_logic_vector (7 downto 0);
+    pixel : out std_logic_vector (7 downto 0));
+end component;
+
+signal vs_sig, term_en : std_logic;
+signal pixel, strip, ascii :  std_logic_vector (7 downto 0);
 signal character_Strip : std_logic_vector (7 downto 0);
 signal fRom_addr : std_logic_vector (10 downto 0);
 signal vcount, hcount : std_logic_vector (9 downto 0);
 signal vid : std_logic;
 
 begin
+
+div: clock_div
+port map ( 
+    clk_in => clk,
+    div => term_en);
 
 font: fontROM
 port map (
@@ -105,8 +135,33 @@ port map (
     vcount => vcount,
     vid => vid,
     hs => hs,
-    vs => vs
+    vs => vs_sig
     );
+
+PixelOut : pixel_pusher Port Map(
+    clk => clk,   
+    en => term_en,
+    pixel => pixel,
+    hcount => hcount,
+    vcount => vcount,
+    vid => vid,
+    vs => vs_sig,
+    R => R,
+    G => G,
+    B => B,
+    addr => memaddr);
+
+PixelSelect : pixel_selector Port Map(
+    strip => strip,
+    pixel => pixel,
+    hcount => hcount);
+    
+Font_Addr_Gen:
+    Font_Rom_Addr_Gen Port Map (
+    vcount => vcount,
+    Ascii_Val => ascii,
+    FRom_Addr => fRom_addr);
+    
 
 
 --addressgenerator: character_memaddress
