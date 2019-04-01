@@ -22,7 +22,7 @@ begin
         if (enable = '1') then                                                              --if the enable pin is high
         
             --hcount incrememnt--
-            if (unsigned(hcount_internal) < 799) then                                       --if the hcount is under 799
+            if (unsigned(hcount_internal) < 307199) then                                       --if the hcount is under 307199
                 hcount_internal <= std_logic_vector(unsigned(hcount_internal) + 1);         --increment hcount by 1
             else                                                                            --if hcount >= 799
                 hcount_internal <= (others => '0');                                                     --reset hcount to 0

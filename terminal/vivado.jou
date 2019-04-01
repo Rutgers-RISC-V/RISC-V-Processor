@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar 31 22:05:05 2019
+# Process ID: 23828
+# Current directory: D:/Alex/Documents/RISC-V-Processor/terminal
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21632 D:\Alex\Documents\RISC-V-Processor\terminal\terminal.xpr
+# Log file: D:/Alex/Documents/RISC-V-Processor/terminal/vivado.log
+# Journal file: D:/Alex/Documents/RISC-V-Processor/terminal\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Alex/Documents/RISC-V-Processor/terminal/terminal.xpr
+add_files -norecurse {D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/Pixel_Pusher.vhd D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd}
+add_files -norecurse D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/Pixel_Pusher.vhd
+add_files -norecurse D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/pixel_selector.vhd
