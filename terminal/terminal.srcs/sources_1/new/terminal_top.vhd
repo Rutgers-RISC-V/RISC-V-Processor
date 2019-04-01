@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity terminal_top is
     Port ( clk : in STD_LOGIC;
            memaddr : out STD_LOGIC_VECTOR (31 downto 0);
-           ascii_in : in STD_LOGIC_VECTOR (8 downto 0);
+           ascii_in : in STD_LOGIC_VECTOR (7 downto 0);
            R : out STD_LOGIC_VECTOR(4 downto 0);
            G : out STD_LOGIC_VECTOR(5 downto 0);
            B : out STD_LOGIC_VECTOR(4 downto 0);
@@ -105,13 +105,15 @@ component pixel_selector Port(
 end component;
 
 signal vs_sig, term_en : std_logic;
-signal pixel, strip, ascii :  std_logic_vector (7 downto 0);
+signal pixel, ascii :  std_logic_vector (7 downto 0);
 signal character_Strip : std_logic_vector (7 downto 0);
 signal fRom_addr : std_logic_vector (10 downto 0);
 signal vcount, hcount : std_logic_vector (9 downto 0);
 signal vid : std_logic;
 
 begin
+
+vs <= vs_sig;
 
 div: clock_div
 port map ( 
@@ -152,14 +154,14 @@ PixelOut : pixel_pusher Port Map(
     addr => memaddr);
 
 PixelSelect : pixel_selector Port Map(
-    strip => strip,
+    strip => character_strip,
     pixel => pixel,
     hcount => hcount);
     
 Font_Addr_Gen:
     Font_Rom_Addr_Gen Port Map (
     vcount => vcount,
-    Ascii_Val => ascii,
+    Ascii_Val => ascii_in,
     FRom_Addr => fRom_addr);
     
 
