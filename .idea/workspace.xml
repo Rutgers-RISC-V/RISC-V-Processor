@@ -2,46 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminal_test_for_simulator.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RV32I.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/RV32I.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RV32I_controls.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RV32I_controls.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_controller_gen/RV32I_single_controls.csv" beforeDir="false" afterPath="$PROJECT_DIR$/old_controller_gen/old_RV32I_single_controls.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe" beforeDir="false" afterPath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" afterPath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe" beforeDir="false" afterPath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_NoDelay.s" beforeDir="false" afterPath="$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_NoDelay.s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/gui_handlers.wdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/java_command_handlers.wdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/project.wpc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/webtalk_pa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/mem_init_files/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/mem_init_files/FPGA_RISC_V_Tests_Dump.coe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/mem_init_files/RV32I_pipelined_blk_mem_gen_0_0.mif" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/mem_init_files/RV32I_pipelined_blk_mem_gen_0_0.mif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/RV32I_pipelined.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/RV32I_pipelined.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/compile.do" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/compile.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/file_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/simulate.do" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/activehdl/simulate.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/RV32I_pipelined.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/RV32I_pipelined.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/file_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/run.f" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/ies/run.f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/RV32I_pipelined.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/RV32I_pipelined.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/compile.do" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/compile.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/file_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/simulate.do" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/modelsim/simulate.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/RV32I_pipelined.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/RV32I_pipelined.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/compile.do" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/compile.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/elaborate.do" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/elaborate.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/questa/file_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/RV32I_pipelined.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/RV32I_pipelined.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/compile.do" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/compile.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/file_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/simulate.do" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/riviera/simulate.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/vcs/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/vcs/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/vcs/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/vcs/RV32I_pipelined.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/vcs/RV32I_pipelined.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/vcs/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/vcs/file_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/RV32I_pipelined.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/RV32I_pipelined.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/file_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/run.f" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xcelium/run.f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/FPGA_RISC_V_Tests_Dump.coe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/RV32I_pipelined.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/RV32I_pipelined.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/elab.opt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/elab.opt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/file_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/vhdl.prj" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/vhdl.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/vlog.prj" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.ip_user_files/sim_scripts/RV32I_pipelined/xsim/vlog.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sim_4/imports/rv32i_pipelined/RV32I_pipelined_tb_behav3.wcfg" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sim_4/imports/rv32i_pipelined/RV32I_pipelined_tb_behav3.wcfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bxml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_ALU_0_0/RV32I_pipelined_ALU_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_ALU_0_0/RV32I_pipelined_ALU_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_Descrambler_0_0/RV32I_pipelined_Descrambler_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_Descrambler_0_0/RV32I_pipelined_Descrambler_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined.hwh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined.hwh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined_bd.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined_bd.tcl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_RV32I_0_0/RV32I_pipelined_RV32I_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_RV32I_0_0/RV32I_pipelined_RV32I_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_RV32I_0_0/sim/RV32I_pipelined_RV32I_0_0.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_alu_signals_0_0/RV32I_pipelined_alu_signals_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_alu_signals_0_0/RV32I_pipelined_alu_signals_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.dcp" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.dcp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.mif" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.mif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xci" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xci" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_brach_logic_0_0/RV32I_pipelined_brach_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_brach_logic_0_0/RV32I_pipelined_brach_logic_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_0_0/RV32I_pipelined_clock_div_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_0_0/RV32I_pipelined_clock_div_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_debounce_0_0/RV32I_pipelined_debounce_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_debounce_0_0/RV32I_pipelined_debounce_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_count_0_0/RV32I_pipelined_hazard_count_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_count_0_0/RV32I_pipelined_hazard_count_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_logic_0_0/RV32I_pipelined_hazard_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_logic_0_0/RV32I_pipelined_hazard_logic_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_instruction_clear_0_0/RV32I_pipelined_instruction_clear_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_instruction_clear_0_0/RV32I_pipelined_instruction_clear_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_mux_output_0_0/RV32I_pipelined_mux_output_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_mux_output_0_0/RV32I_pipelined_mux_output_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_mux_reg_descr_alu_0_0/RV32I_pipelined_mux_reg_descr_alu_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_mux_reg_descr_alu_0_0/RV32I_pipelined_mux_reg_descr_alu_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_mux_reg_pc_alu_0_0/RV32I_pipelined_mux_reg_pc_alu_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_mux_reg_pc_alu_0_0/RV32I_pipelined_mux_reg_pc_alu_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_mux_reg_write_0_0/RV32I_pipelined_mux_reg_write_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_mux_reg_write_0_0/RV32I_pipelined_mux_reg_write_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_pc_logic_0_0/RV32I_pipelined_pc_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_pc_logic_0_0/RV32I_pipelined_pc_logic_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_pc_shift_down_0_0/RV32I_pipelined_pc_shift_down_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_pc_shift_down_0_0/RV32I_pipelined_pc_shift_down_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.v" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.vhdl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_stub.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0.dcp" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0.dcp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_pre_memory_logic_0_0/RV32I_pipelined_pre_memory_logic_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_pre_memory_logic_0_0/RV32I_pipelined_pre_memory_logic_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_program_counter_1_0/RV32I_pipelined_program_counter_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_program_counter_1_0/RV32I_pipelined_program_counter_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_registers_0_0/RV32I_pipelined_registers_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_registers_0_0/RV32I_pipelined_registers_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_stage_DE_0_0/RV32I_pipelined_stage_DE_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_stage_DE_0_0/RV32I_pipelined_stage_DE_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_stage_EM_0_0/RV32I_pipelined_stage_EM_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_stage_EM_0_0/RV32I_pipelined_stage_EM_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_stage_FD_0_0/RV32I_pipelined_stage_FD_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_stage_FD_0_0/RV32I_pipelined_stage_FD_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_stage_MW_0_0/RV32I_pipelined_stage_MW_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_stage_MW_0_0/RV32I_pipelined_stage_MW_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_sim_netlist.v" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_sim_netlist.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_sim_netlist.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_sim_netlist.vhdl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_stub.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.hwdef" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.hwdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ui/bd_190b32e9.ui" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ui/bd_190b32e9.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/mref/RV32I/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/mref/RV32I/component.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/rv32i/rv32i.srcs/sources_1/imports/RISC-V-Processor/RV32I.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/rv32i/rv32i.srcs/sources_1/imports/RISC-V-Processor/RV32I.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/mref/post_memory_logic/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/mref/post_memory_logic/component.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.xpr" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,72 +96,95 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.86144894">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/RV32I_controls.csv">
-              <provider editor-type-id="csv-table-editor">
-                <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-                  <column index="0" width="100" />
-                  <column index="1" width="100" />
-                  <column index="2" width="100" />
-                  <column index="3" width="100" />
-                  <column index="4" width="100" />
-                  <column index="5" width="100" />
-                  <column index="6" width="100" />
-                  <column index="7" width="100" />
-                  <column index="8" width="100" />
-                  <column index="9" width="100" />
-                  <column index="10" width="100" />
-                  <column index="11" width="100" />
-                  <column index="12" width="100" />
-                </state>
-              </provider>
-              <provider selected="true" editor-type-id="csv-text-editor">
-                <state relative-caret-position="216">
-                  <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/controller_gen.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/RV32I_signals.csv">
-              <provider selected="true" editor-type-id="csv-table-editor">
-                <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-                  <column index="0" width="100" />
-                  <column index="1" width="100" />
-                  <column index="2" width="100" />
-                  <column index="3" width="100" />
-                  <column index="4" width="100" />
-                  <column index="5" width="100" />
-                  <column index="6" width="100" />
-                  <column index="7" width="251" />
-                </state>
-              </provider>
-              <provider editor-type-id="csv-text-editor">
-                <state relative-caret-position="160">
-                  <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RV32I_controls.csv">
+          <provider selected="true" editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
+              <column index="0" width="100" />
+              <column index="1" width="100" />
+              <column index="2" width="100" />
+              <column index="3" width="100" />
+              <column index="4" width="100" />
+              <column index="5" width="100" />
+              <column index="6" width="100" />
+              <column index="7" width="100" />
+              <column index="8" width="100" />
+              <column index="9" width="100" />
+              <column index="10" width="100" />
+              <column index="11" width="100" />
+              <column index="12" width="100" />
+            </state>
+          </provider>
+          <provider editor-type-id="csv-text-editor">
+            <state relative-caret-position="336">
+              <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.hex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_NoDelay.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminal_test_for_simulator.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.hex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2832">
+              <caret line="294" column="33" selection-start-line="294" selection-start-column="33" selection-end-line="294" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_Wide_Delay.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-240" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -149,14 +217,18 @@
         <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe" />
         <option value="$PROJECT_DIR$/RV32I_single_signals.csv" />
         <option value="$PROJECT_DIR$/controller_gen.py" />
-        <option value="$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_NoDelay.s" />
         <option value="$PROJECT_DIR$/old_controller_gen/RV32I_single_controls.csv" />
         <option value="$PROJECT_DIR$/RV32I_controls.csv" />
+        <option value="$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_NoDelay.s" />
+        <option value="$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminal_test_for_simulator.s" />
+        <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.hex" />
+        <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="310" />
+    <option name="y" value="31" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -191,6 +263,24 @@
               <item name="Dumps_and_Assembly" type="462c0819:PsiDirectoryNode" />
               <item name="Dumps" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="Terminal_Demos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="Terminal_Demos" type="462c0819:PsiDirectoryNode" />
+              <item name="RISC-V" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="Terminal_Demos" type="462c0819:PsiDirectoryNode" />
+              <item name="RISC-V" type="462c0819:PsiDirectoryNode" />
+              <item name="Draw_2019" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -199,13 +289,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Dumps_and_Assembly/Basic Code" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor\old_controller_gen" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor\Dumps_and_Assembly\Basic Code" />
+      <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -220,7 +312,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.controller_gen">
+  <component name="RunManager" selected="Python.hex2bin">
     <configuration name="controller_gen" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RISC-V-Processor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -307,8 +399,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.controller_gen" />
         <item itemvalue="Python.hex2bin" />
+        <item itemvalue="Python.controller_gen" />
         <item itemvalue="Python.controller_gen_combinational" />
         <item itemvalue="Python.controller_gen_combinational_new" />
       </list>
@@ -493,19 +585,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554073626027</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Fixed many bugs in the controls csv.">
+      <created>1554082653702</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1554082653702</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21998942" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.958752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32664436" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32664436" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40315315" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -558,7 +656,8 @@
     <MESSAGE value="Processor seems to simulate most basic addition test correctly. Will continue debugging processor." />
     <MESSAGE value="Processor loaded on Zybo and completed most basic addition test correctly. Will continue debugging processor later today." />
     <MESSAGE value="Processor loaded on Zybo and completed most basic addition and critical tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Processor loaded on Zybo and completed most basic addition and critical tests." />
+    <MESSAGE value="Fixed many bugs in the controls csv." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed many bugs in the controls csv." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -629,11 +728,6 @@
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.bin">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.hex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5795" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/old_controller_gen/controller_gen_pipelined.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2076">
@@ -641,13 +735,6 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -692,13 +779,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminal_2019.PNG">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_NoDelay.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/old_controller_gen/RV32I_single_pipelined.vhdl">
       <provider selected="true" editor-type-id="text-editor" />
@@ -798,8 +878,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller_gen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2400">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_Wide_Delay.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_NoDelay.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/FPGA_RISC_V_Tests_TranslatedCode.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.hex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2832">
+          <caret line="294" column="33" selection-start-line="294" selection-start-column="33" selection-end-line="294" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.hex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminal_test_for_simulator.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RV32I_controls.csv">
-      <provider editor-type-id="csv-table-editor">
+      <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
           <column index="1" width="100" />
@@ -816,16 +957,9 @@
           <column index="12" width="100" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="216">
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="336">
           <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller_gen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>

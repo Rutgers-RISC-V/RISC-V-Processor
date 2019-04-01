@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Sun Mar 31 18:56:46 2019
+--Date        : Sun Mar 31 23:25:00 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -38,20 +38,6 @@ architecture STRUCTURE of RV32I_pipelined is
     descr_imm : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_Descrambler_0_0;
-  component RV32I_pipelined_RV32I_0_0 is
-  port (
-    error : out STD_LOGIC;
-    instr : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    mux_reg_write : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    mux_output : out STD_LOGIC;
-    mux_reg_descr_alu : out STD_LOGIC;
-    mux_reg_pc_alu : out STD_LOGIC;
-    control_alu : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    control_reg_writeenable : out STD_LOGIC;
-    control_branch : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    control_mem_logic : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component RV32I_pipelined_RV32I_0_0;
   component RV32I_pipelined_alu_signals_0_0 is
   port (
     alu_output_33 : in STD_LOGIC_VECTOR ( 32 downto 0 );
@@ -184,14 +170,6 @@ architecture STRUCTURE of RV32I_pipelined is
     pc_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_pc_shift_down_0_0;
-  component RV32I_pipelined_post_memory_logic_0_0 is
-  port (
-    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    memory_access_out1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    memory_access_out1_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_pipelined_post_memory_logic_0_0;
   component RV32I_pipelined_pre_memory_logic_0_0 is
   port (
     control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -303,6 +281,28 @@ architecture STRUCTURE of RV32I_pipelined is
     memory_access_out1_MW : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_stage_MW_0_0;
+  component RV32I_pipelined_RV32I_0_0 is
+  port (
+    error : out STD_LOGIC;
+    instr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    mux_reg_write : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    mux_output : out STD_LOGIC;
+    mux_reg_descr_alu : out STD_LOGIC;
+    mux_reg_pc_alu : out STD_LOGIC;
+    control_alu : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    control_reg_writeenable : out STD_LOGIC;
+    control_branch : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    control_mem_logic : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_RV32I_0_0;
+  component RV32I_pipelined_post_memory_logic_0_0 is
+  port (
+    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    memory_access_out1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    memory_access_out1_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_post_memory_logic_0_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
