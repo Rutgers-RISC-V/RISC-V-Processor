@@ -5,13 +5,20 @@ use IEEE.NUMERIC_STD.ALL;
 entity vga_ctrl is
 Port ( clk, enable : in std_logic;
        hcount, vcount : out std_logic_vector (9 downto 0);
-       vid, hs, vs : out std_logic
+       vid, hs, vs : out std_logic;
+       addr : out std_logic_vector (31 downto 0)
        );
 end vga_ctrl;
 
 architecture Behavioral of vga_ctrl is
 signal hcount_internal : std_logic_vector (9 downto 0) := (others => '0');
 signal vcount_internal : std_logic_vector (9 downto 0) := (others => '0');
+
+--signal pcount : std_logic_vector(13 downto 0):= (others => '0');
+--signal vcount80 : std_logic_vector(8 downto 0) := (others => '0');
+--signal hdiv : std_logic_vector( 31 downto 0);
+--signal vcount_sign_extend : std_logic_vector(31 downto 0);
+
 begin
 hcount <= hcount_internal;
 vcount <= vcount_internal;
@@ -22,7 +29,7 @@ begin
         if (enable = '1') then                                                              --if the enable pin is high
         
             --hcount incrememnt--
-            if (unsigned(hcount_internal) < 307199) then                                       --if the hcount is under 307199
+            if (unsigned(hcount_internal) < 799) then                                       --if the hcount is under 799
                 hcount_internal <= std_logic_vector(unsigned(hcount_internal) + 1);         --increment hcount by 1
             else                                                                            --if hcount >= 799
                 hcount_internal <= (others => '0');                                                     --reset hcount to 0
@@ -57,6 +64,7 @@ begin
             else                                                                            --otherwise,
                 vs <= '1';                                                                  --raise vs to 1
             end if;--vs
+            
             
         end if; --enable
     end if; --clk
