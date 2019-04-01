@@ -94,8 +94,8 @@ component pixel_pusher Port(
            pixel : in STD_LOGIC_VECTOR (7 downto 0);
            hcount, vcount : in STD_LOGIC_VECTOR (9 downto 0);
            R, B : out STD_LOGIC_VECTOR (4 downto 0);
-           G : out STD_LOGIC_VECTOR (5 downto 0);
-           addr : out STD_LOGIC_VECTOR (31 downto 0));
+           G : out STD_LOGIC_VECTOR (5 downto 0)
+          );
 end component;
 
 component pixel_selector Port(
@@ -118,7 +118,8 @@ vs <= vs_sig;
 div: clock_div
 port map ( 
     clk_in => clk,
-    div => term_en);
+    div => term_en
+);
 
 font: fontROM
 port map (
@@ -127,7 +128,7 @@ port map (
     dataOutA => character_strip,
     writeenableA => '0',
     datainA => (others => '0')
-    );
+);
 
 vgacontrol : vga_ctrl
 port map (
@@ -138,9 +139,10 @@ port map (
     vid => vid,
     hs => hs,
     vs => vs_sig
-    );
+);
 
-PixelOut : pixel_pusher Port Map(
+PixelOut : pixel_pusher 
+Port Map(
     clk => clk,   
     en => term_en,
     pixel => pixel,
@@ -150,25 +152,31 @@ PixelOut : pixel_pusher Port Map(
     vs => vs_sig,
     R => R,
     G => G,
-    B => B,
-    addr => memaddr);
+    B => B
+);
 
-PixelSelect : pixel_selector Port Map(
+PixelSelect : pixel_selector 
+Port Map(
     strip => character_strip,
     pixel => pixel,
-    hcount => hcount);
+    hcount => hcount
+);
     
-Font_Addr_Gen:
-    Font_Rom_Addr_Gen Port Map (
+Font_Addr_Gen: Font_Rom_Addr_Gen 
+Port Map (
     vcount => vcount,
     Ascii_Val => ascii_in,
-    FRom_Addr => fRom_addr);
+    FRom_Addr => fRom_addr
+);
     
 
 
---addressgenerator: character_memaddress
---port map (
+address_generator: character_memaddress
+port map (
+    hcount => hcount,
+    vcount => vcount,
+    addr => memaddr
 
---);
-    
+);
+
 end Behavioral;

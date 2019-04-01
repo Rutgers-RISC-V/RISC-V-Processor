@@ -40,8 +40,8 @@ entity pixel_pusher is
            pixel : in STD_LOGIC_VECTOR (7 downto 0);
            hcount, vcount : in STD_LOGIC_VECTOR (9 downto 0);
            R, B : out STD_LOGIC_VECTOR (4 downto 0);
-           G : out STD_LOGIC_VECTOR (5 downto 0);
-           addr : out STD_LOGIC_VECTOR (31 downto 0));
+           G : out STD_LOGIC_VECTOR (5 downto 0)
+           );
 end pixel_pusher;
 
 architecture Behavioral of pixel_pusher is
@@ -50,11 +50,7 @@ signal addr_sig : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
 begin
 process (clk) begin
     if (rising_edge(clk)) then
-        if en = '1' and vs = '1' and unsigned(hcount) < 480 then
-            addr_sig <= std_logic_vector(unsigned(addr_sig) + 1);
-        elsif vs = '0' then
-            addr_sig <= (others => '0');
-        end if;
+        
         if en = '1' and vid = '1' and unsigned(hcount) < 480 then
             R <= pixel(7 downto 5) & "00";
             G <= pixel(4 downto 2) & "000";
@@ -64,7 +60,7 @@ process (clk) begin
             G <= (others => '0');
             B <= (others => '0');
         end if;
-            addr <= addr_sig;
+            
     end if;
 end process;
 end Behavioral;
