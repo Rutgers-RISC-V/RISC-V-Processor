@@ -9,11 +9,11 @@ blt,Branch if Less Than,1100011,100,-,10,0,1,1,1000,0,1100,1111
 bge,Branch if Greater Than or Equal,1100011,101,-,10,0,1,1,1000,0,1101,1111
 bltu,Branch if Less than Unsigned input,1100011,110,-,10,0,1,1,1000,0,1110,1111
 bgeu,Branch if Greater Than or Equal Unisgned Input,1100011,111,-,10,0,1,1,1000,0,1111,1111
-lb,Load Byte - load 1 byte into register,0000011,000,-,10,0,0,0,0000,1,0010,0000
-lh,Load Half-word - load 2 bytes into register,0000011,001,-,10,0,0,0,0000,1,0010,0001
-lw,Load Word - load 4 bytes into register,0000011,010,-,00,0,0,0,0000,1,0010,0010
-lbu,Load Byte - load 1 byte that is sign extended into register,0000011,100,-,10,0,0,0,0000,1,0010,0100
-lhu,Load Half-word - load 2 bytes that is sign extended into register,0000011,101,-,10,0,0,0,0000,1,0010,0101
+lb,Load Byte - load 1 byte into register,0000011,000,-,00,0,1,1,0000,1,0010,0000
+lh,Load Half-word - load 2 bytes into register,0000011,001,-,00,0,1,1,0000,1,0010,0001
+lw,Load Word - load 4 bytes into register,0000011,010,-,00,0,1,1,0000,1,0010,0010
+lbu,Load Byte - load 1 byte that is sign extended into register,0000011,100,-,00,0,1,1,0000,1,0010,0100
+lhu,Load Half-word - load 2 bytes that is sign extended into register,0000011,101,-,00,0,1,1,0000,1,0010,0101
 sb,Store byte - store least significant bytes in register into memory,0100011,000,-,10,0,0,0,0000,0,0010,1000
 sh,Store half-word - store least 2 significant bytes in register,0100011,001,-,10,0,0,0,0000,0,0010,1001
 sw,Store word - store register (4 bytes) into memory,0100011,010,-,00,0,0,0,0000,0,0010,1010

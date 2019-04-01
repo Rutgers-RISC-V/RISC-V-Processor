@@ -46,59 +46,50 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:module_ref:RV32I:1.0
+-- IP VLNV: xilinx.com:module_ref:alu_signals:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY RV32I_pipelined_RV32I_0_0 IS
+ENTITY RV32I_pipelined_alu_signals_0_0 IS
   PORT (
-    error : OUT STD_LOGIC;
-    instr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    mux_reg_write : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    mux_output : OUT STD_LOGIC;
-    mux_reg_descr_alu : OUT STD_LOGIC;
-    mux_reg_pc_alu : OUT STD_LOGIC;
-    control_alu : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    control_reg_writeenable : OUT STD_LOGIC;
-    control_branch : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    control_mem_logic : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    alu_output_33 : IN STD_LOGIC_VECTOR(32 DOWNTO 0);
+    alu_output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    zero : OUT STD_LOGIC;
+    sign : OUT STD_LOGIC;
+    overflow : OUT STD_LOGIC
   );
-END RV32I_pipelined_RV32I_0_0;
+END RV32I_pipelined_alu_signals_0_0;
 
-ARCHITECTURE RV32I_pipelined_RV32I_0_0_arch OF RV32I_pipelined_RV32I_0_0 IS
+ARCHITECTURE RV32I_pipelined_alu_signals_0_0_arch OF RV32I_pipelined_alu_signals_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF RV32I_pipelined_RV32I_0_0_arch: ARCHITECTURE IS "yes";
-  COMPONENT RV32I IS
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF RV32I_pipelined_alu_signals_0_0_arch: ARCHITECTURE IS "yes";
+  COMPONENT alu_signals IS
     PORT (
-      error : OUT STD_LOGIC;
-      instr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      mux_reg_write : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-      mux_output : OUT STD_LOGIC;
-      mux_reg_descr_alu : OUT STD_LOGIC;
-      mux_reg_pc_alu : OUT STD_LOGIC;
-      control_alu : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      control_reg_writeenable : OUT STD_LOGIC;
-      control_branch : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      control_mem_logic : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+      alu_output_33 : IN STD_LOGIC_VECTOR(32 DOWNTO 0);
+      alu_output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      zero : OUT STD_LOGIC;
+      sign : OUT STD_LOGIC;
+      overflow : OUT STD_LOGIC
     );
-  END COMPONENT RV32I;
+  END COMPONENT alu_signals;
+  ATTRIBUTE X_CORE_INFO : STRING;
+  ATTRIBUTE X_CORE_INFO OF RV32I_pipelined_alu_signals_0_0_arch: ARCHITECTURE IS "alu_signals,Vivado 2018.3";
+  ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
+  ATTRIBUTE CHECK_LICENSE_TYPE OF RV32I_pipelined_alu_signals_0_0_arch : ARCHITECTURE IS "RV32I_pipelined_alu_signals_0_0,alu_signals,{}";
+  ATTRIBUTE CORE_GENERATION_INFO : STRING;
+  ATTRIBUTE CORE_GENERATION_INFO OF RV32I_pipelined_alu_signals_0_0_arch: ARCHITECTURE IS "RV32I_pipelined_alu_signals_0_0,alu_signals,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=alu_signals,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
-  ATTRIBUTE IP_DEFINITION_SOURCE OF RV32I_pipelined_RV32I_0_0_arch: ARCHITECTURE IS "module_ref";
+  ATTRIBUTE IP_DEFINITION_SOURCE OF RV32I_pipelined_alu_signals_0_0_arch: ARCHITECTURE IS "module_ref";
 BEGIN
-  U0 : RV32I
+  U0 : alu_signals
     PORT MAP (
-      error => error,
-      instr => instr,
-      mux_reg_write => mux_reg_write,
-      mux_output => mux_output,
-      mux_reg_descr_alu => mux_reg_descr_alu,
-      mux_reg_pc_alu => mux_reg_pc_alu,
-      control_alu => control_alu,
-      control_reg_writeenable => control_reg_writeenable,
-      control_branch => control_branch,
-      control_mem_logic => control_mem_logic
+      alu_output_33 => alu_output_33,
+      alu_output => alu_output,
+      zero => zero,
+      sign => sign,
+      overflow => overflow
     );
-END RV32I_pipelined_RV32I_0_0_arch;
+END RV32I_pipelined_alu_signals_0_0_arch;
