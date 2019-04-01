@@ -3,7 +3,7 @@ li x6 4096 # load base address of terminal into a register.
 
 li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
 
-li x9 <start instruction of loop>
+li x9 loop_start
 
 # Draw 2
 addi x8 x6 644
@@ -18,6 +18,9 @@ addi x11, x11, -1
 bne x11, x0, loop_start
 jalr x0, 0(x10)
 
+li x6 4096 # load base address of terminal into a register.
+
+li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
 
 
 

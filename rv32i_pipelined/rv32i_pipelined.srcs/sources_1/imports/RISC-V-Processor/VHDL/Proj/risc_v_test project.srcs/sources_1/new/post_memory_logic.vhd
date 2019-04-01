@@ -43,7 +43,7 @@ end post_memory_logic;
 architecture Post_Behavioral of post_memory_logic is
 
 begin
-    process(memory_access_out1_in)
+    process(memory_access_out1_in, control_mem, addr1)
     begin
         case control_mem&addr1(1 downto 0) is
             when "000000" => -- load byte on mod(4)

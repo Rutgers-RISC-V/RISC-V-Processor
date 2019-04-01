@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
-      <Cursor1Time time="404100000fs"></Cursor1Time>
+      <ZoomStartTime time="429120000fs"></ZoomStartTime>
+      <ZoomEndTime time="2429120001fs"></ZoomEndTime>
+      <Cursor1Time time="2016100000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <NameColumnWidth column_width="290"></NameColumnWidth>
+      <ValueColumnWidth column_width="145"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="58" />
+   <WVObjectSize size="78" />
    <wvobject fp_name="/RV32I_pipelined_tb/btn3" type="logic">
       <obj_property name="ElementShortName">btn3</obj_property>
       <obj_property name="ObjectShortName">btn3</obj_property>
@@ -241,7 +241,6 @@
    <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/register_file_1" type="array">
       <obj_property name="ElementShortName">register_file_1[0:31][31:0]</obj_property>
       <obj_property name="ObjectShortName">register_file_1[0:31][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/register_file_2" type="array">
       <obj_property name="ElementShortName">register_file_2[0:31][31:0]</obj_property>
@@ -254,5 +253,88 @@
    <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/clk_wiz_0/inst/locked" type="logic">
       <obj_property name="ElementShortName">locked</obj_property>
       <obj_property name="ObjectShortName">locked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/clka" type="logic">
+      <obj_property name="ElementShortName">clka</obj_property>
+      <obj_property name="ObjectShortName">clka</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/wea" type="array">
+      <obj_property name="ElementShortName">wea[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/addra" type="array">
+      <obj_property name="ElementShortName">addra[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/dina" type="array">
+      <obj_property name="ElementShortName">dina[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/douta" type="array">
+      <obj_property name="ElementShortName">douta[31:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/clkb" type="logic">
+      <obj_property name="ElementShortName">clkb</obj_property>
+      <obj_property name="ObjectShortName">clkb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/enb" type="logic">
+      <obj_property name="ElementShortName">enb</obj_property>
+      <obj_property name="ObjectShortName">enb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/web" type="array">
+      <obj_property name="ElementShortName">web[3:0]</obj_property>
+      <obj_property name="ObjectShortName">web[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/addrb" type="array">
+      <obj_property name="ElementShortName">addrb[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/dinb" type="array">
+      <obj_property name="ElementShortName">dinb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dinb[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/blk_mem_gen_0/doutb" type="array">
+      <obj_property name="ElementShortName">doutb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pre_memory_logic_0/U0/control_mem" type="array">
+      <obj_property name="ElementShortName">control_mem[3:0]</obj_property>
+      <obj_property name="ObjectShortName">control_mem[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pre_memory_logic_0/U0/addr1_in" type="array">
+      <obj_property name="ElementShortName">addr1_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr1_in[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pre_memory_logic_0/U0/addr1_out" type="array">
+      <obj_property name="ElementShortName">addr1_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr1_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pre_memory_logic_0/U0/byte_enable" type="array">
+      <obj_property name="ElementShortName">byte_enable[3:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_enable[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/post_memory_logic_0/U0/control_mem" type="array">
+      <obj_property name="ElementShortName">control_mem[3:0]</obj_property>
+      <obj_property name="ObjectShortName">control_mem[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/post_memory_logic_0/U0/addr1" type="array">
+      <obj_property name="ElementShortName">addr1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr1[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/post_memory_logic_0/U0/memory_access_out1_in" type="array">
+      <obj_property name="ElementShortName">memory_access_out1_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">memory_access_out1_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/post_memory_logic_0/U0/memory_access_out1_out" type="array">
+      <obj_property name="ElementShortName">memory_access_out1_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">memory_access_out1_out[31:0]</obj_property>
    </wvobject>
 </wave_config>

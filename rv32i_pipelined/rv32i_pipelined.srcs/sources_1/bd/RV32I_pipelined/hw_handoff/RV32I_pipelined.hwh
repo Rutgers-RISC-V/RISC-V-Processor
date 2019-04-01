@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 31 18:56:48 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 31 23:25:01 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -289,7 +289,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="true"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -1202,10 +1202,10 @@
         <PORT DIR="O" LEFT="31" NAME="instruction_out" RIGHT="0" SIGIS="undef" SIGNAME="instruction_clear_0_instruction_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Descrambler_0" PORT="scr_imm"/>
-            <CONNECTION INSTANCE="RV32I_0" PORT="instr"/>
             <CONNECTION INSTANCE="hazard_logic_0" PORT="instr_f_d"/>
             <CONNECTION INSTANCE="registers_0" PORT="instr1"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="instruction_FD"/>
+            <CONNECTION INSTANCE="RV32I_0" PORT="instr"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1775,8 +1775,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="output_bus_EM" RIGHT="0" SIGIS="undef" SIGNAME="stage_EM_0_output_bus_EM">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="post_memory_logic_0" PORT="addr1"/>
             <CONNECTION INSTANCE="stage_MW_0" PORT="output_bus_EM"/>
+            <CONNECTION INSTANCE="post_memory_logic_0" PORT="addr1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="instruction_EM" RIGHT="0" SIGIS="undef" SIGNAME="stage_EM_0_instruction_EM">
