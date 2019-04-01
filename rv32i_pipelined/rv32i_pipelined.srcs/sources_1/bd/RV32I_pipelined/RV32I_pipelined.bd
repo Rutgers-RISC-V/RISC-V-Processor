@@ -5,7 +5,8 @@
       "device": "xc7z010clg400-1",
       "name": "RV32I_pipelined",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2018.3"
+      "tool_version": "2018.3",
+      "validated": "true"
     },
     "design_tree": {
       "ALU_0": "",
@@ -25,7 +26,6 @@
       "mux_reg_write_0": "",
       "pc_logic_0": "",
       "pc_shift_down_0": "",
-      "post_memory_logic_0": "",
       "pre_memory_logic_0": "",
       "program_counter_1": "",
       "registers_0": "",
@@ -33,7 +33,8 @@
       "stage_EM_0": "",
       "stage_FD_0": "",
       "stage_MW_0": "",
-      "RV32I_0": ""
+      "RV32I_0": "",
+      "post_memory_logic_0": ""
     },
     "ports": {
       "btn3": {
@@ -43,8 +44,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "RV32I_pipelined_clk",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "125000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
           }
         }
       },
@@ -145,7 +158,7 @@
             "value": "8"
           },
           "Coe_File": {
-            "value": "../../../../../../../Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe"
+            "value": "../../../../../../../Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe"
           },
           "Enable_32bit_Address": {
             "value": "false"
@@ -289,7 +302,21 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "div_clk": {
             "type": "clk",
@@ -311,7 +338,21 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "btn": {
             "direction": "I"
@@ -332,10 +373,38 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "clk_en": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RV32I_pipelined_clock_div_0_0_div_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "new_hazard": {
             "direction": "I"
@@ -605,37 +674,6 @@
           }
         }
       },
-      "post_memory_logic_0": {
-        "vlnv": "xilinx.com:module_ref:post_memory_logic:1.0",
-        "xci_name": "RV32I_pipelined_post_memory_logic_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "post_memory_logic",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "control_mem": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "addr1": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "memory_access_out1_in": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "memory_access_out1_out": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
       "pre_memory_logic_0": {
         "vlnv": "xilinx.com:module_ref:pre_memory_logic:1.0",
         "xci_name": "RV32I_pipelined_pre_memory_logic_0_0",
@@ -678,14 +716,46 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "rst": {
             "type": "rst",
             "direction": "I"
           },
           "clk_en": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RV32I_pipelined_clock_div_0_0_div_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "next_PC": {
             "direction": "I",
@@ -710,10 +780,38 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "clk_en": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RV32I_pipelined_clock_div_0_0_div_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "instr1": {
             "direction": "I",
@@ -761,10 +859,38 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "clk_en": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RV32I_pipelined_clock_div_0_0_div_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "branch_logic": {
             "direction": "I"
@@ -899,10 +1025,38 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "clk_en": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RV32I_pipelined_clock_div_0_0_div_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "PC_DE": {
             "direction": "I",
@@ -973,10 +1127,38 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "clk_en": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RV32I_pipelined_clock_div_0_0_div_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "PC": {
             "direction": "I",
@@ -1012,10 +1194,38 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "clk_en": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RV32I_pipelined_clock_div_0_0_div_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "PC_EM": {
             "direction": "I",
@@ -1122,6 +1332,37 @@
           "control_mem_logic": {
             "direction": "O",
             "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "post_memory_logic_0": {
+        "vlnv": "xilinx.com:module_ref:post_memory_logic:1.0",
+        "xci_name": "RV32I_pipelined_post_memory_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "post_memory_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "control_mem": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "addr1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "memory_access_out1_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "memory_access_out1_out": {
+            "direction": "O",
+            "left": "31",
             "right": "0"
           }
         }
@@ -1521,8 +1762,8 @@
       "stage_EM_0_output_bus_EM": {
         "ports": [
           "stage_EM_0/output_bus_EM",
-          "post_memory_logic_0/addr1",
-          "stage_MW_0/output_bus_EM"
+          "stage_MW_0/output_bus_EM",
+          "post_memory_logic_0/addr1"
         ]
       },
       "stage_FD_0_PC_FD": {
