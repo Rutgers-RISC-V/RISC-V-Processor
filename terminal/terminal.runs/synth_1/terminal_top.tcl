@@ -17,29 +17,26 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/.Xil/Vivado-3508-Nugget/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.cache/wt [current_project]
-set_property parent.project_path C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.xpr [current_project]
+set_property webtalk.parent_dir D:/Alex/Documents/RISC-V-Processor/terminal/terminal.cache/wt [current_project]
+set_property parent.project_path D:/Alex/Documents/RISC-V-Processor/terminal/terminal.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.cache/ip [current_project]
+set_property ip_output_repo d:/Alex/Documents/RISC-V-Processor/terminal/terminal.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd
-  C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd
-  {C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd}
-  C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/character_memaddress.vhd
-  C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/Font_Rom_Addr_Gen.vhd
-  C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/Pixel_Pusher.vhd
-  C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd
-  C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/pixel_selector.vhd
+  D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd
+  D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/terminal_top.vhd
+  {D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd}
+  D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/character_memaddress.vhd
+  D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/Font_Rom_Addr_Gen.vhd
+  D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/Pixel_Pusher.vhd
+  D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/clock_div.vhd
+  D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/sources_1/new/pixel_selector.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -49,8 +46,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/constrs_1/imports/2/ZYBO_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.srcs/constrs_1/imports/2/ZYBO_Master.xdc]
+read_xdc D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/constrs_1/imports/2/ZYBO_Master.xdc
+set_property used_in_implementation false [get_files D:/Alex/Documents/RISC-V-Processor/terminal/terminal.srcs/constrs_1/imports/2/ZYBO_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="39" Path="C:/Users/Jon/Desktop/capstone/RISC-V-Processor/terminal/terminal.xpr">
+<Project Version="7" Minor="39" Path="D:/Alex/Documents/RISC-V-Processor/terminal/terminal.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="eac351a210484a9496a5f2e8626d6445"/>

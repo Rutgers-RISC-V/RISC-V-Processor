@@ -1,1 +1,10 @@
 .DS_Store
+terminal/.Xil/Vivado-23828-LAPTOP-FLASIS1Q/elab.rtd
+terminal/.Xil/Vivado-23828-LAPTOP-FLASIS1Q/realtime/dupFiles.rpt
+terminal/.Xil/Vivado-23828-LAPTOP-FLASIS1Q/realtime/terminal_top.tcl
+terminal/terminal.cache/wt/gui_handlers.wdf
+terminal/terminal.cache/wt/java_command_handlers.wdf
+terminal/terminal.cache/wt/webtalk_pa.xml
+terminal/vivado.jou
+terminal/vivado.log
+terminal/vivado_pid23828.str
