@@ -36,37 +36,69 @@ entity pre_memory_logic is
            control_mem : in STD_LOGIC_VECTOR (3 downto 0);      
            addr1_in : in STD_LOGIC_VECTOR (31 downto 0);
            addr1_out: out STD_LOGIC_VECTOR (31 downto 0);
-           byte_enable : out STD_LOGIC_VECTOR (3 downto 0)
+           data1_in: in STD_LOGIC_VECTOR (31 downto 0);
+           data1_out: out STD_LOGIC_VECTOR (31 downto 0);
+           byte_enable_gen : out STD_LOGIC_VECTOR (3 downto 0);
+           byte_enable_term: out STD_LOGIC_VECTOR (3 downto 0)
            );
 end pre_memory_logic;
 
 architecture pre_behavior of pre_memory_logic is
-    
+constant terminal_address_bit: integer := 12; -- terminal is addresses 4096*4 and on -- for now, will make a tighter bound in future
 begin
 addr1_out <= std_logic_vector(resize(unsigned(addr1_in(31 downto 2)),32));
     process(addr1_in)
     begin
-        case control_mem&addr1_in(1 downto 0) is
-            when "100000" => -- store byte on address % 4 = 0
-                byte_enable <= "0001";
-            when "100001" => -- store byte on address % 4 = 1
-                byte_enable <= "0010";
-            when "100010" => -- store byte on address % 4 = 2
-                byte_enable <= "0100";
-            when "100011" => -- store byte on address % 4 = 3
-                byte_enable <= "1000";
-            when "100100" => -- store half-word on address % 4 = 0
-                byte_enable <= "0011";
-            when "100101" => -- store half-word on address % 4 = 1
-                byte_enable <= "0110";
-            when "100110" => -- store half-word on address % 4 = 2
-                byte_enable <= "1100"; 
---            when "000111" => -- load halfword on address % 4 = 3
---                out1_out <= std_logic_vector(resize(unsigned(out1_in(31 downto 24)),32));
-            when "101000" => -- load word on address % 4 = 0
-                byte_enable <= "1111";
-            when others => -- all others and errors
-                byte_enable <= "0000";
-        end case;
+        if(addr1_in(terminal_address_bit)= '1') then
+            case control_mem&addr1_in(1 downto 0) is
+                when "100000" => -- store byte on address % 4 = 0
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)),32));
+                    byte_enable_term <= "0001";
+                when "100001" => -- store byte on address % 4 = 1
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(15 downto 0)),32));
+                    byte_enable_term <= "0010";
+                when "100010" => -- store byte on address % 4 = 2
+                    byte_enable_term <= "0100";
+                when "100011" => -- store byte on address % 4 = 3
+                    byte_enable_term <= "1000";
+                when "100100" => -- store half-word on address % 4 = 0
+                    byte_enable_term <= "0011";
+                when "100101" => -- store half-word on address % 4 = 1
+                    byte_enable_term <= "0110";
+                when "100110" => -- store half-word on address % 4 = 2
+                    byte_enable_term <= "1100"; 
+    --            when "000111" => -- load halfword on address % 4 = 3
+    --                out1_out <= std_logic_vector(resize(unsigned(out1_in(31 downto 24)),32));
+                when "101000" => -- load word on address % 4 = 0
+                    byte_enable_term <= "1111";
+                when others => -- all others and errors
+                    byte_enable_term <= "0000";
+            end case;
+            byte_enable_gen <= "0000";
+        else
+            case control_mem&addr1_in(1 downto 0) is
+                when "100000" => -- store byte on address % 4 = 0
+                    byte_enable_gen <= "0001";
+                when "100001" => -- store byte on address % 4 = 1
+                    byte_enable_gen <= "0010";
+                when "100010" => -- store byte on address % 4 = 2
+                    byte_enable_gen <= "0100";
+                when "100011" => -- store byte on address % 4 = 3
+                    byte_enable_gen <= "1000";
+                when "100100" => -- store half-word on address % 4 = 0
+                    byte_enable_gen <= "0011";
+                when "100101" => -- store half-word on address % 4 = 1
+                    byte_enable_gen <= "0110";
+                when "100110" => -- store half-word on address % 4 = 2
+                    byte_enable_gen <= "1100"; 
+    --            when "000111" => -- load halfword on address % 4 = 3
+    --                out1_out <= std_logic_vector(resize(unsigned(out1_in(31 downto 24)),32));
+                when "101000" => -- load word on address % 4 = 0
+                    byte_enable_gen <= "1111";
+                when others => -- all others and errors
+                    byte_enable_gen <= "0000";
+            end case;
+            byte_enable_term <= "0000";
+        end if;
     end process;
 end pre_behavior;

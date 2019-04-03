@@ -57,8 +57,9 @@ ENTITY RV32I_pipelined_post_memory_logic_0_0 IS
   PORT (
     control_mem : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     addr1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    memory_access_out1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    memory_access_out1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    memory_access_out_gen_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    memory_access_out_term_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    memory_access_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END RV32I_pipelined_post_memory_logic_0_0;
 
@@ -69,8 +70,9 @@ ARCHITECTURE RV32I_pipelined_post_memory_logic_0_0_arch OF RV32I_pipelined_post_
     PORT (
       control_mem : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       addr1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      memory_access_out1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      memory_access_out1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+      memory_access_out_gen_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      memory_access_out_term_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      memory_access_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT post_memory_logic;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -86,7 +88,8 @@ BEGIN
     PORT MAP (
       control_mem => control_mem,
       addr1 => addr1,
-      memory_access_out1_in => memory_access_out1_in,
-      memory_access_out1_out => memory_access_out1_out
+      memory_access_out_gen_in => memory_access_out_gen_in,
+      memory_access_out_term_in => memory_access_out_term_in,
+      memory_access_out => memory_access_out
     );
 END RV32I_pipelined_post_memory_logic_0_0_arch;

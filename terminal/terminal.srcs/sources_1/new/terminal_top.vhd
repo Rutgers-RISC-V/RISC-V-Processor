@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity terminal_top is
     Port ( clk : in STD_LOGIC;
+           clk_div: out std_logic;
            memaddr : out STD_LOGIC_VECTOR (31 downto 0);
            ascii_in : in STD_LOGIC_VECTOR (7 downto 0);
            R : out STD_LOGIC_VECTOR(4 downto 0);
@@ -114,6 +115,7 @@ signal vid : std_logic;
 begin
 
 vs <= vs_sig;
+clk_div <= term_en;
 
 div: clock_div
 port map ( 

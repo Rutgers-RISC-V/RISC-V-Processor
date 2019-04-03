@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 31 23:41:28 2019
--- Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
+-- Date        : Tue Apr  2 16:09:34 2019
+-- Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim {C:/Users/Oz
 --               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.vhdl}
 -- Design      : RV32I_pipelined_blk_mem_gen_0_0
@@ -609,7 +609,7 @@ begin
       INITP_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_00 => X"7473747374837483748374837483747374737463746374537453047443000300",
+      INIT_00 => X"7473747374837483748374837483747374737463746374537453047443100300",
       INIT_01 => X"7473747374637463745374437453744374437453745374537463746374637473",
       INIT_02 => X"74F374F374F374F374F374F374F374F374F374F374E374D374C374B374837483",
       INIT_03 => X"74B374B374B374B374B374B374B374B374B374C374D374E374F374F374F374F3",

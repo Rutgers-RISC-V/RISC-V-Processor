@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ALU, Descrambler, RV32I, alu_signals, brach_logic, clock_div, debounce, hazard_count, hazard_logic, instruction_clear, mux_output, mux_reg_descr_alu, mux_reg_pc_alu, mux_reg_write, pc_logic, pc_shift_down, post_memory_logic, pre_memory_logic, program_counter, registers, stage_DE, stage_EM, stage_FD, stage_MW
+# ALU, Descrambler, RV32I, alu_signals, brach_logic, clock_div, clock_div, debounce, hazard_count, hazard_logic, instruction_clear, mux_output, mux_reg_descr_alu, mux_reg_pc_alu, mux_reg_write, pc_logic, pc_shift_down, post_memory_logic, pre_memory_logic, program_counter, registers, stage_DE, stage_EM, stage_FD, stage_MW, terminal_top
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -170,6 +170,11 @@ proc create_root_design { parentCell } {
    CONFIG.FREQ_HZ {125000000} \
  ] $clk
   set led [ create_bd_port -dir O -from 3 -to 0 led ]
+  set vga_b [ create_bd_port -dir O -from 4 -to 0 vga_b ]
+  set vga_g [ create_bd_port -dir O -from 5 -to 0 vga_g ]
+  set vga_hs [ create_bd_port -dir O vga_hs ]
+  set vga_r [ create_bd_port -dir O -from 4 -to 0 vga_r ]
+  set vga_vs [ create_bd_port -dir O vga_vs ]
 
   # Create instance: ALU_0, and set properties
   set block_name ALU
@@ -242,6 +247,31 @@ proc create_root_design { parentCell } {
    CONFIG.use_bram_block {Stand_Alone} \
  ] $blk_mem_gen_0
 
+  # Create instance: blk_mem_gen_1, and set properties
+  set blk_mem_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_1 ]
+  set_property -dict [ list \
+   CONFIG.Byte_Size {8} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Enable_B {Use_ENB_Pin} \
+   CONFIG.Fill_Remaining_Memory_Locations {true} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Port_B_Clock {100} \
+   CONFIG.Port_B_Enable_Rate {100} \
+   CONFIG.Port_B_Write_Rate {50} \
+   CONFIG.Read_Width_A {32} \
+   CONFIG.Read_Width_B {8} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
+   CONFIG.Use_Byte_Write_Enable {true} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {600} \
+   CONFIG.Write_Width_A {32} \
+   CONFIG.Write_Width_B {8} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $blk_mem_gen_1
+
   # Create instance: brach_logic_0, and set properties
   set block_name brach_logic
   set block_cell_name brach_logic_0
@@ -276,6 +306,17 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $clock_div_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: clock_div_1, and set properties
+  set block_name clock_div
+  set block_cell_name clock_div_1
+  if { [catch {set clock_div_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $clock_div_1 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -478,6 +519,17 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: terminal_top_0, and set properties
+  set block_name terminal_top
+  set block_cell_name terminal_top_0
+  if { [catch {set terminal_top_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $terminal_top_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create port connections
   connect_bd_net -net ALU_0_alu_out_33 [get_bd_pins ALU_0/alu_out_33] [get_bd_pins alu_signals_0/alu_output_33]
   connect_bd_net -net ALU_0_overflow [get_bd_pins alu_signals_0/overflow] [get_bd_pins brach_logic_0/alu_overflow]
@@ -495,14 +547,17 @@ proc create_root_design { parentCell } {
   connect_bd_net -net RV32I_0_mux_reg_write [get_bd_pins RV32I_0/mux_reg_write] [get_bd_pins stage_DE_0/mux_reg_write_FD]
   connect_bd_net -net blk_mem_gen_0_douta [get_bd_pins Descrambler_0/scr_imm] [get_bd_pins RV32I_0/instr] [get_bd_pins hazard_logic_0/instr_f_d] [get_bd_pins instruction_clear_0/instruction_out] [get_bd_pins registers_0/instr1] [get_bd_pins stage_DE_0/instruction_FD]
   connect_bd_net -net blk_mem_gen_0_douta1 [get_bd_pins blk_mem_gen_0/douta] [get_bd_pins instruction_clear_0/instruction_in]
-  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins post_memory_logic_0/memory_access_out1_in]
+  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins post_memory_logic_0/memory_access_out_gen_in]
+  connect_bd_net -net blk_mem_gen_1_douta [get_bd_pins blk_mem_gen_1/douta] [get_bd_pins post_memory_logic_0/memory_access_out_term_in]
+  connect_bd_net -net blk_mem_gen_1_doutb [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins terminal_top_0/ascii_in]
   connect_bd_net -net brach_logic_0_branch [get_bd_pins brach_logic_0/branch] [get_bd_pins stage_DE_0/branch_logic] [get_bd_pins stage_FD_0/branch]
   connect_bd_net -net brach_logic_0_mux_next_pc [get_bd_pins brach_logic_0/mux_next_pc] [get_bd_pins pc_logic_0/mux_next_pc]
   connect_bd_net -net btn_0_1 [get_bd_ports btn3] [get_bd_pins debounce_0/btn]
-  connect_bd_net -net clk_2 [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins clock_div_0/clk] [get_bd_pins debounce_0/clk] [get_bd_pins hazard_count_0/clk] [get_bd_pins program_counter_1/clk] [get_bd_pins registers_0/clk] [get_bd_pins stage_DE_0/clk] [get_bd_pins stage_EM_0/clk] [get_bd_pins stage_FD_0/clk] [get_bd_pins stage_MW_0/clk]
+  connect_bd_net -net clk_2 [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins blk_mem_gen_1/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins clock_div_0/clk] [get_bd_pins clock_div_1/clk] [get_bd_pins debounce_0/clk] [get_bd_pins hazard_count_0/clk] [get_bd_pins program_counter_1/clk] [get_bd_pins registers_0/clk] [get_bd_pins stage_DE_0/clk] [get_bd_pins stage_EM_0/clk] [get_bd_pins stage_FD_0/clk] [get_bd_pins stage_MW_0/clk] [get_bd_pins terminal_top_0/clk]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins clock_div_0/locked]
-  connect_bd_net -net clock_div_0_div_clk [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins clock_div_0/div_clk] [get_bd_pins hazard_count_0/clk_en] [get_bd_pins program_counter_1/clk_en] [get_bd_pins registers_0/clk_en] [get_bd_pins stage_DE_0/clk_en] [get_bd_pins stage_EM_0/clk_en] [get_bd_pins stage_FD_0/clk_en] [get_bd_pins stage_MW_0/clk_en]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins clock_div_0/locked] [get_bd_pins clock_div_1/locked]
+  connect_bd_net -net clock_div_0_div_clk [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins blk_mem_gen_1/ena] [get_bd_pins clock_div_0/div_clk] [get_bd_pins hazard_count_0/clk_en] [get_bd_pins program_counter_1/clk_en] [get_bd_pins registers_0/clk_en] [get_bd_pins stage_DE_0/clk_en] [get_bd_pins stage_EM_0/clk_en] [get_bd_pins stage_FD_0/clk_en] [get_bd_pins stage_MW_0/clk_en]
+  connect_bd_net -net clock_div_1_div_clk [get_bd_pins blk_mem_gen_1/enb] [get_bd_pins clock_div_1/div_clk] [get_bd_pins terminal_top_0/clk_en]
   connect_bd_net -net debounce_0_dbnc [get_bd_pins debounce_0/dbnc] [get_bd_pins program_counter_1/rst]
   connect_bd_net -net hazard_logic_0_hazard_stage [get_bd_pins hazard_count_0/hazard_stage] [get_bd_pins hazard_logic_0/hazard_stage]
   connect_bd_net -net hazard_logic_0_new_hazard [get_bd_pins hazard_count_0/new_hazard] [get_bd_pins hazard_logic_0/new_hazard] [get_bd_pins stage_DE_0/hazard_logic]
@@ -513,9 +568,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net mux_reg_write_0_reg_write_input [get_bd_pins mux_reg_write_0/reg_write_input] [get_bd_pins registers_0/reg_write_input]
   connect_bd_net -net pc_logic_0_PC_out [get_bd_pins pc_logic_0/PC_out] [get_bd_pins program_counter_1/next_PC]
   connect_bd_net -net pc_shift_down_0_pc_out [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins pc_shift_down_0/pc_out]
-  connect_bd_net -net post_memory_logic_0_memory_access_out1_out [get_bd_pins post_memory_logic_0/memory_access_out1_out] [get_bd_pins stage_MW_0/memory_access_out1_EM]
-  connect_bd_net -net pre_memory_logic_0_addr1_out [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins pre_memory_logic_0/addr1_out]
-  connect_bd_net -net pre_memory_logic_0_byte_enable [get_bd_pins blk_mem_gen_0/web] [get_bd_pins pre_memory_logic_0/byte_enable]
+  connect_bd_net -net post_memory_logic_0_memory_access_out1_out [get_bd_pins post_memory_logic_0/memory_access_out] [get_bd_pins stage_MW_0/memory_access_out1_EM]
+  connect_bd_net -net pre_memory_logic_0_addr1_out [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins blk_mem_gen_1/addra] [get_bd_pins pre_memory_logic_0/addr1_out]
+  connect_bd_net -net pre_memory_logic_0_byte_enable [get_bd_pins blk_mem_gen_0/web] [get_bd_pins pre_memory_logic_0/byte_enable_gen]
+  connect_bd_net -net pre_memory_logic_0_byte_enable_term [get_bd_pins blk_mem_gen_1/wea] [get_bd_pins pre_memory_logic_0/byte_enable_term]
   connect_bd_net -net program_counter_0_PC [get_bd_pins pc_logic_0/PC] [get_bd_pins pc_shift_down_0/pc_in] [get_bd_pins program_counter_1/PC] [get_bd_pins stage_FD_0/PC]
   connect_bd_net -net registers_0_debug_leds [get_bd_ports led] [get_bd_pins registers_0/debug_leds]
   connect_bd_net -net registers_0_reg_1_out [get_bd_pins registers_0/reg_1_out] [get_bd_pins stage_DE_0/reg_1_FD]
@@ -532,7 +588,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net stage_DE_0_mux_reg_write_DE [get_bd_pins stage_DE_0/mux_reg_write_DE] [get_bd_pins stage_EM_0/mux_reg_write_DE]
   connect_bd_net -net stage_DE_0_pc_DE [get_bd_pins mux_reg_pc_alu_0/pc] [get_bd_pins pc_logic_0/PC_DE] [get_bd_pins stage_DE_0/pc_DE] [get_bd_pins stage_EM_0/PC_DE]
   connect_bd_net -net stage_DE_0_reg_1_DE [get_bd_pins mux_reg_pc_alu_0/reg_1_out] [get_bd_pins stage_DE_0/reg_1_DE]
-  connect_bd_net -net stage_DE_0_reg_2_DE [get_bd_pins blk_mem_gen_0/dinb] [get_bd_pins mux_reg_descr_alu_0/reg_2_out] [get_bd_pins stage_DE_0/reg_2_DE]
+  connect_bd_net -net stage_DE_0_reg_2_DE [get_bd_pins blk_mem_gen_0/dinb] [get_bd_pins blk_mem_gen_1/dina] [get_bd_pins mux_reg_descr_alu_0/reg_2_out] [get_bd_pins stage_DE_0/reg_2_DE]
   connect_bd_net -net stage_EM_0_PC_EM [get_bd_pins stage_EM_0/PC_EM] [get_bd_pins stage_MW_0/PC_EM]
   connect_bd_net -net stage_EM_0_control_mem_logic_EM [get_bd_pins post_memory_logic_0/control_mem] [get_bd_pins stage_EM_0/control_mem_logic_EM]
   connect_bd_net -net stage_EM_0_control_reg_writeenable_EM [get_bd_pins stage_EM_0/control_reg_writeenable_EM] [get_bd_pins stage_MW_0/control_reg_writeenable_EM]
@@ -547,6 +603,12 @@ proc create_root_design { parentCell } {
   connect_bd_net -net stage_MW_0_memory_access_out1_MW [get_bd_pins mux_reg_write_0/mem_output] [get_bd_pins stage_MW_0/memory_access_out1_MW]
   connect_bd_net -net stage_MW_0_mux_reg_write_MW [get_bd_pins mux_reg_write_0/control_mux_reg_write] [get_bd_pins stage_MW_0/mux_reg_write_MW]
   connect_bd_net -net stage_MW_0_output_bus_MW [get_bd_pins mux_reg_write_0/output_bus] [get_bd_pins stage_MW_0/output_bus_MW]
+  connect_bd_net -net terminal_top_0_B [get_bd_ports vga_b] [get_bd_pins terminal_top_0/B]
+  connect_bd_net -net terminal_top_0_G [get_bd_ports vga_g] [get_bd_pins terminal_top_0/G]
+  connect_bd_net -net terminal_top_0_HS [get_bd_ports vga_hs] [get_bd_pins terminal_top_0/HS]
+  connect_bd_net -net terminal_top_0_R [get_bd_ports vga_r] [get_bd_pins terminal_top_0/R]
+  connect_bd_net -net terminal_top_0_VS [get_bd_ports vga_vs] [get_bd_pins terminal_top_0/VS]
+  connect_bd_net -net terminal_top_0_memaddr [get_bd_pins blk_mem_gen_1/addrb] [get_bd_pins terminal_top_0/memaddr]
 
   # Create address segments
 
