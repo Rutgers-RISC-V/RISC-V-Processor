@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../terminal.srcs/sources_1/ip/picture/picture_sim_netlist.vhdl" \
+"../../../../terminal.srcs/sources_1/imports/Desktop/Capstone/fontROM.vhd" \
+"../../../../terminal.srcs/sources_1/new/terminal_top.vhd" \
+"../../../../terminal.srcs/sources_1/imports/Desktop/Embedded/Lab 4/lab-4-submission-JonColella/Lab 4.srcs/sources_1/new/vga_ctrl.vhd" \
+"../../../../terminal.srcs/sources_1/new/character_memaddress.vhd" \
+"../../../../terminal.srcs/sources_1/new/Font_Rom_Addr_Gen.vhd" \
+"../../../../terminal.srcs/sources_1/new/Pixel_Pusher.vhd" \
+"../../../../terminal.srcs/sources_1/new/clock_div.vhd" \
+"../../../../terminal.srcs/sources_1/new/pixel_selector.vhd" \
+"../../../../terminal.srcs/sources_1/new/terminal_tb.vhd" \
+
+# Do not sort compile order
+nosort

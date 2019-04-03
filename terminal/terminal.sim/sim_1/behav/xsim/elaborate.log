@@ -1,0 +1,23 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx2018.3/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto eac351a210484a9496a5f2e8626d6445 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot terminal_tb_behav xil_defaultlib.terminal_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture clock_div of entity xil_defaultlib.clock_div [clock_div_default]
+Compiling architecture behavioral of entity xil_defaultlib.fontROM [fontrom_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_ctrl [vga_ctrl_default]
+Compiling architecture behavioral of entity xil_defaultlib.pixel_pusher [pixel_pusher_default]
+Compiling architecture ps of entity xil_defaultlib.pixel_selector [pixel_selector_default]
+Compiling architecture behavioral of entity xil_defaultlib.Font_Rom_Addr_Gen [font_rom_addr_gen_default]
+Compiling architecture behavioral of entity xil_defaultlib.character_memaddress [character_memaddress_default]
+Compiling architecture behavioral of entity xil_defaultlib.terminal_top [terminal_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.terminal_tb
+Built simulation snapshot terminal_tb_behav

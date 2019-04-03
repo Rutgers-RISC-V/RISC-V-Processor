@@ -40,7 +40,7 @@ end clock_div;
 architecture clock_div of clock_div is
 
 signal count : std_logic_vector (31 downto 0) := X"00000000";
-
+--5000000 for 25 hz
 begin
     process(clk_in) begin
         if(rising_edge(clk_in)) then
