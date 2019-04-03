@@ -55,47 +55,63 @@ addr1_out <= std_logic_vector(resize(unsigned(addr1_in(31 downto 2)),32));
                     data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)),32));
                     byte_enable_term <= "0001";
                 when "100001" => -- store byte on address % 4 = 1
-                    data1_out <= std_logic_vector(resize(unsigned(data1_in(15 downto 0)),32));
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)&x"00"),32));
                     byte_enable_term <= "0010";
                 when "100010" => -- store byte on address % 4 = 2
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)&x"0000"),32));
                     byte_enable_term <= "0100";
                 when "100011" => -- store byte on address % 4 = 3
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)&x"000000"),32));
                     byte_enable_term <= "1000";
                 when "100100" => -- store half-word on address % 4 = 0
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(15 downto 0)),32));
                     byte_enable_term <= "0011";
                 when "100101" => -- store half-word on address % 4 = 1
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(15 downto 0) & x"00"),32));
                     byte_enable_term <= "0110";
                 when "100110" => -- store half-word on address % 4 = 2
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(15 downto 0) & x"0000"),32));
                     byte_enable_term <= "1100"; 
     --            when "000111" => -- load halfword on address % 4 = 3
     --                out1_out <= std_logic_vector(resize(unsigned(out1_in(31 downto 24)),32));
                 when "101000" => -- load word on address % 4 = 0
+                    data1_out <= data1_in;
                     byte_enable_term <= "1111";
                 when others => -- all others and errors
+                    data1_out <= x"00000000";
                     byte_enable_term <= "0000";
             end case;
             byte_enable_gen <= "0000";
         else
             case control_mem&addr1_in(1 downto 0) is
                 when "100000" => -- store byte on address % 4 = 0
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)),32));
                     byte_enable_gen <= "0001";
                 when "100001" => -- store byte on address % 4 = 1
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)&x"00"),32));
                     byte_enable_gen <= "0010";
                 when "100010" => -- store byte on address % 4 = 2
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)&x"0000"),32));
                     byte_enable_gen <= "0100";
                 when "100011" => -- store byte on address % 4 = 3
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(7 downto 0)&x"000000"),32));
                     byte_enable_gen <= "1000";
                 when "100100" => -- store half-word on address % 4 = 0
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(15 downto 0)),32));
                     byte_enable_gen <= "0011";
                 when "100101" => -- store half-word on address % 4 = 1
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(15 downto 0) & x"00"),32));
                     byte_enable_gen <= "0110";
                 when "100110" => -- store half-word on address % 4 = 2
+                    data1_out <= std_logic_vector(resize(unsigned(data1_in(15 downto 0) & x"0000"),32));
                     byte_enable_gen <= "1100"; 
     --            when "000111" => -- load halfword on address % 4 = 3
     --                out1_out <= std_logic_vector(resize(unsigned(out1_in(31 downto 24)),32));
                 when "101000" => -- load word on address % 4 = 0
+                    data1_out <= data1_in;
                     byte_enable_gen <= "1111";
                 when others => -- all others and errors
+                    data1_out <= x"00000000";
                     byte_enable_gen <= "0000";
             end case;
             byte_enable_term <= "0000";

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr  2 16:29:28 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr  3 03:32:57 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -19,29 +19,29 @@
         <CONNECTION INSTANCE="registers_0" PORT="debug_leds"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="4" NAME="vga_r" RIGHT="0" SIGIS="undef" SIGNAME="terminal_top_0_R">
+    <PORT DIR="O" LEFT="4" NAME="vga_r" RIGHT="0" SIGIS="undef" SIGNAME="terminal_tld_0_vga_r">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="terminal_top_0" PORT="R"/>
+        <CONNECTION INSTANCE="terminal_tld_0" PORT="vga_r"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="5" NAME="vga_g" RIGHT="0" SIGIS="undef" SIGNAME="terminal_top_0_G">
+    <PORT DIR="O" LEFT="5" NAME="vga_g" RIGHT="0" SIGIS="undef" SIGNAME="terminal_tld_0_vga_g">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="terminal_top_0" PORT="G"/>
+        <CONNECTION INSTANCE="terminal_tld_0" PORT="vga_g"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="4" NAME="vga_b" RIGHT="0" SIGIS="undef" SIGNAME="terminal_top_0_B">
+    <PORT DIR="O" LEFT="4" NAME="vga_b" RIGHT="0" SIGIS="undef" SIGNAME="terminal_tld_0_vga_b">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="terminal_top_0" PORT="B"/>
+        <CONNECTION INSTANCE="terminal_tld_0" PORT="vga_b"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="vga_hs" SIGIS="undef" SIGNAME="terminal_top_0_HS">
+    <PORT DIR="O" NAME="vga_hs" SIGIS="undef" SIGNAME="terminal_tld_0_vga_hs">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="terminal_top_0" PORT="HS"/>
+        <CONNECTION INSTANCE="terminal_tld_0" PORT="vga_hs"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="vga_vs" SIGIS="undef" SIGNAME="terminal_top_0_VS">
+    <PORT DIR="O" NAME="vga_vs" SIGIS="undef" SIGNAME="terminal_tld_0_vga_vs">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="terminal_top_0" PORT="VS"/>
+        <CONNECTION INSTANCE="terminal_tld_0" PORT="vga_vs"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -314,7 +314,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="true"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -387,9 +387,9 @@
             <CONNECTION INSTANCE="pre_memory_logic_0" PORT="addr1_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="stage_DE_0_reg_2_DE">
+        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="pre_memory_logic_0_data1_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stage_DE_0" PORT="reg_2_DE"/>
+            <CONNECTION INSTANCE="pre_memory_logic_0" PORT="data1_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
@@ -608,9 +608,9 @@
             <CONNECTION INSTANCE="pre_memory_logic_0" PORT="addr1_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="stage_DE_0_reg_2_DE">
+        <PORT DIR="I" LEFT="31" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="pre_memory_logic_0_data1_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stage_DE_0" PORT="reg_2_DE"/>
+            <CONNECTION INSTANCE="pre_memory_logic_0" PORT="data1_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_1_douta">
@@ -629,15 +629,15 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="web" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="11" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="terminal_top_0_memaddr">
+        <PORT DIR="I" LEFT="11" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="terminal_tld_0_vram_addr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="terminal_top_0" PORT="memaddr"/>
+            <CONNECTION INSTANCE="terminal_tld_0" PORT="vram_addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="dinb" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="7" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_1_doutb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="terminal_top_0" PORT="ascii_in"/>
+            <CONNECTION INSTANCE="terminal_tld_0" PORT="ascii_value"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1308,7 +1308,7 @@
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="clkb"/>
             <CONNECTION INSTANCE="clock_div_0" PORT="clk"/>
             <CONNECTION INSTANCE="clock_div_1" PORT="clk"/>
-            <CONNECTION INSTANCE="terminal_top_0" PORT="clk"/>
+            <CONNECTION INSTANCE="terminal_tld_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -1374,7 +1374,7 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="div_clk" SIGIS="clk" SIGNAME="clock_div_1_div_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="enb"/>
-            <CONNECTION INSTANCE="terminal_top_0" PORT="clk_en"/>
+            <CONNECTION INSTANCE="terminal_tld_0" PORT="clk_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1761,6 +1761,17 @@
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="addra"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="31" NAME="data1_in" RIGHT="0" SIGIS="undef" SIGNAME="stage_DE_0_reg_2_DE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stage_DE_0" PORT="reg_2_DE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="data1_out" RIGHT="0" SIGIS="undef" SIGNAME="pre_memory_logic_0_data1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="blk_mem_gen_1" PORT="dina"/>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dinb"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="3" NAME="byte_enable_gen" RIGHT="0" SIGIS="undef" SIGNAME="pre_memory_logic_0_byte_enable_gen">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="web"/>
@@ -2013,9 +2024,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="reg_2_DE" RIGHT="0" SIGIS="undef" SIGNAME="stage_DE_0_reg_2_DE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dinb"/>
             <CONNECTION INSTANCE="mux_reg_descr_alu_0" PORT="reg_2_out"/>
-            <CONNECTION INSTANCE="blk_mem_gen_1" PORT="dina"/>
+            <CONNECTION INSTANCE="pre_memory_logic_0" PORT="data1_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="immediate_DE" RIGHT="0" SIGIS="undef" SIGNAME="stage_DE_0_immediate_DE">
@@ -2242,10 +2252,10 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/terminal_top_0" HWVERSION="1.0" INSTANCE="terminal_top_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="terminal_top" VLNV="xilinx.com:module_ref:terminal_top:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/terminal_tld_0" HWVERSION="1.0" INSTANCE="terminal_tld_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="terminal_tld" VLNV="xilinx.com:module_ref:terminal_tld:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="RV32I_pipelined_terminal_top_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="RV32I_pipelined_terminal_tld_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -2259,37 +2269,37 @@
             <CONNECTION INSTANCE="clock_div_1" PORT="div_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="memaddr" RIGHT="0" SIGIS="undef" SIGNAME="terminal_top_0_memaddr">
+        <PORT DIR="O" LEFT="31" NAME="vram_addr" RIGHT="0" SIGIS="undef" SIGNAME="terminal_tld_0_vram_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="addrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="ascii_in" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_1_doutb">
+        <PORT DIR="I" LEFT="7" NAME="ascii_value" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_1_doutb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="doutb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="4" NAME="R" RIGHT="0" SIGIS="undef" SIGNAME="terminal_top_0_R">
+        <PORT DIR="O" LEFT="4" NAME="vga_r" RIGHT="0" SIGIS="undef" SIGNAME="terminal_tld_0_vga_r">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="vga_r"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="5" NAME="G" RIGHT="0" SIGIS="undef" SIGNAME="terminal_top_0_G">
+        <PORT DIR="O" LEFT="5" NAME="vga_g" RIGHT="0" SIGIS="undef" SIGNAME="terminal_tld_0_vga_g">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="vga_g"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="4" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="terminal_top_0_B">
+        <PORT DIR="O" LEFT="4" NAME="vga_b" RIGHT="0" SIGIS="undef" SIGNAME="terminal_tld_0_vga_b">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="vga_b"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="HS" SIGIS="undef" SIGNAME="terminal_top_0_HS">
+        <PORT DIR="O" NAME="vga_hs" SIGIS="undef" SIGNAME="terminal_tld_0_vga_hs">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="vga_hs"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="VS" SIGIS="undef" SIGNAME="terminal_top_0_VS">
+        <PORT DIR="O" NAME="vga_vs" SIGIS="undef" SIGNAME="terminal_tld_0_vga_vs">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="vga_vs"/>
           </CONNECTIONS>

@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Tue Apr  2 16:29:27 2019
+--Date        : Wed Apr  3 03:32:57 2019
 --Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -310,15 +310,6 @@ architecture STRUCTURE of RV32I_pipelined is
     memory_access_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_post_memory_logic_0_0;
-  component RV32I_pipelined_pre_memory_logic_0_0 is
-  port (
-    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addr1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    addr1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    byte_enable_gen : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    byte_enable_term : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component RV32I_pipelined_pre_memory_logic_0_0;
   component RV32I_pipelined_clock_div_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -333,25 +324,37 @@ architecture STRUCTURE of RV32I_pipelined is
     div_clk : out STD_LOGIC
   );
   end component RV32I_pipelined_clock_div_1_0;
-  component RV32I_pipelined_terminal_top_0_0 is
+  component RV32I_pipelined_pre_memory_logic_0_0 is
+  port (
+    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addr1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    addr1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    data1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    data1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    byte_enable_gen : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    byte_enable_term : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_pre_memory_logic_0_0;
+  component RV32I_pipelined_terminal_tld_0_0 is
   port (
     clk : in STD_LOGIC;
     clk_en : in STD_LOGIC;
-    memaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    ascii_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    R : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    G : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    B : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    HS : out STD_LOGIC;
-    VS : out STD_LOGIC
+    vram_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    ascii_value : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    vga_r : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    vga_hs : out STD_LOGIC;
+    vga_vs : out STD_LOGIC
   );
-  end component RV32I_pipelined_terminal_top_0_0;
+  end component RV32I_pipelined_terminal_tld_0_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
   signal ALU_0_sum : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal ALU_0_zero : STD_LOGIC;
   signal Descrambler_0_descr_imm : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Net : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal RV32I_0_control_alu : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal RV32I_0_control_branch : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal RV32I_0_control_mem_logic : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -418,12 +421,12 @@ architecture STRUCTURE of RV32I_pipelined is
   signal stage_MW_0_memory_access_out1_MW : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal stage_MW_0_mux_reg_write_MW : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal stage_MW_0_output_bus_MW : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal terminal_top_0_B : STD_LOGIC_VECTOR ( 4 downto 0 );
-  signal terminal_top_0_G : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal terminal_top_0_HS : STD_LOGIC;
-  signal terminal_top_0_R : STD_LOGIC_VECTOR ( 4 downto 0 );
-  signal terminal_top_0_VS : STD_LOGIC;
-  signal terminal_top_0_memaddr : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal terminal_tld_0_vga_b : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal terminal_tld_0_vga_g : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal terminal_tld_0_vga_hs : STD_LOGIC;
+  signal terminal_tld_0_vga_r : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal terminal_tld_0_vga_vs : STD_LOGIC;
+  signal terminal_tld_0_vram_addr : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_RV32I_0_error_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
@@ -433,11 +436,11 @@ begin
   btn_0_1 <= btn3;
   clk_in1_0_1 <= clk;
   led(3 downto 0) <= registers_0_debug_leds(3 downto 0);
-  vga_b(4 downto 0) <= terminal_top_0_B(4 downto 0);
-  vga_g(5 downto 0) <= terminal_top_0_G(5 downto 0);
-  vga_hs <= terminal_top_0_HS;
-  vga_r(4 downto 0) <= terminal_top_0_R(4 downto 0);
-  vga_vs <= terminal_top_0_VS;
+  vga_b(4 downto 0) <= terminal_tld_0_vga_b(4 downto 0);
+  vga_g(5 downto 0) <= terminal_tld_0_vga_g(5 downto 0);
+  vga_hs <= terminal_tld_0_vga_hs;
+  vga_r(4 downto 0) <= terminal_tld_0_vga_r(4 downto 0);
+  vga_vs <= terminal_tld_0_vga_vs;
 ALU_0: component RV32I_pipelined_ALU_0_0
      port map (
       A(31 downto 0) => mux_reg_pc_alu_0_alu_A(31 downto 0),
@@ -478,7 +481,7 @@ blk_mem_gen_0: component RV32I_pipelined_blk_mem_gen_0_0
       clka => clk_2,
       clkb => clk_2,
       dina(31 downto 0) => B"00000000000000000000000000001000",
-      dinb(31 downto 0) => stage_DE_0_reg_2_DE(31 downto 0),
+      dinb(31 downto 0) => Net(31 downto 0),
       douta(31 downto 0) => blk_mem_gen_0_douta1(31 downto 0),
       doutb(31 downto 0) => blk_mem_gen_0_doutb(31 downto 0),
       ena => clock_div_0_div_clk,
@@ -489,10 +492,10 @@ blk_mem_gen_0: component RV32I_pipelined_blk_mem_gen_0_0
 blk_mem_gen_1: component RV32I_pipelined_blk_mem_gen_1_0
      port map (
       addra(9 downto 0) => pre_memory_logic_0_addr1_out(9 downto 0),
-      addrb(11 downto 0) => terminal_top_0_memaddr(11 downto 0),
+      addrb(11 downto 0) => terminal_tld_0_vram_addr(11 downto 0),
       clka => clk_2,
       clkb => clk_2,
-      dina(31 downto 0) => stage_DE_0_reg_2_DE(31 downto 0),
+      dina(31 downto 0) => Net(31 downto 0),
       dinb(7 downto 0) => B"00001000",
       douta(31 downto 0) => blk_mem_gen_1_douta(31 downto 0),
       doutb(7 downto 0) => blk_mem_gen_1_doutb(7 downto 0),
@@ -615,7 +618,9 @@ pre_memory_logic_0: component RV32I_pipelined_pre_memory_logic_0_0
       addr1_out(31 downto 0) => pre_memory_logic_0_addr1_out(31 downto 0),
       byte_enable_gen(3 downto 0) => pre_memory_logic_0_byte_enable(3 downto 0),
       byte_enable_term(3 downto 0) => pre_memory_logic_0_byte_enable_term(3 downto 0),
-      control_mem(3 downto 0) => stage_DE_0_control_mem_logic_DE(3 downto 0)
+      control_mem(3 downto 0) => stage_DE_0_control_mem_logic_DE(3 downto 0),
+      data1_in(31 downto 0) => stage_DE_0_reg_2_DE(31 downto 0),
+      data1_out(31 downto 0) => Net(31 downto 0)
     );
 program_counter_1: component RV32I_pipelined_program_counter_1_0
      port map (
@@ -714,16 +719,16 @@ stage_MW_0: component RV32I_pipelined_stage_MW_0_0
       output_bus_EM(31 downto 0) => stage_EM_0_output_bus_EM(31 downto 0),
       output_bus_MW(31 downto 0) => stage_MW_0_output_bus_MW(31 downto 0)
     );
-terminal_top_0: component RV32I_pipelined_terminal_top_0_0
+terminal_tld_0: component RV32I_pipelined_terminal_tld_0_0
      port map (
-      B(4 downto 0) => terminal_top_0_B(4 downto 0),
-      G(5 downto 0) => terminal_top_0_G(5 downto 0),
-      HS => terminal_top_0_HS,
-      R(4 downto 0) => terminal_top_0_R(4 downto 0),
-      VS => terminal_top_0_VS,
-      ascii_in(7 downto 0) => blk_mem_gen_1_doutb(7 downto 0),
+      ascii_value(7 downto 0) => blk_mem_gen_1_doutb(7 downto 0),
       clk => clk_2,
       clk_en => clock_div_1_div_clk,
-      memaddr(31 downto 0) => terminal_top_0_memaddr(31 downto 0)
+      vga_b(4 downto 0) => terminal_tld_0_vga_b(4 downto 0),
+      vga_g(5 downto 0) => terminal_tld_0_vga_g(5 downto 0),
+      vga_hs => terminal_tld_0_vga_hs,
+      vga_r(4 downto 0) => terminal_tld_0_vga_r(4 downto 0),
+      vga_vs => terminal_tld_0_vga_vs,
+      vram_addr(31 downto 0) => terminal_tld_0_vram_addr(31 downto 0)
     );
 end STRUCTURE;
