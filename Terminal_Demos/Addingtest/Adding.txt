@@ -1,0 +1,88 @@
+li x6 4096 # load base address of terminal into a register.
+
+li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
+
+xor x12 x12 x12 #clears random register
+li x9 loop_start
+jalr x10, 0(x9)
+
+loop_start:
+lui x11, 2**10 ( 2^10)
+addi x11, x11, -1
+bne x11, x0, loop_start
+jalr x0, 0(x10)
+
+#Load 'random' Number
+
+li x6 1
+addi x12 x0 53
+sw x12 0(x0)
+sw x12 0(x1)
+#jalr x10, 0(x9)
+
+li x6 4096 # load base address of terminal into a register.
+#output written in hex
+li x7 49 # load the ASCII value of '1' into a register. ASCII value of '1' is the decimal number 49
+addi x8 x6 0
+sb x7 0(x8)
+li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
+addi x8 x6 1
+sb x7 0(x8)
+li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
+addi x8 x6 2
+sb x7 0(x8)
+li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
+addi x8 x6 3
+sb x7 0(x8)
+
+li x7 43 # load the ASCII value of '+' into a register. ASCII value of '+' is the decimal number 43
+addi x8 x6 5
+sb x7 0(x8)
+
+li x9 ran_loop
+lui x11 32
+lui x9 7
+jalr x10 0(x9)
+
+ran_loop:
+addi x11 x11 -1
+li x21 48 # load with ascii value '0'
+li x20 4 # for shift operations
+lbu x12 0(x0) # load current value
+sll x12 x12 x20 # shift new value up by one half byte
+sw x12 0(x0) # store shifted value
+srl x7 x12 x20 # save only left most byte
+add x7 x21 x7 #convert byte to ascii
+add x8 x6 x9
+addi x9 x9 1
+sb x7 0(x8) 
+bne x11, x0, ran_loop
+
+li x7 61 # load the ASCII value of '=' into a register. ASCII value of '=' is the decimal number 61
+addi x8 x6 41
+sb x7 0(x8)
+
+lw x28 0(x1)
+li x29 4096
+add x22 x29 x28
+sw x22 0(x2)
+sw x22 0(x3)
+
+li x9 ran_loop
+lui x11 32
+lui x9 7
+jalr x10 0(x9)
+
+last_loop:
+addi x11 x11 -1
+li x21 48 # load with ascii value '0'
+li x20 4 # for shift operations
+lbu x12 0(x3) # load current value
+sll x12 x12 x20 # shift new value up by one half byte
+sw x12 0(x3) # store shifted value
+srl x7 x12 x20 # save only left most byte
+add x7 x21 x7 #convert byte to ascii
+add x8 x6 x9
+addi x9 x9 1
+sb x7 0(x8) 
+bne x11, x0, ran_loop
