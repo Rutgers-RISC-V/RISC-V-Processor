@@ -1,0 +1,26 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port vga_hs -pg 1 -y 140 -defaultsOSRD
+preplace port vga_vs -pg 1 -y 160 -defaultsOSRD
+preplace port clk -pg 1 -y 90 -defaultsOSRD
+preplace portBus vga_b -pg 1 -y 120 -defaultsOSRD
+preplace portBus vga_r -pg 1 -y 80 -defaultsOSRD
+preplace portBus vga_g -pg 1 -y 100 -defaultsOSRD
+preplace inst clock_div_0 -pg 1 -lvl 1 -y 150 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -y 280 -defaultsOSRD
+preplace inst terminal_tld_0 -pg 1 -lvl 2 -y 110 -defaultsOSRD
+preplace netloc clk_0_1 1 0 3 20 90 180 260 NJ
+preplace netloc terminal_tld_0_vga_b 1 2 2 NJ 120 NJ
+preplace netloc terminal_tld_0_vram_addr 1 2 1 500
+preplace netloc terminal_tld_0_vga_r 1 2 2 NJ 80 NJ
+preplace netloc blk_mem_gen_0_douta 1 1 2 200 300 NJ
+preplace netloc terminal_tld_0_vga_g 1 2 2 NJ 100 NJ
+preplace netloc terminal_tld_0_vga_vs 1 2 2 NJ 160 NJ
+preplace netloc terminal_tld_0_vga_hs 1 2 2 NJ 140 NJ
+preplace netloc clock_div_0_div 1 1 2 190 320 NJ
+levelinfo -pg 1 0 100 350 600 720 -top 0 -bot 400
+"
+}
+

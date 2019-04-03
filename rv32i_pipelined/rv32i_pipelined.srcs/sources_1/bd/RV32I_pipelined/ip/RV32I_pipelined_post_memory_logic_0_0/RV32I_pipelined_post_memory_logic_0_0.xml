@@ -14,7 +14,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b450bd87</spirit:value>
+            <spirit:value>9:a3570396</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30,11 +30,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 01 03:25:01 UTC 2019</spirit:value>
+            <spirit:value>Tue Apr 02 20:02:19 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b450bd87</spirit:value>
+            <spirit:value>9:a3570396</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -46,7 +46,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4db8440c</spirit:value>
+            <spirit:value>9:9ecb9158</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -62,11 +62,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 01 03:43:31 UTC 2019</spirit:value>
+            <spirit:value>Tue Apr 02 20:07:07 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4db8440c</spirit:value>
+            <spirit:value>9:9ecb9158</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -80,11 +80,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 01 03:44:46 UTC 2019</spirit:value>
+            <spirit:value>Tue Apr 02 20:08:41 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4db8440c</spirit:value>
+            <spirit:value>9:9ecb9158</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -125,7 +125,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>memory_access_out1_in</spirit:name>
+        <spirit:name>memory_access_out_gen_in</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -142,7 +142,24 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>memory_access_out1_out</spirit:name>
+        <spirit:name>memory_access_out_term_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>memory_access_out</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>

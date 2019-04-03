@@ -44,7 +44,7 @@ begin
     process(clk)
     begin
         if(rising_edge(clk) and locked = '1') then
-            if(unsigned(counter) < 4) then -- 10 MHz
+            if(unsigned(counter) < 1) then -- 25 MHz
                 counter <= std_logic_vector(unsigned(counter)+1);
                 div_clk_reg <= '0';
             else

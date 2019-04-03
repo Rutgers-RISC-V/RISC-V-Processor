@@ -1,0 +1,217 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x3A6BB5050ADF6311",
+      "device": "xc7z010clg400-2",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "blk_mem_gen_0": "",
+      "terminal_top_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "vga_r": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "vga_g": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "vga_b": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "vga_hs": {
+        "direction": "O"
+      },
+      "vga_vs": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_1_blk_mem_gen_0_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Use_ENA_Pin"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "false"
+          },
+          "Read_Width_A": {
+            "value": "8"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "30"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "2400"
+          },
+          "Write_Width_A": {
+            "value": "8"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "terminal_top_0": {
+        "vlnv": "xilinx.com:module_ref:terminal_top:1.0",
+        "xci_name": "design_1_terminal_top_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "terminal_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_div": {
+            "direction": "O"
+          },
+          "memaddr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ascii_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "R": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "G": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "B": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "HS": {
+            "direction": "O"
+          },
+          "VS": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "terminal_top_0_memaddr": {
+        "ports": [
+          "terminal_top_0/memaddr",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "terminal_top_0/ascii_in"
+        ]
+      },
+      "terminal_top_0_clk_div": {
+        "ports": [
+          "terminal_top_0/clk_div",
+          "blk_mem_gen_0/ena"
+        ]
+      },
+      "terminal_top_0_R": {
+        "ports": [
+          "terminal_top_0/R",
+          "vga_r"
+        ]
+      },
+      "terminal_top_0_G": {
+        "ports": [
+          "terminal_top_0/G",
+          "vga_g"
+        ]
+      },
+      "terminal_top_0_B": {
+        "ports": [
+          "terminal_top_0/B",
+          "vga_b"
+        ]
+      },
+      "terminal_top_0_HS": {
+        "ports": [
+          "terminal_top_0/HS",
+          "vga_hs"
+        ]
+      },
+      "terminal_top_0_VS": {
+        "ports": [
+          "terminal_top_0/VS",
+          "vga_vs"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "blk_mem_gen_0/clka",
+          "terminal_top_0/clk"
+        ]
+      }
+    }
+  }
+}
