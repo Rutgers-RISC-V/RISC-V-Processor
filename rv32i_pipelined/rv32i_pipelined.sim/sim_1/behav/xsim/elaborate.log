@@ -1,0 +1,69 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto bd6bf5eee7d641d489ebaa473494efaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot RV32I_pipelined_tb_behav xil_defaultlib.RV32I_pipelined_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture rv32i_pipelined_alu_0_1_arch of entity xil_defaultlib.RV32I_pipelined_ALU_0_1 [rv32i_pipelined_alu_0_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.Descrambler [descrambler_default]
+Compiling architecture rv32i_pipelined_descrambler_0_1_arch of entity xil_defaultlib.RV32I_pipelined_Descrambler_0_1 [rv32i_pipelined_descrambler_0_1_...]
+Compiling architecture controls_behavior of entity xil_defaultlib.RV32I [rv32i_default]
+Compiling architecture rv32i_pipelined_rv32i_0_1_arch of entity xil_defaultlib.RV32I_pipelined_RV32I_0_1 [rv32i_pipelined_rv32i_0_1_defaul...]
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="zyn...
+Compiling module xil_defaultlib.RV32I_pipelined_blk_mem_gen_0_1
+Compiling architecture behavioral of entity xil_defaultlib.brach_logic [brach_logic_default]
+Compiling architecture rv32i_pipelined_brach_logic_0_1_arch of entity xil_defaultlib.RV32I_pipelined_brach_logic_0_1 [rv32i_pipelined_brach_logic_0_1_...]
+Compiling architecture behavioral of entity xil_defaultlib.clock_div [clock_div_default]
+Compiling architecture rv32i_pipelined_clock_div_0_1_arch of entity xil_defaultlib.RV32I_pipelined_clock_div_0_1 [rv32i_pipelined_clock_div_0_1_de...]
+Compiling architecture behavioral of entity xil_defaultlib.debounce [debounce_default]
+Compiling architecture rv32i_pipelined_debounce_0_1_arch of entity xil_defaultlib.RV32I_pipelined_debounce_0_1 [rv32i_pipelined_debounce_0_1_def...]
+Compiling architecture behavioral of entity xil_defaultlib.hazard_count [hazard_count_default]
+Compiling architecture rv32i_pipelined_hazard_count_0_1_arch of entity xil_defaultlib.RV32I_pipelined_hazard_count_0_1 [rv32i_pipelined_hazard_count_0_1...]
+Compiling architecture behavioral of entity xil_defaultlib.hazard_logic [hazard_logic_default]
+Compiling architecture rv32i_pipelined_hazard_logic_0_1_arch of entity xil_defaultlib.RV32I_pipelined_hazard_logic_0_1 [rv32i_pipelined_hazard_logic_0_1...]
+Compiling architecture behavioral of entity xil_defaultlib.instruction_clear [instruction_clear_default]
+Compiling architecture rv32i_pipelined_instruction_clear_0_1_arch of entity xil_defaultlib.RV32I_pipelined_instruction_clear_0_1 [rv32i_pipelined_instruction_clea...]
+Compiling architecture behavioral of entity xil_defaultlib.mux_output [mux_output_default]
+Compiling architecture rv32i_pipelined_mux_output_0_1_arch of entity xil_defaultlib.RV32I_pipelined_mux_output_0_1 [rv32i_pipelined_mux_output_0_1_d...]
+Compiling architecture behavioral of entity xil_defaultlib.mux_reg_descr_alu [mux_reg_descr_alu_default]
+Compiling architecture rv32i_pipelined_mux_reg_descr_alu_0_1_arch of entity xil_defaultlib.RV32I_pipelined_mux_reg_descr_alu_0_1 [rv32i_pipelined_mux_reg_descr_al...]
+Compiling architecture behavioral of entity xil_defaultlib.mux_reg_pc_alu [mux_reg_pc_alu_default]
+Compiling architecture rv32i_pipelined_mux_reg_pc_alu_0_1_arch of entity xil_defaultlib.RV32I_pipelined_mux_reg_pc_alu_0_1 [rv32i_pipelined_mux_reg_pc_alu_0...]
+Compiling architecture behavioral of entity xil_defaultlib.mux_reg_write [mux_reg_write_default]
+Compiling architecture rv32i_pipelined_mux_reg_write_0_1_arch of entity xil_defaultlib.RV32I_pipelined_mux_reg_write_0_1 [rv32i_pipelined_mux_reg_write_0_...]
+Compiling architecture behavioral of entity xil_defaultlib.pc_logic [pc_logic_default]
+Compiling architecture rv32i_pipelined_pc_logic_0_1_arch of entity xil_defaultlib.RV32I_pipelined_pc_logic_0_1 [rv32i_pipelined_pc_logic_0_1_def...]
+Compiling architecture post_behavioral of entity xil_defaultlib.post_memory_logic [post_memory_logic_default]
+Compiling architecture rv32i_pipelined_post_memory_logic_0_1_arch of entity xil_defaultlib.RV32I_pipelined_post_memory_logic_0_1 [rv32i_pipelined_post_memory_logi...]
+Compiling architecture pre_behavior of entity xil_defaultlib.pre_memory_logic [pre_memory_logic_default]
+Compiling architecture rv32i_pipelined_pre_memory_logic_0_1_arch of entity xil_defaultlib.RV32I_pipelined_pre_memory_logic_0_1 [rv32i_pipelined_pre_memory_logic...]
+Compiling architecture behavioral of entity xil_defaultlib.program_counter [program_counter_default]
+Compiling architecture rv32i_pipelined_program_counter_1_1_arch of entity xil_defaultlib.RV32I_pipelined_program_counter_1_1 [rv32i_pipelined_program_counter_...]
+Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
+Compiling architecture rv32i_pipelined_registers_0_1_arch of entity xil_defaultlib.RV32I_pipelined_registers_0_1 [rv32i_pipelined_registers_0_1_de...]
+Compiling architecture behavioral of entity xil_defaultlib.stage_DE [stage_de_default]
+Compiling architecture rv32i_pipelined_stage_de_0_1_arch of entity xil_defaultlib.RV32I_pipelined_stage_DE_0_1 [rv32i_pipelined_stage_de_0_1_def...]
+Compiling architecture behavioral of entity xil_defaultlib.stage_EM [stage_em_default]
+Compiling architecture rv32i_pipelined_stage_em_0_1_arch of entity xil_defaultlib.RV32I_pipelined_stage_EM_0_1 [rv32i_pipelined_stage_em_0_1_def...]
+Compiling architecture behavioral of entity xil_defaultlib.stage_FD [stage_fd_default]
+Compiling architecture rv32i_pipelined_stage_fd_0_1_arch of entity xil_defaultlib.RV32I_pipelined_stage_FD_0_1 [rv32i_pipelined_stage_fd_0_1_def...]
+Compiling architecture behavioral of entity xil_defaultlib.stage_MW [stage_mw_default]
+Compiling architecture rv32i_pipelined_stage_mw_0_1_arch of entity xil_defaultlib.RV32I_pipelined_stage_MW_0_1 [rv32i_pipelined_stage_mw_0_1_def...]
+Compiling architecture structure of entity xil_defaultlib.RV32I_pipelined [rv32i_pipelined_default]
+Compiling architecture structure of entity xil_defaultlib.RV32I_pipelined_wrapper [rv32i_pipelined_wrapper_default]
+Compiling architecture behavioral of entity xil_defaultlib.rv32i_pipelined_tb
+Built simulation snapshot RV32I_pipelined_tb_behav

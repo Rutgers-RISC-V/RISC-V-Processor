@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/program_counter.vhd" \
+"../../../../rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/rv32i/rv32i.srcs/sources_1/imports/RISC-V-Processor/stage_DE.vhd" \
+"../../../../rv32i_pipelined.ip_user_files/bd/processor/sim/processor.vhd" \
+"../../../../rv32i_pipelined.srcs/sources_1/bd/processor/hdl/processor_wrapper.vhd" \
+
+# Do not sort compile order
+nosort
