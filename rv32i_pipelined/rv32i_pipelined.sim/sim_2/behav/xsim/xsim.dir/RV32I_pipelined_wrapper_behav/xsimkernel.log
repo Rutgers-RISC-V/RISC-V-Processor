@@ -1,0 +1,7 @@
+Running: xsim.dir/RV32I_pipelined_wrapper_behav/xsimk.exe -simmode gui -wdb RV32I_pipelined_wrapper_behav.wdb -simrunnum 0 -socket 51568
+Design successfully loaded
+Design Loading Memory Usage: 5116 KB (Peak: 5116 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 6084 KB (Peak: 6084 KB)
+Simulation CPU Usage: 30 ms
