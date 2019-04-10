@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_1.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe" beforeDir="false" afterPath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/gui_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/java_command_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/project.wpc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/webtalk_pa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.runs/impl_1/RV32I_pipelined_wrapper.bit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bxml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined.hwh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined.hwh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0.dcp" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0.dcp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_sim_netlist.v" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_sim_netlist.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_sim_netlist.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_sim_netlist.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_stub.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_stub.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.hwdef" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.hwdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ui/bd_190b32e9.ui" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ui/bd_190b32e9.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/mref/terminal_tld/component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/mref/terminal_tld/component.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.xpr" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,15 +35,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
               <caret line="1634" column="15" selection-end-line="2357" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_1.hex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="1691" column="10" lean-forward="true" selection-start-line="1691" selection-start-column="10" selection-end-line="1691" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -106,20 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_1.coe">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="1703" column="33" selection-start-line="1703" selection-start-column="33" selection-end-line="1703" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -556,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554255301667</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Adding in missing files to Project 4_10_2019">
+      <created>1554904439803</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1554904439803</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -569,15 +536,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4241453" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20916754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32603937" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32286024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40315315" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -632,7 +599,8 @@
     <MESSAGE value="Processor loaded on Zybo and completed most basic addition and critical tests." />
     <MESSAGE value="Fixed many bugs in the controls csv." />
     <MESSAGE value="Starting integration of processor and terminal." />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting integration of processor and terminal." />
+    <MESSAGE value="Adding in missing files to Project 4_10_2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding in missing files to Project 4_10_2019" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -991,7 +959,14 @@
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_1.hex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="597">
-          <caret line="1691" column="10" lean-forward="true" selection-start-line="1691" selection-start-column="10" selection-end-line="1691" selection-end-column="10" />
+          <caret line="1691" column="10" selection-start-line="1691" selection-start-column="10" selection-end-line="1691" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_1.coe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="1703" column="33" selection-start-line="1703" selection-start-column="33" selection-end-line="1703" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -999,13 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_1.coe">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="1703" column="33" selection-start-line="1703" selection-start-column="33" selection-end-line="1703" selection-end-column="33" />
         </state>
       </provider>
     </entry>
