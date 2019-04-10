@@ -152,7 +152,7 @@
             "value": "8"
           },
           "Coe_File": {
-            "value": "../../../../../../../Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe"
+            "value": "../../../../../../../Dumps_and_Assembly/Dumps/addTest_Dump.coe"
           },
           "Enable_32bit_Address": {
             "value": "false"
