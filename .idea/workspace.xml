@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe" beforeDir="false" afterPath="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/gui_handlers.wdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/java_command_handlers.wdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/project.wpc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/webtalk_pa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bxml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined.hwh" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined.hwh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined_bd.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hw_handoff/RV32I_pipelined_bd.tcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.dcp" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.dcp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.mif" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.mif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xci" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.v" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.vhdl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_stub.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.hwdef" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.hwdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.xpr" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,19 +34,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_Delay.hex">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminal_test_for_simulator.s">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_Delay.coe">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/addTest.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53074">
-              <caret line="3122" column="33" selection-start-line="3122" selection-start-column="33" selection-end-line="3122" selection-end-column="33" />
+            <state>
+              <caret selection-end-line="12" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_2.hex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -40,48 +70,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.hex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28934">
-              <caret line="1702" selection-start-line="1702" selection-end-line="1702" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="776">
-              <caret line="1703" column="33" selection-start-line="1703" selection-start-column="33" selection-end-line="1703" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.hex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5134">
-              <caret line="302" selection-start-line="302" selection-end-line="302" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5100">
-              <caret line="300" column="33" selection-start-line="300" selection-start-column="33" selection-end-line="300" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_2.coe">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.hex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.bin">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/li.s">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -119,7 +150,6 @@
         <option value="$PROJECT_DIR$/controller_gen_combinational.py" />
         <option value="$PROJECT_DIR$/RV32I_single_controls.csv" />
         <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py" />
-        <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe" />
         <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe" />
         <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe" />
         <option value="$PROJECT_DIR$/RV32I_single_signals.csv" />
@@ -141,6 +171,10 @@
         <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe" />
         <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_1.bin" />
         <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_1.coe" />
+        <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_2.hex" />
+        <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_2.coe" />
+        <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.hex" />
+        <option value="$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe" />
       </list>
     </option>
   </component>
@@ -523,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554904439803</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Adding in missing files to Project 4_10_2019">
+      <created>1554904469102</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1554904469102</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -536,7 +577,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20916754" />
@@ -656,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.hex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.bin">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -676,22 +710,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6560">
           <caret line="328" column="33" selection-start-line="328" selection-start-column="33" selection-end-line="328" selection-end-column="33" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.bin">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTestDump_Binary.bin">
       <provider selected="true" editor-type-id="text-editor" />
@@ -770,13 +794,6 @@
       <provider editor-type-id="csv-text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/addTest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -893,13 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminal_test_for_simulator.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminalDemo_2019_Wide_Delay.s">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -970,10 +980,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/li.s">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminal_test_for_simulator.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/addTest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_2.hex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_2.coe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.bin">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.hex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.coe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
