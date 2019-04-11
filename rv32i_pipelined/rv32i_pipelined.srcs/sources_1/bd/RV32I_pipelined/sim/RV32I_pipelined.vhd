@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Wed Apr 10 10:15:29 2019
---Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
+--Date        : Thu Apr 11 00:07:26 2019
+--Host        : DESKTOP-LKIEUJ3 running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
 --Purpose     : IP block netlist
@@ -162,19 +162,6 @@ architecture STRUCTURE of RV32I_pipelined is
     PC : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_program_counter_1_0;
-  component RV32I_pipelined_registers_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    instr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    instr2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_write_input : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_2_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    wen : in STD_LOGIC;
-    debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component RV32I_pipelined_registers_0_0;
   component RV32I_pipelined_stage_DE_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -348,6 +335,20 @@ architecture STRUCTURE of RV32I_pipelined is
     vga_vs : out STD_LOGIC
   );
   end component RV32I_pipelined_terminal_tld_0_0;
+  component RV32I_pipelined_registers_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    instr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    instr2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_write_input : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_2_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    wen : in STD_LOGIC;
+    vsync : in STD_LOGIC;
+    debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_registers_0_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
@@ -640,6 +641,7 @@ registers_0: component RV32I_pipelined_registers_0_0
       reg_1_out(31 downto 0) => registers_0_reg_1_out(31 downto 0),
       reg_2_out(31 downto 0) => registers_0_reg_2_out(31 downto 0),
       reg_write_input(31 downto 0) => mux_reg_write_0_reg_write_input(31 downto 0),
+      vsync => terminal_tld_0_vga_vs,
       wen => stage_MW_0_control_reg_writeenable_MW
     );
 stage_DE_0: component RV32I_pipelined_stage_DE_0_0

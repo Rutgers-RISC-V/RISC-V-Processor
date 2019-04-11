@@ -63,6 +63,7 @@ ENTITY RV32I_pipelined_registers_0_0 IS
     reg_1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     reg_2_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     wen : IN STD_LOGIC;
+    vsync : IN STD_LOGIC;
     debug_leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END RV32I_pipelined_registers_0_0;
@@ -80,6 +81,7 @@ ARCHITECTURE RV32I_pipelined_registers_0_0_arch OF RV32I_pipelined_registers_0_0
       reg_1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       reg_2_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       wen : IN STD_LOGIC;
+      vsync : IN STD_LOGIC;
       debug_leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT registers;
@@ -100,6 +102,7 @@ BEGIN
       reg_1_out => reg_1_out,
       reg_2_out => reg_2_out,
       wen => wen,
+      vsync => vsync,
       debug_leds => debug_leds
     );
 END RV32I_pipelined_registers_0_0_arch;

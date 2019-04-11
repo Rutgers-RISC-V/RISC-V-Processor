@@ -58,7 +58,10 @@ ENTITY RV32I_pipelined_pre_memory_logic_0_0 IS
     control_mem : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     addr1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    byte_enable : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    data1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    data1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    byte_enable_gen : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    byte_enable_term : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END RV32I_pipelined_pre_memory_logic_0_0;
 
@@ -70,7 +73,10 @@ ARCHITECTURE RV32I_pipelined_pre_memory_logic_0_0_arch OF RV32I_pipelined_pre_me
       control_mem : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       addr1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      byte_enable : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+      data1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      data1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      byte_enable_gen : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      byte_enable_term : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT pre_memory_logic;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -81,6 +87,9 @@ BEGIN
       control_mem => control_mem,
       addr1_in => addr1_in,
       addr1_out => addr1_out,
-      byte_enable => byte_enable
+      data1_in => data1_in,
+      data1_out => data1_out,
+      byte_enable_gen => byte_enable_gen,
+      byte_enable_term => byte_enable_term
     );
 END RV32I_pipelined_pre_memory_logic_0_0_arch;

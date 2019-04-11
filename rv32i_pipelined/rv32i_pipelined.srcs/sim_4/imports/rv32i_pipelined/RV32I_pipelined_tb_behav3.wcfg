@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="429120000fs"></ZoomStartTime>
-      <ZoomEndTime time="2429120001fs"></ZoomEndTime>
-      <Cursor1Time time="2016100000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1000000000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="290"></NameColumnWidth>
-      <ValueColumnWidth column_width="145"></ValueColumnWidth>
+      <ValueColumnWidth column_width="140"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="78" />
+   <WVObjectSize size="89" />
    <wvobject fp_name="/RV32I_pipelined_tb/btn3" type="logic">
       <obj_property name="ElementShortName">btn3</obj_property>
       <obj_property name="ObjectShortName">btn3</obj_property>
@@ -315,10 +315,6 @@
       <obj_property name="ElementShortName">addr1_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">addr1_out[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/pre_memory_logic_0/U0/byte_enable" type="array">
-      <obj_property name="ElementShortName">byte_enable[3:0]</obj_property>
-      <obj_property name="ObjectShortName">byte_enable[3:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/post_memory_logic_0/U0/control_mem" type="array">
       <obj_property name="ElementShortName">control_mem[3:0]</obj_property>
       <obj_property name="ObjectShortName">control_mem[3:0]</obj_property>
@@ -328,13 +324,61 @@
       <obj_property name="ObjectShortName">addr1[31:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/post_memory_logic_0/U0/memory_access_out1_in" type="array">
-      <obj_property name="ElementShortName">memory_access_out1_in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">memory_access_out1_in[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/post_memory_logic_0/U0/memory_access_out1_out" type="array">
-      <obj_property name="ElementShortName">memory_access_out1_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">memory_access_out1_out[31:0]</obj_property>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/instr1" type="array">
+      <obj_property name="ElementShortName">instr1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/instr2" type="array">
+      <obj_property name="ElementShortName">instr2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/reg_write_input" type="array">
+      <obj_property name="ElementShortName">reg_write_input[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_write_input[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/reg_1_out" type="array">
+      <obj_property name="ElementShortName">reg_1_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_1_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/reg_2_out" type="array">
+      <obj_property name="ElementShortName">reg_2_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_2_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/wen" type="logic">
+      <obj_property name="ElementShortName">wen</obj_property>
+      <obj_property name="ObjectShortName">wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/vsync" type="logic">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/debug_leds" type="array">
+      <obj_property name="ElementShortName">debug_leds[3:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_leds[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/register_file_1" type="array">
+      <obj_property name="ElementShortName">register_file_1[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">register_file_1[0:31][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/register_file_2" type="array">
+      <obj_property name="ElementShortName">register_file_2[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">register_file_2[0:31][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/counter" type="array">
+      <obj_property name="ElementShortName">counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RV32I_pipelined_tb/RV32I_pipelined_i/RV32I_pipelined_i/registers_0/U0/vs" type="logic">
+      <obj_property name="ElementShortName">vs</obj_property>
+      <obj_property name="ObjectShortName">vs</obj_property>
    </wvobject>
 </wave_config>

@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Mar 31 19:12:30 2019
-// Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
+// Date        : Tue Apr  2 16:08:41 2019
+// Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {C:/Users/Oz
 //               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_0_0/RV32I_pipelined_clock_div_0_0_sim_netlist.v}
 // Design      : RV32I_pipelined_clock_div_0_0
@@ -43,70 +43,33 @@ module RV32I_pipelined_clock_div_0_0_clock_div
   input clk;
 
   wire clk;
-  wire [2:0]counter;
+  wire counter;
   wire \counter[0]_i_1_n_0 ;
-  wire \counter[1]_i_1_n_0 ;
-  wire \counter[2]_i_1_n_0 ;
   wire div_clk;
   wire div_clk_reg_i_1_n_0;
   wire locked;
 
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h1A)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
     \counter[0]_i_1 
-       (.I0(counter[0]),
-        .I1(counter[2]),
-        .I2(locked),
+       (.I0(counter),
+        .I1(locked),
         .O(\counter[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h06AA)) 
-    \counter[1]_i_1 
-       (.I0(counter[1]),
-        .I1(counter[0]),
-        .I2(counter[2]),
-        .I3(locked),
-        .O(\counter[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h08F0)) 
-    \counter[2]_i_1 
-       (.I0(counter[1]),
-        .I1(counter[0]),
-        .I2(counter[2]),
-        .I3(locked),
-        .O(\counter[2]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[0] 
        (.C(clk),
         .CE(1'b1),
         .D(\counter[0]_i_1_n_0 ),
-        .Q(counter[0]),
+        .Q(counter),
         .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \counter_reg[1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\counter[1]_i_1_n_0 ),
-        .Q(counter[1]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \counter_reg[2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\counter[2]_i_1_n_0 ),
-        .Q(counter[2]),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'hCA)) 
     div_clk_reg_i_1
        (.I0(div_clk),
-        .I1(counter[2]),
+        .I1(counter),
         .I2(locked),
         .O(div_clk_reg_i_1_n_0));
   FDRE #(
