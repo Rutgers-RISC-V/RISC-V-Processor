@@ -25,6 +25,7 @@
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_0_0/sim/RV32I_pipelined_clock_div_0_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_debounce_0_0/sim/RV32I_pipelined_debounce_0_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_count_0_0/sim/RV32I_pipelined_hazard_count_0_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_logic_0_0/sim/RV32I_pipelined_hazard_logic_0_0.vhd" \
@@ -35,6 +36,8 @@
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_mux_reg_write_0_0/sim/RV32I_pipelined_mux_reg_write_0_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_pc_logic_0_0/sim/RV32I_pipelined_pc_logic_0_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_pc_shift_down_0_0/sim/RV32I_pipelined_pc_shift_down_0_0.vhd" \
+  "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/sim/RV32I_pipelined_post_memory_logic_0_0.vhd" \
+  "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_pre_memory_logic_0_0/sim/RV32I_pipelined_pre_memory_logic_0_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_program_counter_1_0/sim/RV32I_pipelined_program_counter_1_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_registers_0_0/sim/RV32I_pipelined_registers_0_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_stage_DE_0_0/sim/RV32I_pipelined_stage_DE_0_0.vhd" \
@@ -42,6 +45,13 @@
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_stage_FD_0_0/sim/RV32I_pipelined_stage_FD_0_0.vhd" \
   "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_stage_MW_0_0/sim/RV32I_pipelined_stage_MW_0_0.vhd" \
   "../../../bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_1_0/sim/RV32I_pipelined_blk_mem_gen_1_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_1_0/sim/RV32I_pipelined_clock_div_1_0.vhd" \
+  "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/sim/RV32I_pipelined_terminal_tld_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

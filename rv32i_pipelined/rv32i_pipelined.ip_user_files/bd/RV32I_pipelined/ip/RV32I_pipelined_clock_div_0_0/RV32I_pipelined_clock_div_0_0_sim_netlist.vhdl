@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 31 19:12:30 2019
--- Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
+-- Date        : Tue Apr  2 16:08:41 2019
+-- Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim {C:/Users/Oz
 --               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_0_0/RV32I_pipelined_clock_div_0_0_sim_netlist.vhdl}
 -- Design      : RV32I_pipelined_clock_div_0_0
@@ -25,50 +25,23 @@ entity RV32I_pipelined_clock_div_0_0_clock_div is
 end RV32I_pipelined_clock_div_0_0_clock_div;
 
 architecture STRUCTURE of RV32I_pipelined_clock_div_0_0_clock_div is
-  signal counter : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal counter : STD_LOGIC;
   signal \counter[0]_i_1_n_0\ : STD_LOGIC;
-  signal \counter[1]_i_1_n_0\ : STD_LOGIC;
-  signal \counter[2]_i_1_n_0\ : STD_LOGIC;
   signal \^div_clk\ : STD_LOGIC;
   signal div_clk_reg_i_1_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \counter[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \counter[1]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \counter[2]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of div_clk_reg_i_1 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \counter[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of div_clk_reg_i_1 : label is "soft_lutpair0";
 begin
   div_clk <= \^div_clk\;
-\counter[0]_i_1\: unisim.vcomponents.LUT3
+\counter[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1A"
+      INIT => X"6"
     )
         port map (
-      I0 => counter(0),
-      I1 => counter(2),
-      I2 => locked,
+      I0 => counter,
+      I1 => locked,
       O => \counter[0]_i_1_n_0\
-    );
-\counter[1]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"06AA"
-    )
-        port map (
-      I0 => counter(1),
-      I1 => counter(0),
-      I2 => counter(2),
-      I3 => locked,
-      O => \counter[1]_i_1_n_0\
-    );
-\counter[2]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"08F0"
-    )
-        port map (
-      I0 => counter(1),
-      I1 => counter(0),
-      I2 => counter(2),
-      I3 => locked,
-      O => \counter[2]_i_1_n_0\
     );
 \counter_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -78,29 +51,7 @@ begin
       C => clk,
       CE => '1',
       D => \counter[0]_i_1_n_0\,
-      Q => counter(0),
-      R => '0'
-    );
-\counter_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => '1',
-      D => \counter[1]_i_1_n_0\,
-      Q => counter(1),
-      R => '0'
-    );
-\counter_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => '1',
-      D => \counter[2]_i_1_n_0\,
-      Q => counter(2),
+      Q => counter,
       R => '0'
     );
 div_clk_reg_i_1: unisim.vcomponents.LUT3
@@ -109,7 +60,7 @@ div_clk_reg_i_1: unisim.vcomponents.LUT3
     )
         port map (
       I0 => \^div_clk\,
-      I1 => counter(2),
+      I1 => counter,
       I2 => locked,
       O => div_clk_reg_i_1_n_0
     );

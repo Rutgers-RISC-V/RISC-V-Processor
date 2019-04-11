@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 10 10:15:30 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 11 00:07:26 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1299,7 +1299,6 @@
             <CONNECTION INSTANCE="debounce_0" PORT="clk"/>
             <CONNECTION INSTANCE="hazard_count_0" PORT="clk"/>
             <CONNECTION INSTANCE="program_counter_1" PORT="clk"/>
-            <CONNECTION INSTANCE="registers_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_EM_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_FD_0" PORT="clk"/>
@@ -1309,6 +1308,7 @@
             <CONNECTION INSTANCE="clock_div_0" PORT="clk"/>
             <CONNECTION INSTANCE="clock_div_1" PORT="clk"/>
             <CONNECTION INSTANCE="terminal_tld_0" PORT="clk"/>
+            <CONNECTION INSTANCE="registers_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -1343,12 +1343,12 @@
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="enb"/>
             <CONNECTION INSTANCE="hazard_count_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="program_counter_1" PORT="clk_en"/>
-            <CONNECTION INSTANCE="registers_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_EM_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_FD_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_MW_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="ena"/>
+            <CONNECTION INSTANCE="registers_0" PORT="clk_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1503,9 +1503,9 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="Descrambler_0" PORT="scr_imm"/>
             <CONNECTION INSTANCE="hazard_logic_0" PORT="instr_f_d"/>
-            <CONNECTION INSTANCE="registers_0" PORT="instr1"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="instruction_FD"/>
             <CONNECTION INSTANCE="RV32I_0" PORT="instr"/>
+            <CONNECTION INSTANCE="registers_0" PORT="instr1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1867,6 +1867,11 @@
         <PORT DIR="I" NAME="wen" SIGIS="undef" SIGNAME="stage_MW_0_control_reg_writeenable_MW">
           <CONNECTIONS>
             <CONNECTION INSTANCE="stage_MW_0" PORT="control_reg_writeenable_MW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync" SIGIS="undef" SIGNAME="terminal_tld_0_vga_vs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="terminal_tld_0" PORT="vga_vs"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="debug_leds" RIGHT="0" SIGIS="undef" SIGNAME="registers_0_debug_leds">
@@ -2302,6 +2307,7 @@
         <PORT DIR="O" NAME="vga_vs" SIGIS="undef" SIGNAME="terminal_tld_0_vga_vs">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="vga_vs"/>
+            <CONNECTION INSTANCE="registers_0" PORT="vsync"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

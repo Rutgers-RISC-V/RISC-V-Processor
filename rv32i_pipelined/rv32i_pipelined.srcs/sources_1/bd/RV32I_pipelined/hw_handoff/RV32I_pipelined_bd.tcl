@@ -608,7 +608,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net terminal_tld_0_vga_g [get_bd_ports vga_g] [get_bd_pins terminal_tld_0/vga_g]
   connect_bd_net -net terminal_tld_0_vga_hs [get_bd_ports vga_hs] [get_bd_pins terminal_tld_0/vga_hs]
   connect_bd_net -net terminal_tld_0_vga_r [get_bd_ports vga_r] [get_bd_pins terminal_tld_0/vga_r]
-  connect_bd_net -net terminal_tld_0_vga_vs [get_bd_ports vga_vs] [get_bd_pins terminal_tld_0/vga_vs]
+  connect_bd_net -net terminal_tld_0_vga_vs [get_bd_ports vga_vs] [get_bd_pins registers_0/vsync] [get_bd_pins terminal_tld_0/vga_vs]
   connect_bd_net -net terminal_tld_0_vram_addr [get_bd_pins blk_mem_gen_1/addrb] [get_bd_pins terminal_tld_0/vram_addr]
 
   # Create address segments
