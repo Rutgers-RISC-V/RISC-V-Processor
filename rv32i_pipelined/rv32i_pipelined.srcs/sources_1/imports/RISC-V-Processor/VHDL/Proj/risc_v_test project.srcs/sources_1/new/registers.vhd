@@ -44,6 +44,7 @@ entity registers is
            reg_2_out : out STD_LOGIC_VECTOR(31 downto 0);
            wen : in STD_LOGIC;
            vsync: in STD_LOGIC;
+           input_regout: in STD_LOGIC_VECTOR (7 downto 0);
            debug_leds: out STD_LOGIC_VECTOR(3 downto 0));
 end registers;
 
@@ -72,6 +73,7 @@ begin
         end if;
        end if;
        register_file_1(31)(8) <= vsync;
+       register_file_1(31)(7 downto 0) <= input_regout;
     end process;
     
     reg_1_out <= std_logic_vector(register_file_1(to_integer(unsigned(instr1(19 downto 15)))));

@@ -13,21 +13,23 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity RV32I_pipelined_wrapper is
   port (
-    btn3 : in STD_LOGIC;
-    clk : in STD_LOGIC;
-    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    vga_hs : out STD_LOGIC;
-    vga_r : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    vga_vs : out STD_LOGIC
+    btn     : in  STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw      : in  STD_LOGIC_VECTOR ( 3 downto 0 );
+    clk     : in  STD_LOGIC;
+    led     : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    vga_b   : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    vga_g   : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    vga_hs  : out STD_LOGIC;
+    vga_r   : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    vga_vs  : out STD_LOGIC
   );
 end RV32I_pipelined_wrapper;
 
 architecture STRUCTURE of RV32I_pipelined_wrapper is
   component RV32I_pipelined is
   port (
-    btn3 : in STD_LOGIC;
+    btn     : in  STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw      : in  STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     vga_r : out STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -40,7 +42,14 @@ architecture STRUCTURE of RV32I_pipelined_wrapper is
 begin
 RV32I_pipelined_i: component RV32I_pipelined
      port map (
-      btn3 => btn3,
+      btn(0) => btn(0),
+      btn(1) => btn(1),
+      btn(2) => btn(2),
+      btn(3) => btn(3),
+      sw(0) => sw(0),
+      sw(1) => sw(1),
+      sw(2) => sw(2),
+      sw(3) => sw(3),
       clk => clk,
       led(3 downto 0) => led(3 downto 0),
       vga_b(4 downto 0) => vga_b(4 downto 0),

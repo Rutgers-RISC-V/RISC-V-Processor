@@ -2,123 +2,125 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port btn3 -pg 1 -y 1160 -defaultsOSRD
-preplace port vga_hs -pg 1 -y 1250 -defaultsOSRD
-preplace port vga_vs -pg 1 -y 1280 -defaultsOSRD
-preplace port clk -pg 1 -y 970 -defaultsOSRD
-preplace portBus vga_b -pg 1 -y 1220 -defaultsOSRD
-preplace portBus vga_r -pg 1 -y 1160 -defaultsOSRD
-preplace portBus led -pg 1 -y 990 -defaultsOSRD
-preplace portBus vga_g -pg 1 -y 1190 -defaultsOSRD
-preplace inst stage_EM_0 -pg 1 -lvl 5 -y 1020 -defaultsOSRD
-preplace inst instruction_clear_0 -pg 1 -lvl 14 -y 800 -defaultsOSRD
-preplace inst pc_shift_down_0 -pg 1 -lvl 13 -y 630 -defaultsOSRD
-preplace inst RV32I_0 -pg 1 -lvl 8 -y 300 -defaultsOSRD
-preplace inst mux_reg_write_0 -pg 1 -lvl 14 -y 1040 -defaultsOSRD
-preplace inst pre_memory_logic_0 -pg 1 -lvl 14 -y 150 -defaultsOSRD
-preplace inst program_counter_1 -pg 1 -lvl 12 -y 930 -defaultsOSRD
-preplace inst clock_div_0 -pg 1 -lvl 4 -y 960 -defaultsOSRD
-preplace inst ALU_0 -pg 1 -lvl 2 -y 710 -defaultsOSRD
-preplace inst clock_div_1 -pg 1 -lvl 4 -y 1080 -defaultsOSRD
-preplace inst post_memory_logic_0 -pg 1 -lvl 6 -y 900 -defaultsOSRD
-preplace inst mux_output_0 -pg 1 -lvl 4 -y 620 -defaultsOSRD
-preplace inst hazard_logic_0 -pg 1 -lvl 8 -y 930 -defaultsOSRD
-preplace inst debounce_0 -pg 1 -lvl 11 -y 950 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 14 -y 510 -defaultsOSRD
-preplace inst blk_mem_gen_1 -pg 1 -lvl 15 -y 720 -defaultsOSRD
-preplace inst terminal_tld_0 -pg 1 -lvl 14 -y 1270 -defaultsOSRD
-preplace inst registers_0 -pg 1 -lvl 15 -y 1030 -defaultsOSRD
-preplace inst stage_FD_0 -pg 1 -lvl 13 -y 770 -defaultsOSRD
-preplace inst mux_reg_descr_alu_0 -pg 1 -lvl 1 -y 710 -defaultsOSRD
-preplace inst Descrambler_0 -pg 1 -lvl 8 -y 100 -defaultsOSRD
+preplace port vga_hs -pg 1 -y 1500 -defaultsOSRD
+preplace port vga_vs -pg 1 -y 1520 -defaultsOSRD
+preplace port clk -pg 1 -y 1220 -defaultsOSRD
+preplace portBus sw -pg 1 -y 1130 -defaultsOSRD
+preplace portBus vga_b -pg 1 -y 1480 -defaultsOSRD
+preplace portBus btn -pg 1 -y 1150 -defaultsOSRD
+preplace portBus vga_r -pg 1 -y 1440 -defaultsOSRD
+preplace portBus led -pg 1 -y 1000 -defaultsOSRD
+preplace portBus vga_g -pg 1 -y 1460 -defaultsOSRD
+preplace inst stage_EM_0 -pg 1 -lvl 5 -y 960 -defaultsOSRD
+preplace inst instruction_clear_0 -pg 1 -lvl 14 -y 730 -defaultsOSRD
+preplace inst pc_shift_down_0 -pg 1 -lvl 13 -y 570 -defaultsOSRD
+preplace inst RV32I_0 -pg 1 -lvl 8 -y 270 -defaultsOSRD
+preplace inst mux_reg_write_0 -pg 1 -lvl 14 -y 890 -defaultsOSRD
+preplace inst pre_memory_logic_0 -pg 1 -lvl 5 -y 710 -defaultsOSRD
+preplace inst program_counter_1 -pg 1 -lvl 12 -y 810 -defaultsOSRD
+preplace inst clock_div_0 -pg 1 -lvl 4 -y 1070 -defaultsOSRD
+preplace inst ALU_0 -pg 1 -lvl 2 -y 500 -defaultsOSRD
+preplace inst clock_div_1 -pg 1 -lvl 13 -y 1240 -defaultsOSRD
+preplace inst post_memory_logic_0 -pg 1 -lvl 6 -y 930 -defaultsOSRD
+preplace inst mux_output_0 -pg 1 -lvl 4 -y 670 -defaultsOSRD
+preplace inst hazard_logic_0 -pg 1 -lvl 8 -y 690 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 14 -y 420 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 15 -y 1260 -defaultsOSRD
+preplace inst input_handler_0 -pg 1 -lvl 14 -y 1150 -defaultsOSRD
+preplace inst terminal_tld_0 -pg 1 -lvl 14 -y 1470 -defaultsOSRD
+preplace inst registers_0 -pg 1 -lvl 15 -y 980 -defaultsOSRD
+preplace inst stage_FD_0 -pg 1 -lvl 13 -y 710 -defaultsOSRD
+preplace inst mux_reg_descr_alu_0 -pg 1 -lvl 1 -y 620 -defaultsOSRD
+preplace inst Descrambler_0 -pg 1 -lvl 8 -y 90 -defaultsOSRD
 preplace inst pc_logic_0 -pg 1 -lvl 11 -y 710 -defaultsOSRD
-preplace inst mux_reg_pc_alu_0 -pg 1 -lvl 1 -y 570 -defaultsOSRD
-preplace inst hazard_count_0 -pg 1 -lvl 10 -y 880 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 3 -y 970 -defaultsOSRD
-preplace inst alu_signals_0 -pg 1 -lvl 3 -y 800 -defaultsOSRD
-preplace inst stage_MW_0 -pg 1 -lvl 7 -y 1030 -defaultsOSRD
-preplace inst brach_logic_0 -pg 1 -lvl 10 -y 680 -defaultsOSRD
-preplace inst stage_DE_0 -pg 1 -lvl 9 -y 220 -defaultsOSRD
-preplace netloc clk_2 1 3 12 1390 890 1820 890 2380J 1000 2900 840 NJ 840 3910 840 4440 980 4920 870 5330 820 5620 890 5990 680 6530J
-preplace netloc terminal_tld_0_vga_b 1 14 2 6500 1220 NJ
-preplace netloc stage_DE_0_immediate_DE 1 0 10 20J 480 NJ 480 NJ 480 1380 490 NJ 490 NJ 490 NJ 490 NJ 490 NJ 490 4430
-preplace netloc ALU_0_sum 1 3 1 1370
-preplace netloc stage_MW_0_PC_MW 1 7 7 3450 1040 NJ 1040 NJ 1040 4940J 1050 NJ 1050 NJ 1050 NJ
-preplace netloc clk_in1_0_1 1 0 3 NJ 970 NJ 970 NJ
-preplace netloc stage_DE_0_reg_1_DE 1 0 10 0J 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 4440
-preplace netloc ALU_0_zero 1 3 7 1400 730 1780J 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ
-preplace netloc RV32I_0_mux_reg_write 1 8 1 N
-preplace netloc RV32I_0_mux_output 1 8 1 3870
-preplace netloc terminal_tld_0_vga_g 1 14 2 6510 1190 NJ
-preplace netloc stage_DE_0_pc_DE 1 0 11 30J 490 NJ 490 NJ 490 1370J 500 1800 500 NJ 500 NJ 500 NJ 500 NJ 500 4570 570 4950J
-preplace netloc ALU_0_alu_out_33 1 2 1 1030
-preplace netloc program_counter_0_PC 1 10 3 4960 820 5280J 800 5590
-preplace netloc pre_memory_logic_0_byte_enable 1 13 2 6000J 60 6520
-preplace netloc mux_output_0_output_bus 1 4 10 1810 590 NJ 590 NJ 590 NJ 590 NJ 590 NJ 590 4960J 160 N 160 N 160 5970
-preplace netloc RV32I_0_control_mem_logic 1 8 1 3940
-preplace netloc hazard_logic_0_new_hazard 1 8 2 3890 890 NJ
-preplace netloc stage_DE_0_control_branch_DE 1 9 1 4550
-preplace netloc hazard_shift_counter_0_hazard 1 10 3 4910 860 5300J 790 N
-preplace netloc post_memory_logic_0_memory_access_out1_out 1 6 1 2920
-preplace netloc stage_DE_0_mux_reg_pc_alu_DE 1 0 10 10J 0 NJ 0 NJ 0 NJ 0 NJ 0 NJ 0 NJ 0 NJ 0 NJ 0 4430
-preplace netloc stage_EM_0_output_bus_EM 1 5 2 2400 1050 2960
-preplace netloc ALU_0_overflow 1 3 7 1380 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ
-preplace netloc brach_logic_0_mux_next_pc 1 10 1 4910
-preplace netloc RV32I_0_control_reg_writeenable 1 8 1 3950
-preplace netloc registers_0_debug_leds 1 15 1 6930J
-preplace netloc brach_logic_0_branch 1 8 5 3960 780 NJ 780 4940 850 5310J 810 N
-preplace netloc RV32I_0_mux_reg_descr_alu 1 8 1 3860
-preplace netloc blk_mem_gen_0_douta1 1 13 1 6010
-preplace netloc terminal_tld_0_vga_r 1 14 2 6490 1160 NJ
-preplace netloc stage_EM_0_mux_reg_write_EM 1 5 2 2350J 1060 N
-preplace netloc stage_DE_0_control_mem_logic_DE 1 4 10 1850 520 NJ 520 NJ 520 NJ 520 NJ 520 4520 130 N 130 N 130 N 130 N
-preplace netloc stage_DE_0_control_alu_DE 1 1 9 700 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 4460
-preplace netloc pc_logic_0_PC_out 1 11 1 5290
-preplace netloc RV32I_0_control_branch 1 8 1 3880
-preplace netloc blk_mem_gen_1_douta 1 5 10 2430 770 NJ 770 NJ 770 NJ 770 NJ 770 4930J 840 NJ 840 5610J 870 5980J 690 NJ
-preplace netloc stage_EM_0_control_reg_writeenable_EM 1 5 2 2340J 1070 2890
-preplace netloc blk_mem_gen_1_doutb 1 13 2 6030 730 6490J
-preplace netloc debounce_0_dbnc 1 11 1 5320
-preplace netloc mux_reg_descr_alu_0_alu_B 1 1 1 N
-preplace netloc terminal_tld_0_vga_vs 1 14 2 6530 1280 NJ
-preplace netloc mux_reg_write_0_reg_write_input 1 14 1 6440
-preplace netloc stage_MW_0_control_reg_writeenable_MW 1 7 8 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 5590J 940 NJ 940 6450
-preplace netloc stage_MW_0_mux_reg_write_MW 1 7 7 3440J 1050 NJ 1050 NJ 1050 4920J 1030 NJ 1030 5610J 1010 N
-preplace netloc Net 1 13 2 6030 340 6540J
-preplace netloc btn_0_1 1 0 11 10J 890 NJ 890 NJ 890 1370J 860 NJ 860 2410J 990 2910J 890 3490J 1030 NJ 1030 NJ 1030 4910J
-preplace netloc Descrambler_0_descr_imm 1 8 1 3900J
-preplace netloc stage_EM_0_PC_EM 1 5 2 2370J 1030 2950
-preplace netloc stage_MW_0_instruction_MW 1 7 8 3460 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 5630J 950 NJ 950 6460J
-preplace netloc mux_reg_pc_alu_0_alu_A 1 1 1 680
-preplace netloc clk_wiz_0_locked 1 3 1 1400
-preplace netloc clock_div_1_div_clk 1 4 11 1830J 870 2320J 1020 2930J 900 3480J 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 6000J 720 6500
-preplace netloc RV32I_0_mux_reg_pc_alu 1 8 1 3850
-preplace netloc stage_MW_0_output_bus_MW 1 7 7 3470J 790 NJ 790 NJ 790 4920J 830 NJ 830 5600J 1060 5960
-preplace netloc stage_EM_0_instruction_EM 1 5 3 2360J 1040 2940 880 3500J
-preplace netloc stage_DE_0_mux_output_DE 1 3 7 1400 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 4480
-preplace netloc stage_DE_0_control_reg_writeenable_DE 1 4 6 1860 530 NJ 530 NJ 530 NJ 530 NJ 530 4450
-preplace netloc stage_DE_0_mux_reg_write_DE 1 4 6 1870 740 NJ 740 NJ 740 NJ 740 NJ 740 4490
-preplace netloc stage_FD_0_instruction_clear_out 1 13 1 5960
-preplace netloc hazard_logic_0_hazard_stage 1 8 2 3940 910 NJ
-preplace netloc stage_DE_0_mux_reg_descr_alu_DE 1 0 10 30J 790 690J 630 NJ 630 1400J 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 4500
-preplace netloc stage_DE_0_instruction_DE 1 4 6 1880 810 NJ 810 NJ 810 3510 810 NJ 810 4470
-preplace netloc clock_div_0_div_clk 1 4 11 1840 880 2390J 1010 2890 830 NJ 830 3920 830 4530 970 4930J 880 5320 780 5630 880 5970 710 6510J
-preplace netloc pre_memory_logic_0_addr1_out 1 13 2 6020J 310 6550
-preplace netloc pre_memory_logic_0_byte_enable_term 1 14 1 6520
-preplace netloc stage_MW_0_memory_access_out1_MW 1 7 7 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 6020
-preplace netloc terminal_tld_0_vga_hs 1 14 2 6550 1250 NJ
-preplace netloc ALU_0_sign 1 3 7 1390 720 1790J 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ
-preplace netloc stage_FD_0_PC_FD 1 8 6 3970 990 NJ 990 4950 1040 NJ 1040 NJ 1040 5950
-preplace netloc registers_0_reg_2_out 1 8 8 3990 440 4540J 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 6910
-preplace netloc blk_mem_gen_0_douta 1 7 8 3520 480 3950 480 4560J 300 NJ 300 NJ 300 NJ 300 NJ 300 6480
-preplace netloc pc_shift_down_0_pc_out 1 13 1 5950
-preplace netloc terminal_tld_0_vram_addr 1 14 1 6470
-preplace netloc blk_mem_gen_0_doutb 1 5 9 2420 580 N 580 N 580 N 580 N 580 N 580 N 580 5590 570 5980J
-preplace netloc registers_0_reg_1_out 1 8 8 3980 450 4530J 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 6920
-preplace netloc RV32I_0_control_alu 1 8 1 3930
-preplace netloc stage_DE_0_reg_2_DE 1 0 14 -10J 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 4510 170 NJ 170 NJ 170 NJ 170 NJ
-preplace netloc stage_EM_0_control_mem_logic_EM 1 5 1 2330
-levelinfo -pg 1 -30 510 880 1210 1600 2110 2670 3210 3690 4220 4750 5130 5470 5800 6250 6750 6970 -top -300 -bot 1550
+preplace inst mux_reg_pc_alu_0 -pg 1 -lvl 1 -y 480 -defaultsOSRD
+preplace inst hazard_count_0 -pg 1 -lvl 10 -y 650 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -y 1220 -defaultsOSRD
+preplace inst alu_signals_0 -pg 1 -lvl 3 -y 490 -defaultsOSRD
+preplace inst stage_MW_0 -pg 1 -lvl 7 -y 1010 -defaultsOSRD
+preplace inst brach_logic_0 -pg 1 -lvl 10 -y 440 -defaultsOSRD
+preplace inst stage_DE_0 -pg 1 -lvl 9 -y 230 -defaultsOSRD
+preplace netloc clk_2 1 3 12 1030 890 1470 820 1950J 800 2530 20 NJ 20 3490 660 4240 740 4630J 590 4990 590 5300 490 5700 980 6190
+preplace netloc terminal_tld_0_vga_b 1 14 2 NJ 1480 NJ
+preplace netloc stage_DE_0_immediate_DE 1 0 10 50 700 NJ 700 NJ 700 1040 470 NJ 470 NJ 470 NJ 470 NJ 470 3470J 580 4040
+preplace netloc ALU_0_sum 1 3 1 1020
+preplace netloc stage_MW_0_PC_MW 1 7 7 3030 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ
+preplace netloc clk_in1_0_1 1 0 3 NJ 1220 NJ 1220 NJ
+preplace netloc stage_DE_0_reg_1_DE 1 0 10 20 760 NJ 760 NJ 760 NJ 760 1430J 620 1980J 600 NJ 600 3060J 550 3450J 630 4100
+preplace netloc ALU_0_zero 1 3 7 1030J 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 4150
+preplace netloc RV32I_0_mux_reg_write 1 8 1 3460
+preplace netloc RV32I_0_mux_output 1 8 1 N
+preplace netloc terminal_tld_0_vga_g 1 14 2 NJ 1460 NJ
+preplace netloc stage_DE_0_pc_DE 1 0 11 10 770 NJ 770 NJ 770 NJ 770 1440 430 NJ 430 NJ 430 NJ 430 3530J 510 4140 330 4620J
+preplace netloc ALU_0_alu_out_33 1 2 1 700
+preplace netloc program_counter_0_PC 1 10 3 4680 580 NJ 580 5310
+preplace netloc pre_memory_logic_0_byte_enable 1 5 9 2000 780 NJ 780 NJ 780 3460J 740 4200J 340 NJ 340 NJ 340 NJ 340 5710J
+preplace netloc mux_output_0_output_bus 1 4 7 1450 520 NJ 520 NJ 520 NJ 520 3420J 750 NJ 750 4670
+preplace netloc RV32I_0_control_mem_logic 1 8 1 3510
+preplace netloc hazard_logic_0_new_hazard 1 8 2 3480 670 4250J
+preplace netloc stage_DE_0_control_branch_DE 1 9 1 4190
+preplace netloc hazard_shift_counter_0_hazard 1 10 3 4670 600 NJ 600 5260J
+preplace netloc btn_1 1 0 14 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ
+preplace netloc post_memory_logic_0_memory_access_out1_out 1 6 1 2490
+preplace netloc stage_DE_0_mux_reg_pc_alu_DE 1 0 10 10 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 3020J 420 3550J 450 4090
+preplace netloc stage_EM_0_output_bus_EM 1 5 2 1990 840 2500
+preplace netloc ALU_0_overflow 1 3 7 1030J 490 NJ 490 NJ 490 NJ 490 NJ 490 NJ 490 4190
+preplace netloc brach_logic_0_mux_next_pc 1 10 1 4640
+preplace netloc RV32I_0_control_reg_writeenable 1 8 1 N
+preplace netloc registers_0_debug_leds 1 15 1 NJ
+preplace netloc brach_logic_0_branch 1 8 5 3570 540 4210J 530 4590 510 NJ 510 5280J
+preplace netloc RV32I_0_mux_reg_descr_alu 1 8 1 3470
+preplace netloc blk_mem_gen_0_douta1 1 13 1 5730
+preplace netloc terminal_tld_0_vga_r 1 14 2 NJ 1440 NJ
+preplace netloc stage_EM_0_mux_reg_write_EM 1 5 2 1980J 1030 2470
+preplace netloc stage_DE_0_control_mem_logic_DE 1 4 6 1500 600 1970J 580 NJ 580 NJ 580 3440J 620 4130
+preplace netloc stage_DE_0_control_alu_DE 1 1 9 400 580 NJ 580 1050J 540 NJ 540 NJ 540 NJ 540 NJ 540 3460J 610 4110
+preplace netloc pc_logic_0_PC_out 1 11 1 4980
+preplace netloc RV32I_0_control_branch 1 8 1 3420
+preplace netloc blk_mem_gen_1_douta 1 5 10 2010 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 5730J 1230 NJ
+preplace netloc stage_EM_0_control_reg_writeenable_EM 1 5 2 1960J 1020 2480
+preplace netloc blk_mem_gen_1_doutb 1 13 2 5730 1350 NJ
+preplace netloc mux_reg_descr_alu_0_alu_B 1 1 1 390
+preplace netloc terminal_tld_0_vga_vs 1 14 2 6170 1520 NJ
+preplace netloc mux_reg_write_0_reg_write_input 1 14 1 6130
+preplace netloc sw_1 1 0 14 NJ 1130 NJ 1130 NJ 1130 1020J 1140 NJ 1140 NJ 1140 NJ 1140 3060J 1130 NJ 1130 NJ 1130 NJ 1130 NJ 1130 NJ 1130 NJ
+preplace netloc input_handler_0_input_regout 1 14 1 6150
+preplace netloc stage_MW_0_control_reg_writeenable_MW 1 7 8 3100 1010 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ
+preplace netloc stage_MW_0_mux_reg_write_MW 1 7 7 3080 940 NJ 940 NJ 940 NJ 940 NJ 940 5330J 860 NJ
+preplace netloc Net 1 5 10 1950 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 5680 660 6140J
+preplace netloc Descrambler_0_descr_imm 1 8 1 3500J
+preplace netloc stage_EM_0_PC_EM 1 5 2 1950J 830 2510
+preplace netloc stage_MW_0_instruction_MW 1 7 8 3040 930 NJ 930 NJ 930 NJ 930 NJ 930 5320J 810 5650J 800 6170J
+preplace netloc mux_reg_pc_alu_0_alu_A 1 1 1 N
+preplace netloc clk_wiz_0_locked 1 3 10 1050 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 N
+preplace netloc clock_div_1_div_clk 1 13 2 5650 1360 6140J
+preplace netloc RV32I_0_mux_reg_pc_alu 1 8 1 3430
+preplace netloc stage_MW_0_output_bus_MW 1 7 7 3050 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ
+preplace netloc stage_EM_0_instruction_EM 1 5 3 1970J 820 2520 700 NJ
+preplace netloc stage_DE_0_mux_output_DE 1 3 7 1060 530 NJ 530 NJ 530 NJ 530 3030J 500 NJ 500 4080
+preplace netloc stage_DE_0_control_reg_writeenable_DE 1 4 6 1490 560 NJ 560 NJ 560 3040J 530 NJ 530 4050
+preplace netloc stage_DE_0_mux_reg_write_DE 1 4 6 1480 450 NJ 450 NJ 450 NJ 450 3510J 470 4060
+preplace netloc stage_FD_0_instruction_clear_out 1 13 1 N
+preplace netloc hazard_logic_0_hazard_stage 1 8 2 N 680 NJ
+preplace netloc stage_DE_0_mux_reg_descr_alu_DE 1 0 10 30 710 400J 590 NJ 590 NJ 590 NJ 590 NJ 590 NJ 590 3080J 570 NJ 570 4120
+preplace netloc stage_DE_0_instruction_DE 1 4 6 1510 550 NJ 550 NJ 550 3050 560 NJ 560 4030
+preplace netloc clock_div_0_div_clk 1 4 11 1460 810 NJ 810 2540 410 NJ 410 3520 640 4230 560 NJ 560 5000 560 5320 460 5720 610 6160
+preplace netloc pre_memory_logic_0_addr1_out 1 5 10 1960 440 NJ 440 NJ 440 3500J 520 4180J 350 NJ 350 NJ 350 NJ 350 5640 600 6200J
+preplace netloc pre_memory_logic_0_byte_enable_term 1 5 10 1990 570 NJ 570 3070J 600 NJ 600 4170J 250 NJ 250 NJ 250 NJ 250 NJ 250 6180J
+preplace netloc stage_MW_0_memory_access_out1_MW 1 7 7 3070J 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 5730
+preplace netloc terminal_tld_0_vga_hs 1 14 2 NJ 1500 NJ
+preplace netloc ALU_0_sign 1 3 7 NJ 500 NJ 500 NJ 500 NJ 500 3020J 480 NJ 480 4160
+preplace netloc stage_FD_0_PC_FD 1 8 6 3560 780 NJ 780 4650 470 NJ 470 NJ 470 5630
+preplace netloc registers_0_reg_2_out 1 8 8 3590 650 4220J 540 NJ 540 NJ 540 5290J 510 5660J 620 NJ 620 6550
+preplace netloc blk_mem_gen_0_douta 1 7 8 3100 30 3540 550 NJ 550 4610J 530 NJ 530 5270J 500 5670J 630 6210
+preplace netloc pc_shift_down_0_pc_out 1 13 1 5650
+preplace netloc terminal_tld_0_vram_addr 1 14 1 6210
+preplace netloc blk_mem_gen_0_doutb 1 5 9 2010 510 NJ 510 NJ 510 3430J 760 NJ 760 4600J 450 NJ 450 NJ 450 5660J
+preplace netloc registers_0_reg_1_out 1 8 8 3580 770 NJ 770 4660J 520 NJ 520 5260J 480 5690J 590 NJ 590 6560
+preplace netloc RV32I_0_control_alu 1 8 1 N
+preplace netloc stage_DE_0_reg_2_DE 1 0 10 40 750 NJ 750 NJ 750 NJ 750 1420 610 NJ 610 NJ 610 3090J 590 NJ 590 4070
+preplace netloc stage_EM_0_control_mem_logic_EM 1 5 1 2000
+levelinfo -pg 1 -10 220 550 860 1240 1730 2240 2780 3260 3810 4420 4830 5130 5480 5930 6380 6580 -top 0 -bot 1580
 "
 }
 0
