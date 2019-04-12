@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Apr 10 10:25:07 2019">
+<application name="pa" timeStamp="Thu Apr 11 12:04:34 2019">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="411458c23d9544db87c9555dba58fec6" type="ProjectID"/>
 <property name="ProjectIteration" value="40" type="ProjectIteration"/>
@@ -36,7 +36,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="MoveToSimSet" value="1" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="3" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="21" type="JavaHandler"/>
-<property name="OpenProject" value="2" type="JavaHandler"/>
+<property name="OpenProject" value="3" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="4" type="JavaHandler"/>
 <property name="ProgramDevice" value="1" type="JavaHandler"/>
 <property name="RecustomizeCore" value="7" type="JavaHandler"/>
@@ -61,7 +61,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ToggleViewNavigator" value="4" type="JavaHandler"/>
 <property name="ToolsSettings" value="16" type="JavaHandler"/>
 <property name="UnselectAllCmdHandler" value="1" type="JavaHandler"/>
-<property name="UpdateSourceFiles" value="4" type="JavaHandler"/>
+<property name="UpdateSourceFiles" value="5" type="JavaHandler"/>
 <property name="ValidateRSBDesign" value="11" type="JavaHandler"/>
 <property name="ViewTaskIPIntegrator" value="43" type="JavaHandler"/>
 <property name="ViewTaskProgramandDebug" value="1" type="JavaHandler"/>
@@ -94,11 +94,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="CreateSrcFileDialog_FILE_NAME" value="6" type="GuiHandlerData"/>
 <property name="DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS" value="71" type="GuiHandlerData"/>
 <property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="6" type="GuiHandlerData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="951" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="966" type="GuiHandlerData"/>
 <property name="FileSetPanel_MESSAGES" value="3" type="GuiHandlerData"/>
 <property name="FloatingTopDialog_IGNORE_AND_CONTINUE_WITH_INVALID_TOP" value="1" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="413" type="GuiHandlerData"/>
-<property name="GettingStartedView_OPEN_PROJECT" value="1" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="414" type="GuiHandlerData"/>
+<property name="GettingStartedView_OPEN_PROJECT" value="2" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_FIT" value="52" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_IN" value="178" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_OUT" value="31" type="GuiHandlerData"/>
@@ -163,7 +163,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_SIMULATION_SETTINGS" value="7" type="GuiHandlerData"/>
 <property name="PACommandNames_SRC_DISABLE" value="4" type="GuiHandlerData"/>
 <property name="PACommandNames_SRC_ENABLE" value="2" type="GuiHandlerData"/>
-<property name="PACommandNames_SRC_REPLACE_FILE" value="4" type="GuiHandlerData"/>
+<property name="PACommandNames_SRC_REPLACE_FILE" value="5" type="GuiHandlerData"/>
 <property name="PACommandNames_TOGGLE_VIEW_NAV" value="4" type="GuiHandlerData"/>
 <property name="PACommandNames_VALIDATE_RSB_DESIGN" value="11" type="GuiHandlerData"/>
 <property name="PACommandNames_ZOOM_FIT" value="9" type="GuiHandlerData"/>
@@ -229,7 +229,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER" value="1" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="25" type="GuiMode"/>
+<property name="GuiMode" value="19" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="15" type="TclMode"/>
 </item>
