@@ -173,7 +173,7 @@
             "value": "8"
           },
           "Coe_File": {
-            "value": "../../../../../../../Dumps_and_Assembly/Dumps/addTest_Dump.coe"
+            "value": "../../../../../../../Dumps_and_Assembly/Dumps/inputtest.coe"
           },
           "Enable_32bit_Address": {
             "value": "false"
@@ -185,7 +185,7 @@
             "value": "Use_ENB_Pin"
           },
           "Fill_Remaining_Memory_Locations": {
-            "value": "true"
+            "value": "false"
           },
           "Load_Init_File": {
             "value": "true"

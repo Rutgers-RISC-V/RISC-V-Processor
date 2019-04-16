@@ -1,0 +1,126 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Apr 16 14:59:54 2019
+| Host         : Nugget running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file RV32I_pipelined_wrapper_control_sets_placed.rpt
+| Design       : RV32I_pipelined_wrapper
+| Device       : xc7z010
+----------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    57 |
+| Unused register locations in slices containing registers |   118 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            9 |
+|      4 |            1 |
+|      6 |            1 |
+|     10 |            2 |
+|     12 |            2 |
+|    16+ |           42 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              51 |           22 |
+| No           | No                    | Yes                    |               9 |            9 |
+| No           | Yes                   | No                     |             176 |           40 |
+| Yes          | No                    | No                     |            1278 |          367 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             176 |           60 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
+|                Clock Signal                |                           Enable Signal                          |                              Set/Reset Signal                              | Slice Load Count | Bel Load Count |
++--------------------------------------------+------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/registers_0/U0/register_file_1[31][4]_i_2_n_0            |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/registers_0/U0/register_file_1[31][3]_i_2_n_0            |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/registers_0/U0/register_file_1[31][6]_i_2_n_0            |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/registers_0/U0/register_file_1[31][5]_i_2_n_0            |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/registers_0/U0/register_file_1[31][1]_i_2_n_0            |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/registers_0/U0/register_file_1[31][0]_i_2_n_0            |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/registers_0/U0/register_file_1[31][2]_i_2_n_0            |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/registers_0/U0/register_file_1[31][7]_i_2_n_0            |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/terminal_tld_0/U0/vga/vga_vs                             |                1 |              1 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/clock_div_1/U0/div_clk                         |                                                                            |                1 |              4 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/clock_div_1/U0/div_clk                         | RV32I_pipelined_i/terminal_tld_0/U0/vga/horizontal_count0                  |                3 |              6 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/terminal_tld_0/U0/vga/horizontal_count0        | RV32I_pipelined_i/terminal_tld_0/U0/vga/vertical_count0                    |                4 |             10 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/clock_div_1/U0/div_clk                         | RV32I_pipelined_i/terminal_tld_0/U0/vga/memory_horizontal_count[0]_i_1_n_0 |                3 |             10 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/terminal_tld_0/U0/vga/base_mem_addr0           | RV32I_pipelined_i/terminal_tld_0/U0/vga/memory_addr0                       |                3 |             12 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/terminal_tld_0/U0/vga/memory_addr[31]_i_2_n_0  | RV32I_pipelined_i/terminal_tld_0/U0/vga/memory_addr0                       |                5 |             12 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/input_handler_0/U0/db1/counter[21]_i_1__0_n_0            |                4 |             22 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/input_handler_0/U0/db2/counter[21]_i_1__1_n_0            |                5 |             22 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/input_handler_0/U0/db0/counter[21]_i_1_n_0               |                5 |             22 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/input_handler_0/U0/db3/counter[21]_i_1__2_n_0            |                5 |             22 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/input_handler_0/U0/sw0/counter[21]_i_1__3_n_0            |                6 |             22 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/input_handler_0/U0/sw1/counter[21]_i_1__4_n_0            |                5 |             22 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/input_handler_0/U0/sw2/counter[21]_i_1__5_n_0            |                5 |             22 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  | RV32I_pipelined_i/input_handler_0/U0/sw3/counter[21]_i_1__6_n_0            |                5 |             22 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[31][31]_i_1_n_0 |                                                                            |               11 |             23 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[23]_15          |                                                                            |               14 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[10]_24          |                                                                            |                9 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[20]_2           |                                                                            |                9 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[14]_23          |                                                                            |               10 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[26]_14          |                                                                            |                5 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[28]_0           |                                                                            |                7 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[1]_12           |                                                                            |                7 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[2]_11           |                                                                            |                7 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[15]_20          |                                                                            |               11 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[24]_1           |                                                                            |                6 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[11]_21          |                                                                            |               10 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[12]_4           |                                                                            |               10 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[25]_18          |                                                                            |                7 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[29]_17          |                                                                            |                9 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[16]_3           |                                                                            |                9 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[18]_8           |                                                                            |                8 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[19]_7           |                                                                            |                8 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[22]_16          |                                                                            |               11 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[13]_26          |                                                                            |                9 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[17]_9           |                                                                            |                7 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[21]_19          |                                                                            |                8 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[9]_27           |                                                                            |               17 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[3]_10           |                                                                            |                6 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[27]_13          |                                                                            |                8 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[7]_22           |                                                                            |               16 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[4]_6            |                                                                            |                5 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[8]_5            |                                                                            |               10 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[5]_28           |                                                                            |                6 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/register_file_1[6]_25           |                                                                            |               10 |             32 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/registers_0/U0/p_1_in                          |                                                                            |                6 |             48 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 |                                                                  |                                                                            |               22 |             51 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/clock_div_0/U0/div_clk                         | RV32I_pipelined_i/stage_DE_0/U0/control_branch_DE_reg0                     |               42 |            126 |
+|  RV32I_pipelined_i/clk_wiz_0/inst/clk_out1 | RV32I_pipelined_i/clock_div_0/U0/div_clk                         |                                                                            |               96 |            323 |
++--------------------------------------------+------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
+
+
