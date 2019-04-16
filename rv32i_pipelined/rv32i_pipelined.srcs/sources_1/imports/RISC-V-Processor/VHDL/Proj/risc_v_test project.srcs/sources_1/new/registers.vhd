@@ -58,8 +58,12 @@ architecture Behavioral of registers is
     signal register_file_2: register_layout := (others=>(others=>'0'));
     signal counter: STD_LOGIC_VECTOR(31 downto 0):= (others => '0');
     signal vs: STD_LOGIC:='1';
+    signal latched_inputs : STD_LOGIC_VECTOR (8 downto 0);
 
 begin
+
+latched_inputs <= vsync & input_regout;
+
     process (clk) 
     begin
        register_file_1(30) <= counter;
@@ -74,7 +78,7 @@ begin
         end if;
        
         for I in 0 to 8 loop --Latch Operation Loop
-            if (input_regout(I) = '1') then --If a value is 1 for each of the incoming values
+            if (latched_inputs(I) = '1') then --If a value is 1 for each of the incoming values
                 register_file_1(31)(I) <= '1'; --Latch that bit in x31 up to a 1
             end if;
         end loop;

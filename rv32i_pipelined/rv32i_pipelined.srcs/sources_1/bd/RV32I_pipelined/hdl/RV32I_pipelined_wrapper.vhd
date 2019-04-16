@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Thu Apr 11 00:07:26 2019
---Host        : DESKTOP-LKIEUJ3 running 64-bit major release  (build 9200)
+--Date        : Tue Apr 16 11:13:41 2019
+--Host        : Nugget running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined_wrapper.bd
 --Design      : RV32I_pipelined_wrapper
 --Purpose     : IP block netlist
@@ -13,45 +13,39 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity RV32I_pipelined_wrapper is
   port (
-    btn     : in  STD_LOGIC_VECTOR ( 3 downto 0 );
-    sw      : in  STD_LOGIC_VECTOR ( 3 downto 0 );
-    clk     : in  STD_LOGIC;
-    led     : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    vga_b   : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    vga_g   : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    vga_hs  : out STD_LOGIC;
-    vga_r   : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    vga_vs  : out STD_LOGIC
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clk : in STD_LOGIC;
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    vga_hs : out STD_LOGIC;
+    vga_r : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    vga_vs : out STD_LOGIC
   );
 end RV32I_pipelined_wrapper;
 
 architecture STRUCTURE of RV32I_pipelined_wrapper is
   component RV32I_pipelined is
   port (
-    btn     : in  STD_LOGIC_VECTOR ( 3 downto 0 );
-    sw      : in  STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     vga_r : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_hs : out STD_LOGIC;
-    vga_vs : out STD_LOGIC
+    vga_vs : out STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_pipelined;
 begin
 RV32I_pipelined_i: component RV32I_pipelined
      port map (
-      btn(0) => btn(0),
-      btn(1) => btn(1),
-      btn(2) => btn(2),
-      btn(3) => btn(3),
-      sw(0) => sw(0),
-      sw(1) => sw(1),
-      sw(2) => sw(2),
-      sw(3) => sw(3),
+      btn(3 downto 0) => btn(3 downto 0),
       clk => clk,
       led(3 downto 0) => led(3 downto 0),
+      sw(3 downto 0) => sw(3 downto 0),
       vga_b(4 downto 0) => vga_b(4 downto 0),
       vga_g(5 downto 0) => vga_g(5 downto 0),
       vga_hs => vga_hs,
