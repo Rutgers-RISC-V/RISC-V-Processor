@@ -35,8 +35,8 @@
       "clock_div_1": "",
       "pre_memory_logic_0": "",
       "terminal_tld_0": "",
-      "registers_0": "",
-      "input_handler_0": ""
+      "input_handler_0": "",
+      "registers_0": ""
     },
     "ports": {
       "clk": {
@@ -1241,6 +1241,36 @@
           }
         }
       },
+      "input_handler_0": {
+        "vlnv": "xilinx.com:module_ref:input_handler:1.0",
+        "xci_name": "RV32I_pipelined_input_handler_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "input_handler",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "sw": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "btn": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "input_regout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
       "registers_0": {
         "vlnv": "xilinx.com:module_ref:registers:1.0",
         "xci_name": "RV32I_pipelined_registers_0_0",
@@ -1296,36 +1326,6 @@
           "debug_leds": {
             "direction": "O",
             "left": "3",
-            "right": "0"
-          }
-        }
-      },
-      "input_handler_0": {
-        "vlnv": "xilinx.com:module_ref:input_handler:1.0",
-        "xci_name": "RV32I_pipelined_input_handler_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "input_handler",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "sw": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "btn": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "input_regout": {
-            "direction": "O",
-            "left": "7",
             "right": "0"
           }
         }
@@ -1467,8 +1467,8 @@
           "clock_div_0/clk",
           "clock_div_1/clk",
           "terminal_tld_0/clk",
-          "registers_0/clk",
-          "input_handler_0/clk"
+          "input_handler_0/clk",
+          "registers_0/clk"
         ]
       },
       "clk_in1_0_1": {

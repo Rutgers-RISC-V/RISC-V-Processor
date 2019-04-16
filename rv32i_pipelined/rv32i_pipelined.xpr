@@ -300,23 +300,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_DE_0_0/RV32I_pipelined_stage_DE_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_stage_DE_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_RV32I_0_0/RV32I_pipelined_RV32I_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_RV32I_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_FD_0_0/RV32I_pipelined_stage_FD_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_stage_FD_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_descr_alu_0_0/RV32I_pipelined_mux_reg_descr_alu_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_mux_reg_descr_alu_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pc_logic_0_0/RV32I_pipelined_pc_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_pc_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clock_div_0_0/RV32I_pipelined_clock_div_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_clock_div_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_hazard_logic_0_0/RV32I_pipelined_hazard_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_hazard_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_alu_signals_0_0/RV32I_pipelined_alu_signals_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_alu_signals_0_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_blk_mem_gen_1_0/RV32I_pipelined_blk_mem_gen_1_0.xci">
           <Proxy FileSetName="RV32I_pipelined_blk_mem_gen_1_0"/>
@@ -324,59 +315,68 @@
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_instruction_clear_0_0/RV32I_pipelined_instruction_clear_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_instruction_clear_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clk_wiz_0_0/RV32I_pipelined_clk_wiz_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_hazard_count_0_0/RV32I_pipelined_hazard_count_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_hazard_count_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_MW_0_0/RV32I_pipelined_stage_MW_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_stage_MW_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_Descrambler_0_0/RV32I_pipelined_Descrambler_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_Descrambler_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_pc_alu_0_0/RV32I_pipelined_mux_reg_pc_alu_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_mux_reg_pc_alu_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_DE_0_0/RV32I_pipelined_stage_DE_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_stage_DE_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pc_shift_down_0_0/RV32I_pipelined_pc_shift_down_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_pc_shift_down_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_output_0_0/RV32I_pipelined_mux_output_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_mux_output_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pc_logic_0_0/RV32I_pipelined_pc_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_pc_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clock_div_1_0/RV32I_pipelined_clock_div_1_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_clock_div_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_MW_0_0/RV32I_pipelined_stage_MW_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_stage_MW_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pre_memory_logic_0_0/RV32I_pipelined_pre_memory_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_pre_memory_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_FD_0_0/RV32I_pipelined_stage_FD_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_stage_FD_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_hazard_logic_0_0/RV32I_pipelined_hazard_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_hazard_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_write_0_0/RV32I_pipelined_mux_reg_write_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_mux_reg_write_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_EM_0_0/RV32I_pipelined_stage_EM_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_stage_EM_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_alu_signals_0_0/RV32I_pipelined_alu_signals_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_alu_signals_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clock_div_0_0/RV32I_pipelined_clock_div_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_clock_div_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_post_memory_logic_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_ALU_0_0/RV32I_pipelined_ALU_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_ALU_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_clock_div_1_0/RV32I_pipelined_clock_div_1_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_clock_div_1_0"/>
+        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="RV32I_pipelined_blk_mem_gen_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_brach_logic_0_0/RV32I_pipelined_brach_logic_0_0.xci">
           <Proxy FileSetName="RV32I_pipelined_brach_logic_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_program_counter_1_0/RV32I_pipelined_program_counter_1_0.xci">
           <Proxy FileSetName="RV32I_pipelined_program_counter_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_pc_alu_0_0/RV32I_pipelined_mux_reg_pc_alu_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_mux_reg_pc_alu_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_stage_EM_0_0/RV32I_pipelined_stage_EM_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_stage_EM_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_blk_mem_gen_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_post_memory_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_RV32I_0_0/RV32I_pipelined_RV32I_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_RV32I_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_write_0_0/RV32I_pipelined_mux_reg_write_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_mux_reg_write_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_pre_memory_logic_0_0/RV32I_pipelined_pre_memory_logic_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_pre_memory_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_output_0_0/RV32I_pipelined_mux_output_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_mux_output_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="RV32I_pipelined.bd" FileRelPathName="ip/RV32I_pipelined_mux_reg_descr_alu_0_0/RV32I_pipelined_mux_reg_descr_alu_0_0.xci">
-          <Proxy FileSetName="RV32I_pipelined_mux_reg_descr_alu_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd">
@@ -447,13 +447,6 @@
       </File>
       <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/addTest_Dump.coe">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/clock_div_programmable.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>

@@ -71,9 +71,15 @@ begin
                 register_file_2(to_integer(unsigned(instr2(11 downto 7)))) <= reg_write_input;        
            end if;
         end if;
-       end if;
-       register_file_1(31)(8) <= vsync;
-       register_file_1(31)(7 downto 0) <= input_regout;
+        end if;
+       
+        for I in 0 to 8 loop --Latch Operation Loop
+            if (input_regout(I) = '1') then --If a value is 1 for each of the incoming values
+                register_file_1(31)(I) <= '1'; --Latch that bit in x31 up to a 1
+            end if;
+        end loop;
+       --register_file_1(31)(8) <= vsync; --DEPRECATED, SWITCHED TO LATCH OPERATION -JC
+       --register_file_1(31)(7 downto 0) <= input_regout; --DEPRECATED, SWITCHED TO LATCH OPERATION -JC
     end process;
     
     reg_1_out <= std_logic_vector(register_file_1(to_integer(unsigned(instr1(19 downto 15)))));
