@@ -17,8 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -41,7 +41,7 @@ add_files C:/Users/Jon/Desktop/capstone/RISC-V-Processor/Dumps_and_Assembly/Dump
 add_files C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/Dumps/terminalDemo_2019_Wide_Delay.coe
 add_files C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/Dumps/terminalDemo_2019_Wide_NoDelay.coe
 add_files C:/Users/Jon/Desktop/capstone/RISC-V-Processor/Dumps_and_Assembly/Dumps/addTest_Dump.coe
-add_files c:/Users/Jon/Desktop/capstone/RISC-V-Processor/Dumps_and_Assembly/Dumps/inputtest.coe
+add_files C:/Users/Jon/Desktop/capstone/RISC-V-Processor/Dumps_and_Assembly/Dumps/inputtest.coe
 read_vhdl -library xil_defaultlib C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd
 add_files C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd
 set_property used_in_implementation false [get_files -all c:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_ooc.xdc]

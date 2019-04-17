@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Apr 16 17:17:02 2019
-# Process ID: 2752
+# Start of session at: Tue Apr 16 19:05:35 2019
+# Process ID: 1132
 # Current directory: C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1
 # Command line: vivado.exe -log RV32I_pipelined_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RV32I_pipelined_wrapper.tcl
 # Log file: C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/RV32I_pipelined_wrapper.vds
@@ -13,81 +13,81 @@ source RV32I_pipelined_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.3/data/ip'.
-add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:01:52 . Memory (MB): peak = 312.078 ; gain = 58.852
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:01:52 . Memory (MB): peak = 311.852 ; gain = 58.063
 Command: synth_design -top RV32I_pipelined_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6900 
+INFO: Helper process launched with PID 5232 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 433.344 ; gain = 107.824
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 432.898 ; gain = 107.242
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_wrapper' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd:28]
 INFO: [Synth 8-3491] module 'RV32I_pipelined' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:14' bound to instance 'RV32I_pipelined_i' of component 'RV32I_pipelined' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd:43]
 INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:32]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_ALU_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_ALU_0_0_stub.vhdl:5' bound to instance 'ALU_0' of component 'RV32I_pipelined_ALU_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:454]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_ALU_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_ALU_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_Descrambler_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_Descrambler_0_0_stub.vhdl:5' bound to instance 'Descrambler_0' of component 'RV32I_pipelined_Descrambler_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:461]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_Descrambler_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_Descrambler_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_RV32I_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_RV32I_0_0_stub.vhdl:5' bound to instance 'RV32I_0' of component 'RV32I_pipelined_RV32I_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:466]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_RV32I_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_RV32I_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_alu_signals_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_alu_signals_0_0_stub.vhdl:5' bound to instance 'alu_signals_0' of component 'RV32I_pipelined_alu_signals_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:479]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_alu_signals_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_alu_signals_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_blk_mem_gen_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'RV32I_pipelined_blk_mem_gen_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:487]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_blk_mem_gen_1_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_blk_mem_gen_1_0_stub.vhdl:5' bound to instance 'blk_mem_gen_1' of component 'RV32I_pipelined_blk_mem_gen_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:502]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_blk_mem_gen_1_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_brach_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_brach_logic_0_0_stub.vhdl:5' bound to instance 'brach_logic_0' of component 'RV32I_pipelined_brach_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:517]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_brach_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_brach_logic_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_clk_wiz_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'RV32I_pipelined_clk_wiz_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:526]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clk_wiz_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_clk_wiz_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_clock_div_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_clock_div_0_0_stub.vhdl:5' bound to instance 'clock_div_0' of component 'RV32I_pipelined_clock_div_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:532]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clock_div_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_clock_div_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_clock_div_1_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_clock_div_1_0_stub.vhdl:5' bound to instance 'clock_div_1' of component 'RV32I_pipelined_clock_div_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:538]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clock_div_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_clock_div_1_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_hazard_count_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_hazard_count_0_0_stub.vhdl:5' bound to instance 'hazard_count_0' of component 'RV32I_pipelined_hazard_count_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:544]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_hazard_count_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_hazard_count_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_hazard_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_hazard_logic_0_0_stub.vhdl:5' bound to instance 'hazard_logic_0' of component 'RV32I_pipelined_hazard_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:552]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_hazard_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_hazard_logic_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_input_handler_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_input_handler_0_0_stub.vhdl:5' bound to instance 'input_handler_0' of component 'RV32I_pipelined_input_handler_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:561]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_input_handler_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_input_handler_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_instruction_clear_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_instruction_clear_0_0_stub.vhdl:5' bound to instance 'instruction_clear_0' of component 'RV32I_pipelined_instruction_clear_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:568]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_instruction_clear_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_instruction_clear_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_output_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_mux_output_0_0_stub.vhdl:5' bound to instance 'mux_output_0' of component 'RV32I_pipelined_mux_output_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:574]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_output_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_mux_output_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_descr_alu_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_mux_reg_descr_alu_0_0_stub.vhdl:5' bound to instance 'mux_reg_descr_alu_0' of component 'RV32I_pipelined_mux_reg_descr_alu_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:581]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_descr_alu_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_mux_reg_descr_alu_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_pc_alu_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_mux_reg_pc_alu_0_0_stub.vhdl:5' bound to instance 'mux_reg_pc_alu_0' of component 'RV32I_pipelined_mux_reg_pc_alu_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:588]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_pc_alu_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_mux_reg_pc_alu_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_write_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_mux_reg_write_0_0_stub.vhdl:5' bound to instance 'mux_reg_write_0' of component 'RV32I_pipelined_mux_reg_write_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:595]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_write_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_mux_reg_write_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_pc_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_pc_logic_0_0_stub.vhdl:5' bound to instance 'pc_logic_0' of component 'RV32I_pipelined_pc_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:603]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pc_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_pc_logic_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_pc_shift_down_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_pc_shift_down_0_0_stub.vhdl:5' bound to instance 'pc_shift_down_0' of component 'RV32I_pipelined_pc_shift_down_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:613]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pc_shift_down_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_pc_shift_down_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_post_memory_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl:5' bound to instance 'post_memory_logic_0' of component 'RV32I_pipelined_post_memory_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:618]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_post_memory_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_pre_memory_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_pre_memory_logic_0_0_stub.vhdl:5' bound to instance 'pre_memory_logic_0' of component 'RV32I_pipelined_pre_memory_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:626]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pre_memory_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_pre_memory_logic_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_program_counter_1_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_program_counter_1_0_stub.vhdl:5' bound to instance 'program_counter_1' of component 'RV32I_pipelined_program_counter_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:636]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_program_counter_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_program_counter_1_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_registers_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_registers_0_0_stub.vhdl:5' bound to instance 'registers_0' of component 'RV32I_pipelined_registers_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:644]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_registers_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_registers_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_DE_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_stage_DE_0_0_stub.vhdl:5' bound to instance 'stage_DE_0' of component 'RV32I_pipelined_stage_DE_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:658]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_DE_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_stage_DE_0_0_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_EM_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_stage_EM_0_0_stub.vhdl:5' bound to instance 'stage_EM_0' of component 'RV32I_pipelined_stage_EM_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:691]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_EM_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_stage_EM_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_FD_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_stage_FD_0_0_stub.vhdl:5' bound to instance 'stage_FD_0' of component 'RV32I_pipelined_stage_FD_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:708]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_FD_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_stage_FD_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_MW_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_stage_MW_0_0_stub.vhdl:5' bound to instance 'stage_MW_0' of component 'RV32I_pipelined_stage_MW_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:718]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_MW_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_stage_MW_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_terminal_tld_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_terminal_tld_0_0_stub.vhdl:5' bound to instance 'terminal_tld_0' of component 'RV32I_pipelined_terminal_tld_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:735]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_terminal_tld_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-2752-Nugget/realtime/RV32I_pipelined_terminal_tld_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_ALU_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_ALU_0_0_stub.vhdl:5' bound to instance 'ALU_0' of component 'RV32I_pipelined_ALU_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:454]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_ALU_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_ALU_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_Descrambler_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_Descrambler_0_0_stub.vhdl:5' bound to instance 'Descrambler_0' of component 'RV32I_pipelined_Descrambler_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:461]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_Descrambler_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_Descrambler_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_RV32I_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_RV32I_0_0_stub.vhdl:5' bound to instance 'RV32I_0' of component 'RV32I_pipelined_RV32I_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:466]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_RV32I_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_RV32I_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_alu_signals_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_alu_signals_0_0_stub.vhdl:5' bound to instance 'alu_signals_0' of component 'RV32I_pipelined_alu_signals_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:479]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_alu_signals_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_alu_signals_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_blk_mem_gen_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'RV32I_pipelined_blk_mem_gen_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:487]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_blk_mem_gen_1_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_blk_mem_gen_1_0_stub.vhdl:5' bound to instance 'blk_mem_gen_1' of component 'RV32I_pipelined_blk_mem_gen_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:502]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_blk_mem_gen_1_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_brach_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_brach_logic_0_0_stub.vhdl:5' bound to instance 'brach_logic_0' of component 'RV32I_pipelined_brach_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:517]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_brach_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_brach_logic_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_clk_wiz_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'RV32I_pipelined_clk_wiz_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:526]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clk_wiz_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_clk_wiz_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_clock_div_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_clock_div_0_0_stub.vhdl:5' bound to instance 'clock_div_0' of component 'RV32I_pipelined_clock_div_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:532]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clock_div_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_clock_div_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_clock_div_1_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_clock_div_1_0_stub.vhdl:5' bound to instance 'clock_div_1' of component 'RV32I_pipelined_clock_div_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:538]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clock_div_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_clock_div_1_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_hazard_count_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_hazard_count_0_0_stub.vhdl:5' bound to instance 'hazard_count_0' of component 'RV32I_pipelined_hazard_count_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:544]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_hazard_count_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_hazard_count_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_hazard_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_hazard_logic_0_0_stub.vhdl:5' bound to instance 'hazard_logic_0' of component 'RV32I_pipelined_hazard_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:552]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_hazard_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_hazard_logic_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_input_handler_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_input_handler_0_0_stub.vhdl:5' bound to instance 'input_handler_0' of component 'RV32I_pipelined_input_handler_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:561]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_input_handler_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_input_handler_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_instruction_clear_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_instruction_clear_0_0_stub.vhdl:5' bound to instance 'instruction_clear_0' of component 'RV32I_pipelined_instruction_clear_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:568]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_instruction_clear_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_instruction_clear_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_output_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_mux_output_0_0_stub.vhdl:5' bound to instance 'mux_output_0' of component 'RV32I_pipelined_mux_output_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:574]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_output_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_mux_output_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_descr_alu_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_mux_reg_descr_alu_0_0_stub.vhdl:5' bound to instance 'mux_reg_descr_alu_0' of component 'RV32I_pipelined_mux_reg_descr_alu_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:581]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_descr_alu_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_mux_reg_descr_alu_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_pc_alu_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_mux_reg_pc_alu_0_0_stub.vhdl:5' bound to instance 'mux_reg_pc_alu_0' of component 'RV32I_pipelined_mux_reg_pc_alu_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:588]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_pc_alu_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_mux_reg_pc_alu_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_write_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_mux_reg_write_0_0_stub.vhdl:5' bound to instance 'mux_reg_write_0' of component 'RV32I_pipelined_mux_reg_write_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:595]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_write_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_mux_reg_write_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_pc_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_pc_logic_0_0_stub.vhdl:5' bound to instance 'pc_logic_0' of component 'RV32I_pipelined_pc_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:603]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pc_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_pc_logic_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_pc_shift_down_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_pc_shift_down_0_0_stub.vhdl:5' bound to instance 'pc_shift_down_0' of component 'RV32I_pipelined_pc_shift_down_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:613]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pc_shift_down_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_pc_shift_down_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_post_memory_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl:5' bound to instance 'post_memory_logic_0' of component 'RV32I_pipelined_post_memory_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:618]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_post_memory_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_pre_memory_logic_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_pre_memory_logic_0_0_stub.vhdl:5' bound to instance 'pre_memory_logic_0' of component 'RV32I_pipelined_pre_memory_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:626]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pre_memory_logic_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_pre_memory_logic_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_program_counter_1_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_program_counter_1_0_stub.vhdl:5' bound to instance 'program_counter_1' of component 'RV32I_pipelined_program_counter_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:636]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_program_counter_1_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_program_counter_1_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_registers_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_registers_0_0_stub.vhdl:5' bound to instance 'registers_0' of component 'RV32I_pipelined_registers_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:644]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_registers_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_registers_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_DE_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_stage_DE_0_0_stub.vhdl:5' bound to instance 'stage_DE_0' of component 'RV32I_pipelined_stage_DE_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:658]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_DE_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_stage_DE_0_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_EM_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_stage_EM_0_0_stub.vhdl:5' bound to instance 'stage_EM_0' of component 'RV32I_pipelined_stage_EM_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:691]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_EM_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_stage_EM_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_FD_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_stage_FD_0_0_stub.vhdl:5' bound to instance 'stage_FD_0' of component 'RV32I_pipelined_stage_FD_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:708]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_FD_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_stage_FD_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_MW_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_stage_MW_0_0_stub.vhdl:5' bound to instance 'stage_MW_0' of component 'RV32I_pipelined_stage_MW_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:718]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_MW_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_stage_MW_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_terminal_tld_0_0' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_terminal_tld_0_0_stub.vhdl:5' bound to instance 'terminal_tld_0' of component 'RV32I_pipelined_terminal_tld_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:735]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_terminal_tld_0_0' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-1132-Nugget/realtime/RV32I_pipelined_terminal_tld_0_0_stub.vhdl:20]
 INFO: [Synth 8-256] done synthesizing module 'RV32I_pipelined' (1#1) [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:32]
 INFO: [Synth 8-256] done synthesizing module 'RV32I_pipelined_wrapper' (2#1) [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd:28]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 490.738 ; gain = 165.219
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 490.141 ; gain = 164.484
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -100,10 +100,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 490.738 ; gain = 165.219
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 490.141 ; gain = 164.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 490.738 ; gain = 165.219
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 490.141 ; gain = 164.484
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -174,24 +174,24 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/RV32I_pipelined_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.980 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 812.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.980 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.773 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 812.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.980 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 812.980 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -229,10 +229,10 @@ Applied set_property DONT_TOUCH = true for RV32I_pipelined_i/clock_div_1. (const
 Applied set_property DONT_TOUCH = true for RV32I_pipelined_i/terminal_tld_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for RV32I_pipelined_i/input_handler_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -268,7 +268,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -282,13 +282,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'RV32I_pipelined_i/clk_wiz_0/clk_out1' to pin 'RV32I_pipelined_i/clk_wiz_0/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -300,7 +300,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -324,7 +324,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -337,7 +337,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -349,25 +349,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -453,25 +453,25 @@ Report Instance Areas:
 |2     |  RV32I_pipelined_i |RV32I_pipelined |  1167|
 +------+--------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 812.773 ; gain = 487.254
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 812.980 ; gain = 487.324
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 812.773 ; gain = 165.219
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 812.773 ; gain = 487.254
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 812.980 ; gain = 164.484
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 812.980 ; gain = 487.324
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 813.379 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 815.441 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 78 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 813.434 ; gain = 501.355
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 813.434 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 815.504 ; gain = 503.617
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 815.504 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/RV32I_pipelined_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file RV32I_pipelined_wrapper_utilization_synth.rpt -pb RV32I_pipelined_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 17:19:17 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 19:07:49 2019...

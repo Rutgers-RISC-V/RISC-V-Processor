@@ -33,6 +33,7 @@ sb x7 0(x8)  	#store at location x8
 addi x8 x6 6 	#add into x8 the base address + 6
 li x7 115 	# load the ASCII value of 's' into a register.
 sb x7 0(x8)  	#store at location x8
+li   x7 0	#clear x7
 
 #Button Values - Line 2
 andi x7 x31 1	#bitmask the first button to x7
@@ -40,6 +41,7 @@ sub  x31 x31 x7 #set the button to 0 by subtracting the mask
 addi x7 x7 48	#add the masked value to 48 (ascii 0)
 addi x8 x6 80 	#add into x8 the base address + 80
 sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
 
 andi x7 x31 2	#bitmask the second button to x7
 sub  x31 x31 x7 #set the button to 0 by subtracting the mask
@@ -47,6 +49,7 @@ srli x7 x7 1	#shift the masked bit to LSB
 addi x7 x7 48	#add the masked value to 48 (ascii 0)
 addi x8 x6 81 	#add into x8 the base address + 81
 sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
 
 andi x7 x31 4	#bitmask the third button to x7
 sub  x31 x31 x7 #set the button to 0 by subtracting the mask
@@ -54,6 +57,7 @@ srli x7 x7 2	#shift the masked bit to LSB
 addi x7 x7 48	#add the masked value to 48 (ascii 0)
 addi x8 x6 82 	#add into x8 the base address + 82
 sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
 
 andi x7 x31 8	#bitmask the fourth button to x7
 sub  x31 x31 x7 #set the button to 0 by subtracting the mask
@@ -61,6 +65,7 @@ srli x7 x7 3	#shift the masked bit to LSB
 addi x7 x7 48	#add the masked value to 48 (ascii 0)
 addi x8 x6 83 	#add into x8 the base address + 83
 sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
 
 #Switches - Line 3
 addi x8 x6 240 	#add into x8 the base address + 240
@@ -101,24 +106,28 @@ srli x7 x7 4	#shift the masked bit to LSB
 addi x7 x7 48	#add the masked value to 48 (ascii 0)
 addi x8 x6 320	#add into x8 the base address + 320
 sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
 
 andi x7 x31 32	#bitmask the second switch to x7
 srli x7 x7 5	#shift the masked bit to LSB
 addi x7 x7 48	#add the masked value to 48 (ascii 0)
 addi x8 x6 321	#add into x8 the base address + 321
 sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
 
 andi x7 x31 64	#bitmask the third switch to x7
 srli x7 x7 6	#shift the masked bit to LSB
 addi x7 x7 48	#add the masked value to 48 (ascii 0)
 addi x8 x6 322 	#add into x8 the base address + 322
 sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
 
 andi x7 x31 128	#bitmask the fourth switch to x7
 srli x7 x7 7	#shift the masked bit to LSB
 addi x7 x7 48	#add the masked value to 48 (ascii 0)
 addi x8 x6 323 	#add into x8 the base address + 323
 sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
 
 
 wait: 		#This should always be at the end of your program loop!
@@ -127,3 +136,4 @@ srli x7 x7 8	#shift the masked bit to LSB
 beq  x7 x0 wait #wait for vsync
 andi x7 x31 256	#bitmask the vsync to x7 again
 sub  x31 x31 x7 #set vsync to 0 by subtracting the mask
+li   x7 0	#clear x7

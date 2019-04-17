@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Apr 16 17:22:24 2019
+| Date         : Tue Apr 16 19:10:41 2019
 | Host         : Nugget running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file RV32I_pipelined_wrapper_timing_summary_routed.rpt -pb RV32I_pipelined_wrapper_timing_summary_routed.pb -rpx RV32I_pipelined_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : RV32I_pipelined_wrapper
