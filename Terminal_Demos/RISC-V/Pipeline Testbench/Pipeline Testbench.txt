@@ -308,7 +308,7 @@ li x7 115 #s
 addi x8 x6 1535
 sb x7 0(x8)
 
-li x7 65 #B
+li x7 66 #B
 addi x8 x6 1537
 sb x7 0(x8)
 
