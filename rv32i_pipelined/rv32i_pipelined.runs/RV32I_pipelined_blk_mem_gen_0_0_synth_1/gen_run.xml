@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="RV32I_pipelined_blk_mem_gen_0_0_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555455819">
+<GenRun Id="RV32I_pipelined_blk_mem_gen_0_0_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555617076">
   <File Type="PA-TCL" Name="RV32I_pipelined_blk_mem_gen_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="RV32I_pipelined_blk_mem_gen_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="RV32I_pipelined_blk_mem_gen_0_0_reports.tcl"/>
@@ -46,7 +46,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

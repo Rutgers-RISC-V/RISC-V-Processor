@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Apr 16 19:10:39 2019
-| Host         : Nugget running 64-bit major release  (build 9200)
+| Date         : Thu Apr 18 16:00:18 2019
+| Host         : JONPC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file RV32I_pipelined_wrapper_methodology_drc_routed.rpt -pb RV32I_pipelined_wrapper_methodology_drc_routed.pb -rpx RV32I_pipelined_wrapper_methodology_drc_routed.rpx
 | Design       : RV32I_pipelined_wrapper
 | Device       : xc7z010clg400-1
@@ -23,56 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 10
+             Violations found: 2
 +----------+----------+------------------------------------------------+------------+
 | Rule     | Severity | Description                                    | Violations |
 +----------+----------+------------------------------------------------+------------+
-| LUTAR-1  | Warning  | LUT drives async reset alert                   | 8          |
 | TIMING-6 | Warning  | No common primary clock between related clocks | 2          |
 +----------+----------+------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-LUTAR-1#1 Warning
-LUT drives async reset alert  
-LUT cell RV32I_pipelined_i/registers_0/U0/register_file_1[31][0]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) RV32I_pipelined_i/registers_0/U0/register_file_1_reg[31][0]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#2 Warning
-LUT drives async reset alert  
-LUT cell RV32I_pipelined_i/registers_0/U0/register_file_1[31][1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) RV32I_pipelined_i/registers_0/U0/register_file_1_reg[31][1]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#3 Warning
-LUT drives async reset alert  
-LUT cell RV32I_pipelined_i/registers_0/U0/register_file_1[31][2]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) RV32I_pipelined_i/registers_0/U0/register_file_1_reg[31][2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#4 Warning
-LUT drives async reset alert  
-LUT cell RV32I_pipelined_i/registers_0/U0/register_file_1[31][3]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) RV32I_pipelined_i/registers_0/U0/register_file_1_reg[31][3]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#5 Warning
-LUT drives async reset alert  
-LUT cell RV32I_pipelined_i/registers_0/U0/register_file_1[31][4]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) RV32I_pipelined_i/registers_0/U0/register_file_1_reg[31][4]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#6 Warning
-LUT drives async reset alert  
-LUT cell RV32I_pipelined_i/registers_0/U0/register_file_1[31][5]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) RV32I_pipelined_i/registers_0/U0/register_file_1_reg[31][5]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#7 Warning
-LUT drives async reset alert  
-LUT cell RV32I_pipelined_i/registers_0/U0/register_file_1[31][6]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) RV32I_pipelined_i/registers_0/U0/register_file_1_reg[31][6]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#8 Warning
-LUT drives async reset alert  
-LUT cell RV32I_pipelined_i/registers_0/U0/register_file_1[31][7]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) RV32I_pipelined_i/registers_0/U0/register_file_1_reg[31][7]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
 TIMING-6#1 Warning
 No common primary clock between related clocks  
 The clocks clk_out1_RV32I_pipelined_clk_wiz_0_0 and clk_out1_RV32I_pipelined_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_RV32I_pipelined_clk_wiz_0_0] -to [get_clocks clk_out1_RV32I_pipelined_clk_wiz_0_0_1]

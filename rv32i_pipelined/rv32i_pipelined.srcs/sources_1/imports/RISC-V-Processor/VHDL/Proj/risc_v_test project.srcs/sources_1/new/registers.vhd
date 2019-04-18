@@ -89,5 +89,5 @@ latched_inputs <= vsync & input_regout;
     
     reg_1_out <= std_logic_vector(register_file_1(to_integer(unsigned(instr1(19 downto 15)))));
     reg_2_out <= std_logic_vector(register_file_2(to_integer(unsigned(instr1(24 downto 20)))));
-    debug_leds <= register_file_1(31)(3 downto 0);
+    debug_leds <= register_file_1(31)(7 downto 4);
 end Behavioral;

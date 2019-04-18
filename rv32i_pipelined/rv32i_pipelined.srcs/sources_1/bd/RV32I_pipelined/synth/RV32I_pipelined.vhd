@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Thu Apr 18 14:46:09 2019
---Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
+--Date        : Thu Apr 18 15:51:04 2019
+--Host        : JONPC running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
 --Purpose     : IP block netlist
@@ -314,6 +314,14 @@ architecture STRUCTURE of RV32I_pipelined is
     vga_vs : out STD_LOGIC
   );
   end component RV32I_pipelined_terminal_tld_0_0;
+  component RV32I_pipelined_input_handler_0_0 is
+  port (
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clk : in STD_LOGIC;
+    input_regout : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component RV32I_pipelined_input_handler_0_0;
   component RV32I_pipelined_alu_signals_0_0 is
   port (
     alu_output_33 : in STD_LOGIC_VECTOR ( 32 downto 0 );
@@ -329,14 +337,6 @@ architecture STRUCTURE of RV32I_pipelined is
     pc_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_pc_shift_down_0_0;
-  component RV32I_pipelined_input_handler_0_0 is
-  port (
-    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    clk : in STD_LOGIC;
-    input_regout : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component RV32I_pipelined_input_handler_0_0;
   component RV32I_pipelined_registers_0_0 is
   port (
     clk : in STD_LOGIC;

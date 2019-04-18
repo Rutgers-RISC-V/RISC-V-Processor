@@ -114,7 +114,7 @@ output wire [31 : 0] doutb;
     .C_LOAD_INIT_FILE(1),
     .C_INIT_FILE_NAME("RV32I_pipelined_blk_mem_gen_0_0.mif"),
     .C_INIT_FILE("NONE"),
-    .C_USE_DEFAULT_DATA(0),
+    .C_USE_DEFAULT_DATA(1),
     .C_DEFAULT_DATA("0"),
     .C_HAS_RSTA(0),
     .C_RST_PRIORITY_A("CE"),
