@@ -1,4 +1,4 @@
-	li x18 121	#random value
+	li x18 121	#value to print
 	li x19 48	#ascii value 0
 	li x20 0	#Number of digits (referred to as 'n')
 	li x6 10	#check digit assuming >0
