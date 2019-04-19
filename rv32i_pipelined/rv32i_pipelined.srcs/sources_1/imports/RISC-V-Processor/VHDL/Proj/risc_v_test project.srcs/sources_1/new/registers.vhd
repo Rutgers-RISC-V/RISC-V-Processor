@@ -56,7 +56,7 @@ architecture Behavioral of registers is
     type register_layout is array(0 to 31) of std_logic_vector(31 downto 0);
     signal register_file_1: register_layout := (others=>(others=>'0'));
     signal register_file_2: register_layout := (others=>(others=>'0'));
-    signal counter: STD_LOGIC_VECTOR(31 downto 0):= (others => '0');
+--    signal counter: STD_LOGIC_VECTOR(31 downto 0):= (others => '0');
     signal vs: STD_LOGIC:='1';
     signal latched_inputs : STD_LOGIC_VECTOR (8 downto 0);
 
@@ -66,10 +66,12 @@ latched_inputs <= vsync & input_regout;
 
     process (clk) 
     begin
-       register_file_1(30) <= counter;
+--       register_file_1(30) <= counter;
+--       register_file_1(30) <= counter;
        if(rising_edge(clk)) then
          if(clk_en = '1') then
-            counter <= std_logic_vector(unsigned(counter) + 1);
+            register_file_1(30) <= std_logic_vector(unsigned(register_file_1(30)) + 1);
+            register_file_2(30) <= std_logic_vector(unsigned(register_file_2(30)) + 1);
             if (wen = '1' and unsigned(instr2(11 downto 7)) > 0) then
                 register_file_1(to_integer(unsigned(instr2(11 downto 7)))) <= reg_write_input;
                 register_file_2(to_integer(unsigned(instr2(11 downto 7)))) <= reg_write_input;        

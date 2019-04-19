@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555645675">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555646873">
   <File Type="PA-TCL" Name="RV32I_pipelined_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="RV32I_pipelined_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="RV32I_pipelined_wrapper_reports.tcl"/>
@@ -395,7 +395,7 @@
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_blk_mem_gen_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_pre_memory_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_blk_mem_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_registers_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_alu_signals_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_program_counter_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_registers_0_0"/>
 </GenRun>

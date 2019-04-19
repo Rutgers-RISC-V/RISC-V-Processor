@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Thu Apr 18 23:47:07 2019
+--Date        : Fri Apr 19 00:07:42 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -313,21 +313,6 @@ architecture STRUCTURE of RV32I_pipelined is
     input_regout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component RV32I_pipelined_input_handler_0_0;
-  component RV32I_pipelined_registers_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    instr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    instr2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_write_input : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_2_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    wen : in STD_LOGIC;
-    vsync : in STD_LOGIC;
-    input_regout : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component RV32I_pipelined_registers_0_0;
   component RV32I_pipelined_alu_signals_0_0 is
   port (
     alu_output_33 : in STD_LOGIC_VECTOR ( 32 downto 0 );
@@ -351,6 +336,21 @@ architecture STRUCTURE of RV32I_pipelined is
     PC : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_program_counter_1_0;
+  component RV32I_pipelined_registers_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    instr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    instr2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_write_input : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_2_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    wen : in STD_LOGIC;
+    vsync : in STD_LOGIC;
+    input_regout : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_registers_0_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
