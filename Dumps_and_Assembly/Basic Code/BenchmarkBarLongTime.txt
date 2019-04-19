@@ -1,0 +1,531 @@
+#UI initialization	
+li x6 4096 # load base address of terminal into a register.	
+	
+#Pipeline	
+	
+li x7 80 #P	
+addi x8 x6 329	
+sb x7 0(x8)	
+	
+li x7 105 #i	
+addi x8 x6 330	
+sb x7 0(x8)	
+	
+li x7 112 #p	
+addi x8 x6 331	
+sb x7 0(x8)	
+	
+li x7 101 #e	
+addi x8 x6 332	
+sb x7 0(x8)	
+	
+li x7 108 #l	
+addi x8 x6 333	
+sb x7 0(x8)	
+	
+li x7 105 #i	
+addi x8 x6 334	
+sb x7 0(x8)	
+	
+li x7 110 #n	
+addi x8 x6 335	
+sb x7 0(x8)	
+	
+li x7 101 #e	
+addi x8 x6 336	
+sb x7 0(x8)	
+	
+#BenchPress	
+	
+li x7 66 #B	
+addi x8 x6 338	
+sb x7 0(x8)	
+	
+li x7 101 #e	
+addi x8 x6 339	
+sb x7 0(x8)	
+	
+li x7 110 #n	
+addi x8 x6 340	
+sb x7 0(x8)	
+	
+li x7 99 #c	
+addi x8 x6 341	
+sb x7 0(x8)	
+	
+li x7 104 #h	
+addi x8 x6 342	
+sb x7 0(x8)	
+	
+li x7 112 #p	
+addi x8 x6 343	
+sb x7 0(x8)	
+	
+li x7 114 #r	
+addi x8 x6 344	
+sb x7 0(x8)	
+	
+li x7 101 #e	
+addi x8 x6 345	
+sb x7 0(x8)	
+	
+li x7 115 #s	
+addi x8 x6 346	
+sb x7 0(x8)	
+	
+li x7 115 #s	
+addi x8 x6 347	
+sb x7 0(x8)	
+	
+li x7 46 #.	
+addi x8 x6 348	
+sb x7 0(x8)	
+	
+#Process A	
+li x7 80 #P	
+addi x8 x6 729	
+sb x7 0(x8)	
+	
+li x7 114 #r	
+addi x8 x6 730	
+sb x7 0(x8)	
+	
+li x7 111 #o	
+addi x8 x6 731	
+sb x7 0(x8)	
+	
+li x7 99 #c	
+addi x8 x6 732	
+sb x7 0(x8)	
+	
+li x7 101 #e	
+addi x8 x6 733	
+sb x7 0(x8)	
+	
+li x7 115 #s	
+addi x8 x6 734	
+sb x7 0(x8)	
+	
+li x7 115 #s	
+addi x8 x6 735	
+sb x7 0(x8)	
+	
+li x7 65 #A	
+addi x8 x6 737	
+sb x7 0(x8)	
+	
+li x7 58 #	
+addi x8 x6 738	
+sb x7 0(x8)	
+	
+#A[--....--]	
+	
+li x7 91 #[	
+addi x8 x6 809	
+sb x7 0(x8)	
+	
+li x7 45 #-	
+addi x8 x6	810
+sb x7 0(x8)	
+	
+addi x8 x6	811
+sb x7 0(x8)	
+	
+addi x8 x6	812
+sb x7 0(x8)	
+	
+addi x8 x6	813
+sb x7 0(x8)	
+	
+addi x8 x6	814
+sb x7 0(x8)	
+	
+addi x8 x6	815
+sb x7 0(x8)	
+	
+addi x8 x6	816
+sb x7 0(x8)	
+	
+addi x8 x6	817
+sb x7 0(x8)	
+	
+addi x8 x6	818
+sb x7 0(x8)	
+	
+addi x8 x6	819
+sb x7 0(x8)	
+	
+addi x8 x6	820
+sb x7 0(x8)	
+	
+addi x8 x6	821
+sb x7 0(x8)	
+	
+addi x8 x6	822
+sb x7 0(x8)	
+	
+addi x8 x6	823
+sb x7 0(x8)	
+	
+addi x8 x6	824
+sb x7 0(x8)	
+	
+addi x8 x6	825
+sb x7 0(x8)	
+	
+addi x8 x6	826
+sb x7 0(x8)	
+	
+addi x8 x6	827
+sb x7 0(x8)	
+	
+addi x8 x6	828
+sb x7 0(x8)	
+	
+addi x8 x6	829
+sb x7 0(x8)	
+	
+addi x8 x6	830
+sb x7 0(x8)	
+	
+addi x8 x6	831
+sb x7 0(x8)	
+	
+addi x8 x6	832
+sb x7 0(x8)	
+	
+addi x8 x6	833
+sb x7 0(x8)	
+	
+addi x8 x6	834
+sb x7 0(x8)	
+	
+addi x8 x6	835
+sb x7 0(x8)	
+	
+addi x8 x6	836
+sb x7 0(x8)	
+	
+addi x8 x6	837
+sb x7 0(x8)	
+	
+addi x8 x6	838
+sb x7 0(x8)	
+	
+addi x8 x6	839
+sb x7 0(x8)	
+	
+addi x8 x6	840
+sb x7 0(x8)	
+	
+addi x8 x6	841
+sb x7 0(x8)	
+	
+addi x8 x6	842
+sb x7 0(x8)	
+	
+addi x8 x6	843
+sb x7 0(x8)	
+	
+addi x8 x6	844
+sb x7 0(x8)	
+	
+addi x8 x6	845
+sb x7 0(x8)	
+	
+addi x8 x6	846
+sb x7 0(x8)	
+	
+addi x8 x6	847
+sb x7 0(x8)	
+	
+addi x8 x6	848
+sb x7 0(x8)	
+	
+addi x8 x6	849
+sb x7 0(x8)	
+	
+addi x8 x6	850
+sb x7 0(x8)	
+	
+addi x8 x6	851
+sb x7 0(x8)	
+	
+addi x8 x6	852
+sb x7 0(x8)	
+	
+addi x8 x6	853
+sb x7 0(x8)	
+	
+addi x8 x6	854
+sb x7 0(x8)	
+	
+addi x8 x6	855
+sb x7 0(x8)	
+	
+addi x8 x6	856
+sb x7 0(x8)	
+	
+addi x8 x6	857
+sb x7 0(x8)	
+	
+addi x8 x6	858
+sb x7 0(x8)	
+	
+addi x8 x6	859
+sb x7 0(x8)	
+	
+li x7 93 #]	
+addi x8 x6 860	
+sb x7 0(x8)	
+	
+#Process B	
+	
+li x7 80 #P	
+addi x8 x6 1529	
+sb x7 0(x8)	
+	
+li x7 114 #r	
+addi x8 x6 1530	
+sb x7 0(x8)	
+	
+li x7 111 #o	
+addi x8 x6 1531	
+sb x7 0(x8)	
+	
+li x7 99 #c	
+addi x8 x6 1532	
+sb x7 0(x8)	
+	
+li x7 101 #e	
+addi x8 x6 1533	
+sb x7 0(x8)	
+	
+li x7 115 #s	
+addi x8 x6 1534	
+sb x7 0(x8)	
+	
+li x7 115 #s	
+addi x8 x6 1535	
+sb x7 0(x8)	
+	
+li x7 66 #B	
+addi x8 x6 1537	
+sb x7 0(x8)	
+	
+li x7 58 #	
+addi x8 x6 1538	
+sb x7 0(x8)	
+	
+#B[--....--]	
+	
+li x7 91 #[	
+addi x8 x6 1609	
+sb x7 0(x8)	
+	
+li x7 45 #-	
+	
+addi x8 x6	1610
+sb x7 0(x8)	
+	
+addi x8 x6	1611
+sb x7 0(x8)	
+	
+addi x8 x6	1612
+sb x7 0(x8)	
+	
+addi x8 x6	1613
+sb x7 0(x8)	
+	
+addi x8 x6	1614
+sb x7 0(x8)	
+	
+addi x8 x6	1615
+sb x7 0(x8)	
+	
+addi x8 x6	1616
+sb x7 0(x8)	
+	
+addi x8 x6	1617
+sb x7 0(x8)	
+	
+addi x8 x6	1618
+sb x7 0(x8)	
+	
+addi x8 x6	1619
+sb x7 0(x8)	
+	
+addi x8 x6	1620
+sb x7 0(x8)	
+	
+addi x8 x6	1621
+sb x7 0(x8)	
+	
+addi x8 x6	1622
+sb x7 0(x8)	
+	
+addi x8 x6	1623
+sb x7 0(x8)	
+	
+addi x8 x6	1624
+sb x7 0(x8)	
+	
+addi x8 x6	1625
+sb x7 0(x8)	
+	
+addi x8 x6	1626
+sb x7 0(x8)	
+	
+addi x8 x6	1627
+sb x7 0(x8)	
+	
+addi x8 x6	1628
+sb x7 0(x8)	
+	
+addi x8 x6	1629
+sb x7 0(x8)	
+	
+addi x8 x6	1630
+sb x7 0(x8)	
+	
+addi x8 x6	1631
+sb x7 0(x8)	
+	
+addi x8 x6	1632
+sb x7 0(x8)	
+	
+addi x8 x6	1633
+sb x7 0(x8)	
+	
+addi x8 x6	1634
+sb x7 0(x8)	
+	
+addi x8 x6	1635
+sb x7 0(x8)	
+	
+addi x8 x6	1636
+sb x7 0(x8)	
+	
+addi x8 x6	1637
+sb x7 0(x8)	
+	
+addi x8 x6	1638
+sb x7 0(x8)	
+	
+addi x8 x6	1639
+sb x7 0(x8)	
+	
+addi x8 x6	1640
+sb x7 0(x8)	
+	
+addi x8 x6	1641
+sb x7 0(x8)	
+	
+addi x8 x6	1642
+sb x7 0(x8)	
+	
+addi x8 x6	1643
+sb x7 0(x8)	
+	
+addi x8 x6	1644
+sb x7 0(x8)	
+	
+addi x8 x6	1645
+sb x7 0(x8)	
+	
+addi x8 x6	1646
+sb x7 0(x8)	
+	
+addi x8 x6	1647
+sb x7 0(x8)	
+	
+addi x8 x6	1648
+sb x7 0(x8)	
+	
+addi x8 x6	1649
+sb x7 0(x8)	
+	
+addi x8 x6	1650
+sb x7 0(x8)	
+	
+addi x8 x6	1651
+sb x7 0(x8)	
+	
+addi x8 x6	1652
+sb x7 0(x8)	
+	
+addi x8 x6	1653
+sb x7 0(x8)	
+	
+addi x8 x6	1654
+sb x7 0(x8)	
+	
+addi x8 x6	1655
+sb x7 0(x8)	
+	
+addi x8 x6	1656
+sb x7 0(x8)	
+	
+addi x8 x6	1657
+sb x7 0(x8)	
+	
+addi x8 x6	1658
+sb x7 0(x8)	
+	
+addi x8 x6	1659
+sb x7 0(x8)	
+	
+	
+	
+	
+li x7 93 #]	
+addi x8 x6 1660	
+sb x7 0(x8)	
+	
+	li x20 127
+	li x8 4096
+	addi x8 x8 810
+	li x18 250000000
+	add x5 x5 x0
+	li x19 5000000
+	addi x21 x19 0
+process1	
+	addi x5 x5 1
+	addi x5 x5 1
+	addi x5 x5 1
+	addi x5 x5 1
+	addi x5 x5 1
+	beq x5 x19 Bar1
+	blt x5 x18 process1
+	
+	li x8 4096
+	addi x8 x8 1610
+	li x18 50000000
+	li x19 1000000
+	add x5 x0 x0
+	add x6 x0 x0
+	add x7 x0 x0
+	add x28 x0 x0
+	add x29 x0 x0
+	addi x21 x19 0
+process2	
+	addi x5 x5 1
+	addi x6 x6 1
+	addi x7 x7 1
+	addi x28 x28 1
+	addi x29 x29 1
+	beq x5 x19 Bar2
+	blt x5 x18 process2
+	j End
+Bar1	
+	sb x20 0(x8)
+	addi x8 x8 1
+	add x19 x19 x21
+	j process1
+Bar2	
+	sb x20 0(x8)
+	addi x8 x8 1
+	add x19 x19 x21
+	j process2
+End	
+#	j End

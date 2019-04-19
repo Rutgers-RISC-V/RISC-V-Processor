@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Apr  6 21:12:17 2019
-// Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {C:/Users/Oz
-//               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_sim_netlist.v}
+// Date        : Fri Apr 19 04:54:14 2019
+// Host        : LAPTOP-FLASIS1Q running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               D:/Alex/Documents/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/RV32I_pipelined_terminal_tld_0_0_sim_netlist.v
 // Design      : RV32I_pipelined_terminal_tld_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -184,7 +184,7 @@ module RV32I_pipelined_terminal_tld_0_0_font_ROM
     .INIT_3C(256'h00F80C067EC6C6C6C6C6C6000000000000000000C3663C183C66C30000000000),
     .INIT_3D(256'h000000000E18181818701818180E000000000000FEC6603018CCFE0000000000),
     .INIT_3E(256'h0000000070181818180E18181870000000000000181818181800181818180000),
-    .INIT_3F(256'h0000000000FEC6C6C66C381000000000000000000000000000000000DC760000),
+    .INIT_3F(256'h007E7E7E7E7E7E7E7E7E7E7E7E7E7E00000000000000000000000000DC760000),
     .INIT_A(18'h00000),
     .INIT_B(18'h00000),
     .RAM_MODE("TDP"),
