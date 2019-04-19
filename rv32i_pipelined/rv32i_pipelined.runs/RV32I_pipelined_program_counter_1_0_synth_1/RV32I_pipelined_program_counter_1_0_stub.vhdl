@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Tue Apr 16 11:06:45 2019
--- Host        : Nugget running 64-bit major release  (build 9200)
+-- Date        : Thu Apr 18 23:49:05 2019
+-- Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ RV32I_pipelined_program_counter_1_0_stub.vhdl
 -- Design      : RV32I_pipelined_program_counter_1_0
@@ -16,7 +16,6 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   Port ( 
     clk : in STD_LOGIC;
     clk_en : in STD_LOGIC;
-    rst : in STD_LOGIC;
     next_PC : in STD_LOGIC_VECTOR ( 31 downto 0 );
     PC : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
@@ -27,7 +26,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,clk_en,rst,next_PC[31:0],PC[31:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,clk_en,next_PC[31:0],PC[31:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "program_counter,Vivado 2018.3";
 begin

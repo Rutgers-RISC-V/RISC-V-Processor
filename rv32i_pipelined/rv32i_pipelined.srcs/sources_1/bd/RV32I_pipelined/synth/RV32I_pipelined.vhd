@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Thu Apr 18 15:51:04 2019
---Host        : JONPC running 64-bit major release  (build 9200)
+--Date        : Thu Apr 18 23:47:07 2019
+--Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
 --Purpose     : IP block netlist
@@ -147,15 +147,6 @@ architecture STRUCTURE of RV32I_pipelined is
     PC_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_pc_logic_0_0;
-  component RV32I_pipelined_program_counter_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    next_PC : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    PC : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_pipelined_program_counter_1_0;
   component RV32I_pipelined_stage_DE_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -322,21 +313,6 @@ architecture STRUCTURE of RV32I_pipelined is
     input_regout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component RV32I_pipelined_input_handler_0_0;
-  component RV32I_pipelined_alu_signals_0_0 is
-  port (
-    alu_output_33 : in STD_LOGIC_VECTOR ( 32 downto 0 );
-    alu_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    zero : out STD_LOGIC;
-    sign : out STD_LOGIC;
-    overflow : out STD_LOGIC
-  );
-  end component RV32I_pipelined_alu_signals_0_0;
-  component RV32I_pipelined_pc_shift_down_0_0 is
-  port (
-    pc_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pc_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_pipelined_pc_shift_down_0_0;
   component RV32I_pipelined_registers_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -352,6 +328,29 @@ architecture STRUCTURE of RV32I_pipelined is
     debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_pipelined_registers_0_0;
+  component RV32I_pipelined_alu_signals_0_0 is
+  port (
+    alu_output_33 : in STD_LOGIC_VECTOR ( 32 downto 0 );
+    alu_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    zero : out STD_LOGIC;
+    sign : out STD_LOGIC;
+    overflow : out STD_LOGIC
+  );
+  end component RV32I_pipelined_alu_signals_0_0;
+  component RV32I_pipelined_pc_shift_down_0_0 is
+  port (
+    pc_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    pc_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_pc_shift_down_0_0;
+  component RV32I_pipelined_program_counter_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    next_PC : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PC : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_program_counter_1_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
@@ -638,8 +637,7 @@ program_counter_1: component RV32I_pipelined_program_counter_1_0
       PC(31 downto 0) => program_counter_0_PC(31 downto 0),
       clk => clk_2,
       clk_en => clock_div_0_div_clk,
-      next_PC(31 downto 0) => pc_logic_0_PC_out(31 downto 0),
-      rst => '0'
+      next_PC(31 downto 0) => pc_logic_0_PC_out(31 downto 0)
     );
 registers_0: component RV32I_pipelined_registers_0_0
      port map (

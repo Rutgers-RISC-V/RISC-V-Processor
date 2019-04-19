@@ -34,7 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity program_counter is
     Port ( clk : in STD_LOGIC;
            clk_en : in STD_LOGIC;
-           rst: in STD_LOGIC;
+--           rst: in STD_LOGIC;
            next_PC : in STD_LOGIC_VECTOR (31 downto 0);
            PC : out STD_LOGIC_VECTOR (31 downto 0));
 end program_counter;
@@ -46,10 +46,11 @@ begin
     process(clk) 
     begin
         if (rising_edge(clk) and clk_en = '1') then
-            if(rst = '1') then
-                 pc_reg <= (others => '0');
-                 start_pc_count <= "10";
-            elsif(unsigned(start_pc_count) > 0) then
+--            if(rst = '1') then
+--                 pc_reg <= (others => '0');
+--                 start_pc_count <= "10";
+--            els
+            if(unsigned(start_pc_count) > 0) then
                 pc_reg <= std_logic_vector(unsigned(pc_reg) + 4);
                 start_pc_count <= std_logic_vector(unsigned(start_pc_count) - 1);
             else

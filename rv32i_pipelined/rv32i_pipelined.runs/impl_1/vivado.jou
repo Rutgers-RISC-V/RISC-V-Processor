@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Apr 18 15:56:51 2019
-# Process ID: 9960
-# Current directory: C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/impl_1
+# Start of session at: Thu Apr 18 23:52:38 2019
+# Process ID: 17176
+# Current directory: C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/impl_1
 # Command line: vivado.exe -log RV32I_pipelined_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RV32I_pipelined_wrapper.tcl -notrace
-# Log file: C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/impl_1/RV32I_pipelined_wrapper.vdi
-# Journal file: C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/impl_1\vivado.jou
+# Log file: C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/impl_1/RV32I_pipelined_wrapper.vdi
+# Journal file: C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source RV32I_pipelined_wrapper.tcl -notrace

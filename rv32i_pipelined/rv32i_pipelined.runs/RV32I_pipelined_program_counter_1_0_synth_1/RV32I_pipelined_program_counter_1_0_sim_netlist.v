@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Apr 16 11:06:45 2019
-// Host        : Nugget running 64-bit major release  (build 9200)
+// Date        : Thu Apr 18 23:49:05 2019
+// Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ RV32I_pipelined_program_counter_1_0_sim_netlist.v
 // Design      : RV32I_pipelined_program_counter_1_0
@@ -18,12 +18,10 @@
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (clk,
     clk_en,
-    rst,
     next_PC,
     PC);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
   input clk_en;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
   input [31:0]next_PC;
   output [31:0]PC;
 
@@ -31,33 +29,28 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire clk;
   wire clk_en;
   wire [31:0]next_PC;
-  wire rst;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter U0
        (.PC(PC),
         .clk(clk),
         .clk_en(clk_en),
-        .next_PC(next_PC),
-        .rst(rst));
+        .next_PC(next_PC));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
    (PC,
-    rst,
-    next_PC,
     clk_en,
-    clk);
+    clk,
+    next_PC);
   output [31:0]PC;
-  input rst;
-  input [31:0]next_PC;
   input clk_en;
   input clk;
+  input [31:0]next_PC;
 
   wire [31:0]PC;
   wire clk;
   wire clk_en;
   wire [31:0]next_PC;
-  wire pc_reg0;
   wire \pc_reg[0]_i_1_n_0 ;
   wire \pc_reg[12]_i_2_n_0 ;
   wire \pc_reg[12]_i_3_n_0 ;
@@ -79,9 +72,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
   wire \pc_reg[28]_i_3_n_0 ;
   wire \pc_reg[28]_i_4_n_0 ;
   wire \pc_reg[28]_i_5_n_0 ;
+  wire \pc_reg[31]_i_2_n_0 ;
   wire \pc_reg[31]_i_3_n_0 ;
   wire \pc_reg[31]_i_4_n_0 ;
-  wire \pc_reg[31]_i_5_n_0 ;
   wire \pc_reg[4]_i_2_n_0 ;
   wire \pc_reg[4]_i_3_n_0 ;
   wire \pc_reg[4]_i_4_n_0 ;
@@ -131,11 +124,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
   wire \pc_reg_reg[28]_i_1_n_5 ;
   wire \pc_reg_reg[28]_i_1_n_6 ;
   wire \pc_reg_reg[28]_i_1_n_7 ;
-  wire \pc_reg_reg[31]_i_2_n_2 ;
-  wire \pc_reg_reg[31]_i_2_n_3 ;
-  wire \pc_reg_reg[31]_i_2_n_5 ;
-  wire \pc_reg_reg[31]_i_2_n_6 ;
-  wire \pc_reg_reg[31]_i_2_n_7 ;
+  wire \pc_reg_reg[31]_i_1_n_2 ;
+  wire \pc_reg_reg[31]_i_1_n_3 ;
+  wire \pc_reg_reg[31]_i_1_n_5 ;
+  wire \pc_reg_reg[31]_i_1_n_6 ;
+  wire \pc_reg_reg[31]_i_1_n_7 ;
   wire \pc_reg_reg[4]_i_1_n_0 ;
   wire \pc_reg_reg[4]_i_1_n_1 ;
   wire \pc_reg_reg[4]_i_1_n_2 ;
@@ -152,21 +145,19 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
   wire \pc_reg_reg[8]_i_1_n_5 ;
   wire \pc_reg_reg[8]_i_1_n_6 ;
   wire \pc_reg_reg[8]_i_1_n_7 ;
-  wire rst;
   wire [1:0]start_pc_count;
   wire \start_pc_count[0]_i_1_n_0 ;
   wire \start_pc_count[1]_i_1_n_0 ;
-  wire [3:2]\NLW_pc_reg_reg[31]_i_2_CO_UNCONNECTED ;
-  wire [3:3]\NLW_pc_reg_reg[31]_i_2_O_UNCONNECTED ;
+  wire [3:2]\NLW_pc_reg_reg[31]_i_1_CO_UNCONNECTED ;
+  wire [3:3]\NLW_pc_reg_reg[31]_i_1_O_UNCONNECTED ;
 
-  LUT5 #(
-    .INIT(32'h44454440)) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
     \pc_reg[0]_i_1 
-       (.I0(rst),
-        .I1(PC[0]),
-        .I2(start_pc_count[1]),
-        .I3(start_pc_count[0]),
-        .I4(next_PC[0]),
+       (.I0(PC[0]),
+        .I1(start_pc_count[1]),
+        .I2(start_pc_count[0]),
+        .I3(next_PC[0]),
         .O(\pc_reg[0]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hABA8)) 
@@ -328,36 +319,30 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .I2(start_pc_count[0]),
         .I3(next_PC[25]),
         .O(\pc_reg[28]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \pc_reg[31]_i_1 
-       (.I0(clk_en),
-        .I1(rst),
-        .O(pc_reg0));
   LUT4 #(
     .INIT(16'hABA8)) 
-    \pc_reg[31]_i_3 
+    \pc_reg[31]_i_2 
        (.I0(PC[31]),
         .I1(start_pc_count[1]),
         .I2(start_pc_count[0]),
         .I3(next_PC[31]),
-        .O(\pc_reg[31]_i_3_n_0 ));
+        .O(\pc_reg[31]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hABA8)) 
-    \pc_reg[31]_i_4 
+    \pc_reg[31]_i_3 
        (.I0(PC[30]),
         .I1(start_pc_count[1]),
         .I2(start_pc_count[0]),
         .I3(next_PC[30]),
-        .O(\pc_reg[31]_i_4_n_0 ));
+        .O(\pc_reg[31]_i_3_n_0 ));
   LUT4 #(
     .INIT(16'hABA8)) 
-    \pc_reg[31]_i_5 
+    \pc_reg[31]_i_4 
        (.I0(PC[29]),
         .I1(start_pc_count[1]),
         .I2(start_pc_count[0]),
         .I3(next_PC[29]),
-        .O(\pc_reg[31]_i_5_n_0 ));
+        .O(\pc_reg[31]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'hABA8)) 
     \pc_reg[4]_i_2 
@@ -445,7 +430,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[12]_i_1_n_6 ),
         .Q(PC[10]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[11] 
@@ -453,7 +438,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[12]_i_1_n_5 ),
         .Q(PC[11]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[12] 
@@ -461,7 +446,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[12]_i_1_n_4 ),
         .Q(PC[12]),
-        .R(pc_reg0));
+        .R(1'b0));
   CARRY4 \pc_reg_reg[12]_i_1 
        (.CI(\pc_reg_reg[8]_i_1_n_0 ),
         .CO({\pc_reg_reg[12]_i_1_n_0 ,\pc_reg_reg[12]_i_1_n_1 ,\pc_reg_reg[12]_i_1_n_2 ,\pc_reg_reg[12]_i_1_n_3 }),
@@ -476,7 +461,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[16]_i_1_n_7 ),
         .Q(PC[13]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[14] 
@@ -484,7 +469,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[16]_i_1_n_6 ),
         .Q(PC[14]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[15] 
@@ -492,7 +477,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[16]_i_1_n_5 ),
         .Q(PC[15]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[16] 
@@ -500,7 +485,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[16]_i_1_n_4 ),
         .Q(PC[16]),
-        .R(pc_reg0));
+        .R(1'b0));
   CARRY4 \pc_reg_reg[16]_i_1 
        (.CI(\pc_reg_reg[12]_i_1_n_0 ),
         .CO({\pc_reg_reg[16]_i_1_n_0 ,\pc_reg_reg[16]_i_1_n_1 ,\pc_reg_reg[16]_i_1_n_2 ,\pc_reg_reg[16]_i_1_n_3 }),
@@ -515,7 +500,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[20]_i_1_n_7 ),
         .Q(PC[17]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[18] 
@@ -523,7 +508,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[20]_i_1_n_6 ),
         .Q(PC[18]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[19] 
@@ -531,7 +516,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[20]_i_1_n_5 ),
         .Q(PC[19]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[1] 
@@ -539,7 +524,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[4]_i_1_n_7 ),
         .Q(PC[1]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[20] 
@@ -547,7 +532,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[20]_i_1_n_4 ),
         .Q(PC[20]),
-        .R(pc_reg0));
+        .R(1'b0));
   CARRY4 \pc_reg_reg[20]_i_1 
        (.CI(\pc_reg_reg[16]_i_1_n_0 ),
         .CO({\pc_reg_reg[20]_i_1_n_0 ,\pc_reg_reg[20]_i_1_n_1 ,\pc_reg_reg[20]_i_1_n_2 ,\pc_reg_reg[20]_i_1_n_3 }),
@@ -562,7 +547,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[24]_i_1_n_7 ),
         .Q(PC[21]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[22] 
@@ -570,7 +555,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[24]_i_1_n_6 ),
         .Q(PC[22]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[23] 
@@ -578,7 +563,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[24]_i_1_n_5 ),
         .Q(PC[23]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[24] 
@@ -586,7 +571,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[24]_i_1_n_4 ),
         .Q(PC[24]),
-        .R(pc_reg0));
+        .R(1'b0));
   CARRY4 \pc_reg_reg[24]_i_1 
        (.CI(\pc_reg_reg[20]_i_1_n_0 ),
         .CO({\pc_reg_reg[24]_i_1_n_0 ,\pc_reg_reg[24]_i_1_n_1 ,\pc_reg_reg[24]_i_1_n_2 ,\pc_reg_reg[24]_i_1_n_3 }),
@@ -601,7 +586,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[28]_i_1_n_7 ),
         .Q(PC[25]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[26] 
@@ -609,7 +594,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[28]_i_1_n_6 ),
         .Q(PC[26]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[27] 
@@ -617,7 +602,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[28]_i_1_n_5 ),
         .Q(PC[27]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[28] 
@@ -625,7 +610,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[28]_i_1_n_4 ),
         .Q(PC[28]),
-        .R(pc_reg0));
+        .R(1'b0));
   CARRY4 \pc_reg_reg[28]_i_1 
        (.CI(\pc_reg_reg[24]_i_1_n_0 ),
         .CO({\pc_reg_reg[28]_i_1_n_0 ,\pc_reg_reg[28]_i_1_n_1 ,\pc_reg_reg[28]_i_1_n_2 ,\pc_reg_reg[28]_i_1_n_3 }),
@@ -638,9 +623,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
     \pc_reg_reg[29] 
        (.C(clk),
         .CE(clk_en),
-        .D(\pc_reg_reg[31]_i_2_n_7 ),
+        .D(\pc_reg_reg[31]_i_1_n_7 ),
         .Q(PC[29]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[2] 
@@ -648,30 +633,30 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[4]_i_1_n_6 ),
         .Q(PC[2]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[30] 
        (.C(clk),
         .CE(clk_en),
-        .D(\pc_reg_reg[31]_i_2_n_6 ),
+        .D(\pc_reg_reg[31]_i_1_n_6 ),
         .Q(PC[30]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[31] 
        (.C(clk),
         .CE(clk_en),
-        .D(\pc_reg_reg[31]_i_2_n_5 ),
+        .D(\pc_reg_reg[31]_i_1_n_5 ),
         .Q(PC[31]),
-        .R(pc_reg0));
-  CARRY4 \pc_reg_reg[31]_i_2 
+        .R(1'b0));
+  CARRY4 \pc_reg_reg[31]_i_1 
        (.CI(\pc_reg_reg[28]_i_1_n_0 ),
-        .CO({\NLW_pc_reg_reg[31]_i_2_CO_UNCONNECTED [3:2],\pc_reg_reg[31]_i_2_n_2 ,\pc_reg_reg[31]_i_2_n_3 }),
+        .CO({\NLW_pc_reg_reg[31]_i_1_CO_UNCONNECTED [3:2],\pc_reg_reg[31]_i_1_n_2 ,\pc_reg_reg[31]_i_1_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_pc_reg_reg[31]_i_2_O_UNCONNECTED [3],\pc_reg_reg[31]_i_2_n_5 ,\pc_reg_reg[31]_i_2_n_6 ,\pc_reg_reg[31]_i_2_n_7 }),
-        .S({1'b0,\pc_reg[31]_i_3_n_0 ,\pc_reg[31]_i_4_n_0 ,\pc_reg[31]_i_5_n_0 }));
+        .O({\NLW_pc_reg_reg[31]_i_1_O_UNCONNECTED [3],\pc_reg_reg[31]_i_1_n_5 ,\pc_reg_reg[31]_i_1_n_6 ,\pc_reg_reg[31]_i_1_n_7 }),
+        .S({1'b0,\pc_reg[31]_i_2_n_0 ,\pc_reg[31]_i_3_n_0 ,\pc_reg[31]_i_4_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[3] 
@@ -679,7 +664,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[4]_i_1_n_5 ),
         .Q(PC[3]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[4] 
@@ -687,7 +672,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[4]_i_1_n_4 ),
         .Q(PC[4]),
-        .R(pc_reg0));
+        .R(1'b0));
   CARRY4 \pc_reg_reg[4]_i_1 
        (.CI(1'b0),
         .CO({\pc_reg_reg[4]_i_1_n_0 ,\pc_reg_reg[4]_i_1_n_1 ,\pc_reg_reg[4]_i_1_n_2 ,\pc_reg_reg[4]_i_1_n_3 }),
@@ -702,7 +687,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[8]_i_1_n_7 ),
         .Q(PC[5]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[6] 
@@ -710,7 +695,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[8]_i_1_n_6 ),
         .Q(PC[6]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[7] 
@@ -718,7 +703,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[8]_i_1_n_5 ),
         .Q(PC[7]),
-        .R(pc_reg0));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg_reg[8] 
@@ -726,7 +711,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[8]_i_1_n_4 ),
         .Q(PC[8]),
-        .R(pc_reg0));
+        .R(1'b0));
   CARRY4 \pc_reg_reg[8]_i_1 
        (.CI(\pc_reg_reg[4]_i_1_n_0 ),
         .CO({\pc_reg_reg[8]_i_1_n_0 ,\pc_reg_reg[8]_i_1_n_1 ,\pc_reg_reg[8]_i_1_n_2 ,\pc_reg_reg[8]_i_1_n_3 }),
@@ -741,24 +726,22 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_program_counter
         .CE(clk_en),
         .D(\pc_reg_reg[12]_i_1_n_7 ),
         .Q(PC[9]),
-        .R(pc_reg0));
+        .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h04AA)) 
+  LUT3 #(
+    .INIT(8'h38)) 
     \start_pc_count[0]_i_1 
-       (.I0(start_pc_count[0]),
-        .I1(start_pc_count[1]),
-        .I2(rst),
-        .I3(clk_en),
+       (.I0(start_pc_count[1]),
+        .I1(clk_en),
+        .I2(start_pc_count[0]),
         .O(\start_pc_count[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'hF8AA)) 
+  LUT3 #(
+    .INIT(8'hD0)) 
     \start_pc_count[1]_i_1 
-       (.I0(start_pc_count[1]),
+       (.I0(clk_en),
         .I1(start_pc_count[0]),
-        .I2(rst),
-        .I3(clk_en),
+        .I2(start_pc_count[1]),
         .O(\start_pc_count[1]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 18 15:51:05 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 18 23:47:09 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1302,7 +1302,6 @@
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
             <CONNECTION INSTANCE="hazard_count_0" PORT="clk"/>
-            <CONNECTION INSTANCE="program_counter_1" PORT="clk"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_EM_0" PORT="clk"/>
             <CONNECTION INSTANCE="stage_FD_0" PORT="clk"/>
@@ -1314,6 +1313,7 @@
             <CONNECTION INSTANCE="terminal_tld_0" PORT="clk"/>
             <CONNECTION INSTANCE="input_handler_0" PORT="clk"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -1347,13 +1347,13 @@
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="ena"/>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="enb"/>
             <CONNECTION INSTANCE="hazard_count_0" PORT="clk_en"/>
-            <CONNECTION INSTANCE="program_counter_1" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_DE_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_EM_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_FD_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="stage_MW_0" PORT="clk_en"/>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="ena"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk_en"/>
+            <CONNECTION INSTANCE="program_counter_1" PORT="clk_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1814,7 +1814,6 @@
             <CONNECTION INSTANCE="clock_div_0" PORT="div_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" SIGIS="rst"/>
         <PORT DIR="I" LEFT="31" NAME="next_PC" RIGHT="0" SIGIS="undef" SIGNAME="pc_logic_0_PC_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pc_logic_0" PORT="PC_out"/>

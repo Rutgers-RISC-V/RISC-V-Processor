@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555617078">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555645675">
   <File Type="PA-TCL" Name="RV32I_pipelined_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="RV32I_pipelined_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="RV32I_pipelined_wrapper_reports.tcl"/>
@@ -324,14 +324,18 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/inputtest.coe">
+    <File Path="$PSRCDIR/sources_1/imports/Dumps/inputtest.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/inputtest.coe"/>
+        <Attr Name="ImportTime" Val="1555644443"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/inputtest2.coe">
+    <File Path="$PSRCDIR/sources_1/imports/Dumps/inputtest2.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/inputtest2.coe"/>
+        <Attr Name="ImportTime" Val="1555644489"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -377,7 +381,6 @@
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_mux_reg_descr_alu_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_ALU_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_hazard_count_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_program_counter_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_pc_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_stage_MW_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_terminal_tld_0_0"/>
@@ -391,7 +394,8 @@
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_post_memory_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_blk_mem_gen_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_pre_memory_logic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_alu_signals_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_registers_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_alu_signals_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_program_counter_1_0"/>
 </GenRun>
