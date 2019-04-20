@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Apr 19 00:14:08 2019
+| Date             : Sat Apr 20 14:02:26 2019
 | Host             : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file RV32I_pipelined_wrapper_power_routed.rpt -pb RV32I_pipelined_wrapper_power_summary_routed.pb -rpx RV32I_pipelined_wrapper_power_routed.rpx
 | Design           : RV32I_pipelined_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.219        |
+| Total On-Chip Power (W)  | 0.225        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.125        |
-| Device Static (W)        | 0.095        |
+| Dynamic (W)              | 0.129        |
+| Device Static (W)        | 0.096        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 82.5         |
-| Junction Temperature (C) | 27.5         |
+| Max Ambient (C)          | 82.4         |
+| Junction Temperature (C) | 27.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.004 |        8 |       --- |             --- |
-| Slice Logic    |     0.004 |     4748 |       --- |             --- |
-|   LUT as Logic |     0.003 |     2251 |     17600 |           12.79 |
+| Slice Logic    |     0.005 |     5085 |       --- |             --- |
+|   LUT as Logic |     0.004 |     2429 |     17600 |           13.80 |
 |   CARRY4       |    <0.001 |      165 |      4400 |            3.75 |
-|   Register     |    <0.001 |     1690 |     35200 |            4.80 |
-|   F7/F8 Muxes  |    <0.001 |      257 |     17600 |            1.46 |
-|   Others       |     0.000 |       56 |       --- |             --- |
-| Signals        |     0.005 |     4025 |       --- |             --- |
-| Block RAM      |     0.006 |      5.5 |        60 |            9.17 |
+|   Register     |    <0.001 |     1705 |     35200 |            4.84 |
+|   F7/F8 Muxes  |    <0.001 |      321 |     17600 |            1.82 |
+|   Others       |     0.000 |      132 |       --- |             --- |
+| Signals        |     0.008 |     4594 |       --- |             --- |
+| Block RAM      |     0.005 |     33.5 |        60 |           55.83 |
 | MMCM           |     0.106 |        1 |         2 |           50.00 |
 | I/O            |    <0.001 |       31 |       100 |           31.00 |
-| Static Power   |     0.095 |          |           |                 |
-| Total          |     0.219 |          |           |                 |
+| Static Power   |     0.096 |          |           |                 |
+| Total          |     0.225 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.022 |       0.018 |      0.004 |
+| Vccint    |       1.000 |     0.027 |       0.022 |      0.005 |
 | Vccaux    |       1.800 |     0.064 |       0.059 |      0.005 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +83,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.002 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -155,22 +155,22 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| RV32I_pipelined_wrapper |     0.125 |
-|   RV32I_pipelined_i     |     0.124 |
-|     ALU_0               |     0.002 |
+| RV32I_pipelined_wrapper |     0.129 |
+|   RV32I_pipelined_i     |     0.128 |
+|     ALU_0               |     0.003 |
 |       U0                |     0.002 |
-|     blk_mem_gen_0       |     0.004 |
-|       U0                |     0.004 |
+|     blk_mem_gen_0       |     0.005 |
+|       U0                |     0.005 |
 |     blk_mem_gen_1       |     0.001 |
 |       U0                |     0.001 |
 |     clk_wiz_0           |     0.106 |
 |       inst              |     0.106 |
 |     input_handler_0     |     0.001 |
 |       U0                |     0.001 |
-|     instruction_clear_0 |     0.001 |
-|       U0                |     0.001 |
-|     registers_0         |     0.003 |
-|       U0                |     0.003 |
+|     instruction_clear_0 |     0.002 |
+|       U0                |     0.002 |
+|     registers_0         |     0.004 |
+|       U0                |     0.004 |
 +-------------------------+-----------+
 
 

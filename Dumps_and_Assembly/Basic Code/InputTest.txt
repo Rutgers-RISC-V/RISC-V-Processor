@@ -1,7 +1,7 @@
 # This program draws the value of buttons 0 through 3 and switches 4 through 7 to the terminal.
 
 #Setup
-li x6 16384 	#load base address of terminal into a register.
+li x6 32768 	#load base address of terminal into a register.
 
 #Drawing Graphics
 

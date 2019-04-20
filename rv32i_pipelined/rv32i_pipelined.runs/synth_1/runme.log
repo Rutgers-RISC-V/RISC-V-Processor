@@ -12,81 +12,81 @@ source RV32I_pipelined_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:01:34 . Memory (MB): peak = 317.426 ; gain = 64.996
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:01:18 . Memory (MB): peak = 317.832 ; gain = 64.543
 Command: synth_design -top RV32I_pipelined_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11240 
+INFO: Helper process launched with PID 20272 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 438.227 ; gain = 107.148
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 437.859 ; gain = 106.438
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_wrapper' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd:28]
 INFO: [Synth 8-3491] module 'RV32I_pipelined' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:14' bound to instance 'RV32I_pipelined_i' of component 'RV32I_pipelined' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd:43]
 INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:32]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_ALU_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_ALU_0_0_stub.vhdl:5' bound to instance 'ALU_0' of component 'RV32I_pipelined_ALU_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:453]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_ALU_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_ALU_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_Descrambler_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_Descrambler_0_0_stub.vhdl:5' bound to instance 'Descrambler_0' of component 'RV32I_pipelined_Descrambler_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:460]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_Descrambler_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_Descrambler_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_RV32I_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_RV32I_0_0_stub.vhdl:5' bound to instance 'RV32I_0' of component 'RV32I_pipelined_RV32I_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:465]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_RV32I_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_RV32I_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_alu_signals_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_alu_signals_0_0_stub.vhdl:5' bound to instance 'alu_signals_0' of component 'RV32I_pipelined_alu_signals_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:478]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_alu_signals_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_alu_signals_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_blk_mem_gen_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'RV32I_pipelined_blk_mem_gen_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:486]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_blk_mem_gen_1_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_blk_mem_gen_1_0_stub.vhdl:5' bound to instance 'blk_mem_gen_1' of component 'RV32I_pipelined_blk_mem_gen_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:501]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_blk_mem_gen_1_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_brach_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_brach_logic_0_0_stub.vhdl:5' bound to instance 'brach_logic_0' of component 'RV32I_pipelined_brach_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:516]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_brach_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_brach_logic_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_clk_wiz_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'RV32I_pipelined_clk_wiz_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:525]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clk_wiz_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clk_wiz_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_clock_div_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clock_div_0_0_stub.vhdl:5' bound to instance 'clock_div_0' of component 'RV32I_pipelined_clock_div_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:531]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clock_div_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clock_div_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_clock_div_1_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clock_div_1_0_stub.vhdl:5' bound to instance 'clock_div_1' of component 'RV32I_pipelined_clock_div_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:537]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clock_div_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clock_div_1_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_hazard_count_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_hazard_count_0_0_stub.vhdl:5' bound to instance 'hazard_count_0' of component 'RV32I_pipelined_hazard_count_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:543]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_hazard_count_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_hazard_count_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_hazard_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_hazard_logic_0_0_stub.vhdl:5' bound to instance 'hazard_logic_0' of component 'RV32I_pipelined_hazard_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:551]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_hazard_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_hazard_logic_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_input_handler_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_input_handler_0_0_stub.vhdl:5' bound to instance 'input_handler_0' of component 'RV32I_pipelined_input_handler_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:560]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_input_handler_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_input_handler_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_instruction_clear_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_instruction_clear_0_0_stub.vhdl:5' bound to instance 'instruction_clear_0' of component 'RV32I_pipelined_instruction_clear_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:567]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_instruction_clear_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_instruction_clear_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_output_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_output_0_0_stub.vhdl:5' bound to instance 'mux_output_0' of component 'RV32I_pipelined_mux_output_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:573]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_output_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_output_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_descr_alu_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_descr_alu_0_0_stub.vhdl:5' bound to instance 'mux_reg_descr_alu_0' of component 'RV32I_pipelined_mux_reg_descr_alu_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:580]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_descr_alu_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_descr_alu_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_pc_alu_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_pc_alu_0_0_stub.vhdl:5' bound to instance 'mux_reg_pc_alu_0' of component 'RV32I_pipelined_mux_reg_pc_alu_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:587]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_pc_alu_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_pc_alu_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_write_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_write_0_0_stub.vhdl:5' bound to instance 'mux_reg_write_0' of component 'RV32I_pipelined_mux_reg_write_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:594]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_write_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_write_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_pc_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pc_logic_0_0_stub.vhdl:5' bound to instance 'pc_logic_0' of component 'RV32I_pipelined_pc_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:602]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pc_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pc_logic_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_pc_shift_down_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pc_shift_down_0_0_stub.vhdl:5' bound to instance 'pc_shift_down_0' of component 'RV32I_pipelined_pc_shift_down_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:612]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pc_shift_down_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pc_shift_down_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_post_memory_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl:5' bound to instance 'post_memory_logic_0' of component 'RV32I_pipelined_post_memory_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:617]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_post_memory_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_pre_memory_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pre_memory_logic_0_0_stub.vhdl:5' bound to instance 'pre_memory_logic_0' of component 'RV32I_pipelined_pre_memory_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:625]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pre_memory_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pre_memory_logic_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_program_counter_1_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_program_counter_1_0_stub.vhdl:5' bound to instance 'program_counter_1' of component 'RV32I_pipelined_program_counter_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:635]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_program_counter_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_program_counter_1_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_registers_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_registers_0_0_stub.vhdl:5' bound to instance 'registers_0' of component 'RV32I_pipelined_registers_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:642]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_registers_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_registers_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_DE_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_DE_0_0_stub.vhdl:5' bound to instance 'stage_DE_0' of component 'RV32I_pipelined_stage_DE_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:656]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_DE_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_DE_0_0_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_EM_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_EM_0_0_stub.vhdl:5' bound to instance 'stage_EM_0' of component 'RV32I_pipelined_stage_EM_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:689]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_EM_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_EM_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_FD_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_FD_0_0_stub.vhdl:5' bound to instance 'stage_FD_0' of component 'RV32I_pipelined_stage_FD_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:706]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_FD_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_FD_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_MW_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_MW_0_0_stub.vhdl:5' bound to instance 'stage_MW_0' of component 'RV32I_pipelined_stage_MW_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:716]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_MW_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_MW_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'RV32I_pipelined_terminal_tld_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_terminal_tld_0_0_stub.vhdl:5' bound to instance 'terminal_tld_0' of component 'RV32I_pipelined_terminal_tld_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:733]
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_terminal_tld_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-9448-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_terminal_tld_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_ALU_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_ALU_0_0_stub.vhdl:5' bound to instance 'ALU_0' of component 'RV32I_pipelined_ALU_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:453]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_ALU_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_ALU_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_Descrambler_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_Descrambler_0_0_stub.vhdl:5' bound to instance 'Descrambler_0' of component 'RV32I_pipelined_Descrambler_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:460]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_Descrambler_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_Descrambler_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_RV32I_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_RV32I_0_0_stub.vhdl:5' bound to instance 'RV32I_0' of component 'RV32I_pipelined_RV32I_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:465]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_RV32I_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_RV32I_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_alu_signals_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_alu_signals_0_0_stub.vhdl:5' bound to instance 'alu_signals_0' of component 'RV32I_pipelined_alu_signals_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:478]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_alu_signals_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_alu_signals_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_blk_mem_gen_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'RV32I_pipelined_blk_mem_gen_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:486]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_blk_mem_gen_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_blk_mem_gen_1_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_blk_mem_gen_1_0_stub.vhdl:5' bound to instance 'blk_mem_gen_1' of component 'RV32I_pipelined_blk_mem_gen_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:501]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_blk_mem_gen_1_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_brach_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_brach_logic_0_0_stub.vhdl:5' bound to instance 'brach_logic_0' of component 'RV32I_pipelined_brach_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:516]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_brach_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_brach_logic_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_clk_wiz_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'RV32I_pipelined_clk_wiz_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:525]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clk_wiz_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clk_wiz_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_clock_div_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clock_div_0_0_stub.vhdl:5' bound to instance 'clock_div_0' of component 'RV32I_pipelined_clock_div_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:531]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clock_div_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clock_div_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_clock_div_1_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clock_div_1_0_stub.vhdl:5' bound to instance 'clock_div_1' of component 'RV32I_pipelined_clock_div_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:537]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_clock_div_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_clock_div_1_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_hazard_count_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_hazard_count_0_0_stub.vhdl:5' bound to instance 'hazard_count_0' of component 'RV32I_pipelined_hazard_count_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:543]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_hazard_count_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_hazard_count_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_hazard_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_hazard_logic_0_0_stub.vhdl:5' bound to instance 'hazard_logic_0' of component 'RV32I_pipelined_hazard_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:551]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_hazard_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_hazard_logic_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_input_handler_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_input_handler_0_0_stub.vhdl:5' bound to instance 'input_handler_0' of component 'RV32I_pipelined_input_handler_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:560]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_input_handler_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_input_handler_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_instruction_clear_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_instruction_clear_0_0_stub.vhdl:5' bound to instance 'instruction_clear_0' of component 'RV32I_pipelined_instruction_clear_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:567]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_instruction_clear_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_instruction_clear_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_output_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_output_0_0_stub.vhdl:5' bound to instance 'mux_output_0' of component 'RV32I_pipelined_mux_output_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:573]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_output_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_output_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_descr_alu_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_descr_alu_0_0_stub.vhdl:5' bound to instance 'mux_reg_descr_alu_0' of component 'RV32I_pipelined_mux_reg_descr_alu_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:580]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_descr_alu_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_descr_alu_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_pc_alu_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_pc_alu_0_0_stub.vhdl:5' bound to instance 'mux_reg_pc_alu_0' of component 'RV32I_pipelined_mux_reg_pc_alu_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:587]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_pc_alu_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_pc_alu_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_mux_reg_write_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_write_0_0_stub.vhdl:5' bound to instance 'mux_reg_write_0' of component 'RV32I_pipelined_mux_reg_write_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:594]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_mux_reg_write_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_mux_reg_write_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_pc_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pc_logic_0_0_stub.vhdl:5' bound to instance 'pc_logic_0' of component 'RV32I_pipelined_pc_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:602]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pc_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pc_logic_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_pc_shift_down_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pc_shift_down_0_0_stub.vhdl:5' bound to instance 'pc_shift_down_0' of component 'RV32I_pipelined_pc_shift_down_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:612]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pc_shift_down_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pc_shift_down_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_post_memory_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl:5' bound to instance 'post_memory_logic_0' of component 'RV32I_pipelined_post_memory_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:617]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_post_memory_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_post_memory_logic_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_pre_memory_logic_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pre_memory_logic_0_0_stub.vhdl:5' bound to instance 'pre_memory_logic_0' of component 'RV32I_pipelined_pre_memory_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:625]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_pre_memory_logic_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_pre_memory_logic_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_program_counter_1_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_program_counter_1_0_stub.vhdl:5' bound to instance 'program_counter_1' of component 'RV32I_pipelined_program_counter_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:635]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_program_counter_1_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_program_counter_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_registers_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_registers_0_0_stub.vhdl:5' bound to instance 'registers_0' of component 'RV32I_pipelined_registers_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:642]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_registers_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_registers_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_DE_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_DE_0_0_stub.vhdl:5' bound to instance 'stage_DE_0' of component 'RV32I_pipelined_stage_DE_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:656]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_DE_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_DE_0_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_EM_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_EM_0_0_stub.vhdl:5' bound to instance 'stage_EM_0' of component 'RV32I_pipelined_stage_EM_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:689]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_EM_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_EM_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_FD_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_FD_0_0_stub.vhdl:5' bound to instance 'stage_FD_0' of component 'RV32I_pipelined_stage_FD_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:706]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_FD_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_FD_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_stage_MW_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_MW_0_0_stub.vhdl:5' bound to instance 'stage_MW_0' of component 'RV32I_pipelined_stage_MW_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:716]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_stage_MW_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_stage_MW_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'RV32I_pipelined_terminal_tld_0_0' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_terminal_tld_0_0_stub.vhdl:5' bound to instance 'terminal_tld_0' of component 'RV32I_pipelined_terminal_tld_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:733]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_terminal_tld_0_0' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/.Xil/Vivado-23296-Oz-Bejerano-Laptop/realtime/RV32I_pipelined_terminal_tld_0_0_stub.vhdl:20]
 INFO: [Synth 8-256] done synthesizing module 'RV32I_pipelined' (1#1) [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/synth/RV32I_pipelined.vhd:32]
 INFO: [Synth 8-256] done synthesizing module 'RV32I_pipelined_wrapper' (2#1) [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd:28]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 495.301 ; gain = 164.223
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 496.168 ; gain = 164.746
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -99,10 +99,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 495.301 ; gain = 164.223
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 496.168 ; gain = 164.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 495.301 ; gain = 164.223
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 496.168 ; gain = 164.746
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -173,24 +173,24 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/RV32I_pipelined_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 818.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 817.922 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 818.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 817.922 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 818.883 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 818.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 817.922 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 817.922 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 818.883 ; gain = 487.805
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 818.883 ; gain = 487.805
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -228,10 +228,10 @@ Applied set_property DONT_TOUCH = true for RV32I_pipelined_i/clock_div_1. (const
 Applied set_property DONT_TOUCH = true for RV32I_pipelined_i/terminal_tld_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for RV32I_pipelined_i/input_handler_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 818.883 ; gain = 487.805
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 818.883 ; gain = 487.805
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -267,7 +267,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 818.883 ; gain = 487.805
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -281,13 +281,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'RV32I_pipelined_i/clk_wiz_0/clk_out1' to pin 'RV32I_pipelined_i/clk_wiz_0/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 818.883 ; gain = 487.805
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 818.883 ; gain = 487.805
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -299,7 +299,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 822.094 ; gain = 491.016
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -323,7 +323,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 822.094 ; gain = 491.016
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -336,7 +336,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 822.094 ; gain = 491.016
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -348,25 +348,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 822.094 ; gain = 491.016
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 822.094 ; gain = 491.016
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 822.094 ; gain = 491.016
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 822.094 ; gain = 491.016
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -452,25 +452,25 @@ Report Instance Areas:
 |2     |  RV32I_pipelined_i |RV32I_pipelined |  1167|
 +------+--------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 822.094 ; gain = 491.016
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 817.922 ; gain = 486.500
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 822.094 ; gain = 167.434
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 822.094 ; gain = 491.016
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 817.922 ; gain = 164.746
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 817.922 ; gain = 486.500
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 833.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 822.273 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 78 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 833.328 ; gain = 515.746
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 833.328 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 822.336 ; gain = 504.414
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 822.336 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/synth_1/RV32I_pipelined_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file RV32I_pipelined_wrapper_utilization_synth.rpt -pb RV32I_pipelined_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 00:11:05 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 20 13:59:27 2019...

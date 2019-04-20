@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Apr 19 00:07:43 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Apr 20 13:54:04 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -231,9 +231,9 @@
         <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="32"/>
         <PARAMETER NAME="C_READ_WIDTH_A" VALUE="32"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="4096"/>
-        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="4096"/>
-        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="32768"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="32768"/>
+        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="15"/>
         <PARAMETER NAME="C_HAS_RSTB" VALUE="0"/>
         <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
         <PARAMETER NAME="C_RSTRAM_B" VALUE="0"/>
@@ -245,9 +245,9 @@
         <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="32"/>
         <PARAMETER NAME="C_READ_WIDTH_B" VALUE="32"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="4096"/>
-        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="4096"/>
-        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="32768"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="32768"/>
+        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="15"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_A" VALUE="0"/>
@@ -272,7 +272,7 @@
         <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="0"/>
         <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
-        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="4"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="32"/>
         <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
         <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     20.388 mW"/>
         <PARAMETER NAME="Component_Name" VALUE="RV32I_pipelined_blk_mem_gen_0_0"/>
@@ -301,7 +301,7 @@
         <PARAMETER NAME="Primitive" VALUE="8kx2"/>
         <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
         <PARAMETER NAME="Write_Width_A" VALUE="32"/>
-        <PARAMETER NAME="Write_Depth_A" VALUE="4096"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="32768"/>
         <PARAMETER NAME="Read_Width_A" VALUE="32"/>
         <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_A" VALUE="Use_ENA_Pin"/>
@@ -319,7 +319,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/inputtest2.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/InputTest.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="true"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -361,7 +361,7 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="wea" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="11" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="pc_shift_down_0_pc_out">
+        <PORT DIR="I" LEFT="14" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="pc_shift_down_0_pc_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pc_shift_down_0" PORT="pc_out"/>
           </CONNECTIONS>
@@ -387,7 +387,7 @@
             <CONNECTION INSTANCE="pre_memory_logic_0" PORT="byte_enable_gen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="pre_memory_logic_0_addr1_out">
+        <PORT DIR="I" LEFT="14" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="pre_memory_logic_0_addr1_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pre_memory_logic_0" PORT="addr1_out"/>
           </CONNECTIONS>

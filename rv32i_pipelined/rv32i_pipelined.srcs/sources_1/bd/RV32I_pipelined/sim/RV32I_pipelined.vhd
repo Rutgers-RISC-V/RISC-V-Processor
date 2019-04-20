@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Fri Apr 19 00:07:42 2019
+--Date        : Sat Apr 20 13:54:02 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -49,13 +49,13 @@ architecture STRUCTURE of RV32I_pipelined is
     clka : in STD_LOGIC;
     ena : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 14 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clkb : in STD_LOGIC;
     enb : in STD_LOGIC;
     web : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 14 downto 0 );
     dinb : in STD_LOGIC_VECTOR ( 31 downto 0 );
     doutb : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
@@ -281,17 +281,6 @@ architecture STRUCTURE of RV32I_pipelined is
     div_clk : out STD_LOGIC
   );
   end component RV32I_pipelined_clock_div_1_0;
-  component RV32I_pipelined_pre_memory_logic_0_0 is
-  port (
-    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addr1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    addr1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    data1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    data1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    byte_enable_gen : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    byte_enable_term : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component RV32I_pipelined_pre_memory_logic_0_0;
   component RV32I_pipelined_terminal_tld_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -351,6 +340,17 @@ architecture STRUCTURE of RV32I_pipelined is
     debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_pipelined_registers_0_0;
+  component RV32I_pipelined_pre_memory_logic_0_0 is
+  port (
+    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addr1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    addr1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    data1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    data1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    byte_enable_gen : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    byte_enable_term : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_pre_memory_logic_0_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
@@ -485,8 +485,8 @@ alu_signals_0: component RV32I_pipelined_alu_signals_0_0
     );
 blk_mem_gen_0: component RV32I_pipelined_blk_mem_gen_0_0
      port map (
-      addra(11 downto 0) => pc_shift_down_0_pc_out(11 downto 0),
-      addrb(11 downto 0) => pre_memory_logic_0_addr1_out(11 downto 0),
+      addra(14 downto 0) => pc_shift_down_0_pc_out(14 downto 0),
+      addrb(14 downto 0) => pre_memory_logic_0_addr1_out(14 downto 0),
       clka => clk_2,
       clkb => clk_2,
       dina(31 downto 0) => B"00000000000000000000000000001000",

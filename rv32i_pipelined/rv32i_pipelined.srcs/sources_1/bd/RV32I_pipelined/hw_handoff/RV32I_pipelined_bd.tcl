@@ -225,7 +225,7 @@ proc create_root_design { parentCell } {
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
   set_property -dict [ list \
    CONFIG.Byte_Size {8} \
-   CONFIG.Coe_File {../../../../../../../Dumps_and_Assembly/Dumps/inputtest2.coe} \
+   CONFIG.Coe_File {../../../../../../../Dumps_and_Assembly/Dumps/InputTest.coe} \
    CONFIG.EN_SAFETY_CKT {false} \
    CONFIG.Enable_32bit_Address {false} \
    CONFIG.Enable_A {Use_ENA_Pin} \
@@ -242,7 +242,7 @@ proc create_root_design { parentCell } {
    CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
    CONFIG.Use_Byte_Write_Enable {true} \
    CONFIG.Use_RSTA_Pin {false} \
-   CONFIG.Write_Depth_A {4096} \
+   CONFIG.Write_Depth_A {32768} \
    CONFIG.Write_Width_A {32} \
    CONFIG.Write_Width_B {32} \
    CONFIG.use_bram_block {Stand_Alone} \
