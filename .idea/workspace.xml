@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/gui_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/java_command_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rv32i_pipelined/rv32i_pipelined.cache/wt/webtalk_pa.xml" afterDir="false" />
-    </list>
+    <list default="true" id="885f91e5-e2b9-425b-a739-18c58d22959e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,74 +11,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/addTest.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="12" selection-end-column="7" />
+        <entry file="file://$PROJECT_DIR$/RV32I_controls.csv">
+          <provider editor-type-id="csv-text-editor">
+            <state relative-caret-position="440">
+              <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/TestDebugLeds.s">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Unused/testinput.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/InputTest.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+          <provider selected="true" editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
+              <column index="0" width="100" />
+              <column index="1" width="100" />
+              <column index="2" width="100" />
+              <column index="3" width="100" />
+              <column index="4" width="100" />
+              <column index="5" width="100" />
+              <column index="6" width="100" />
+              <column index="7" width="100" />
+              <column index="8" width="100" />
+              <column index="9" width="100" />
+              <column index="10" width="100" />
+              <column index="11" width="100" />
+              <column index="12" width="100" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminalDemo_2019_Wide_NoDelay.s">
+        <entry file="file://$PROJECT_DIR$/controller_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.hex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/InputTest.hex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2180">
-              <caret line="109" selection-start-line="109" selection-end-line="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/InputTest.coe">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="509">
+              <caret line="167" selection-start-line="167" selection-end-line="167" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,6 +55,47 @@
               <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_NoDelay.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Basic Code/terminal_test_for_simulator.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.hex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5880">
+              <caret line="294" column="9" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Terminal_Demos/RISC-V/Draw_2019/terminalDemo_2019_Wide_Delay.s">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -202,6 +204,58 @@
               <item name="Dumps_and_Assembly" type="462c0819:PsiDirectoryNode" />
               <item name="Dumps" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined.srcs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined.srcs" type="462c0819:PsiDirectoryNode" />
+              <item name="sources_1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined.srcs" type="462c0819:PsiDirectoryNode" />
+              <item name="sources_1" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined" type="462c0819:PsiDirectoryNode" />
+              <item name="rv32i_pipelined.srcs" type="462c0819:PsiDirectoryNode" />
+              <item name="sources_1" type="462c0819:PsiDirectoryNode" />
+              <item name="new" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="Terminal_Demos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="Terminal_Demos" type="462c0819:PsiDirectoryNode" />
+              <item name="RISC-V" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RISC-V-Processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RISC-V-Processor" type="462c0819:PsiDirectoryNode" />
+              <item name="Terminal_Demos" type="462c0819:PsiDirectoryNode" />
+              <item name="RISC-V" type="462c0819:PsiDirectoryNode" />
+              <item name="Draw_2019" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -214,14 +268,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Dumps_and_Assembly/Basic Code" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor\Dumps_and_Assembly\Basic Code" />
+      <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor\Unused Code and Files" />
       <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor" />
       <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor\old_controller_gen" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor\Dumps_and_Assembly\Basic Code" />
-      <recent name="C:\Users\Oz Bejerano\PycharmProjects\RISC-V-Processor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -594,19 +648,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5552618" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.5552618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32218507" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32218507" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40315315" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4994618" weight="0.3277592" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.4994618" visible="true" weight="0.3277592" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32995495" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32995495" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053823" side_tool="true" weight="0.32995495" />
@@ -712,9 +765,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTestDump_Binary.bin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTestDump_Binary.bin" />
     <entry file="file://$PROJECT_DIR$/Unused/old_controller_gen/RV32I_single_signals.csv">
       <provider editor-type-id="csv-text-editor">
         <state relative-caret-position="80">
@@ -765,9 +816,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.bin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.bin" />
     <entry file="file://$PROJECT_DIR$/Unused/old_controller_gen/old_RV32I_single_controls.csv">
       <provider editor-type-id="csv-text-editor">
         <state relative-caret-position="160">
@@ -845,9 +894,7 @@
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_2.hex" />
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/hex2bin.py" />
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/test_2.coe" />
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.bin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.bin" />
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/addTest_Dump.hex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -864,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller_gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3340">
-          <caret line="168" selection-start-line="168" selection-end-line="169" selection-end-column="10" />
+        <state relative-caret-position="509">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -902,8 +949,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="5880">
+          <caret line="294" column="9" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1005,9 +1052,7 @@
     <entry file="file://$PROJECT_DIR$/Unused/testinput.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_text.coe">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/terminal_text.coe" />
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.hex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1015,9 +1060,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.txt" />
     <entry file="file://$PROJECT_DIR$/Dumps_and_Assembly/Dumps/InputTest.hex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2180">
