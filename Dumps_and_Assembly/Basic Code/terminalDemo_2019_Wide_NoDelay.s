@@ -1,5 +1,5 @@
 # This program draws the current year (2019) on the terminal
-li x6 4096 # load base address of terminal into a register.
+li x6 32768 # load base address of terminal into a register.
 
 li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
 

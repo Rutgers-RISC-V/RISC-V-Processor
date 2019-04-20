@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Wed Apr 10 10:15:29 2019
---Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
+--Date        : Sat Apr 20 13:54:02 2019
+--Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
 --Purpose     : IP block netlist
@@ -13,9 +13,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity RV32I_pipelined is
   port (
-    btn3 : in STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
     vga_hs : out STD_LOGIC;
@@ -48,13 +49,13 @@ architecture STRUCTURE of RV32I_pipelined is
     clka : in STD_LOGIC;
     ena : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 14 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clkb : in STD_LOGIC;
     enb : in STD_LOGIC;
     web : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 14 downto 0 );
     dinb : in STD_LOGIC_VECTOR ( 31 downto 0 );
     doutb : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
@@ -76,13 +77,6 @@ architecture STRUCTURE of RV32I_pipelined is
     locked : out STD_LOGIC
   );
   end component RV32I_pipelined_clk_wiz_0_0;
-  component RV32I_pipelined_debounce_0_0 is
-  port (
-    btn : in STD_LOGIC;
-    clk : in STD_LOGIC;
-    dbnc : out STD_LOGIC
-  );
-  end component RV32I_pipelined_debounce_0_0;
   component RV32I_pipelined_hazard_count_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -153,28 +147,6 @@ architecture STRUCTURE of RV32I_pipelined is
     PC_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_pc_logic_0_0;
-  component RV32I_pipelined_program_counter_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    next_PC : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    PC : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_pipelined_program_counter_1_0;
-  component RV32I_pipelined_registers_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clk_en : in STD_LOGIC;
-    instr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    instr2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_write_input : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    reg_2_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    wen : in STD_LOGIC;
-    debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component RV32I_pipelined_registers_0_0;
   component RV32I_pipelined_stage_DE_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -270,21 +242,6 @@ architecture STRUCTURE of RV32I_pipelined is
     control_mem_logic : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_pipelined_RV32I_0_0;
-  component RV32I_pipelined_alu_signals_0_0 is
-  port (
-    alu_output_33 : in STD_LOGIC_VECTOR ( 32 downto 0 );
-    alu_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    zero : out STD_LOGIC;
-    sign : out STD_LOGIC;
-    overflow : out STD_LOGIC
-  );
-  end component RV32I_pipelined_alu_signals_0_0;
-  component RV32I_pipelined_pc_shift_down_0_0 is
-  port (
-    pc_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pc_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component RV32I_pipelined_pc_shift_down_0_0;
   component RV32I_pipelined_blk_mem_gen_1_0 is
   port (
     clka : in STD_LOGIC;
@@ -324,17 +281,6 @@ architecture STRUCTURE of RV32I_pipelined is
     div_clk : out STD_LOGIC
   );
   end component RV32I_pipelined_clock_div_1_0;
-  component RV32I_pipelined_pre_memory_logic_0_0 is
-  port (
-    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    addr1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    addr1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    data1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    data1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    byte_enable_gen : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    byte_enable_term : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component RV32I_pipelined_pre_memory_logic_0_0;
   component RV32I_pipelined_terminal_tld_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -348,6 +294,63 @@ architecture STRUCTURE of RV32I_pipelined is
     vga_vs : out STD_LOGIC
   );
   end component RV32I_pipelined_terminal_tld_0_0;
+  component RV32I_pipelined_input_handler_0_0 is
+  port (
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clk : in STD_LOGIC;
+    input_regout : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component RV32I_pipelined_input_handler_0_0;
+  component RV32I_pipelined_alu_signals_0_0 is
+  port (
+    alu_output_33 : in STD_LOGIC_VECTOR ( 32 downto 0 );
+    alu_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    zero : out STD_LOGIC;
+    sign : out STD_LOGIC;
+    overflow : out STD_LOGIC
+  );
+  end component RV32I_pipelined_alu_signals_0_0;
+  component RV32I_pipelined_pc_shift_down_0_0 is
+  port (
+    pc_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    pc_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_pc_shift_down_0_0;
+  component RV32I_pipelined_program_counter_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    next_PC : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PC : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component RV32I_pipelined_program_counter_1_0;
+  component RV32I_pipelined_registers_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
+    instr1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    instr2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_write_input : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_2_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    wen : in STD_LOGIC;
+    vsync : in STD_LOGIC;
+    input_regout : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_registers_0_0;
+  component RV32I_pipelined_pre_memory_logic_0_0 is
+  port (
+    control_mem : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addr1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    addr1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    data1_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    data1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    byte_enable_gen : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    byte_enable_term : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component RV32I_pipelined_pre_memory_logic_0_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;
@@ -370,16 +373,16 @@ architecture STRUCTURE of RV32I_pipelined is
   signal blk_mem_gen_1_doutb : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal brach_logic_0_branch : STD_LOGIC;
   signal brach_logic_0_mux_next_pc : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal btn_0_1 : STD_LOGIC;
+  signal btn_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal clk_2 : STD_LOGIC;
   signal clk_in1_0_1 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
   signal clock_div_0_div_clk : STD_LOGIC;
   signal clock_div_1_div_clk : STD_LOGIC;
-  signal debounce_0_dbnc : STD_LOGIC;
   signal hazard_logic_0_hazard_stage : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal hazard_logic_0_new_hazard : STD_LOGIC;
   signal hazard_shift_counter_0_hazard : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal input_handler_0_input_regout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal mux_output_0_output_bus : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal mux_reg_descr_alu_0_alu_B : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal mux_reg_pc_alu_0_alu_A : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -421,6 +424,7 @@ architecture STRUCTURE of RV32I_pipelined is
   signal stage_MW_0_memory_access_out1_MW : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal stage_MW_0_mux_reg_write_MW : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal stage_MW_0_output_bus_MW : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal sw_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal terminal_tld_0_vga_b : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal terminal_tld_0_vga_g : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal terminal_tld_0_vga_hs : STD_LOGIC;
@@ -432,10 +436,15 @@ architecture STRUCTURE of RV32I_pipelined is
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN RV32I_pipelined_clk, FREQ_HZ 125000000, INSERT_VIP 0, PHASE 0.000";
+  attribute X_INTERFACE_INFO of btn : signal is "xilinx.com:signal:data:1.0 DATA.BTN DATA";
+  attribute X_INTERFACE_PARAMETER of btn : signal is "XIL_INTERFACENAME DATA.BTN, LAYERED_METADATA undef";
+  attribute X_INTERFACE_INFO of sw : signal is "xilinx.com:signal:data:1.0 DATA.SW DATA";
+  attribute X_INTERFACE_PARAMETER of sw : signal is "XIL_INTERFACENAME DATA.SW, LAYERED_METADATA undef";
 begin
-  btn_0_1 <= btn3;
+  btn_1(3 downto 0) <= btn(3 downto 0);
   clk_in1_0_1 <= clk;
   led(3 downto 0) <= registers_0_debug_leds(3 downto 0);
+  sw_1(3 downto 0) <= sw(3 downto 0);
   vga_b(4 downto 0) <= terminal_tld_0_vga_b(4 downto 0);
   vga_g(5 downto 0) <= terminal_tld_0_vga_g(5 downto 0);
   vga_hs <= terminal_tld_0_vga_hs;
@@ -476,8 +485,8 @@ alu_signals_0: component RV32I_pipelined_alu_signals_0_0
     );
 blk_mem_gen_0: component RV32I_pipelined_blk_mem_gen_0_0
      port map (
-      addra(11 downto 0) => pc_shift_down_0_pc_out(11 downto 0),
-      addrb(11 downto 0) => pre_memory_logic_0_addr1_out(11 downto 0),
+      addra(14 downto 0) => pc_shift_down_0_pc_out(14 downto 0),
+      addrb(14 downto 0) => pre_memory_logic_0_addr1_out(14 downto 0),
       clka => clk_2,
       clkb => clk_2,
       dina(31 downto 0) => B"00000000000000000000000000001000",
@@ -531,12 +540,6 @@ clock_div_1: component RV32I_pipelined_clock_div_1_0
       div_clk => clock_div_1_div_clk,
       locked => clk_wiz_0_locked
     );
-debounce_0: component RV32I_pipelined_debounce_0_0
-     port map (
-      btn => btn_0_1,
-      clk => clk_2,
-      dbnc => debounce_0_dbnc
-    );
 hazard_count_0: component RV32I_pipelined_hazard_count_0_0
      port map (
       clk => clk_2,
@@ -553,6 +556,13 @@ hazard_logic_0: component RV32I_pipelined_hazard_logic_0_0
       instr_f_d(31 downto 0) => blk_mem_gen_0_douta(31 downto 0),
       instr_m_w(31 downto 0) => stage_MW_0_instruction_MW(31 downto 0),
       new_hazard => hazard_logic_0_new_hazard
+    );
+input_handler_0: component RV32I_pipelined_input_handler_0_0
+     port map (
+      btn(3 downto 0) => btn_1(3 downto 0),
+      clk => clk_2,
+      input_regout(7 downto 0) => input_handler_0_input_regout(7 downto 0),
+      sw(3 downto 0) => sw_1(3 downto 0)
     );
 instruction_clear_0: component RV32I_pipelined_instruction_clear_0_0
      port map (
@@ -627,19 +637,20 @@ program_counter_1: component RV32I_pipelined_program_counter_1_0
       PC(31 downto 0) => program_counter_0_PC(31 downto 0),
       clk => clk_2,
       clk_en => clock_div_0_div_clk,
-      next_PC(31 downto 0) => pc_logic_0_PC_out(31 downto 0),
-      rst => debounce_0_dbnc
+      next_PC(31 downto 0) => pc_logic_0_PC_out(31 downto 0)
     );
 registers_0: component RV32I_pipelined_registers_0_0
      port map (
       clk => clk_2,
       clk_en => clock_div_0_div_clk,
       debug_leds(3 downto 0) => registers_0_debug_leds(3 downto 0),
+      input_regout(7 downto 0) => input_handler_0_input_regout(7 downto 0),
       instr1(31 downto 0) => blk_mem_gen_0_douta(31 downto 0),
       instr2(31 downto 0) => stage_MW_0_instruction_MW(31 downto 0),
       reg_1_out(31 downto 0) => registers_0_reg_1_out(31 downto 0),
       reg_2_out(31 downto 0) => registers_0_reg_2_out(31 downto 0),
       reg_write_input(31 downto 0) => mux_reg_write_0_reg_write_input(31 downto 0),
+      vsync => terminal_tld_0_vga_vs,
       wen => stage_MW_0_control_reg_writeenable_MW
     );
 stage_DE_0: component RV32I_pipelined_stage_DE_0_0

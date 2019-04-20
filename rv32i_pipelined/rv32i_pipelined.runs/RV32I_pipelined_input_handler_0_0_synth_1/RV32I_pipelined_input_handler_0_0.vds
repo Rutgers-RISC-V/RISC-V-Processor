@@ -1,0 +1,321 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Apr 18 15:26:57 2019
+# Process ID: 11812
+# Current directory: C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_input_handler_0_0_synth_1
+# Command line: vivado.exe -log RV32I_pipelined_input_handler_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RV32I_pipelined_input_handler_0_0.tcl
+# Log file: C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_input_handler_0_0_synth_1/RV32I_pipelined_input_handler_0_0.vds
+# Journal file: C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_input_handler_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source RV32I_pipelined_input_handler_0_0.tcl -notrace
+Command: synth_design -top RV32I_pipelined_input_handler_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12392 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 387.539 ; gain = 104.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_input_handler_0_0' [c:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_input_handler_0_0/synth/RV32I_pipelined_input_handler_0_0.vhd:65]
+	Parameter clkspd bound to: 25000000 - type: integer 
+	Parameter repeatdelay_ms bound to: 200 - type: integer 
+INFO: [Synth 8-3491] module 'input_handler' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:6' bound to instance 'U0' of component 'input_handler' [c:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_input_handler_0_0/synth/RV32I_pipelined_input_handler_0_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'input_handler' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:16]
+	Parameter clkspd bound to: 25000000 - type: integer 
+	Parameter repeatdelay_ms bound to: 200 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:25' bound to instance 'db0' of component 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:31]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:25' bound to instance 'db1' of component 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:38]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:25' bound to instance 'db2' of component 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:43]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:25' bound to instance 'db3' of component 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:48]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:25' bound to instance 'sw0' of component 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:54]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:25' bound to instance 'sw1' of component 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:59]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:25' bound to instance 'sw2' of component 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:64]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/debounce.vhd:25' bound to instance 'sw3' of component 'debounce' [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'input_handler' (2#1) [C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/new/input_handler.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'RV32I_pipelined_input_handler_0_0' (3#1) [c:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_input_handler_0_0/synth/RV32I_pipelined_input_handler_0_0.vhd:65]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 443.316 ; gain = 160.523
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 443.316 ; gain = 160.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 443.316 ; gain = 160.523
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 755.398 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 755.398 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 758.176 ; gain = 2.777
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 758.176 ; gain = 475.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 758.176 ; gain = 475.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 758.176 ; gain = 475.383
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "current_state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 758.176 ; gain = 475.383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 8     
++---Registers : 
+	               22 Bit    Registers := 8     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debounce 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "U0/db0/current_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U0/db1/current_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U0/db2/current_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U0/db3/current_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U0/sw0/current_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U0/sw1/current_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U0/sw2/current_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U0/sw3/current_state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 758.176 ; gain = 475.383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 769.664 ; gain = 486.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 769.961 ; gain = 487.168
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 782.551 ; gain = 499.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 782.551 ; gain = 499.758
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 782.551 ; gain = 499.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 782.551 ; gain = 499.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 782.551 ; gain = 499.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 782.551 ; gain = 499.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 782.551 ; gain = 499.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    48|
+|2     |LUT2   |   184|
+|3     |LUT3   |     8|
+|4     |LUT4   |    32|
+|5     |LUT5   |     8|
+|6     |LUT6   |     8|
+|7     |FDRE   |   184|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   472|
+|2     |  U0     |input_handler |   472|
+|3     |    db0  |debounce      |    59|
+|4     |    db1  |debounce_0    |    59|
+|5     |    db2  |debounce_1    |    59|
+|6     |    db3  |debounce_2    |    59|
+|7     |    sw0  |debounce_3    |    59|
+|8     |    sw1  |debounce_4    |    59|
+|9     |    sw2  |debounce_5    |    59|
+|10    |    sw3  |debounce_6    |    59|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 782.551 ; gain = 499.758
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 782.551 ; gain = 184.898
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 782.551 ; gain = 499.758
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 794.004 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:07 . Memory (MB): peak = 794.004 ; gain = 524.656
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 794.004 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_input_handler_0_0_synth_1/RV32I_pipelined_input_handler_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 794.004 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jonco/Desktop/Capstone/repo/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_input_handler_0_0_synth_1/RV32I_pipelined_input_handler_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RV32I_pipelined_input_handler_0_0_utilization_synth.rpt -pb RV32I_pipelined_input_handler_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 18 15:28:26 2019...

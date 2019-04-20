@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Apr 16 11:05:26 2019
+# Process ID: 19108
+# Current directory: C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_hazard_logic_0_0_synth_1
+# Command line: vivado.exe -log RV32I_pipelined_hazard_logic_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RV32I_pipelined_hazard_logic_0_0.tcl
+# Log file: C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_hazard_logic_0_0_synth_1/RV32I_pipelined_hazard_logic_0_0.vds
+# Journal file: C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_hazard_logic_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source RV32I_pipelined_hazard_logic_0_0.tcl -notrace

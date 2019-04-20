@@ -1,2 +1,0 @@
-control_line,description,size(number of bits),options
-pc_mux_controls, controls mux before pc, 2, [{00:pc},{01:general output},{10:pc+4},{11:jump}]

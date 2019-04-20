@@ -57,7 +57,6 @@ ENTITY RV32I_pipelined_program_counter_1_0 IS
   PORT (
     clk : IN STD_LOGIC;
     clk_en : IN STD_LOGIC;
-    rst : IN STD_LOGIC;
     next_PC : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
@@ -70,7 +69,6 @@ ARCHITECTURE RV32I_pipelined_program_counter_1_0_arch OF RV32I_pipelined_program
     PORT (
       clk : IN STD_LOGIC;
       clk_en : IN STD_LOGIC;
-      rst : IN STD_LOGIC;
       next_PC : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
@@ -79,16 +77,13 @@ ARCHITECTURE RV32I_pipelined_program_counter_1_0_arch OF RV32I_pipelined_program
   ATTRIBUTE IP_DEFINITION_SOURCE OF RV32I_pipelined_program_counter_1_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF rst: SIGNAL IS "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF rst: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : program_counter
     PORT MAP (
       clk => clk,
       clk_en => clk_en,
-      rst => rst,
       next_PC => next_PC,
       PC => PC
     );

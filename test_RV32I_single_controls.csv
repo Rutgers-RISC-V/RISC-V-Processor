@@ -1,7 +1,0 @@
-command_name,description,opcode,funct3,funct7,ALUOp[1:0],reg_write
-add,Adds two registers together and stores in a destination reg,0110011,000,0,01,1
-sub,can subtract,0110011,001,0,10,1
-addi,addis,0010011,001,-,10,1
-subi,subis,0010011,011,-,11,1
-subx,subxis,0010011,011,1,11,1
-subxy,subxiys,0010011,011,0,11,1

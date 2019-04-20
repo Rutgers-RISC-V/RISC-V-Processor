@@ -44,7 +44,7 @@ entity pre_memory_logic is
 end pre_memory_logic;
 
 architecture pre_behavior of pre_memory_logic is
-constant terminal_address_bit: integer := 12; -- terminal is addresses 4096*4 and on -- for now, will make a tighter bound in future
+constant terminal_address_bit: integer := 15; -- terminal is addresses 32768*4 and on
 begin
 addr1_out <= std_logic_vector(resize(unsigned(addr1_in(31 downto 2)),32));
     process(addr1_in)

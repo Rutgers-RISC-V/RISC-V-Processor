@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Apr  2 22:00:32 2019
-// Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
+// Date        : Sat Apr 20 13:55:35 2019
+// Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {C:/Users/Oz
 //               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_pre_memory_logic_0_0/RV32I_pipelined_pre_memory_logic_0_0_sim_netlist.v}
 // Design      : RV32I_pipelined_pre_memory_logic_0_0
@@ -57,12 +57,12 @@ module RV32I_pipelined_pre_memory_logic_0_0
     .INIT(4'h2)) 
     \byte_enable_gen[0]_INST_0 
        (.I0(\data1_out[7]_INST_0_i_1_n_0 ),
-        .I1(addr1_in[12]),
+        .I1(addr1_in[15]),
         .O(byte_enable_gen[0]));
   LUT6 #(
     .INIT(64'h0000000001010110)) 
     \byte_enable_gen[1]_INST_0 
-       (.I0(addr1_in[12]),
+       (.I0(addr1_in[15]),
         .I1(\byte_enable_gen[3]_INST_0_i_1_n_0 ),
         .I2(control_mem[1]),
         .I3(control_mem[0]),
@@ -72,7 +72,7 @@ module RV32I_pipelined_pre_memory_logic_0_0
   LUT6 #(
     .INIT(64'h0001010000010010)) 
     \byte_enable_gen[2]_INST_0 
-       (.I0(addr1_in[12]),
+       (.I0(addr1_in[15]),
         .I1(\byte_enable_gen[3]_INST_0_i_1_n_0 ),
         .I2(control_mem[1]),
         .I3(addr1_in[0]),
@@ -82,7 +82,7 @@ module RV32I_pipelined_pre_memory_logic_0_0
   LUT6 #(
     .INIT(64'h0001010000000010)) 
     \byte_enable_gen[3]_INST_0 
-       (.I0(addr1_in[12]),
+       (.I0(addr1_in[15]),
         .I1(\byte_enable_gen[3]_INST_0_i_1_n_0 ),
         .I2(control_mem[1]),
         .I3(addr1_in[0]),
@@ -98,14 +98,14 @@ module RV32I_pipelined_pre_memory_logic_0_0
   LUT2 #(
     .INIT(4'h8)) 
     \byte_enable_term[0]_INST_0 
-       (.I0(addr1_in[12]),
+       (.I0(addr1_in[15]),
         .I1(\data1_out[7]_INST_0_i_1_n_0 ),
         .O(byte_enable_term[0]));
   LUT6 #(
     .INIT(64'h0000000004040440)) 
     \byte_enable_term[1]_INST_0 
        (.I0(\byte_enable_gen[3]_INST_0_i_1_n_0 ),
-        .I1(addr1_in[12]),
+        .I1(addr1_in[15]),
         .I2(control_mem[1]),
         .I3(control_mem[0]),
         .I4(addr1_in[0]),
@@ -115,7 +115,7 @@ module RV32I_pipelined_pre_memory_logic_0_0
     .INIT(64'h0004040000040040)) 
     \byte_enable_term[2]_INST_0 
        (.I0(\byte_enable_gen[3]_INST_0_i_1_n_0 ),
-        .I1(addr1_in[12]),
+        .I1(addr1_in[15]),
         .I2(control_mem[1]),
         .I3(addr1_in[0]),
         .I4(addr1_in[1]),
@@ -125,7 +125,7 @@ module RV32I_pipelined_pre_memory_logic_0_0
     .INIT(64'h0004040000000040)) 
     \byte_enable_term[3]_INST_0 
        (.I0(\byte_enable_gen[3]_INST_0_i_1_n_0 ),
-        .I1(addr1_in[12]),
+        .I1(addr1_in[15]),
         .I2(control_mem[1]),
         .I3(addr1_in[0]),
         .I4(control_mem[0]),

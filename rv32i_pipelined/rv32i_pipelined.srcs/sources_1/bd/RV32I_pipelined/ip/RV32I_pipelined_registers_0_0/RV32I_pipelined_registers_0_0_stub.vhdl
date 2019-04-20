@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Apr  1 01:07:23 2019
--- Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
+-- Date        : Fri Apr 19 00:08:56 2019
+-- Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub {C:/Users/Oz
 --               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_registers_0_0/RV32I_pipelined_registers_0_0_stub.vhdl}
 -- Design      : RV32I_pipelined_registers_0_0
@@ -22,6 +22,8 @@ entity RV32I_pipelined_registers_0_0 is
     reg_1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     reg_2_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     wen : in STD_LOGIC;
+    vsync : in STD_LOGIC;
+    input_regout : in STD_LOGIC_VECTOR ( 7 downto 0 );
     debug_leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
 
@@ -31,7 +33,7 @@ architecture stub of RV32I_pipelined_registers_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,clk_en,instr1[31:0],instr2[31:0],reg_write_input[31:0],reg_1_out[31:0],reg_2_out[31:0],wen,debug_leds[3:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,clk_en,instr1[31:0],instr2[31:0],reg_write_input[31:0],reg_1_out[31:0],reg_2_out[31:0],wen,vsync,input_regout[7:0],debug_leds[3:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "registers,Vivado 2018.3";
 begin
