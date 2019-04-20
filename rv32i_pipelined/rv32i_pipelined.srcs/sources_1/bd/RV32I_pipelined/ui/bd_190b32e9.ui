@@ -17,8 +17,8 @@ preplace inst RV32I_0 -pg 1 -lvl 8 -y 300 -defaultsOSRD
 preplace inst mux_reg_write_0 -pg 1 -lvl 14 -y 1040 -defaultsOSRD
 preplace inst pre_memory_logic_0 -pg 1 -lvl 14 -y 150 -defaultsOSRD
 preplace inst program_counter_1 -pg 1 -lvl 12 -y 930 -defaultsOSRD
-preplace inst clock_div_0 -pg 1 -lvl 4 -y 960 -defaultsOSRD
 preplace inst ALU_0 -pg 1 -lvl 2 -y 710 -defaultsOSRD
+preplace inst clock_div_0 -pg 1 -lvl 4 -y 960 -defaultsOSRD
 preplace inst clock_div_1 -pg 1 -lvl 4 -y 1080 -defaultsOSRD
 preplace inst post_memory_logic_0 -pg 1 -lvl 6 -y 900 -defaultsOSRD
 preplace inst mux_output_0 -pg 1 -lvl 4 -y 620 -defaultsOSRD

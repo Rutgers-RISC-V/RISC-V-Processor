@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="RV32I_pipelined" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1555663265"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1555663265"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1555663265"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1555663265"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1555750821"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1555750821"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1555750821"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1555750821"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\RV32I_pipelined_ALU_0_0\RV32I_pipelined_ALU_0_0.xci" Type="IP">
         <Instance HierarchyPath="ALU_0"/>

@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12416 
+INFO: Helper process launched with PID 15840 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 395.828 ; gain = 99.023
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 396.336 ; gain = 99.832
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_blk_mem_gen_0_0' [d:/Alex/Documents/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/synth/RV32I_pipelined_blk_mem_gen_0_0.vhd:76]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -198,7 +198,7 @@ WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DBITERR
 WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[11]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:08 ; elapsed = 00:01:41 . Memory (MB): peak = 664.961 ; gain = 368.156
+Finished RTL Elaboration : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 666.496 ; gain = 369.992
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -211,10 +211,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:42 . Memory (MB): peak = 664.961 ; gain = 368.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:21 . Memory (MB): peak = 666.496 ; gain = 369.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:08 ; elapsed = 00:01:42 . Memory (MB): peak = 664.961 ; gain = 368.156
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:21 . Memory (MB): peak = 666.496 ; gain = 369.992
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -229,31 +229,31 @@ Parsing XDC File [D:/Alex/Documents/RISC-V-Processor/rv32i_pipelined/rv32i_pipel
 Finished Parsing XDC File [D:/Alex/Documents/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 730.141 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 733.430 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 730.152 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 731.707 ; gain = 1.566
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 733.430 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.457 . Memory (MB): peak = 734.809 ; gain = 1.379
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:16 ; elapsed = 00:01:54 . Memory (MB): peak = 731.707 ; gain = 434.902
+Finished Constraint Validation : Time (s): cpu = 00:01:16 ; elapsed = 00:01:40 . Memory (MB): peak = 734.809 ; gain = 438.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:16 ; elapsed = 00:01:54 . Memory (MB): peak = 731.707 ; gain = 434.902
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:16 ; elapsed = 00:01:40 . Memory (MB): peak = 734.809 ; gain = 438.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Alex/Documents/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_blk_mem_gen_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:54 . Memory (MB): peak = 731.707 ; gain = 434.902
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:40 . Memory (MB): peak = 734.809 ; gain = 438.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:17 ; elapsed = 00:01:55 . Memory (MB): peak = 731.707 ; gain = 434.902
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:16 ; elapsed = 00:01:41 . Memory (MB): peak = 734.809 ; gain = 438.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -310,7 +310,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:56 . Memory (MB): peak = 731.707 ; gain = 434.902
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:42 . Memory (MB): peak = 734.809 ; gain = 438.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -322,13 +322,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:02:07 . Memory (MB): peak = 790.355 ; gain = 493.551
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:51 . Memory (MB): peak = 791.477 ; gain = 494.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:02:07 . Memory (MB): peak = 790.840 ; gain = 494.035
+Finished Timing Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:01:51 . Memory (MB): peak = 791.961 ; gain = 495.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -340,7 +340,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:02:07 . Memory (MB): peak = 800.727 ; gain = 503.922
+Finished Technology Mapping : Time (s): cpu = 00:01:26 ; elapsed = 00:01:51 . Memory (MB): peak = 802.039 ; gain = 505.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -364,7 +364,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 800.727 ; gain = 503.922
+Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:52 . Memory (MB): peak = 802.039 ; gain = 505.535
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -377,7 +377,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 800.727 ; gain = 503.922
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:52 . Memory (MB): peak = 802.039 ; gain = 505.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -389,25 +389,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 800.727 ; gain = 503.922
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:01:52 . Memory (MB): peak = 802.039 ; gain = 505.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 800.727 ; gain = 503.922
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:27 ; elapsed = 00:01:52 . Memory (MB): peak = 802.039 ; gain = 505.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 800.727 ; gain = 503.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:27 ; elapsed = 00:01:52 . Memory (MB): peak = 802.039 ; gain = 505.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 800.727 ; gain = 503.922
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:27 ; elapsed = 00:01:52 . Memory (MB): peak = 802.039 ; gain = 505.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -448,33 +448,33 @@ Report Instance Areas:
 |13    |            \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized2 |     1|
 +------+---------------------------------------------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 800.727 ; gain = 503.922
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:27 ; elapsed = 00:01:52 . Memory (MB): peak = 802.039 ; gain = 505.535
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 154 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:02:00 . Memory (MB): peak = 800.727 ; gain = 437.176
-Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 800.727 ; gain = 503.922
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:01:36 . Memory (MB): peak = 802.039 ; gain = 437.223
+Synthesis Optimization Complete : Time (s): cpu = 00:01:27 ; elapsed = 00:01:53 . Memory (MB): peak = 802.039 ; gain = 505.535
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.563 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 814.645 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 17 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:02:12 . Memory (MB): peak = 812.563 ; gain = 524.660
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.563 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:56 . Memory (MB): peak = 814.645 ; gain = 526.668
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 814.645 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Alex/Documents/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_blk_mem_gen_0_0_synth_1/RV32I_pipelined_blk_mem_gen_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP RV32I_pipelined_blk_mem_gen_0_0, cache-ID = b0bf8bb3bcc94540
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP RV32I_pipelined_blk_mem_gen_0_0, cache-ID = e2d6a4e2c09fd11d
 INFO: [Coretcl 2-1174] Renamed 12 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.563 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 814.645 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Alex/Documents/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_blk_mem_gen_0_0_synth_1/RV32I_pipelined_blk_mem_gen_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file RV32I_pipelined_blk_mem_gen_0_0_utilization_synth.rpt -pb RV32I_pipelined_blk_mem_gen_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 04:54:05 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 20 05:05:31 2019...

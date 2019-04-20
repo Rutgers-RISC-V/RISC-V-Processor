@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Fri Apr 19 04:41:03 2019
+--Date        : Sat Apr 20 05:00:20 2019
 --Host        : LAPTOP-FLASIS1Q running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -29,14 +29,6 @@ entity RV32I_pipelined is
 end RV32I_pipelined;
 
 architecture STRUCTURE of RV32I_pipelined is
-  component RV32I_pipelined_ALU_0_0 is
-  port (
-    A : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    B : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    control_alu : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    alu_out_33 : out STD_LOGIC_VECTOR ( 32 downto 0 )
-  );
-  end component RV32I_pipelined_ALU_0_0;
   component RV32I_pipelined_Descrambler_0_0 is
   port (
     scr_imm : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -348,6 +340,14 @@ architecture STRUCTURE of RV32I_pipelined is
     vga_vs : out STD_LOGIC
   );
   end component RV32I_pipelined_terminal_tld_0_0;
+  component RV32I_pipelined_ALU_0_0 is
+  port (
+    A : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    B : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    control_alu : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    alu_out_33 : out STD_LOGIC_VECTOR ( 32 downto 0 )
+  );
+  end component RV32I_pipelined_ALU_0_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;

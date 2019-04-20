@@ -9,7 +9,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "ALU_0": "",
       "Descrambler_0": "",
       "blk_mem_gen_0": "",
       "brach_logic_0": "",
@@ -37,7 +36,8 @@
       "clock_div_0": "",
       "clock_div_1": "",
       "pre_memory_logic_0": "",
-      "terminal_tld_0": ""
+      "terminal_tld_0": "",
+      "ALU_0": ""
     },
     "ports": {
       "btn3": {
@@ -92,37 +92,6 @@
       }
     },
     "components": {
-      "ALU_0": {
-        "vlnv": "xilinx.com:module_ref:ALU:1.0",
-        "xci_name": "RV32I_pipelined_ALU_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ALU",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "A": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "B": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "control_alu": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "alu_out_33": {
-            "direction": "O",
-            "left": "32",
-            "right": "0"
-          }
-        }
-      },
       "Descrambler_0": {
         "vlnv": "xilinx.com:module_ref:Descrambler:1.0",
         "xci_name": "RV32I_pipelined_Descrambler_0_0",
@@ -152,7 +121,7 @@
             "value": "8"
           },
           "Coe_File": {
-            "value": "../../../../../../../Dumps_and_Assembly/Dumps/Benchtest.coe"
+            "value": "../../../../../../../Dumps_and_Assembly/Dumps/BenchmarkNewUIlong.coe"
           },
           "Enable_32bit_Address": {
             "value": "false"
@@ -1584,6 +1553,37 @@
           },
           "vga_vs": {
             "direction": "O"
+          }
+        }
+      },
+      "ALU_0": {
+        "vlnv": "xilinx.com:module_ref:ALU:1.0",
+        "xci_name": "RV32I_pipelined_ALU_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALU",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "control_alu": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "alu_out_33": {
+            "direction": "O",
+            "left": "32",
+            "right": "0"
           }
         }
       }

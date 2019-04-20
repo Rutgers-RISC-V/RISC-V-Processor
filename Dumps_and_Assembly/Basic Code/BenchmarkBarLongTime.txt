@@ -121,21 +121,21 @@ addi x8 x6 43
 sb x7 0(x8)
 
 li x7 108 #ll
-addi x8 x6 45	
+addi x8 x6 44	
 sb x7 0(x8)
-addi x8 x6 46	
+addi x8 x6 45	
 sb x7 0(x8)
 
 li x7 105 #i
-addi x8 x6 47	
+addi x8 x6 46	
 sb x7 0(x8)
 
 li x7 111 #o
-addi x8 x6 48	
+addi x8 x6 47
 sb x7 0(x8)
 
 li x7 112 #n
-addi x8 x6 49	
+addi x8 x6 48
 sb x7 0(x8)
 
 #Pipeline	
@@ -337,7 +337,7 @@ li x7 110 #n
 addi x8 x6 759	
 sb x7 0(x8)	
 	
-li x7 108 #i	
+li x7 105 #i	
 addi x8 x6 760	
 sb x7 0(x8)	
 
@@ -346,11 +346,11 @@ addi x8 x6 761
 sb x7 0(x8)
 
 li x7 103 #g	
-addi x8 x6 759	
+addi x8 x6 762	
 sb x7 0(x8)
 
-li x7 58 #	
-addi x8 x6 760	
+li x7 58 #:	
+addi x8 x6 763	
 sb x7 0(x8)
 
 #A[--....--]	
@@ -626,7 +626,7 @@ li x7 110 #n
 addi x8 x6 1557	
 sb x7 0(x8)	
 	
-li x7 108 #i	
+li x7 105 #i	
 addi x8 x6 1558	
 sb x7 0(x8)	
 
