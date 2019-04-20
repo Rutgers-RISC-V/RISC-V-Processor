@@ -4,6 +4,8 @@ li x6 4096 # load base address of terminal into a register.
 
 li x7 0 # load an ASCII value into register
 
+la x9 frameBreak #load address of frame break loop into x9
+
 # Output char to terminal
 addi x8 x6 0
 sb x7 0(x8)

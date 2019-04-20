@@ -3,6 +3,8 @@ li x6 4096 # load base address of terminal into a register.
 
 li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
 
+la x9 frameBreak #load address of frame break loop into x9
+
 # Draw 2
 addi x8 x6 162
 sb x7 0(x8)
