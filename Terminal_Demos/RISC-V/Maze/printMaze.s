@@ -3,6 +3,8 @@ li x6 4096 # load base address of terminal into a register.
 
 li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
 
+la x9 frames #load address of frame break loop into x9
+
 #Print the maze
 addi x8 x6 0
 sb x7 0(x8)
@@ -319,16 +321,20 @@ sb x7 0(x8)
 addi x8 x6 2000
 sb x7 0(x8)
 
-addi x8 x6 2080
+addi x8 x6 1080
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2160
+addi x8 x6 1160
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2240
+addi x8 x6 1240
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2320
+addi x8 x6 1320
+addi x8 x8 1000
 sb x7 0(x8)
 
 addi x8 x6 79
@@ -403,253 +409,336 @@ sb x7 0(x8)
 addi x8 x6 1999
 sb x7 0(x8)
 
-addi x8 x6 2079
+addi x8 x6 1079
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2159
+addi x8 x6 1159
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2239
+addi x8 x6 1239
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2319
+addi x8 x6 1319
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2399
+addi x8 x6 1399
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2321
+addi x8 x6 1321
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2322
+addi x8 x6 1322
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2323
+addi x8 x6 1323
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2324
+addi x8 x6 1324
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2325
+addi x8 x6 1325
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2326
+addi x8 x6 1326
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2327
+addi x8 x6 1327
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2328
+addi x8 x6 1328
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2329
+addi x8 x6 1329
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2330
+addi x8 x6 1330
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2331
+addi x8 x6 1331
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2332
+addi x8 x6 1332
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2333
+addi x8 x6 1333
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2334
+addi x8 x6 1334
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2335
+addi x8 x6 1335
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2336
+addi x8 x6 1336
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2337
+addi x8 x6 1337
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2338
+addi x8 x6 1338
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2339
+addi x8 x6 1339
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2340
+addi x8 x6 1340
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2341
+addi x8 x6 1341
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2342
+addi x8 x6 1342
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2343
+addi x8 x6 1343
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2344
+addi x8 x6 1344
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2345
+addi x8 x6 1345
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2346
+addi x8 x6 1346
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2347
+addi x8 x6 1347
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2348
+addi x8 x6 1348
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2349
+addi x8 x6 1349
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2350
+addi x8 x6 1350
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2351
+addi x8 x6 1351
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2352
+addi x8 x6 1352
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2353
+addi x8 x6 1353
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2354
+addi x8 x6 1354
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2355
+addi x8 x6 1355
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2356
+addi x8 x6 1356
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2357
+addi x8 x6 1357
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2358
+addi x8 x6 1358
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2359
+addi x8 x6 1359
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2360
+addi x8 x6 1360
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2361
+addi x8 x6 1361
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2362
+addi x8 x6 1362
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2363
+addi x8 x6 1363
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2364
+addi x8 x6 1364
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2365
+addi x8 x6 1365
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2366
+addi x8 x6 1366
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2367
+addi x8 x6 1367
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2368
+addi x8 x6 1368
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2369
+addi x8 x6 1369
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2370
+addi x8 x6 1370
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2371
+addi x8 x6 1371
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2372
+addi x8 x6 1372
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2373
+addi x8 x6 1373
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2374
+addi x8 x6 1374
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2375
+addi x8 x6 1375
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2376
+addi x8 x6 1376
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2377
+addi x8 x6 1377
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2378
+addi x8 x6 1378
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2379
+addi x8 x6 1379
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2380
+addi x8 x6 1380
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2381
+addi x8 x6 1381
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2382
+addi x8 x6 1382
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2383
+addi x8 x6 1383
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2384
+addi x8 x6 1384
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2385
+addi x8 x6 1385
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2386
+addi x8 x6 1386
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2387
+addi x8 x6 1387
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2388
+addi x8 x6 1388
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2389
+addi x8 x6 1389
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2390
+addi x8 x6 1390
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2391
+addi x8 x6 1391
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2392
+addi x8 x6 1392
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2393
+addi x8 x6 1393
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2394
+addi x8 x6 1394
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2395
+addi x8 x6 1395
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2396
+addi x8 x6 1396
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2397
+addi x8 x6 1397
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2398
+addi x8 x6 1398
+addi x8 x8 1000
 sb x7 0(x8)
 
 addi x8 x6 82
@@ -3979,455 +4068,717 @@ sb x7 0(x8)
 addi x8 x6 2046
 sb x7 0(x8)
 
-addi x8 x6 2048
+addi x8 x6 1048
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2053
+addi x8 x6 1053
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2055
+addi x8 x6 1055
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2069
+addi x8 x6 1069
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2071
+addi x8 x6 1071
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2073
+addi x8 x6 1073
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2074
+addi x8 x6 1074
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2075
+addi x8 x6 1075
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2076
+addi x8 x6 1076
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2077
+addi x8 x6 1077
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2078
+addi x8 x6 1078
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2082
+addi x8 x6 1082
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2083
+addi x8 x6 1083
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2084
+addi x8 x6 1084
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2085
+addi x8 x6 1085
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2087
+addi x8 x6 1087
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2089
+addi x8 x6 1089
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2091
+addi x8 x6 1091
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2092
+addi x8 x6 1092
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2093
+addi x8 x6 1093
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2094
+addi x8 x6 1094
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2096
+addi x8 x6 1096
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2097
+addi x8 x6 1097
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2098
+addi x8 x6 1098
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2100
+addi x8 x6 1100
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2102
+addi x8 x6 1102
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2103
+addi x8 x6 1103
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2104
+addi x8 x6 1104
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2105
+addi x8 x6 1105
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2106
+addi x8 x6 1106
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2107
+addi x8 x6 1107
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2108
+addi x8 x6 1108
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2109
+addi x8 x6 1109
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2110
+addi x8 x6 1110
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2111
+addi x8 x6 1111
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2113
+addi x8 x6 1113
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2115
+addi x8 x6 1115
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2116
+addi x8 x6 1116
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2117
+addi x8 x6 1117
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2118
+addi x8 x6 1118
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2119
+addi x8 x6 1119
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2120
+addi x8 x6 1120
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2121
+addi x8 x6 1121
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2122
+addi x8 x6 1122
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2123
+addi x8 x6 1123
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2124
+addi x8 x6 1124
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2126
+addi x8 x6 1126
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2128
+addi x8 x6 1128
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2129
+addi x8 x6 1129
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2130
+addi x8 x6 1130
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2131
+addi x8 x6 1131
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2132
+addi x8 x6 1132
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2133
+addi x8 x6 1133
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2135
+addi x8 x6 1135
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2137
+addi x8 x6 1137
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2138
+addi x8 x6 1138
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2139
+addi x8 x6 1139
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2140
+addi x8 x6 1140
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2141
+addi x8 x6 1141
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2142
+addi x8 x6 1142
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2143
+addi x8 x6 1143
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2144
+addi x8 x6 1144
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2145
+addi x8 x6 1145
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2146
+addi x8 x6 1146
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2147
+addi x8 x6 1147
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2148
+addi x8 x6 1148
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2149
+addi x8 x6 1149
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2151
+addi x8 x6 1151
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2153
+addi x8 x6 1153
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2154
+addi x8 x6 1154
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2155
+addi x8 x6 1155
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2156
+addi x8 x6 1156
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2157
+addi x8 x6 1157
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2158
+addi x8 x6 1158
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2082
+addi x8 x6 1082
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2083
+addi x8 x6 1083
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2084
+addi x8 x6 1084
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2085
+addi x8 x6 1085
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2086
+addi x8 x6 1086
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2087
+addi x8 x6 1087
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2088
+addi x8 x6 1088
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2089
+addi x8 x6 1089
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2090
+addi x8 x6 1090
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2091
+addi x8 x6 1091
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2092
+addi x8 x6 1092
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2093
+addi x8 x6 1093
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2094
+addi x8 x6 1094
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2095
+addi x8 x6 1095
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2096
+addi x8 x6 1096
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2097
+addi x8 x6 1097
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2098
+addi x8 x6 1098
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2099
+addi x8 x6 1099
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2100
+addi x8 x6 1100
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2101
+addi x8 x6 1101
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2102
+addi x8 x6 1102
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2103
+addi x8 x6 1103
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2104
+addi x8 x6 1104
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2105
+addi x8 x6 1105
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2106
+addi x8 x6 1106
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2107
+addi x8 x6 1107
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2108
+addi x8 x6 1108
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2109
+addi x8 x6 1109
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2110
+addi x8 x6 1110
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2111
+addi x8 x6 1111
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2112
+addi x8 x6 1112
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2113
+addi x8 x6 1113
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2114
+addi x8 x6 1114
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2115
+addi x8 x6 1115
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2116
+addi x8 x6 1116
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2117
+addi x8 x6 1117
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2118
+addi x8 x6 1118
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2119
+addi x8 x6 1119
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2120
+addi x8 x6 1120
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2121
+addi x8 x6 1121
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2122
+addi x8 x6 1122
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2123
+addi x8 x6 1123
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2124
+addi x8 x6 1124
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2125
+addi x8 x6 1125
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2126
+addi x8 x6 1126
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2127
+addi x8 x6 1127
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2128
+addi x8 x6 1128
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2129
+addi x8 x6 1129
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2130
+addi x8 x6 1130
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2131
+addi x8 x6 1131
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2132
+addi x8 x6 1132
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2133
+addi x8 x6 1133
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2134
+addi x8 x6 1134
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2135
+addi x8 x6 1135
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2136
+addi x8 x6 1136
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2137
+addi x8 x6 1137
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2138
+addi x8 x6 1138
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2139
+addi x8 x6 1139
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2140
+addi x8 x6 1140
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2141
+addi x8 x6 1141
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2142
+addi x8 x6 1142
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2143
+addi x8 x6 1143
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2144
+addi x8 x6 1144
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2145
+addi x8 x6 1145
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2146
+addi x8 x6 1146
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2147
+addi x8 x6 1147
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2148
+addi x8 x6 1148
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2149
+addi x8 x6 1149
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2150
+addi x8 x6 1150
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2151
+addi x8 x6 1151
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2152
+addi x8 x6 1152
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2153
+addi x8 x6 1153
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2154
+addi x8 x6 1154
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2155
+addi x8 x6 1155
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2156
+addi x8 x6 1156
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2157
+addi x8 x6 1157
+addi x8 x8 1000
 sb x7 0(x8)
 
-addi x8 x6 2158
+addi x8 x6 1158
+addi x8 x8 1000
 sb x7 0(x8)
+
+li x7 88 # load the ASCII value of 'X' into a register. This is the player
+
+#Print the player
+addi x8 x6 81
+sb x7 0(x8)
+
+#Wait 30 frames to make sure output is printed to screen first
+jalr x10 0(x9)
+
+#Perform game logic
+
+#Store movement value in registers (L, U, D, R) (using buttons)
+addi x18 x0 8
+addi x19 x0 4
+addi x20 x0 2
+addi x21 x0 1
+
+#Store wall character in register
+li x22 48
+#Store empty character in register
+li x23 0
+#Store goal position in register
+li x24 1919
+
+#Read user input (Live updates)
+input:
+#Determine direction to move in
+beq x31 x18 left
+beq x31 x19 up
+beq x31 x20 down
+beq x31 x21 right
+
+left:
+#Load value stored in position to attempt move to
+addi x26 x8 -1
+lb x27 0(x26)
+#Check if the position is occupied
+beq x27 x22 doNothing
+j move
+
+up:
+#Load value stored in position to attempt move to
+addi x26 x8 -80
+lb x27 0(x26)
+#Check if the position is occupied
+beq x27 x22 doNothing
+j move
+
+down:
+#Load value stored in position to attempt move to
+addi x26 x8 80
+lb x27 0(x26)
+#Check if the position is occupied
+beq x27 x22 doNothing
+j move
+
+right:
+#Load value stored in position to attempt move to
+addi x26 x8 1
+lb x27 0(x26)
+#Check if the position is occupied
+beq x27 x22 doNothing
+j move
+
+
+#If occupied, do nothing
+doNothing:
+#Reset bits in x31?
+li x31 0
+#Jump back to beginning of input logic
+j input
+
+#Else print player's new position and delete old position. Then check if the player has reached the goal position
+move:
+sb x7 0(x26)
+sb x23 0(x8)
+addi x8 x26 0
+
+#If the player has reached the goal position, then end game (jump to there)
+beq x8 x24 end
+#Otherwise, update frame and continue
+jalr x10 0(x9)
+#Reset bits in x31?
+li x31 0
+#Continue reading input
+j input
+
+
+#Wait block to load frames
+frames:
+li x29 15 #load divisor of 60 FPS (60/30 = 2 frames per second)
+wait:
+andi x7 x31 256 #bitmask the vsync to x7
+srli x7 x7 8    #shift the masked bit to LSB
+beq  x7 x0 wait #wait for vsync
+andi x7 x31 256 #bitmask the vsync to x7
+sub  x31 x31 x7 #set the sync signal to 0 by subtracting the mask
+addi x29 x29 -1 #decrement frame counter
+bgt x29 x0 wait
+jalr x0, 0(x10)
+
+
+end:
+andi x7 x31 256 #bitmask the vsync to x7
+srli x7 x7 8    #shift the masked bit to LSB
+beq  x7 x0 end #wait for vsync
+andi x7 x31 256 #bitmask the vsync to x7
+sub  x31 x31 x7 #set the sync signal to 0 by subtracting the mask
+addi x29 x29 -1 #decrement frame counter
+bgt x29 x0 end
