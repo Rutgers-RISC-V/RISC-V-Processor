@@ -1,6 +1,143 @@
 #UI initialization	
 li x6 4096 # load base address of terminal into a register.	
+
+#Two Processes That Count Up to 250 million 
+li x7 84 #T
+addi x8 x6 9	
+sb x7 0(x8)	
+
+li x7 119 #w	
+addi x8 x6 10	
+sb x7 0(x8)	
+
+li x7 111 #o
+addi x8 x6 11	
+sb x7 0(x8)	
+
+li x7 80 #P	
+addi x8 x6 13	
+sb x7 0(x8)	
+
+li x7 114 #r	
+addi x8 x6 14	
+sb x7 0(x8)	
+
+li x7 111 #o	
+addi x8 x6 15	
+sb x7 0(x8)	
+
+li x7 99 #c	
+addi x8 x6 16	
+sb x7 0(x8)	
+
+li x7 101 #e
+addi x8 x6 17	
+sb x7 0(x8)	
+
+li x7 115 #ss	
+addi x8 x6 18	
+sb x7 0(x8)	
+addi x8 x6 19	
+sb x7 0(x8)	
+
+li x7 101 #e
+addi x8 x6 20	
+sb x7 0(x8)	
+
+li x7 115 #s	
+addi x8 x6 21	
+sb x7 0(x8)	
+
+li x7 84 #T	
+addi x8 x6 23	
+sb x7 0(x8)
 	
+li x7 84 #h	
+addi x8 x6 24	
+sb x7 0(x8)
+	
+li x7 97 #a
+addi x8 x6 25	
+sb x7 0(x8)
+	
+li x7 116 #t	
+addi x8 x6 26	
+sb x7 0(x8)
+	
+li x7 67 #C	
+addi x8 x6 28	
+sb x7 0(x8)
+	
+li x7 111 #o	
+addi x8 x6 27	
+sb x7 0(x8)	
+	
+li x7 117 #u
+addi x8 x6 28	
+sb x7 0(x8)
+
+li x7 110 #n	
+addi x8 x6 29	
+sb x7 0(x8)
+
+li x7 116 #t	
+addi x8 x6 30	
+sb x7 0(x8)
+
+li x7 85 #U
+addi x8 x6 32	
+sb x7 0(x8)
+
+li x7 112 #p
+addi x8 x6 33	
+sb x7 0(x8)
+
+li x7 84 #T	
+addi x8 x6 35	
+sb x7 0(x8)
+
+li x7 111 #o	
+addi x8 x6 36	
+sb x7 0(x8)
+	
+li x7 50 #2	
+addi x8 x6 38	
+sb x7 0(x8)	
+	
+li x7 53 #5
+addi x8 x6 39	
+sb x7 0(x8)
+
+li x7 48 #0
+addi x8 x6 40	
+sb x7 0(x8)
+
+li x7 77 #M	
+addi x8 x6 42	
+sb x7 0(x8)
+
+li x7 105 #i
+addi x8 x6 43	
+sb x7 0(x8)
+
+li x7 108 #ll
+addi x8 x6 45	
+sb x7 0(x8)
+addi x8 x6 46	
+sb x7 0(x8)
+
+li x7 105 #i
+addi x8 x6 47	
+sb x7 0(x8)
+
+li x7 111 #o
+addi x8 x6 48	
+sb x7 0(x8)
+
+li x7 112 #n
+addi x8 x6 49	
+sb x7 0(x8)
+
 #Pipeline	
 	
 li x7 80 #P	
@@ -81,7 +218,7 @@ li x7 46 #.
 addi x8 x6 348	
 sb x7 0(x8)	
 	
-#Process A	
+#Process	
 li x7 80 #P	
 addi x8 x6 729	
 sb x7 0(x8)	
@@ -110,14 +247,112 @@ li x7 115 #s
 addi x8 x6 735	
 sb x7 0(x8)	
 	
-li x7 65 #A	
+#Unoptimized
+	
+li x7 85 #U	
 addi x8 x6 737	
 sb x7 0(x8)	
 	
-li x7 58 #	
+li x7 110 #n
 addi x8 x6 738	
 sb x7 0(x8)	
+
+li x7 111 #o
+addi x8 x6 739	
+sb x7 0(x8)
+
+li x7 112 #p
+addi x8 x6 740	
+sb x7 0(x8)
+
+li x7 116 #t
+addi x8 x6 741	
+sb x7 0(x8)
+
+li x7 105 #i
+addi x8 x6 742	
+sb x7 0(x8)
+
+li x7 109 #m
+addi x8 x6 743	
+sb x7 0(x8)
+
+li x7 105 #i
+addi x8 x6 744	
+sb x7 0(x8)
+
+li x7 122 #z
+addi x8 x6 745	
+sb x7 0(x8)
+
+li x7 101 #e
+addi x8 x6 746	
+sb x7 0(x8)
+
+li x7 100 #d
+addi x8 x6 747	
+sb x7 0(x8)
+
+#For
+
+li x7 70 #F
+addi x8 x6 749	
+sb x7 0(x8)
+
+li x7 111 #o
+addi x8 x6 750	
+sb x7 0(x8)
+
+li x7 114 #r
+addi x8 x6 751	
+sb x7 0(x8)
+
+#Pipelining
+
+li x7 80 #P	
+addi x8 x6 753	
+sb x7 0(x8)	
 	
+li x7 105 #i	
+addi x8 x6 754	
+sb x7 0(x8)	
+	
+li x7 112 #p	
+addi x8 x6 755	
+sb x7 0(x8)	
+	
+li x7 101 #e	
+addi x8 x6 756	
+sb x7 0(x8)	
+	
+li x7 108 #l	
+addi x8 x6 757	
+sb x7 0(x8)	
+	
+li x7 105 #i	
+addi x8 x6 758	
+sb x7 0(x8)	
+	
+li x7 110 #n	
+addi x8 x6 759	
+sb x7 0(x8)	
+	
+li x7 108 #i	
+addi x8 x6 760	
+sb x7 0(x8)	
+
+li x7 110 #n	
+addi x8 x6 761	
+sb x7 0(x8)
+
+li x7 103 #g	
+addi x8 x6 759	
+sb x7 0(x8)
+
+li x7 58 #	
+addi x8 x6 760	
+sb x7 0(x8)
+
 #A[--....--]	
 	
 li x7 91 #[	
@@ -279,7 +514,7 @@ li x7 93 #]
 addi x8 x6 860	
 sb x7 0(x8)	
 	
-#Process B	
+#Process Optimized For Pipelining
 	
 li x7 80 #P	
 addi x8 x6 1529	
@@ -309,12 +544,102 @@ li x7 115 #s
 addi x8 x6 1535	
 sb x7 0(x8)	
 	
-li x7 66 #B	
+#Optimized	
+	
+li x7 79 #O
 addi x8 x6 1537	
+sb x7 0(x8)
+
+li x7 112 #p
+addi x8 x6 1538	
+sb x7 0(x8)
+
+li x7 116 #t
+addi x8 x6 1539	
+sb x7 0(x8)
+
+li x7 105 #i
+addi x8 x6 1540	
+sb x7 0(x8)
+
+li x7 109 #m
+addi x8 x6 1541	
+sb x7 0(x8)
+
+li x7 105 #i
+addi x8 x6 1542	
+sb x7 0(x8)
+
+li x7 122 #z
+addi x8 x6 1543	
+sb x7 0(x8)
+
+li x7 101 #e
+addi x8 x6 1544	
+sb x7 0(x8)
+
+li x7 100 #d
+addi x8 x6 1545	
+sb x7 0(x8)
+
+#For
+
+li x7 70 #F
+addi x8 x6 1547	
+sb x7 0(x8)
+
+li x7 111 #o
+addi x8 x6 1548	
+sb x7 0(x8)
+
+li x7 114 #r
+addi x8 x6 1549	
+sb x7 0(x8)
+
+#Pipelining
+
+li x7 80 #P	
+addi x8 x6 1551	
 sb x7 0(x8)	
 	
+li x7 105 #i	
+addi x8 x6 1552	
+sb x7 0(x8)	
+	
+li x7 112 #p	
+addi x8 x6 1553	
+sb x7 0(x8)	
+	
+li x7 101 #e	
+addi x8 x6 1554	
+sb x7 0(x8)	
+	
+li x7 108 #l	
+addi x8 x6 1555	
+sb x7 0(x8)	
+	
+li x7 105 #i	
+addi x8 x6 1556	
+sb x7 0(x8)	
+	
+li x7 110 #n	
+addi x8 x6 1557	
+sb x7 0(x8)	
+	
+li x7 108 #i	
+addi x8 x6 1558	
+sb x7 0(x8)	
+
+li x7 110 #n	
+addi x8 x6 1559	
+sb x7 0(x8)
+
+li x7 103 #g	
+addi x8 x6 1560	
+sb x7 0(x8)
+	
 li x7 58 #	
-addi x8 x6 1538	
+addi x8 x6 1561	
 sb x7 0(x8)	
 	
 #B[--....--]	
@@ -474,10 +799,7 @@ sb x7 0(x8)
 	
 addi x8 x6	1659
 sb x7 0(x8)	
-	
-	
-	
-	
+		
 li x7 93 #]	
 addi x8 x6 1660	
 sb x7 0(x8)	
@@ -528,4 +850,4 @@ Bar2
 	add x19 x19 x21
 	j process2
 End	
-#	j End
+	j End
