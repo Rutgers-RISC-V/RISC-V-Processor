@@ -87,7 +87,7 @@ BEGIN
   U0 : input_handler
     GENERIC MAP (
       clkspd => 25000000,
-      repeatdelay_ms => 200
+      repeatdelay_ms => 20
     )
     PORT MAP (
       sw => sw,

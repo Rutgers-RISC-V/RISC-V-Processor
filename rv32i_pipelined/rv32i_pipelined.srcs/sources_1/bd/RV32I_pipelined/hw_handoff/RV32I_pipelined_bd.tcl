@@ -606,11 +606,12 @@ proc create_root_design { parentCell } {
   connect_bd_net -net stage_MW_0_mux_reg_write_MW [get_bd_pins mux_reg_write_0/control_mux_reg_write] [get_bd_pins stage_MW_0/mux_reg_write_MW]
   connect_bd_net -net stage_MW_0_output_bus_MW [get_bd_pins mux_reg_write_0/output_bus] [get_bd_pins stage_MW_0/output_bus_MW]
   connect_bd_net -net sw_1 [get_bd_ports sw] [get_bd_pins input_handler_0/sw]
+  connect_bd_net -net terminal_tld_0_terminal_count [get_bd_pins registers_0/vsync] [get_bd_pins terminal_tld_0/terminal_count]
   connect_bd_net -net terminal_tld_0_vga_b [get_bd_ports vga_b] [get_bd_pins terminal_tld_0/vga_b]
   connect_bd_net -net terminal_tld_0_vga_g [get_bd_ports vga_g] [get_bd_pins terminal_tld_0/vga_g]
   connect_bd_net -net terminal_tld_0_vga_hs [get_bd_ports vga_hs] [get_bd_pins terminal_tld_0/vga_hs]
   connect_bd_net -net terminal_tld_0_vga_r [get_bd_ports vga_r] [get_bd_pins terminal_tld_0/vga_r]
-  connect_bd_net -net terminal_tld_0_vga_vs [get_bd_ports vga_vs] [get_bd_pins registers_0/vsync] [get_bd_pins terminal_tld_0/vga_vs]
+  connect_bd_net -net terminal_tld_0_vga_vs [get_bd_ports vga_vs] [get_bd_pins terminal_tld_0/vga_vs]
   connect_bd_net -net terminal_tld_0_vram_addr [get_bd_pins blk_mem_gen_1/addrb] [get_bd_pins terminal_tld_0/vram_addr]
 
   # Create address segments

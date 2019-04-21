@@ -16,7 +16,8 @@ entity terminal_tld is
            vga_g : out STD_LOGIC_VECTOR (5 downto 0);
            vga_b : out STD_LOGIC_VECTOR (4 downto 0);
            vga_hs : out STD_LOGIC;
-           vga_vs : out STD_LOGIC);
+           vga_vs : out STD_LOGIC;
+           terminal_count: out STD_LOGIC);
 end terminal_tld;
 
 architecture Behavioral of terminal_tld is
@@ -87,7 +88,8 @@ component vga_ctrl
 --   select_cnt : out std_logic_vector(2 downto 0);
    vid : out STD_LOGIC; -- 1 when display should be on, 0 otherwise
    hs : out STD_LOGIC;  -- HS Pulse
-   vs : out STD_LOGIC); -- VS Pulse
+   vs : out STD_LOGIC;
+   terminal_count: out STD_LOGIC); -- VS Pulse
 end component;
 
 
@@ -133,8 +135,8 @@ font_addr <= ascii_value(6 downto 0)&vert_cnt(3 downto 0);
         clk_en => clk_en,
         vcount => vert_cnt,
         hcount => horz_cnt,
-        vram_addr =>vram_addr,
---        select_cnt => select_cnt,
+        vram_addr => vram_addr,
+        terminal_count => terminal_count,
         vid => vid_on,
         hs=> vga_hs,
         vs => vert_sync);

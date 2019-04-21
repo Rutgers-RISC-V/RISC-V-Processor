@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity input_handler is
     Generic (clkspd : natural               := 25000000; --set this to the processor's clock speed in Hz
-             repeatdelay_ms : natural       := 200);     --set this to how many ms you want to hold the output for
+             repeatdelay_ms : natural       := 20);     --set this to how many ms you want to hold the output for
              
     Port ( sw : in STD_LOGIC_VECTOR (3 downto 0);
            btn : in STD_LOGIC_VECTOR (3 downto 0);

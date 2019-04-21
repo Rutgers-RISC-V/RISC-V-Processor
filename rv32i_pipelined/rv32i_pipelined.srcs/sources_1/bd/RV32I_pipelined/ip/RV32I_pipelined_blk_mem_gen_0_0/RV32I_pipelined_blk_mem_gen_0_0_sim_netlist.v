@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Apr 20 13:57:38 2019
+// Date        : Sat Apr 20 13:57:37 2019
 // Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {C:/Users/Oz
-//               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim -rename_top RV32I_pipelined_blk_mem_gen_0_0 -prefix
+//               RV32I_pipelined_blk_mem_gen_0_0_ RV32I_pipelined_blk_mem_gen_0_0_sim_netlist.v
 // Design      : RV32I_pipelined_blk_mem_gen_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -214,7 +214,6 @@ module RV32I_pipelined_blk_mem_gen_0_0
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_generic_cstr
    (douta,
     doutb,
@@ -1276,7 +1275,6 @@ module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_generic_cstr
         .web(web[1]));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_mux" *) 
 module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_mux
    (douta,
     addra,
@@ -3336,7 +3334,6 @@ module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_mux__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_prim_width
    (\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram ,
     \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0 ,
@@ -5170,7 +5167,6 @@ module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_prim_width__parameterized9
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init
    (\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0 ,
     \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1 ,
@@ -13804,7 +13800,6 @@ module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init__parameteri
         .WEBWE({1'b0,1'b0,1'b0,1'b0,web,web,web,web}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_top
    (douta,
     doutb,
@@ -13884,7 +13879,7 @@ endmodule
 (* C_WEA_WIDTH = "4" *) (* C_WEB_WIDTH = "4" *) (* C_WRITE_DEPTH_A = "32768" *) 
 (* C_WRITE_DEPTH_B = "32768" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
 (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) (* C_XDEVICEFAMILY = "zynq" *) 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_v8_4_2
    (clka,
     rsta,
@@ -14130,7 +14125,6 @@ module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_v8_4_2
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2_synth" *) 
 module RV32I_pipelined_blk_mem_gen_0_0_blk_mem_gen_v8_4_2_synth
    (douta,
     doutb,

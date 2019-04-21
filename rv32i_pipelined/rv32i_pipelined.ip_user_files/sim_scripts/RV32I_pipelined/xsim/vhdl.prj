@@ -5,7 +5,6 @@ vhdl xil_defaultlib  \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_alu_signals_0_0/sim/RV32I_pipelined_alu_signals_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_brach_logic_0_0/sim/RV32I_pipelined_brach_logic_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_0_0/sim/RV32I_pipelined_clock_div_0_0.vhd" \
-"../../../bd/RV32I_pipelined/ip/RV32I_pipelined_debounce_0_0/sim/RV32I_pipelined_debounce_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_count_0_0/sim/RV32I_pipelined_hazard_count_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_logic_0_0/sim/RV32I_pipelined_hazard_logic_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_instruction_clear_0_0/sim/RV32I_pipelined_instruction_clear_0_0.vhd" \
@@ -25,6 +24,5 @@ vhdl xil_defaultlib  \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_stage_MW_0_0/sim/RV32I_pipelined_stage_MW_0_0.vhd" \
 "../../../bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_1_0/sim/RV32I_pipelined_clock_div_1_0.vhd" \
-"../../../bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/sim/RV32I_pipelined_terminal_tld_0_0.vhd" \
 
 nosort

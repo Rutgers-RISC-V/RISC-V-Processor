@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sat Apr 20 14:02:26 2019
+| Date             : Sun Apr 21 17:01:26 2019
 | Host             : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file RV32I_pipelined_wrapper_power_routed.rpt -pb RV32I_pipelined_wrapper_power_summary_routed.pb -rpx RV32I_pipelined_wrapper_power_routed.rpx
 | Design           : RV32I_pipelined_wrapper
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.004 |        8 |       --- |             --- |
-| Slice Logic    |     0.005 |     5085 |       --- |             --- |
-|   LUT as Logic |     0.004 |     2429 |     17600 |           13.80 |
+| Slice Logic    |     0.005 |     5084 |       --- |             --- |
+|   LUT as Logic |     0.004 |     2428 |     17600 |           13.80 |
 |   CARRY4       |    <0.001 |      165 |      4400 |            3.75 |
 |   Register     |    <0.001 |     1705 |     35200 |            4.84 |
 |   F7/F8 Muxes  |    <0.001 |      321 |     17600 |            1.82 |
 |   Others       |     0.000 |      132 |       --- |             --- |
-| Signals        |     0.008 |     4594 |       --- |             --- |
+| Signals        |     0.008 |     4595 |       --- |             --- |
 | Block RAM      |     0.005 |     33.5 |        60 |           55.83 |
 | MMCM           |     0.106 |        1 |         2 |           50.00 |
 | I/O            |    <0.001 |       31 |       100 |           31.00 |
@@ -157,7 +157,7 @@ Table of Contents
 +-------------------------+-----------+
 | RV32I_pipelined_wrapper |     0.129 |
 |   RV32I_pipelined_i     |     0.128 |
-|     ALU_0               |     0.003 |
+|     ALU_0               |     0.002 |
 |       U0                |     0.002 |
 |     blk_mem_gen_0       |     0.005 |
 |       U0                |     0.005 |

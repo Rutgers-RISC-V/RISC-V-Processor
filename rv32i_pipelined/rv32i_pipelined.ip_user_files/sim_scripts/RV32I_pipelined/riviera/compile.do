@@ -10,11 +10,11 @@ vmap xpm riviera/xpm
 vmap blk_mem_gen_v8_4_2 riviera/blk_mem_gen_v8_4_2
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ipshared/85a3" \
-"C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93 \
-"C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
+"D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_ALU_0_0/sim/RV32I_pipelined_ALU_0_0.vhd" \
@@ -37,7 +37,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../rv32i_pipelined.srcs/sourc
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_0_0/sim/RV32I_pipelined_clock_div_0_0.vhd" \
-"../../../bd/RV32I_pipelined/ip/RV32I_pipelined_debounce_0_0/sim/RV32I_pipelined_debounce_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_count_0_0/sim/RV32I_pipelined_hazard_count_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_hazard_logic_0_0/sim/RV32I_pipelined_hazard_logic_0_0.vhd" \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_instruction_clear_0_0/sim/RV32I_pipelined_instruction_clear_0_0.vhd" \
@@ -62,7 +61,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../rv32i_pipelined.srcs/sourc
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/RV32I_pipelined/ip/RV32I_pipelined_clock_div_1_0/sim/RV32I_pipelined_clock_div_1_0.vhd" \
-"../../../bd/RV32I_pipelined/ip/RV32I_pipelined_terminal_tld_0_0/sim/RV32I_pipelined_terminal_tld_0_0.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

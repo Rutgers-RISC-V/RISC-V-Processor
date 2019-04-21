@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555782874">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555880173">
   <File Type="BITSTR-BMM" Name="RV32I_pipelined_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="RV32I_pipelined_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="RV32I_pipelined_wrapper_timing_summary_init.rpt"/>
@@ -473,9 +473,8 @@
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_clock_div_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_post_memory_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_blk_mem_gen_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_alu_signals_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_program_counter_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_registers_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_pre_memory_logic_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_registers_0_0"/>
 </GenRun>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Apr 20 13:54:04 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 21 17:30:51 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1310,10 +1310,10 @@
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="clkb"/>
             <CONNECTION INSTANCE="clock_div_0" PORT="clk"/>
             <CONNECTION INSTANCE="clock_div_1" PORT="clk"/>
-            <CONNECTION INSTANCE="terminal_tld_0" PORT="clk"/>
-            <CONNECTION INSTANCE="input_handler_0" PORT="clk"/>
             <CONNECTION INSTANCE="program_counter_1" PORT="clk"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk"/>
+            <CONNECTION INSTANCE="terminal_tld_0" PORT="clk"/>
+            <CONNECTION INSTANCE="input_handler_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -1466,7 +1466,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="clkspd" VALUE="25000000"/>
-        <PARAMETER NAME="repeatdelay_ms" VALUE="200"/>
+        <PARAMETER NAME="repeatdelay_ms" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="RV32I_pipelined_input_handler_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1876,9 +1876,9 @@
             <CONNECTION INSTANCE="stage_MW_0" PORT="control_reg_writeenable_MW"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="vsync" SIGIS="undef" SIGNAME="terminal_tld_0_vga_vs">
+        <PORT DIR="I" NAME="vsync" SIGIS="undef" SIGNAME="terminal_tld_0_terminal_count">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="terminal_tld_0" PORT="vga_vs"/>
+            <CONNECTION INSTANCE="terminal_tld_0" PORT="terminal_count"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="input_regout" RIGHT="0" SIGIS="undef" SIGNAME="input_handler_0_input_regout">
@@ -2319,6 +2319,10 @@
         <PORT DIR="O" NAME="vga_vs" SIGIS="undef" SIGNAME="terminal_tld_0_vga_vs">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="vga_vs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="terminal_count" SIGIS="undef" SIGNAME="terminal_tld_0_terminal_count">
+          <CONNECTIONS>
             <CONNECTION INSTANCE="registers_0" PORT="vsync"/>
           </CONNECTIONS>
         </PORT>

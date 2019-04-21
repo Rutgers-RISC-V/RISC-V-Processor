@@ -57,7 +57,6 @@ architecture Behavioral of registers is
     signal register_file_1: register_layout := (others=>(others=>'0'));
     signal register_file_2: register_layout := (others=>(others=>'0'));
 --    signal counter: STD_LOGIC_VECTOR(31 downto 0):= (others => '0');
-    signal vs: STD_LOGIC:='1';
     signal latched_inputs : STD_LOGIC_VECTOR (8 downto 0);
 
 begin

@@ -15,8 +15,8 @@ entity vga_ctrl is
            vid : out STD_LOGIC; -- 1 when display should be on, 0 otherwise
            hs : out STD_LOGIC;  -- HS Pulse
            vs : out STD_LOGIC;
+           terminal_count : out STD_LOGIC;
            vram_addr : out std_logic_vector(31 downto 0)
---           select_cnt : out std_logic_vector(2 downto 0)
            );
 end vga_ctrl;
   
@@ -30,6 +30,7 @@ architecture Behavioral of vga_ctrl is
     signal display_on : STD_LOGIC := '0';
     signal hsync : STD_LOGIC := '0';
     signal vsync : STD_LOGIC := '0';
+    signal tcount: STD_LOGIC := '0';
 begin
     process (clk)
     begin
@@ -88,12 +89,16 @@ begin
             
             if((unsigned(vertical_count) = 489) AND (unsigned(horizontal_count) = 799)) then
                 vsync <= '0';
+                tcount <= '1';
             elsif((unsigned(vertical_count) = 491) AND (unsigned(horizontal_count) = 799)) then
                 vsync <= '1';
+                tcount <= '0';
             elsif((unsigned(vertical_count) = 490) OR (unsigned(vertical_count) = 491)) then -- 489 corresponds to the cycle of 490, and 490 for 491
                 vsync <= '0';
+                tcount <= '0';
             else
                 vsync <= '1';
+                tcount <= '0';
             end if;
             
         end if;
@@ -102,9 +107,9 @@ begin
     hcount <= horizontal_count;
     vcount <= vertical_count;
     vram_addr <= memory_addr;
---    select_cnt <= std_logic_vector(unsigned(horizontal_count(2 downto 0)) - 1);
     vid <= display_on;
     hs <= hsync;
     vs <= vsync;
+    terminal_count <= tcount;
 
 end Behavioral;

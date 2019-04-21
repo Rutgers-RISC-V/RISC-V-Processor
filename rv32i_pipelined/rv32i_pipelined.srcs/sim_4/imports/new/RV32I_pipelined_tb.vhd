@@ -38,29 +38,54 @@ end RV32I_pipelined_tb;
 architecture Behavioral_test of RV32I_pipelined_tb is
   component RV32I_pipelined_wrapper is
   port (
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    btn3 : in STD_LOGIC;
-    led : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    vga_hs : out STD_LOGIC;
+    vga_r : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    vga_vs : out STD_LOGIC
   );
   end component RV32I_pipelined_wrapper;
-  signal btn3: std_logic := '0';
-  signal clk: std_logic := '0';
-  signal led: std_logic_vector(3 downto 0);
+  signal btni: std_logic_vector(3 downto 0) := "0001";
+  signal clki: std_logic := '0';
+  signal ledi: std_logic_vector(3 downto 0);
+  signal swi: std_logic_vector(3 downto 0) := "0000";
+  signal vga_bi : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal vga_gi : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal vga_hsi : STD_LOGIC;
+  signal vga_ri : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal vga_vsi : STD_LOGIC;
 begin
 RV32I_pipelined_i: component RV32I_pipelined_wrapper
      port map (
-      btn3 => btn3,
-      clk => clk,
-      led(3 downto 0) => led(3 downto 0)
+      btn(3 downto 0) => btni(3 downto 0),
+      clk => clki,
+      led(3 downto 0) => ledi(3 downto 0),
+      sw(3 downto 0) => swi(3 downto 0),
+      vga_b => vga_bi,
+      vga_g => vga_gi,
+      vga_hs => vga_hsi,
+      vga_r => vga_ri,
+      vga_vs => vga_vsi
     );
     
 process
 begin
-    clk <= '0';
+    clki <= '0';
     wait for 4ns;
-    clk <= '1';
+    clki <= '1';
     wait for 4ns;
 end process;
+
+process
+begin
+    wait for 21ns;
+    btni(0) <= '0';
+end process;
+
 
 
 end Behavioral_test;

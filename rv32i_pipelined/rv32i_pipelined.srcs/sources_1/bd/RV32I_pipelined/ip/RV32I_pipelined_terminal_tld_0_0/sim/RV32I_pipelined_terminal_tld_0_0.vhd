@@ -63,7 +63,8 @@ ENTITY RV32I_pipelined_terminal_tld_0_0 IS
     vga_g : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
     vga_b : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
     vga_hs : OUT STD_LOGIC;
-    vga_vs : OUT STD_LOGIC
+    vga_vs : OUT STD_LOGIC;
+    terminal_count : OUT STD_LOGIC
   );
 END RV32I_pipelined_terminal_tld_0_0;
 
@@ -80,7 +81,8 @@ ARCHITECTURE RV32I_pipelined_terminal_tld_0_0_arch OF RV32I_pipelined_terminal_t
       vga_g : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
       vga_b : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
       vga_hs : OUT STD_LOGIC;
-      vga_vs : OUT STD_LOGIC
+      vga_vs : OUT STD_LOGIC;
+      terminal_count : OUT STD_LOGIC
     );
   END COMPONENT terminal_tld;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -100,6 +102,7 @@ BEGIN
       vga_g => vga_g,
       vga_b => vga_b,
       vga_hs => vga_hs,
-      vga_vs => vga_vs
+      vga_vs => vga_vs,
+      terminal_count => terminal_count
     );
 END RV32I_pipelined_terminal_tld_0_0_arch;
