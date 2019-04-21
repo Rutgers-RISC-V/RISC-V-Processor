@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.ip_user_files/bd/RV32I_pipelined/sim/RV32I_pipelined.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RV32I_pipelined'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RV32I_pipelined_wrapper'

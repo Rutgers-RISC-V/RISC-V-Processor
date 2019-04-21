@@ -33,6 +33,7 @@ architecture Behavioral of debounce is
     signal current_state: std_logic := '0'; -- assumes that the button is not pressed on power on
     signal output_signal: std_logic := '0';
 begin
+    dbnc <= output_signal;
     process(clk)
     begin
         if(rising_edge(clk)) then						-- NOTE: Assume that button is not pressed when starting

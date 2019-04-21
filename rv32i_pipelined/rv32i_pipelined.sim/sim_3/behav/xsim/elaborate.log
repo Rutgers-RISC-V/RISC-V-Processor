@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto bd6bf5eee7d641d489ebaa473494efaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot RV32I_pipelined_tb_behav xil_defaultlib.RV32I_pipelined_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-718] formal port <btn3> does not exist in entity <RV32I_pipelined_wrapper>.  Please compare the definition of block <RV32I_pipelined_wrapper> to its component declaration and its instantion to detect the mismatch. [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sim_3/imports/rv32i_pipelined/rv32i_pipelined.srcs/sim_2/imports/new/RV32I_pipelined_tb.vhd:42]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit rv32i_pipelined_tb in library work failed.
