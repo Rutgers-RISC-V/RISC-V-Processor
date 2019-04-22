@@ -4563,20 +4563,15 @@ li x7 88 # load the ASCII value of 'X' into a register. This is the player
 addi x8 x6 81
 sb x7 0(x8)
 
-#Wait 30 frames to make sure output is printed to screen first
+#Wait to make sure output is printed to screen first
 jalr x10 0(x9)
 
 #Perform game logic
-
-#Store movement value in registers (L, U, D, R) (using switches)
-li x18 128
-li x19 64
-li x20 32
-li x21 16
+#Movement values (1L, 2U, 4D, 8R)
 
 #Store wall character in register
 li x22 48
-#Store empty character in register
+#Store space character in register
 li x23 0
 #Store goal position in register
 li x24 1919
@@ -4584,90 +4579,105 @@ li x24 1919
 #Read user input (Live updates)
 input:
 #Determine direction to move in
-and x25 x31 x18
-beq x25 x18 left
-and x25 x31 x19
-beq x25 x19 up
-and x25 x31 x20
-beq x25 x20 down
-and x25 x31 x21
-beq x25 x21 right
+andi x18 x31 1	#bitmask the first button to x18
+andi x19 x31 2	#bitmask the second button to x19
+andi x20 x31 4	#bitmask the third button to x20
+andi x21 x31 8	#bitmask the third button to x21
+
+
+bne x18 x0 right
+bne x19 x0 down
+bne x20 x0 up
+bne x21 x0 left
+jal x0 input
 
 left:
-#Load value stored in position to attempt move to
-addi x26 x8 -1
-lb x27 0(x26)
-#Check if the position is occupied
-beq x27 x22 doNothing
-j move
+sub  x31 x31 x18 #set the button to 0 by subtracting the mask
+addi x18 x18 87	#add the masked value to 87 ((ascii X) - 1)
+addi x27 x8 -1 	#add into x27 the player address - 1
+lb x25 0(x27)
+beq x25 x22 doNothing
+sb x18 0(x27)  	#store the character at location x27
+sb x23 0(x8) #delete the character at the previous position
+li x18 0	#clear x18
+addi x8 x8 -1 #update player's current location
+jalr x10 0(x9) #update frame
+beq x8 x24 end #End the game if reached the goal
+jal x0 input #Continue taking input otherwise
 
 up:
-#Load value stored in position to attempt move to
-addi x26 x8 -80
-lb x27 0(x26)
-#Check if the position is occupied
-beq x27 x22 doNothing
-j move
+sub  x31 x31 x19 #set the button to 0 by subtracting the mask
+addi x19 x19 87	#add the masked value to 87 ((ascii X) - 1)
+addi x27 x8 -80 	#add into x27 the player address - 80
+lb x25 0(x27)
+beq x25 x22 doNothing
+sb x19 0(x27)  	#store the character at location x27
+sb x23 0(x8) #delete the character at the previous position
+li x19 0	#clear x19
+addi x8 x8 -80 #update player's current location
+jalr x10 0(x9) #update frame
+beq x8 x24 end #End the game if reached the goal
+jal x0 input #Continue taking input otherwise
 
 down:
-#Load value stored in position to attempt move to
-addi x26 x8 80
-lb x27 0(x26)
-#Check if the position is occupied
-beq x27 x22 doNothing
-j move
+sub  x31 x31 x20 #set the button to 0 by subtracting the mask
+addi x20 x20 87	#add the masked value to 87 ((ascii X) - 1)
+addi x27 x8 80 	#add into x27 the player address + 80
+lb x25 0(x27)
+beq x25 x22 doNothing
+sb x20 0(x27)  	#store the character at location x27
+sb x23 0(x8) #delete the character at the previous position
+li x20 0	#clear x20
+addi x8 x8 80 #update player's current location
+jalr x10 0(x9) #update frame
+beq x8 x24 end #End the game if reached the goal
+jal x0 input #Continue taking input otherwise
 
 right:
-#Load value stored in position to attempt move to
-addi x26 x8 1
-lb x27 0(x26)
-#Check if the position is occupied
-beq x27 x22 doNothing
-j move
+sub  x31 x31 x21 #set the button to 0 by subtracting the mask
+addi x21 x21 87	#add the masked value to 87 ((ascii X) - 1)
+addi x27 x8 1 	#add into x27 the player address + 1
+lb x25 0(x27)
+beq x25 x22 doNothing
+sb x21 0(x27)  	#store the character at location x27
+sb x23 0(x8) #delete the character at the previous position
+li x21 0	#clear x21
+addi x8 x8 1 #update player's current location
+jalr x10 0(x9) #update frame
+beq x8 x24 end #End the game if reached the goal
+jal x0 input #Continue taking input otherwise
 
 
 #If occupied, do nothing
 doNothing:
-#Reset bits in x31?
-li x31 0
+li x18 0		#clear x18
+li x19 0		#clear x19
+li x20 0		#clear x20
+li x21 0		#clear x21
 #Jump back to beginning of input logic
-j input
+jal x0 input
 
-#Else print player's new position and delete old position. Then check if the player has reached the goal position
-move:
-sb x7 0(x26)
-sb x23 0(x8)
-addi x8 x26 0
-
-#If the player has reached the goal position, then end game (jump to there)
-beq x8 x24 end
-#Otherwise, update frame and continue
-jalr x10 0(x9)
-#Reset bits in x31?
-li x31 0
-#Continue reading input
-j input
 
 
 #Wait block to load frames
 frames:
-li x29 4 #load divisor of 60 FPS (60/30 = 2 frames per second)
+#li x29 4 #load divisor of 60 FPS (60/30 = 2 frames per second)
 wait:
-andi x7 x31 256 #bitmask the vsync to x7
-srli x7 x7 8    #shift the masked bit to LSB
-beq  x7 x0 wait #wait for vsync
-andi x7 x31 256 #bitmask the vsync to x7
-sub  x31 x31 x7 #set the sync signal to 0 by subtracting the mask
-addi x29 x29 -1 #decrement frame counter
-bgt x29 x0 wait
+andi x26 x31 256 #bitmask the vsync to x26
+srli x26 x7 8    #shift the masked bit to LSB
+beq  x26 x0 wait #wait for vsync
+andi x26 x31 256 #bitmask the vsync to x26
+sub  x31 x31 x26 #set the sync signal to 0 by subtracting the mask
+#addi x29 x29 -1 #decrement frame counter
+#bgt x29 x0 wait
 jalr x0, 0(x10)
 
 
 end:
-andi x7 x31 256 #bitmask the vsync to x7
-srli x7 x7 8    #shift the masked bit to LSB
-beq  x7 x0 end #wait for vsync
-andi x7 x31 256 #bitmask the vsync to x7
-sub  x31 x31 x7 #set the sync signal to 0 by subtracting the mask
-addi x29 x29 -1 #decrement frame counter
-bgt x29 x0 end
+andi x26 x31 256 #bitmask the vsync to x26
+srli x26 x26 8    #shift the masked bit to LSB
+beq  x26 x0 end #wait for vsync
+andi x26 x31 256 #bitmask the vsync to x26
+sub  x31 x31 x26 #set the sync signal to 0 by subtracting the mask
+#addi x29 x29 -1 #decrement frame counter
+#bgt x29 x0 end

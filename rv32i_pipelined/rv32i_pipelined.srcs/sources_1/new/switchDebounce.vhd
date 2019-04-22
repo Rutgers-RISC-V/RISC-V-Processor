@@ -62,24 +62,22 @@ end switchdebounce;
 architecture Behavioral of switchdebounce is
     signal counter: std_logic_vector(21 downto 0) := (others => '0');		-- 22 bit register can represent 2500000 ticks
     signal current_state: std_logic := '0'; -- assumes that the button is not pressed on power on
-    signal output_signal: std_logic := '0';
+--    signal output_signal: std_logic := '0';
 begin
-    dbnc <= output_signal;
+    dbnc <= current_state;
     process(clk)
     begin
         if(rising_edge(clk) and clk_en = '1') then						-- NOTE: Assume that button is not pressed when starting
             if(btn = current_state) then
                 counter <= (others => '0');	-- Resets counter if button press value matches the last valid state
-                output_signal <= '0';
-            else
-                counter <= std_logic_vector(unsigned(counter)+1);		-- Increments counter if button value changes
-                if(to_integer(unsigned(counter)) = count_amount) then		-- Once 20ms passes by, change debounce state and resets counter
-                    output_signal <='1';
+--                output_signal <= '0';
+            elsif(to_integer(unsigned(counter)) = count_amount) then		-- Once 20ms passes by, change debounce state and resets counter
+--                    output_signal <='1';
                     current_state <= not current_state;
                     counter <= (others => '0');
-                else
-                    output_signal <= '0';
-                end if;
+            else
+                counter <= std_logic_vector(unsigned(counter)+1);		-- Increments counter if button value changes
+--              output_signal <= '0';
             end if;
         end if;
     end process;

@@ -8,7 +8,7 @@ entity input_handler is
              repeatdelay_ms : natural       := 20);     --set this to how many ms you want to hold the output for
              
     Port ( sw : in STD_LOGIC_VECTOR (3 downto 0);
-           btn : in STD_LOGIC_VECTOR (3 downto 0);
+           btn : in STD_LOGIC_VECTOR (3 downto 0); 
            clk : in STD_LOGIC;
            clk_en: in STD_LOGIC;
            input_regout : out STD_LOGIC_VECTOR (7 downto 0) := (others => '0'));

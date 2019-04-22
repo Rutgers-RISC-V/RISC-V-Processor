@@ -42,19 +42,17 @@ begin
             if(btn = current_state) then
                 counter <= (others => '0');	-- Resets counter if button press value matches the last valid state
                 output_signal <= '0';
-            else
-                counter <= std_logic_vector(unsigned(counter)+1);		-- Increments counter if button value changes
-                if(to_integer(unsigned(counter)) = count_amount) then		-- Once 20ms passes by, change debounce state and resets counter
-                    if(current_state = '1') then -- if change from button press to release
-                        output_signal <='1';
-                    else
-                        output_signal <= '0';
-                    end if;
-                    current_state <= not current_state;
-                    counter <= (others => '0');
+            elsif(to_integer(unsigned(counter)) = count_amount) then		-- Once 20ms passes by, change debounce state and resets counter
+                if(current_state = '1') then -- if change from button press to release
+                    output_signal <='1';
                 else
                     output_signal <= '0';
                 end if;
+                current_state <= not current_state;
+                counter <= (others => '0');
+            else
+                counter <= std_logic_vector(unsigned(counter)+1);		-- Increments counter if button value changes
+                output_signal <= '0';
             end if;
         end if;
     end process;
