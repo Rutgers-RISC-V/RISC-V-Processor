@@ -1,5 +1,5 @@
 #UI initialization	
-li x6 4096 # load base address of terminal into a register.	
+li x6 32768  # load base address of terminal into a register.	
 
 #Two Processes That Count Up to 250 million 
 li x7 84 #T
@@ -52,7 +52,7 @@ li x7 84 #T
 addi x8 x6 23	
 sb x7 0(x8)
 	
-li x7 84 #h	
+li x7 104 #h	
 addi x8 x6 24	
 sb x7 0(x8)
 	
@@ -69,73 +69,73 @@ addi x8 x6 28
 sb x7 0(x8)
 	
 li x7 111 #o	
-addi x8 x6 27	
+addi x8 x6 29	
 sb x7 0(x8)	
 	
 li x7 117 #u
-addi x8 x6 28	
-sb x7 0(x8)
-
-li x7 110 #n	
-addi x8 x6 29	
-sb x7 0(x8)
-
-li x7 116 #t	
 addi x8 x6 30	
 sb x7 0(x8)
 
-li x7 85 #U
+li x7 110 #n	
+addi x8 x6 31	
+sb x7 0(x8)
+
+li x7 116 #t	
 addi x8 x6 32	
 sb x7 0(x8)
 
-li x7 112 #p
+li x7 85 #U
 addi x8 x6 33	
 sb x7 0(x8)
 
+li x7 112 #p
+addi x8 x6 34
+sb x7 0(x8)
+
 li x7 84 #T	
-addi x8 x6 35	
+addi x8 x6 36	
 sb x7 0(x8)
 
 li x7 111 #o	
-addi x8 x6 36	
+addi x8 x6 37	
 sb x7 0(x8)
 	
 li x7 50 #2	
-addi x8 x6 38	
+addi x8 x6 39	
 sb x7 0(x8)	
 	
 li x7 53 #5
-addi x8 x6 39	
-sb x7 0(x8)
-
-li x7 48 #0
 addi x8 x6 40	
 sb x7 0(x8)
 
-li x7 77 #M	
-addi x8 x6 42	
+li x7 48 #0
+addi x8 x6 41	
 sb x7 0(x8)
 
-li x7 105 #i
+li x7 77 #M	
 addi x8 x6 43	
 sb x7 0(x8)
 
-li x7 108 #ll
+li x7 105 #i
 addi x8 x6 44	
 sb x7 0(x8)
+
+li x7 108 #ll
 addi x8 x6 45	
 sb x7 0(x8)
-
-li x7 105 #i
 addi x8 x6 46	
 sb x7 0(x8)
 
-li x7 111 #o
+li x7 105 #i
 addi x8 x6 47
 sb x7 0(x8)
 
-li x7 112 #n
-addi x8 x6 48
+li x7 111 #o
+addi x8 x6 48	
+sb x7 0(x8)
+
+li x7 110 #n
+addi x8 x6 49	
 sb x7 0(x8)
 
 #Pipeline	
@@ -337,7 +337,7 @@ li x7 110 #n
 addi x8 x6 759	
 sb x7 0(x8)	
 	
-li x7 105 #i	
+li x7 108 #i	
 addi x8 x6 760	
 sb x7 0(x8)	
 
@@ -349,7 +349,7 @@ li x7 103 #g
 addi x8 x6 762	
 sb x7 0(x8)
 
-li x7 58 #:	
+li x7 58 #	
 addi x8 x6 763	
 sb x7 0(x8)
 
@@ -626,7 +626,7 @@ li x7 110 #n
 addi x8 x6 1557	
 sb x7 0(x8)	
 	
-li x7 105 #i	
+li x7 108 #i	
 addi x8 x6 1558	
 sb x7 0(x8)	
 
@@ -804,13 +804,29 @@ li x7 93 #]
 addi x8 x6 1660	
 sb x7 0(x8)	
 	
+	
+	la x10 process1
+	la x11 Bar1
 	li x20 127
-	li x8 4096
+	li x8 32768 
 	addi x8 x8 810
 	li x18 250000000
 	add x5 x5 x0
 	li x19 5000000
 	addi x21 x19 0
+	jalr x1 0(x10)
+	
+Bar1:	
+	sb x20 0(x8)
+	addi x8 x8 1
+	add x19 x19 x21
+	jalr x1 0(x10)
+Bar2:
+	sb x20 0(x8)
+	addi x8 x8 1
+	add x19 x19 x21
+	jalr x1 0(x10)
+	
 process1:	
 	addi x5 x5 1
 	addi x5 x5 1
@@ -819,17 +835,62 @@ process1:
 	addi x5 x5 1
 	beq x5 x19 Bar1
 	blt x5 x18 process1
+
+	li x7 93 #]	
+	addi x8 x6 1660	
+	sb x7 0(x8)	
+		
 	
-	li x8 4096
+	#Complete
+	li x6 32768  # load base address of terminal into a register.	
+	#C
+	li x7 67
+	addi x8 x6 933
+	sb x7 0(x8)
+	#o
+	li x7 111
+	addi x8 x8 1
+	sb x7 0(x8)
+	#m
+	li x7 109
+	addi x8 x8 1
+	sb x7 0(x8)
+	#p
+	li x7 112
+	addi x8 x8 1
+	sb x7 0(x8)
+	#l
+	li x7 108
+	addi x8 x8 1
+	sb x7 0(x8)
+	#e
+	li x7 101
+	addi x8 x8 1
+	sb x7 0(x8)
+	#t
+	li x7 116
+	addi x8 x8 1
+	sb x7 0(x8)
+	#e
+	li x7 101
+	addi x8 x8 1
+	sb x7 0(x8)
+	
+	li x8 32768 
 	addi x8 x8 1610
 	li x18 50000000
 	li x19 1000000
-	add x5 x0 x0
-	add x6 x0 x0
-	add x7 x0 x0
-	add x28 x0 x0
-	add x29 x0 x0
+	li x5 0
+	li x6 0
+	li x7 0
+	li x28 0
+	li x29 0
 	addi x21 x19 0
+	la x10 process2
+	la x11 Bar2
+	jalr x0 0(x10)
+
+	
 process2:	
 	addi x5 x5 1
 	addi x6 x6 1
@@ -838,16 +899,42 @@ process2:
 	addi x29 x29 1
 	beq x5 x19 Bar2
 	blt x5 x18 process2
-	j End
-Bar1:	
-	sb x20 0(x8)
+	
+	#Output Complete
+	li x6 32768  # load base address of terminal into a register.	
+	#C
+	li x7 67
+	addi x8 x6 1733
+	sb x7 0(x8)
+	#o
+	li x7 111
 	addi x8 x8 1
-	add x19 x19 x21
-	j process1
-Bar2:
-	sb x20 0(x8)
+	sb x7 0(x8)
+	#m
+	li x7 109
 	addi x8 x8 1
-	add x19 x19 x21
-	j process2
-End:
-	j End
+	sb x7 0(x8)
+	#p
+	li x7 112
+	addi x8 x8 1
+	sb x7 0(x8)
+	#l
+	li x7 108
+	addi x8 x8 1
+	sb x7 0(x8)
+	#e
+	li x7 101
+	addi x8 x8 1
+	sb x7 0(x8)
+	#t
+	li x7 116
+	addi x8 x8 1
+	sb x7 0(x8)
+	#e
+	li x7 101
+	addi x8 x8 1
+	sb x7 0(x8)
+	la x10 End
+	jalr x1 0(x10)
+	End:
+	jalr x1 0(x10)
