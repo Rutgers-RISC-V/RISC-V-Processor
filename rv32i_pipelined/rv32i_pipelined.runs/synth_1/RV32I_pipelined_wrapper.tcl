@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -43,6 +45,8 @@ add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipeline
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/Dumps/inputtest2.coe}}
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe}}
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/InputTest.coe}}
+add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/fillTerminalAnimation.coe}}
+add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/draw.coe}}
 read_vhdl -library xil_defaultlib {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd}}
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_ooc.xdc}}]

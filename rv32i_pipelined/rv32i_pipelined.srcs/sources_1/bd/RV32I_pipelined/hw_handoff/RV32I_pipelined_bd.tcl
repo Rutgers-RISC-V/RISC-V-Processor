@@ -225,7 +225,7 @@ proc create_root_design { parentCell } {
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
   set_property -dict [ list \
    CONFIG.Byte_Size {8} \
-   CONFIG.Coe_File {../../../../../../../Dumps_and_Assembly/Dumps/InputTest.coe} \
+   CONFIG.Coe_File {../../../../../../../Dumps_and_Assembly/Dumps/draw.coe} \
    CONFIG.EN_SAFETY_CKT {false} \
    CONFIG.Enable_32bit_Address {false} \
    CONFIG.Enable_A {Use_ENA_Pin} \
@@ -558,7 +558,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clk_2 [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins blk_mem_gen_1/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins clock_div_0/clk] [get_bd_pins clock_div_1/clk] [get_bd_pins hazard_count_0/clk] [get_bd_pins input_handler_0/clk] [get_bd_pins program_counter_1/clk] [get_bd_pins registers_0/clk] [get_bd_pins stage_DE_0/clk] [get_bd_pins stage_EM_0/clk] [get_bd_pins stage_FD_0/clk] [get_bd_pins stage_MW_0/clk] [get_bd_pins terminal_tld_0/clk]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins clock_div_0/locked] [get_bd_pins clock_div_1/locked]
-  connect_bd_net -net clock_div_0_div_clk [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins blk_mem_gen_1/ena] [get_bd_pins clock_div_0/div_clk] [get_bd_pins hazard_count_0/clk_en] [get_bd_pins program_counter_1/clk_en] [get_bd_pins registers_0/clk_en] [get_bd_pins stage_DE_0/clk_en] [get_bd_pins stage_EM_0/clk_en] [get_bd_pins stage_FD_0/clk_en] [get_bd_pins stage_MW_0/clk_en]
+  connect_bd_net -net clock_div_0_div_clk [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins blk_mem_gen_1/ena] [get_bd_pins clock_div_0/div_clk] [get_bd_pins hazard_count_0/clk_en] [get_bd_pins input_handler_0/clk_en] [get_bd_pins program_counter_1/clk_en] [get_bd_pins registers_0/clk_en] [get_bd_pins stage_DE_0/clk_en] [get_bd_pins stage_EM_0/clk_en] [get_bd_pins stage_FD_0/clk_en] [get_bd_pins stage_MW_0/clk_en]
   connect_bd_net -net clock_div_1_div_clk [get_bd_pins blk_mem_gen_1/enb] [get_bd_pins clock_div_1/div_clk] [get_bd_pins terminal_tld_0/clk_en]
   connect_bd_net -net hazard_logic_0_hazard_stage [get_bd_pins hazard_count_0/hazard_stage] [get_bd_pins hazard_logic_0/hazard_stage]
   connect_bd_net -net hazard_logic_0_new_hazard [get_bd_pins hazard_count_0/new_hazard] [get_bd_pins hazard_logic_0/new_hazard] [get_bd_pins stage_DE_0/hazard_logic]

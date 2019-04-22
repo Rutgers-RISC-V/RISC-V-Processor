@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Sun Apr 21 19:33:20 2019
+--Date        : Sun Apr 21 20:23:28 2019
 --Host        : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -349,6 +349,7 @@ architecture STRUCTURE of RV32I_pipelined is
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
     btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
+    clk_en : in STD_LOGIC;
     input_regout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component RV32I_pipelined_input_handler_0_0;
@@ -563,6 +564,7 @@ input_handler_0: component RV32I_pipelined_input_handler_0_0
      port map (
       btn(3 downto 0) => btn_1(3 downto 0),
       clk => clk_2,
+      clk_en => clock_div_0_div_clk,
       input_regout(7 downto 0) => input_handler_0_input_regout(7 downto 0),
       sw(3 downto 0) => sw_1(3 downto 0)
     );

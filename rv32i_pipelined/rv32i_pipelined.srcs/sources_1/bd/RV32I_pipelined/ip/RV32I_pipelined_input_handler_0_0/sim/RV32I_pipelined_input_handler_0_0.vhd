@@ -58,6 +58,7 @@ ENTITY RV32I_pipelined_input_handler_0_0 IS
     sw : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     btn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     clk : IN STD_LOGIC;
+    clk_en : IN STD_LOGIC;
     input_regout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END RV32I_pipelined_input_handler_0_0;
@@ -74,6 +75,7 @@ ARCHITECTURE RV32I_pipelined_input_handler_0_0_arch OF RV32I_pipelined_input_han
       sw : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       btn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       clk : IN STD_LOGIC;
+      clk_en : IN STD_LOGIC;
       input_regout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
   END COMPONENT input_handler;
@@ -93,6 +95,7 @@ BEGIN
       sw => sw,
       btn => btn,
       clk => clk,
+      clk_en => clk_en,
       input_regout => input_regout
     );
 END RV32I_pipelined_input_handler_0_0_arch;

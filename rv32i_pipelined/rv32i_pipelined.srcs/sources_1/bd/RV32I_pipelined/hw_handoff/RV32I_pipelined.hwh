@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 21 19:33:20 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 21 20:23:29 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="RV32I_pipelined" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -319,7 +319,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/InputTest.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../Dumps_and_Assembly/Dumps/draw.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="true"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -1354,6 +1354,7 @@
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="ena"/>
             <CONNECTION INSTANCE="program_counter_1" PORT="clk_en"/>
             <CONNECTION INSTANCE="registers_0" PORT="clk_en"/>
+            <CONNECTION INSTANCE="input_handler_0" PORT="clk_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1484,6 +1485,11 @@
         <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_en" SIGIS="undef" SIGNAME="clock_div_0_div_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_div_0" PORT="div_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="input_regout" RIGHT="0" SIGIS="undef" SIGNAME="input_handler_0_input_regout">
