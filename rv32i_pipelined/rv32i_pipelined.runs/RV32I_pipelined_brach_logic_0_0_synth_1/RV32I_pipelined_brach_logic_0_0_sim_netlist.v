@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Apr 16 11:06:08 2019
-// Host        : Nugget running 64-bit major release  (build 9200)
+// Date        : Tue Apr 23 01:08:13 2019
+// Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ RV32I_pipelined_brach_logic_0_0_sim_netlist.v
 // Design      : RV32I_pipelined_brach_logic_0_0
@@ -37,38 +37,40 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire [1:0]mux_next_pc;
   wire \mux_next_pc[0]_INST_0_i_1_n_0 ;
 
-  LUT5 #(
-    .INIT(32'h8888888B)) 
+  LUT6 #(
+    .INIT(64'h88BB88888BBBB8BB)) 
     branch_INST_0
        (.I0(\mux_next_pc[0]_INST_0_i_1_n_0 ),
-        .I1(control_branch[3]),
-        .I2(control_branch[2]),
-        .I3(control_branch[0]),
-        .I4(control_branch[1]),
+        .I1(control_branch[2]),
+        .I2(alu_zero),
+        .I3(control_branch[3]),
+        .I4(control_branch[0]),
+        .I5(control_branch[1]),
         .O(branch));
-  LUT4 #(
-    .INIT(16'h88B8)) 
+  LUT6 #(
+    .INIT(64'h888BBBBB88B88888)) 
     \mux_next_pc[0]_INST_0 
        (.I0(\mux_next_pc[0]_INST_0_i_1_n_0 ),
-        .I1(control_branch[3]),
-        .I2(control_branch[0]),
-        .I3(control_branch[2]),
-        .O(mux_next_pc[0]));
-  LUT6 #(
-    .INIT(64'h4700473374337400)) 
-    \mux_next_pc[0]_INST_0_i_1 
-       (.I0(alu_overflow),
-        .I1(control_branch[1]),
-        .I2(alu_sign),
-        .I3(control_branch[2]),
-        .I4(alu_zero),
+        .I1(control_branch[2]),
+        .I2(alu_zero),
+        .I3(control_branch[1]),
+        .I4(control_branch[3]),
         .I5(control_branch[0]),
+        .O(mux_next_pc[0]));
+  LUT5 #(
+    .INIT(32'h06F60000)) 
+    \mux_next_pc[0]_INST_0_i_1 
+       (.I0(alu_sign),
+        .I1(control_branch[0]),
+        .I2(control_branch[1]),
+        .I3(alu_overflow),
+        .I4(control_branch[3]),
         .O(\mux_next_pc[0]_INST_0_i_1_n_0 ));
   LUT3 #(
-    .INIT(8'h9A)) 
+    .INIT(8'h9C)) 
     \mux_next_pc[1]_INST_0 
-       (.I0(control_branch[3]),
-        .I1(control_branch[2]),
+       (.I0(control_branch[2]),
+        .I1(control_branch[3]),
         .I2(control_branch[1]),
         .O(mux_next_pc[1]));
 endmodule

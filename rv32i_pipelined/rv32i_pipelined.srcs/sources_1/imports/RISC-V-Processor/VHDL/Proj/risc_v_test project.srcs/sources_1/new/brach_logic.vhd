@@ -51,13 +51,13 @@ begin
                 branch <= '1'; -- a stall requires preventing the instructions in the fetch and decode stages from continuing execution
             when "0001" => -- jalr
                 mux_next_pc <= "01";
-                 branch <= '0';
+                 branch <= '1';
             when "0010" => -- pc+4
                 mux_next_pc <= "10";
                  branch <= '0';
             when "0011" => -- jal or branch
                 mux_next_pc <= "11";
-                 branch <= '0';
+                 branch <= '1';
             when "1000" => -- beq
                 if( alu_zero = '1') then -- do branch
                     mux_next_pc <= "11";

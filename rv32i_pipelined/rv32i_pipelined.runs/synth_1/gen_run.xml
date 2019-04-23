@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555988214">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555996841">
   <File Type="PA-TCL" Name="RV32I_pipelined_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="RV32I_pipelined_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="RV32I_pipelined_wrapper_reports.tcl"/>
@@ -264,162 +264,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/addTest_Dump.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/addTest_Dump.coe"/>
-        <Attr Name="ImportTime" Val="1553461696"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/FPGA_Critical_Dump.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe"/>
-        <Attr Name="ImportTime" Val="1553461700"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/FPGA_RISC_V_Tests_Dump.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe"/>
-        <Attr Name="ImportTime" Val="1553461705"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/terminal_test_for_simulator.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe"/>
-        <Attr Name="ImportTime" Val="1554087875"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/terminalDemo_2019_Wide_Delay.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_Delay.coe"/>
-        <Attr Name="ImportTime" Val="1554903902"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/terminalDemo_2019_Wide_NoDelay.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe"/>
-        <Attr Name="ImportTime" Val="1554903902"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/addTest_Dump.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/inputtest.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/inputtest.coe"/>
-        <Attr Name="ImportTime" Val="1555644443"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/inputtest2.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/inputtest2.coe"/>
-        <Attr Name="ImportTime" Val="1555644489"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/InputTest.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/fillTerminalAnimation.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/draw.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/draw.coe"/>
-        <Attr Name="ImportTime" Val="1555980046"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/printMaze.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/printMaze.coe"/>
-        <Attr Name="ImportTime" Val="1555980046"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/rockpaperscizzors.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/rockpaperscizzors.coe"/>
-        <Attr Name="ImportTime" Val="1555980046"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Dumps/memRead.coe">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/memRead.coe"/>
-        <Attr Name="ImportTime" Val="1555980046"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/draw.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/printMaze.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/rockpaperscissors.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/mazeinput.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="RV32I_pipelined_wrapper"/>
@@ -449,18 +293,16 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_Descrambler_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_mux_reg_pc_alu_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_mux_output_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_instruction_clear_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_mux_reg_pc_alu_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_Descrambler_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_hazard_logic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_input_handler_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_brach_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_pc_shift_down_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_mux_reg_descr_alu_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_ALU_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_hazard_count_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_hazard_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_pc_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_stage_MW_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_terminal_tld_0_0"/>
@@ -476,6 +318,8 @@
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_registers_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_alu_signals_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_brach_logic_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_input_handler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_post_memory_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RV32I_pipelined_pre_memory_logic_0_0"/>
 </GenRun>

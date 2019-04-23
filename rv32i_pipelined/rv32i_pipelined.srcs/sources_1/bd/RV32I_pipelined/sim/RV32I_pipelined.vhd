@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Mon Apr 22 22:54:20 2019
+--Date        : Tue Apr 23 01:19:14 2019
 --Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
 --Command     : generate_target RV32I_pipelined.bd
 --Design      : RV32I_pipelined
@@ -60,16 +60,6 @@ architecture STRUCTURE of RV32I_pipelined is
     doutb : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component RV32I_pipelined_blk_mem_gen_0_0;
-  component RV32I_pipelined_brach_logic_0_0 is
-  port (
-    control_branch : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    alu_zero : in STD_LOGIC;
-    alu_sign : in STD_LOGIC;
-    alu_overflow : in STD_LOGIC;
-    mux_next_pc : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    branch : out STD_LOGIC
-  );
-  end component RV32I_pipelined_brach_logic_0_0;
   component RV32I_pipelined_clk_wiz_0_0 is
   port (
     clk_in1 : in STD_LOGIC;
@@ -353,6 +343,16 @@ architecture STRUCTURE of RV32I_pipelined is
     byte_enable_term : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component RV32I_pipelined_pre_memory_logic_0_0;
+  component RV32I_pipelined_brach_logic_0_0 is
+  port (
+    control_branch : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    alu_zero : in STD_LOGIC;
+    alu_sign : in STD_LOGIC;
+    alu_overflow : in STD_LOGIC;
+    mux_next_pc : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    branch : out STD_LOGIC
+  );
+  end component RV32I_pipelined_brach_logic_0_0;
   signal ALU_0_alu_out_33 : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal ALU_0_overflow : STD_LOGIC;
   signal ALU_0_sign : STD_LOGIC;

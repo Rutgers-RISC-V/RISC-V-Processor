@@ -400,162 +400,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/addTest_Dump.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/addTest_Dump.coe"/>
-          <Attr Name="ImportTime" Val="1553461696"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/FPGA_Critical_Dump.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/FPGA_Critical_Dump.coe"/>
-          <Attr Name="ImportTime" Val="1553461700"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/FPGA_RISC_V_Tests_Dump.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe"/>
-          <Attr Name="ImportTime" Val="1553461705"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/FPGA_RISC_V_Tests_Dump.coe">
-        <FileInfo RelPath="FPGA_RISC_V_Tests_Dump.coe">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/terminal_test_for_simulator.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe"/>
-          <Attr Name="ImportTime" Val="1554087875"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/terminal_test_for_simulator.coe">
-        <FileInfo RelPath="terminal_test_for_simulator.coe">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/terminalDemo_2019_Wide_Delay.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_Delay.coe"/>
-          <Attr Name="ImportTime" Val="1554903902"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/terminalDemo_2019_Wide_NoDelay.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe"/>
-          <Attr Name="ImportTime" Val="1554903902"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/addTest_Dump.coe">
-        <FileInfo RelPath="addTest_Dump.coe">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/inputtest.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/inputtest.coe"/>
-          <Attr Name="ImportTime" Val="1555644443"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/inputtest2.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/inputtest2.coe"/>
-          <Attr Name="ImportTime" Val="1555644489"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe">
-        <FileInfo RelPath="terminalDemo_2019_Wide_NoDelay.coe">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/InputTest.coe">
-        <FileInfo RelPath="InputTest.coe">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/fillTerminalAnimation.coe">
-        <FileInfo RelPath="fillTerminalAnimation.coe">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/draw.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/draw.coe"/>
-          <Attr Name="ImportTime" Val="1555980046"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/printMaze.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/printMaze.coe"/>
-          <Attr Name="ImportTime" Val="1555980046"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/rockpaperscizzors.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/rockpaperscizzors.coe"/>
-          <Attr Name="ImportTime" Val="1555980046"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Dumps/memRead.coe">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Dumps_and_Assembly/Dumps/memRead.coe"/>
-          <Attr Name="ImportTime" Val="1555980046"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/draw.coe">
-        <FileInfo RelPath="draw.coe">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/printMaze.coe">
-        <FileInfo RelPath="printMaze.coe">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/rockpaperscissors.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../Dumps_and_Assembly/Dumps/mazeinput.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="RV32I_pipelined_wrapper"/>
@@ -688,12 +532,6 @@
     <FileSet Name="RV32I_pipelined_Descrambler_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_Descrambler_0_0">
       <Config>
         <Option Name="TopModule" Val="RV32I_pipelined_Descrambler_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="RV32I_pipelined_brach_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_brach_logic_0_0">
-      <Config>
-        <Option Name="TopModule" Val="RV32I_pipelined_brach_logic_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -859,6 +697,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="RV32I_pipelined_brach_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/RV32I_pipelined_brach_logic_0_0">
+      <Config>
+        <Option Name="TopModule" Val="RV32I_pipelined_brach_logic_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -889,15 +733,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="RV32I_pipelined_Descrambler_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_Descrambler_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_Descrambler_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_Descrambler_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_brach_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_brach_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_brach_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_brach_logic_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -1149,6 +984,17 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="RV32I_pipelined_brach_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="RV32I_pipelined_brach_logic_0_0" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_brach_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/RV32I_pipelined_brach_logic_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
@@ -1167,22 +1013,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="RV32I_pipelined_Descrambler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_Descrambler_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_Descrambler_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="RV32I_pipelined_brach_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_brach_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_brach_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -1617,6 +1447,24 @@
     <Run Id="RV32I_pipelined_pre_memory_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_pre_memory_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_pre_memory_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="RV32I_pipelined_brach_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="RV32I_pipelined_brach_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="RV32I_pipelined_brach_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

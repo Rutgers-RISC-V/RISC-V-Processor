@@ -12,7 +12,6 @@
       "ALU_0": "",
       "Descrambler_0": "",
       "blk_mem_gen_0": "",
-      "brach_logic_0": "",
       "clk_wiz_0": "",
       "hazard_count_0": "",
       "hazard_logic_0": "",
@@ -37,7 +36,8 @@
       "terminal_tld_0": "",
       "input_handler_0": "",
       "post_memory_logic_0": "",
-      "pre_memory_logic_0": ""
+      "pre_memory_logic_0": "",
+      "brach_logic_0": ""
     },
     "ports": {
       "clk": {
@@ -173,7 +173,7 @@
             "value": "8"
           },
           "Coe_File": {
-            "value": "../../../../../../../Dumps_and_Assembly/Dumps/mazeinput.coe"
+            "value": "../../../../../../../Dumps_and_Assembly/Dumps/mazeInputOld.coe"
           },
           "Enable_32bit_Address": {
             "value": "false"
@@ -231,39 +231,6 @@
           },
           "use_bram_block": {
             "value": "Stand_Alone"
-          }
-        }
-      },
-      "brach_logic_0": {
-        "vlnv": "xilinx.com:module_ref:brach_logic:1.0",
-        "xci_name": "RV32I_pipelined_brach_logic_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "brach_logic",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "control_branch": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "alu_zero": {
-            "direction": "I"
-          },
-          "alu_sign": {
-            "direction": "I"
-          },
-          "alu_overflow": {
-            "direction": "I"
-          },
-          "mux_next_pc": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "branch": {
-            "direction": "O"
           }
         }
       },
@@ -1646,6 +1613,39 @@
             "direction": "O",
             "left": "3",
             "right": "0"
+          }
+        }
+      },
+      "brach_logic_0": {
+        "vlnv": "xilinx.com:module_ref:brach_logic:1.0",
+        "xci_name": "RV32I_pipelined_brach_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "brach_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "control_branch": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "alu_zero": {
+            "direction": "I"
+          },
+          "alu_sign": {
+            "direction": "I"
+          },
+          "alu_overflow": {
+            "direction": "I"
+          },
+          "mux_next_pc": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "branch": {
+            "direction": "O"
           }
         }
       }

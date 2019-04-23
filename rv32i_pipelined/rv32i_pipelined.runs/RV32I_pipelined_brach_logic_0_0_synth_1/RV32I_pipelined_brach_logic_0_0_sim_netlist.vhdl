@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Tue Apr 16 11:06:08 2019
--- Host        : Nugget running 64-bit major release  (build 9200)
+-- Date        : Tue Apr 23 01:08:13 2019
+-- Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ RV32I_pipelined_brach_logic_0_0_sim_netlist.vhdl
 -- Design      : RV32I_pipelined_brach_logic_0_0
@@ -38,49 +38,51 @@ end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   signal \mux_next_pc[0]_INST_0_i_1_n_0\ : STD_LOGIC;
 begin
-branch_INST_0: unisim.vcomponents.LUT5
+branch_INST_0: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8888888B"
+      INIT => X"88BB88888BBBB8BB"
     )
         port map (
       I0 => \mux_next_pc[0]_INST_0_i_1_n_0\,
-      I1 => control_branch(3),
-      I2 => control_branch(2),
-      I3 => control_branch(0),
-      I4 => control_branch(1),
+      I1 => control_branch(2),
+      I2 => alu_zero,
+      I3 => control_branch(3),
+      I4 => control_branch(0),
+      I5 => control_branch(1),
       O => branch
     );
-\mux_next_pc[0]_INST_0\: unisim.vcomponents.LUT4
+\mux_next_pc[0]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"88B8"
+      INIT => X"888BBBBB88B88888"
     )
         port map (
       I0 => \mux_next_pc[0]_INST_0_i_1_n_0\,
-      I1 => control_branch(3),
-      I2 => control_branch(0),
-      I3 => control_branch(2),
+      I1 => control_branch(2),
+      I2 => alu_zero,
+      I3 => control_branch(1),
+      I4 => control_branch(3),
+      I5 => control_branch(0),
       O => mux_next_pc(0)
     );
-\mux_next_pc[0]_INST_0_i_1\: unisim.vcomponents.LUT6
+\mux_next_pc[0]_INST_0_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"4700473374337400"
+      INIT => X"06F60000"
     )
         port map (
-      I0 => alu_overflow,
-      I1 => control_branch(1),
-      I2 => alu_sign,
-      I3 => control_branch(2),
-      I4 => alu_zero,
-      I5 => control_branch(0),
+      I0 => alu_sign,
+      I1 => control_branch(0),
+      I2 => control_branch(1),
+      I3 => alu_overflow,
+      I4 => control_branch(3),
       O => \mux_next_pc[0]_INST_0_i_1_n_0\
     );
 \mux_next_pc[1]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"9A"
+      INIT => X"9C"
     )
         port map (
-      I0 => control_branch(3),
-      I1 => control_branch(2),
+      I0 => control_branch(2),
+      I1 => control_branch(3),
       I2 => control_branch(1),
       O => mux_next_pc(1)
     );
