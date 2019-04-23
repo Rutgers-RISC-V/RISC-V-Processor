@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Apr 16 11:08:01 2019
-// Host        : Nugget running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_sim_netlist.v
+// Date        : Mon Apr 22 20:48:59 2019
+// Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim {C:/Users/Oz
+//               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_sim_netlist.v}
 // Design      : RV32I_pipelined_post_memory_logic_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -120,7 +120,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[1]),
         .I3(\memory_access_out[15]_INST_0_i_5_n_0 ),
         .I4(addr1[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[0]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
@@ -137,7 +137,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     \memory_access_out[0]_INST_0_i_3 
        (.I0(memory_access_out_term_in[0]),
         .I1(memory_access_out_gen_in[0]),
-        .I2(addr1[12]),
+        .I2(addr1[15]),
         .I3(addr1[0]),
         .I4(addr1[1]),
         .I5(\memory_access_out[6]_INST_0_i_5_n_0 ),
@@ -175,7 +175,7 @@ module RV32I_pipelined_post_memory_logic_0_0
        (.I0(memory_access_out_term_in[18]),
         .I1(\memory_access_out[14]_INST_0_i_8_n_0 ),
         .I2(memory_access_out_term_in[10]),
-        .I3(addr1[12]),
+        .I3(addr1[15]),
         .I4(\memory_access_out[14]_INST_0_i_6_n_0 ),
         .I5(\memory_access_out[14]_INST_0_i_9_n_0 ),
         .O(\memory_access_out[10]_INST_0_i_3_n_0 ));
@@ -212,7 +212,7 @@ module RV32I_pipelined_post_memory_logic_0_0
        (.I0(memory_access_out_term_in[19]),
         .I1(\memory_access_out[14]_INST_0_i_8_n_0 ),
         .I2(memory_access_out_term_in[11]),
-        .I3(addr1[12]),
+        .I3(addr1[15]),
         .I4(\memory_access_out[14]_INST_0_i_6_n_0 ),
         .I5(\memory_access_out[14]_INST_0_i_9_n_0 ),
         .O(\memory_access_out[11]_INST_0_i_3_n_0 ));
@@ -249,7 +249,7 @@ module RV32I_pipelined_post_memory_logic_0_0
        (.I0(memory_access_out_term_in[20]),
         .I1(\memory_access_out[14]_INST_0_i_8_n_0 ),
         .I2(memory_access_out_term_in[12]),
-        .I3(addr1[12]),
+        .I3(addr1[15]),
         .I4(\memory_access_out[14]_INST_0_i_6_n_0 ),
         .I5(\memory_access_out[14]_INST_0_i_9_n_0 ),
         .O(\memory_access_out[12]_INST_0_i_3_n_0 ));
@@ -286,7 +286,7 @@ module RV32I_pipelined_post_memory_logic_0_0
        (.I0(memory_access_out_term_in[21]),
         .I1(\memory_access_out[14]_INST_0_i_8_n_0 ),
         .I2(memory_access_out_term_in[13]),
-        .I3(addr1[12]),
+        .I3(addr1[15]),
         .I4(\memory_access_out[14]_INST_0_i_6_n_0 ),
         .I5(\memory_access_out[14]_INST_0_i_9_n_0 ),
         .O(\memory_access_out[13]_INST_0_i_3_n_0 ));
@@ -312,7 +312,7 @@ module RV32I_pipelined_post_memory_logic_0_0
   LUT6 #(
     .INIT(64'h0004000000040040)) 
     \memory_access_out[14]_INST_0_i_2 
-       (.I0(addr1[12]),
+       (.I0(addr1[15]),
         .I1(\memory_access_out[14]_INST_0_i_6_n_0 ),
         .I2(control_mem[1]),
         .I3(control_mem[3]),
@@ -332,7 +332,7 @@ module RV32I_pipelined_post_memory_logic_0_0
        (.I0(memory_access_out_term_in[22]),
         .I1(\memory_access_out[14]_INST_0_i_8_n_0 ),
         .I2(memory_access_out_term_in[14]),
-        .I3(addr1[12]),
+        .I3(addr1[15]),
         .I4(\memory_access_out[14]_INST_0_i_6_n_0 ),
         .I5(\memory_access_out[14]_INST_0_i_9_n_0 ),
         .O(\memory_access_out[14]_INST_0_i_4_n_0 ));
@@ -344,7 +344,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I1(control_mem[1]),
         .I2(control_mem[3]),
         .I3(addr1[0]),
-        .I4(addr1[12]),
+        .I4(addr1[15]),
         .O(\memory_access_out[14]_INST_0_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
@@ -361,12 +361,12 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I1(control_mem[1]),
         .I2(control_mem[3]),
         .I3(addr1[0]),
-        .I4(addr1[12]),
+        .I4(addr1[15]),
         .O(\memory_access_out[14]_INST_0_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h0000000800000000)) 
     \memory_access_out[14]_INST_0_i_8 
-       (.I0(addr1[12]),
+       (.I0(addr1[15]),
         .I1(addr1[0]),
         .I2(control_mem[3]),
         .I3(control_mem[1]),
@@ -426,7 +426,7 @@ module RV32I_pipelined_post_memory_logic_0_0
   LUT3 #(
     .INIT(8'h80)) 
     \memory_access_out[15]_INST_0_i_4 
-       (.I0(addr1[12]),
+       (.I0(addr1[15]),
         .I1(\memory_access_out[31]_INST_0_i_1_n_0 ),
         .I2(memory_access_out_term_in[15]),
         .O(\memory_access_out[15]_INST_0_i_4_n_0 ));
@@ -442,14 +442,14 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(8'hB8)) 
     \memory_access_out[15]_INST_0_i_6 
        (.I0(memory_access_out_term_in[23]),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(memory_access_out_gen_in[23]),
         .O(\memory_access_out[15]_INST_0_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[16]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[16]),
@@ -459,7 +459,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[17]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[17]),
@@ -469,7 +469,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[18]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[18]),
@@ -479,7 +479,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[19]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[19]),
@@ -502,7 +502,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[1]),
         .I3(\memory_access_out[15]_INST_0_i_5_n_0 ),
         .I4(addr1[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[1]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
@@ -519,7 +519,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     \memory_access_out[1]_INST_0_i_3 
        (.I0(memory_access_out_term_in[1]),
         .I1(memory_access_out_gen_in[1]),
-        .I2(addr1[12]),
+        .I2(addr1[15]),
         .I3(addr1[0]),
         .I4(addr1[1]),
         .I5(\memory_access_out[6]_INST_0_i_5_n_0 ),
@@ -528,7 +528,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[20]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[20]),
@@ -538,7 +538,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[21]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[21]),
@@ -548,7 +548,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[22]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[22]),
@@ -558,7 +558,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(32'hFFFFB800)) 
     \memory_access_out[23]_INST_0 
        (.I0(memory_access_out_term_in[23]),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(memory_access_out_gen_in[23]),
         .I3(\memory_access_out[31]_INST_0_i_1_n_0 ),
         .I4(\memory_access_out[31]_INST_0_i_2_n_0 ),
@@ -567,7 +567,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[24]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[24]),
@@ -577,7 +577,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[25]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[25]),
@@ -587,7 +587,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[26]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[26]),
@@ -597,7 +597,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[27]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[27]),
@@ -607,7 +607,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[28]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[28]),
@@ -617,7 +617,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[29]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[29]),
@@ -640,7 +640,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[1]),
         .I3(\memory_access_out[15]_INST_0_i_5_n_0 ),
         .I4(addr1[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[2]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
@@ -657,7 +657,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     \memory_access_out[2]_INST_0_i_3 
        (.I0(memory_access_out_term_in[2]),
         .I1(memory_access_out_gen_in[2]),
-        .I2(addr1[12]),
+        .I2(addr1[15]),
         .I3(addr1[0]),
         .I4(addr1[1]),
         .I5(\memory_access_out[6]_INST_0_i_5_n_0 ),
@@ -666,7 +666,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[30]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[30]),
@@ -676,7 +676,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(64'hFFF8F8F8FFF0F0F0)) 
     \memory_access_out[31]_INST_0 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(\memory_access_out[31]_INST_0_i_2_n_0 ),
         .I3(\memory_access_out[31]_INST_0_i_3_n_0 ),
         .I4(memory_access_out_gen_in[31]),
@@ -707,7 +707,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(4'h2)) 
     \memory_access_out[31]_INST_0_i_3 
        (.I0(\memory_access_out[31]_INST_0_i_1_n_0 ),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .O(\memory_access_out[31]_INST_0_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
@@ -724,7 +724,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I1(control_mem[0]),
         .I2(addr1[1]),
         .I3(memory_access_out_gen_in[23]),
-        .I4(addr1[12]),
+        .I4(addr1[15]),
         .I5(memory_access_out_term_in[23]),
         .O(\memory_access_out[31]_INST_0_i_5_n_0 ));
   LUT6 #(
@@ -734,7 +734,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I1(memory_access_out_gen_in[23]),
         .I2(addr1[1]),
         .I3(memory_access_out_term_in[7]),
-        .I4(addr1[12]),
+        .I4(addr1[15]),
         .I5(memory_access_out_gen_in[7]),
         .O(\memory_access_out[31]_INST_0_i_6_n_0 ));
   LUT6 #(
@@ -744,7 +744,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I1(memory_access_out_term_in[31]),
         .I2(memory_access_out_gen_in[31]),
         .I3(addr1[1]),
-        .I4(addr1[12]),
+        .I4(addr1[15]),
         .I5(memory_access_out_term_in[15]),
         .O(\memory_access_out[31]_INST_0_i_7_n_0 ));
   LUT5 #(
@@ -764,7 +764,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[1]),
         .I3(\memory_access_out[15]_INST_0_i_5_n_0 ),
         .I4(addr1[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[3]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
@@ -781,7 +781,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     \memory_access_out[3]_INST_0_i_3 
        (.I0(memory_access_out_term_in[3]),
         .I1(memory_access_out_gen_in[3]),
-        .I2(addr1[12]),
+        .I2(addr1[15]),
         .I3(addr1[0]),
         .I4(addr1[1]),
         .I5(\memory_access_out[6]_INST_0_i_5_n_0 ),
@@ -803,7 +803,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[1]),
         .I3(\memory_access_out[15]_INST_0_i_5_n_0 ),
         .I4(addr1[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[4]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
@@ -820,7 +820,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     \memory_access_out[4]_INST_0_i_3 
        (.I0(memory_access_out_term_in[4]),
         .I1(memory_access_out_gen_in[4]),
-        .I2(addr1[12]),
+        .I2(addr1[15]),
         .I3(addr1[0]),
         .I4(addr1[1]),
         .I5(\memory_access_out[6]_INST_0_i_5_n_0 ),
@@ -842,7 +842,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[1]),
         .I3(\memory_access_out[15]_INST_0_i_5_n_0 ),
         .I4(addr1[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[5]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
@@ -859,7 +859,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     \memory_access_out[5]_INST_0_i_3 
        (.I0(memory_access_out_term_in[5]),
         .I1(memory_access_out_gen_in[5]),
-        .I2(addr1[12]),
+        .I2(addr1[15]),
         .I3(addr1[0]),
         .I4(addr1[1]),
         .I5(\memory_access_out[6]_INST_0_i_5_n_0 ),
@@ -881,7 +881,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[1]),
         .I3(\memory_access_out[15]_INST_0_i_5_n_0 ),
         .I4(addr1[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[6]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
@@ -898,7 +898,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     \memory_access_out[6]_INST_0_i_3 
        (.I0(memory_access_out_term_in[6]),
         .I1(memory_access_out_gen_in[6]),
-        .I2(addr1[12]),
+        .I2(addr1[15]),
         .I3(addr1[0]),
         .I4(addr1[1]),
         .I5(\memory_access_out[6]_INST_0_i_5_n_0 ),
@@ -911,7 +911,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[0]),
         .I3(addr1[1]),
         .I4(control_mem[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[6]_INST_0_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
@@ -950,7 +950,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I1(control_mem[1]),
         .I2(control_mem[3]),
         .I3(addr1[0]),
-        .I4(addr1[12]),
+        .I4(addr1[15]),
         .O(\memory_access_out[7]_INST_0_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
@@ -969,7 +969,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I2(addr1[0]),
         .I3(addr1[1]),
         .I4(control_mem[0]),
-        .I5(addr1[12]),
+        .I5(addr1[15]),
         .O(\memory_access_out[7]_INST_0_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
@@ -986,7 +986,7 @@ module RV32I_pipelined_post_memory_logic_0_0
     .INIT(8'hB8)) 
     \memory_access_out[7]_INST_0_i_6 
        (.I0(memory_access_out_term_in[7]),
-        .I1(addr1[12]),
+        .I1(addr1[15]),
         .I2(memory_access_out_gen_in[7]),
         .O(\memory_access_out[7]_INST_0_i_6_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
@@ -997,7 +997,7 @@ module RV32I_pipelined_post_memory_logic_0_0
         .I1(control_mem[1]),
         .I2(control_mem[3]),
         .I3(addr1[0]),
-        .I4(addr1[12]),
+        .I4(addr1[15]),
         .O(\memory_access_out[7]_INST_0_i_7_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFEEE)) 
@@ -1032,7 +1032,7 @@ module RV32I_pipelined_post_memory_logic_0_0
        (.I0(memory_access_out_term_in[16]),
         .I1(\memory_access_out[14]_INST_0_i_8_n_0 ),
         .I2(memory_access_out_term_in[8]),
-        .I3(addr1[12]),
+        .I3(addr1[15]),
         .I4(\memory_access_out[14]_INST_0_i_6_n_0 ),
         .I5(\memory_access_out[14]_INST_0_i_9_n_0 ),
         .O(\memory_access_out[8]_INST_0_i_3_n_0 ));
@@ -1069,7 +1069,7 @@ module RV32I_pipelined_post_memory_logic_0_0
        (.I0(memory_access_out_term_in[17]),
         .I1(\memory_access_out[14]_INST_0_i_8_n_0 ),
         .I2(memory_access_out_term_in[9]),
-        .I3(addr1[12]),
+        .I3(addr1[15]),
         .I4(\memory_access_out[14]_INST_0_i_6_n_0 ),
         .I5(\memory_access_out[14]_INST_0_i_9_n_0 ),
         .O(\memory_access_out[9]_INST_0_i_3_n_0 ));

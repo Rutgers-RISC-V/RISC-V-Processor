@@ -2,12 +2,12 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Apr 16 11:07:29 2019
-# Process ID: 18640
-# Current directory: C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1
+# Start of session at: Mon Apr 22 20:48:27 2019
+# Process ID: 18976
+# Current directory: C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1
 # Command line: vivado.exe -log RV32I_pipelined_post_memory_logic_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RV32I_pipelined_post_memory_logic_0_0.tcl
-# Log file: C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1/RV32I_pipelined_post_memory_logic_0_0.vds
-# Journal file: C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1\vivado.jou
+# Log file: C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1/RV32I_pipelined_post_memory_logic_0_0.vds
+# Journal file: C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source RV32I_pipelined_post_memory_logic_0_0.tcl -notrace
 Command: synth_design -top RV32I_pipelined_post_memory_logic_0_0 -part xc7z010clg400-1 -mode out_of_context
@@ -15,15 +15,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12132 
+INFO: Helper process launched with PID 14184 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 389.621 ; gain = 105.641
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 393.504 ; gain = 104.430
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_post_memory_logic_0_0' [c:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/synth/RV32I_pipelined_post_memory_logic_0_0.vhd:66]
-INFO: [Synth 8-3491] module 'post_memory_logic' declared at 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd:34' bound to instance 'U0' of component 'post_memory_logic' [c:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/synth/RV32I_pipelined_post_memory_logic_0_0.vhd:87]
-INFO: [Synth 8-638] synthesizing module 'post_memory_logic' [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'post_memory_logic' (1#1) [C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'RV32I_pipelined_post_memory_logic_0_0' (2#1) [c:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/synth/RV32I_pipelined_post_memory_logic_0_0.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'RV32I_pipelined_post_memory_logic_0_0' [c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/synth/RV32I_pipelined_post_memory_logic_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'post_memory_logic' declared at 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd:34' bound to instance 'U0' of component 'post_memory_logic' [c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/synth/RV32I_pipelined_post_memory_logic_0_0.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'post_memory_logic' [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'post_memory_logic' (1#1) [C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/RISC-V-Processor/VHDL/Proj/risc_v_test project.srcs/sources_1/new/post_memory_logic.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'RV32I_pipelined_post_memory_logic_0_0' (2#1) [c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/synth/RV32I_pipelined_post_memory_logic_0_0.vhd:66]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[31]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[30]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[29]
@@ -40,9 +40,9 @@ WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[19]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[18]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[17]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[16]
-WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[15]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[14]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[13]
+WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[12]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[11]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[10]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[9]
@@ -54,7 +54,7 @@ WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[4]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[3]
 WARNING: [Synth 8-3331] design post_memory_logic has unconnected port addr1[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 445.176 ; gain = 161.195
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 449.879 ; gain = 160.805
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -67,10 +67,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 445.176 ; gain = 161.195
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 449.879 ; gain = 160.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 445.176 ; gain = 161.195
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 449.879 ; gain = 160.805
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -79,32 +79,32 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 690.379 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 694.887 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 690.379 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 694.887 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 692.289 ; gain = 1.910
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 697.559 ; gain = 2.672
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 692.289 ; gain = 408.309
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 697.559 ; gain = 408.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 692.289 ; gain = 408.309
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 697.559 ; gain = 408.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 692.289 ; gain = 408.309
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 697.559 ; gain = 408.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 692.289 ; gain = 408.309
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 697.559 ; gain = 408.484
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -163,9 +163,9 @@ WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconne
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[18]
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[17]
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[16]
-WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[15]
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[14]
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[13]
+WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[12]
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[11]
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[10]
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[9]
@@ -177,7 +177,7 @@ WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconne
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[3]
 WARNING: [Synth 8-3331] design RV32I_pipelined_post_memory_logic_0_0 has unconnected port addr1[2]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 692.289 ; gain = 408.309
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 697.559 ; gain = 408.484
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -189,13 +189,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 767.156 ; gain = 483.176
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 772.652 ; gain = 483.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 767.230 ; gain = 483.250
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 772.801 ; gain = 483.727
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,7 +207,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 779.391 ; gain = 495.410
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 785.242 ; gain = 496.168
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -231,7 +231,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 779.391 ; gain = 495.410
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 785.242 ; gain = 496.168
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -244,7 +244,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 779.391 ; gain = 495.410
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 785.242 ; gain = 496.168
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -256,25 +256,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 779.391 ; gain = 495.410
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 785.242 ; gain = 496.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 779.391 ; gain = 495.410
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 785.242 ; gain = 496.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 779.391 ; gain = 495.410
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 785.242 ; gain = 496.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 779.391 ; gain = 495.410
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 785.242 ; gain = 496.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -304,29 +304,29 @@ Report Instance Areas:
 |1     |top      |       |   102|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 779.391 ; gain = 495.410
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 785.242 ; gain = 496.168
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 779.391 ; gain = 248.297
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 779.391 ; gain = 495.410
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 785.242 ; gain = 248.488
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 785.242 ; gain = 496.168
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 790.387 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 792.203 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 14 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 790.387 ; gain = 519.699
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 790.387 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 792.203 ; gain = 516.293
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 792.203 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1/RV32I_pipelined_post_memory_logic_0_0.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 790.387 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1/RV32I_pipelined_post_memory_logic_0_0.dcp' has been generated.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 792.203 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1/RV32I_pipelined_post_memory_logic_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.runs/RV32I_pipelined_post_memory_logic_0_0_synth_1/RV32I_pipelined_post_memory_logic_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file RV32I_pipelined_post_memory_logic_0_0_utilization_synth.rpt -pb RV32I_pipelined_post_memory_logic_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 11:08:01 2019...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 22 20:48:59 2019...

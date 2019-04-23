@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Tue Apr 16 11:08:01 2019
--- Host        : Nugget running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Jon/Desktop/capstone/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_sim_netlist.vhdl
+-- Date        : Mon Apr 22 20:48:59 2019
+-- Host        : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim {C:/Users/Oz
+--               Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_post_memory_logic_0_0/RV32I_pipelined_post_memory_logic_0_0_sim_netlist.vhdl}
 -- Design      : RV32I_pipelined_post_memory_logic_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -151,7 +151,7 @@ begin
       I2 => addr1(1),
       I3 => \memory_access_out[15]_INST_0_i_5_n_0\,
       I4 => addr1(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[0]_INST_0_i_1_n_0\
     );
 \memory_access_out[0]_INST_0_i_2\: unisim.vcomponents.LUT6
@@ -174,7 +174,7 @@ begin
         port map (
       I0 => memory_access_out_term_in(0),
       I1 => memory_access_out_gen_in(0),
-      I2 => addr1(12),
+      I2 => addr1(15),
       I3 => addr1(0),
       I4 => addr1(1),
       I5 => \memory_access_out[6]_INST_0_i_5_n_0\,
@@ -223,7 +223,7 @@ begin
       I0 => memory_access_out_term_in(18),
       I1 => \memory_access_out[14]_INST_0_i_8_n_0\,
       I2 => memory_access_out_term_in(10),
-      I3 => addr1(12),
+      I3 => addr1(15),
       I4 => \memory_access_out[14]_INST_0_i_6_n_0\,
       I5 => \memory_access_out[14]_INST_0_i_9_n_0\,
       O => \memory_access_out[10]_INST_0_i_3_n_0\
@@ -271,7 +271,7 @@ begin
       I0 => memory_access_out_term_in(19),
       I1 => \memory_access_out[14]_INST_0_i_8_n_0\,
       I2 => memory_access_out_term_in(11),
-      I3 => addr1(12),
+      I3 => addr1(15),
       I4 => \memory_access_out[14]_INST_0_i_6_n_0\,
       I5 => \memory_access_out[14]_INST_0_i_9_n_0\,
       O => \memory_access_out[11]_INST_0_i_3_n_0\
@@ -319,7 +319,7 @@ begin
       I0 => memory_access_out_term_in(20),
       I1 => \memory_access_out[14]_INST_0_i_8_n_0\,
       I2 => memory_access_out_term_in(12),
-      I3 => addr1(12),
+      I3 => addr1(15),
       I4 => \memory_access_out[14]_INST_0_i_6_n_0\,
       I5 => \memory_access_out[14]_INST_0_i_9_n_0\,
       O => \memory_access_out[12]_INST_0_i_3_n_0\
@@ -367,7 +367,7 @@ begin
       I0 => memory_access_out_term_in(21),
       I1 => \memory_access_out[14]_INST_0_i_8_n_0\,
       I2 => memory_access_out_term_in(13),
-      I3 => addr1(12),
+      I3 => addr1(15),
       I4 => \memory_access_out[14]_INST_0_i_6_n_0\,
       I5 => \memory_access_out[14]_INST_0_i_9_n_0\,
       O => \memory_access_out[13]_INST_0_i_3_n_0\
@@ -402,7 +402,7 @@ begin
       INIT => X"0004000000040040"
     )
         port map (
-      I0 => addr1(12),
+      I0 => addr1(15),
       I1 => \memory_access_out[14]_INST_0_i_6_n_0\,
       I2 => control_mem(1),
       I3 => control_mem(3),
@@ -428,7 +428,7 @@ begin
       I0 => memory_access_out_term_in(22),
       I1 => \memory_access_out[14]_INST_0_i_8_n_0\,
       I2 => memory_access_out_term_in(14),
-      I3 => addr1(12),
+      I3 => addr1(15),
       I4 => \memory_access_out[14]_INST_0_i_6_n_0\,
       I5 => \memory_access_out[14]_INST_0_i_9_n_0\,
       O => \memory_access_out[14]_INST_0_i_4_n_0\
@@ -442,7 +442,7 @@ begin
       I1 => control_mem(1),
       I2 => control_mem(3),
       I3 => addr1(0),
-      I4 => addr1(12),
+      I4 => addr1(15),
       O => \memory_access_out[14]_INST_0_i_5_n_0\
     );
 \memory_access_out[14]_INST_0_i_6\: unisim.vcomponents.LUT2
@@ -463,7 +463,7 @@ begin
       I1 => control_mem(1),
       I2 => control_mem(3),
       I3 => addr1(0),
-      I4 => addr1(12),
+      I4 => addr1(15),
       O => \memory_access_out[14]_INST_0_i_7_n_0\
     );
 \memory_access_out[14]_INST_0_i_8\: unisim.vcomponents.LUT6
@@ -471,7 +471,7 @@ begin
       INIT => X"0000000800000000"
     )
         port map (
-      I0 => addr1(12),
+      I0 => addr1(15),
       I1 => addr1(0),
       I2 => control_mem(3),
       I3 => control_mem(1),
@@ -546,7 +546,7 @@ begin
       INIT => X"80"
     )
         port map (
-      I0 => addr1(12),
+      I0 => addr1(15),
       I1 => \memory_access_out[31]_INST_0_i_1_n_0\,
       I2 => memory_access_out_term_in(15),
       O => \memory_access_out[15]_INST_0_i_4_n_0\
@@ -566,7 +566,7 @@ begin
     )
         port map (
       I0 => memory_access_out_term_in(23),
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => memory_access_out_gen_in(23),
       O => \memory_access_out[15]_INST_0_i_6_n_0\
     );
@@ -576,7 +576,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(16),
@@ -589,7 +589,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(17),
@@ -602,7 +602,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(18),
@@ -615,7 +615,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(19),
@@ -644,7 +644,7 @@ begin
       I2 => addr1(1),
       I3 => \memory_access_out[15]_INST_0_i_5_n_0\,
       I4 => addr1(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[1]_INST_0_i_1_n_0\
     );
 \memory_access_out[1]_INST_0_i_2\: unisim.vcomponents.LUT6
@@ -667,7 +667,7 @@ begin
         port map (
       I0 => memory_access_out_term_in(1),
       I1 => memory_access_out_gen_in(1),
-      I2 => addr1(12),
+      I2 => addr1(15),
       I3 => addr1(0),
       I4 => addr1(1),
       I5 => \memory_access_out[6]_INST_0_i_5_n_0\,
@@ -679,7 +679,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(20),
@@ -692,7 +692,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(21),
@@ -705,7 +705,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(22),
@@ -718,7 +718,7 @@ begin
     )
         port map (
       I0 => memory_access_out_term_in(23),
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => memory_access_out_gen_in(23),
       I3 => \memory_access_out[31]_INST_0_i_1_n_0\,
       I4 => \memory_access_out[31]_INST_0_i_2_n_0\,
@@ -730,7 +730,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(24),
@@ -743,7 +743,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(25),
@@ -756,7 +756,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(26),
@@ -769,7 +769,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(27),
@@ -782,7 +782,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(28),
@@ -795,7 +795,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(29),
@@ -824,7 +824,7 @@ begin
       I2 => addr1(1),
       I3 => \memory_access_out[15]_INST_0_i_5_n_0\,
       I4 => addr1(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[2]_INST_0_i_1_n_0\
     );
 \memory_access_out[2]_INST_0_i_2\: unisim.vcomponents.LUT6
@@ -847,7 +847,7 @@ begin
         port map (
       I0 => memory_access_out_term_in(2),
       I1 => memory_access_out_gen_in(2),
-      I2 => addr1(12),
+      I2 => addr1(15),
       I3 => addr1(0),
       I4 => addr1(1),
       I5 => \memory_access_out[6]_INST_0_i_5_n_0\,
@@ -859,7 +859,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(30),
@@ -872,7 +872,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => \memory_access_out[31]_INST_0_i_2_n_0\,
       I3 => \memory_access_out[31]_INST_0_i_3_n_0\,
       I4 => memory_access_out_gen_in(31),
@@ -911,7 +911,7 @@ begin
     )
         port map (
       I0 => \memory_access_out[31]_INST_0_i_1_n_0\,
-      I1 => addr1(12),
+      I1 => addr1(15),
       O => \memory_access_out[31]_INST_0_i_3_n_0\
     );
 \memory_access_out[31]_INST_0_i_4\: unisim.vcomponents.LUT3
@@ -933,7 +933,7 @@ begin
       I1 => control_mem(0),
       I2 => addr1(1),
       I3 => memory_access_out_gen_in(23),
-      I4 => addr1(12),
+      I4 => addr1(15),
       I5 => memory_access_out_term_in(23),
       O => \memory_access_out[31]_INST_0_i_5_n_0\
     );
@@ -946,7 +946,7 @@ begin
       I1 => memory_access_out_gen_in(23),
       I2 => addr1(1),
       I3 => memory_access_out_term_in(7),
-      I4 => addr1(12),
+      I4 => addr1(15),
       I5 => memory_access_out_gen_in(7),
       O => \memory_access_out[31]_INST_0_i_6_n_0\
     );
@@ -959,7 +959,7 @@ begin
       I1 => memory_access_out_term_in(31),
       I2 => memory_access_out_gen_in(31),
       I3 => addr1(1),
-      I4 => addr1(12),
+      I4 => addr1(15),
       I5 => memory_access_out_term_in(15),
       O => \memory_access_out[31]_INST_0_i_7_n_0\
     );
@@ -985,7 +985,7 @@ begin
       I2 => addr1(1),
       I3 => \memory_access_out[15]_INST_0_i_5_n_0\,
       I4 => addr1(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[3]_INST_0_i_1_n_0\
     );
 \memory_access_out[3]_INST_0_i_2\: unisim.vcomponents.LUT6
@@ -1008,7 +1008,7 @@ begin
         port map (
       I0 => memory_access_out_term_in(3),
       I1 => memory_access_out_gen_in(3),
-      I2 => addr1(12),
+      I2 => addr1(15),
       I3 => addr1(0),
       I4 => addr1(1),
       I5 => \memory_access_out[6]_INST_0_i_5_n_0\,
@@ -1036,7 +1036,7 @@ begin
       I2 => addr1(1),
       I3 => \memory_access_out[15]_INST_0_i_5_n_0\,
       I4 => addr1(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[4]_INST_0_i_1_n_0\
     );
 \memory_access_out[4]_INST_0_i_2\: unisim.vcomponents.LUT6
@@ -1059,7 +1059,7 @@ begin
         port map (
       I0 => memory_access_out_term_in(4),
       I1 => memory_access_out_gen_in(4),
-      I2 => addr1(12),
+      I2 => addr1(15),
       I3 => addr1(0),
       I4 => addr1(1),
       I5 => \memory_access_out[6]_INST_0_i_5_n_0\,
@@ -1087,7 +1087,7 @@ begin
       I2 => addr1(1),
       I3 => \memory_access_out[15]_INST_0_i_5_n_0\,
       I4 => addr1(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[5]_INST_0_i_1_n_0\
     );
 \memory_access_out[5]_INST_0_i_2\: unisim.vcomponents.LUT6
@@ -1110,7 +1110,7 @@ begin
         port map (
       I0 => memory_access_out_term_in(5),
       I1 => memory_access_out_gen_in(5),
-      I2 => addr1(12),
+      I2 => addr1(15),
       I3 => addr1(0),
       I4 => addr1(1),
       I5 => \memory_access_out[6]_INST_0_i_5_n_0\,
@@ -1138,7 +1138,7 @@ begin
       I2 => addr1(1),
       I3 => \memory_access_out[15]_INST_0_i_5_n_0\,
       I4 => addr1(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[6]_INST_0_i_1_n_0\
     );
 \memory_access_out[6]_INST_0_i_2\: unisim.vcomponents.LUT6
@@ -1161,7 +1161,7 @@ begin
         port map (
       I0 => memory_access_out_term_in(6),
       I1 => memory_access_out_gen_in(6),
-      I2 => addr1(12),
+      I2 => addr1(15),
       I3 => addr1(0),
       I4 => addr1(1),
       I5 => \memory_access_out[6]_INST_0_i_5_n_0\,
@@ -1177,7 +1177,7 @@ begin
       I2 => addr1(0),
       I3 => addr1(1),
       I4 => control_mem(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[6]_INST_0_i_4_n_0\
     );
 \memory_access_out[6]_INST_0_i_5\: unisim.vcomponents.LUT4
@@ -1226,7 +1226,7 @@ begin
       I1 => control_mem(1),
       I2 => control_mem(3),
       I3 => addr1(0),
-      I4 => addr1(12),
+      I4 => addr1(15),
       O => \memory_access_out[7]_INST_0_i_2_n_0\
     );
 \memory_access_out[7]_INST_0_i_3\: unisim.vcomponents.LUT4
@@ -1250,7 +1250,7 @@ begin
       I2 => addr1(0),
       I3 => addr1(1),
       I4 => control_mem(0),
-      I5 => addr1(12),
+      I5 => addr1(15),
       O => \memory_access_out[7]_INST_0_i_4_n_0\
     );
 \memory_access_out[7]_INST_0_i_5\: unisim.vcomponents.LUT5
@@ -1271,7 +1271,7 @@ begin
     )
         port map (
       I0 => memory_access_out_term_in(7),
-      I1 => addr1(12),
+      I1 => addr1(15),
       I2 => memory_access_out_gen_in(7),
       O => \memory_access_out[7]_INST_0_i_6_n_0\
     );
@@ -1284,7 +1284,7 @@ begin
       I1 => control_mem(1),
       I2 => control_mem(3),
       I3 => addr1(0),
-      I4 => addr1(12),
+      I4 => addr1(15),
       O => \memory_access_out[7]_INST_0_i_7_n_0\
     );
 \memory_access_out[8]_INST_0\: unisim.vcomponents.LUT6
@@ -1330,7 +1330,7 @@ begin
       I0 => memory_access_out_term_in(16),
       I1 => \memory_access_out[14]_INST_0_i_8_n_0\,
       I2 => memory_access_out_term_in(8),
-      I3 => addr1(12),
+      I3 => addr1(15),
       I4 => \memory_access_out[14]_INST_0_i_6_n_0\,
       I5 => \memory_access_out[14]_INST_0_i_9_n_0\,
       O => \memory_access_out[8]_INST_0_i_3_n_0\
@@ -1378,7 +1378,7 @@ begin
       I0 => memory_access_out_term_in(17),
       I1 => \memory_access_out[14]_INST_0_i_8_n_0\,
       I2 => memory_access_out_term_in(9),
-      I3 => addr1(12),
+      I3 => addr1(15),
       I4 => \memory_access_out[14]_INST_0_i_6_n_0\,
       I5 => \memory_access_out[14]_INST_0_i_9_n_0\,
       O => \memory_access_out[9]_INST_0_i_3_n_0\

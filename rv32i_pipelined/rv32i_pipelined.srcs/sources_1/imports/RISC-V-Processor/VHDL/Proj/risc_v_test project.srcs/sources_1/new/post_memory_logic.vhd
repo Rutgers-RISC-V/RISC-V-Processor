@@ -44,9 +44,9 @@ end post_memory_logic;
 architecture Post_Behavioral of post_memory_logic is
 
 begin
-    process(memory_access_out_gen_in,memory_access_out_term_in, control_mem, addr1)
+    process(memory_access_out_gen_in, memory_access_out_term_in, control_mem, addr1)
     begin
-        if(addr1(12) = '1') then
+        if(addr1(15) = '1') then
             case control_mem&addr1(1 downto 0) is
                 when "000000" => -- load byte on mod(4)
                      memory_access_out <= std_logic_vector(resize(signed(memory_access_out_term_in(7 downto 0)),32));

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Apr 21 22:23:27 2019
-| Host         : Oz-Bejerano-Laptop running 64-bit major release  (build 9200)
+| Date         : Mon Apr 22 21:52:41 2019
+| Host         : Oz-Bejerano-Desktop running 64-bit major release  (build 9200)
 | Command      : report_utilization -file RV32I_pipelined_wrapper_utilization_synth.rpt -pb RV32I_pipelined_wrapper_utilization_synth.pb
 | Design       : RV32I_pipelined_wrapper
 | Device       : 7z010clg400-1

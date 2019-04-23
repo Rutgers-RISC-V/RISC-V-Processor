@@ -17,8 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -46,7 +46,11 @@ add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipeline
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/terminalDemo_2019_Wide_NoDelay.coe}}
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/InputTest.coe}}
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/fillTerminalAnimation.coe}}
-add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/draw.coe}}
+add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/Dumps/draw.coe}}
+add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/Dumps/printMaze.coe}}
+add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/Dumps/rockpaperscizzors.coe}}
+add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/Dumps/memRead.coe}}
+add_files {{c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/draw.coe}}
 add_files {{c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/printMaze.coe}}
 read_vhdl -library xil_defaultlib {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd}}
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd}}
