@@ -52,6 +52,8 @@ add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipeline
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/imports/Dumps/memRead.coe}}
 add_files {{c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/draw.coe}}
 add_files {{c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/printMaze.coe}}
+add_files {{c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/rockpaperscissors.coe}}
+add_files {{c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/Dumps_and_Assembly/Dumps/mazeinput.coe}}
 read_vhdl -library xil_defaultlib {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/hdl/RV32I_pipelined_wrapper.vhd}}
 add_files {{C:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/RV32I_pipelined.bd}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Oz Bejerano/PycharmProjects/RISC-V-Processor/rv32i_pipelined/rv32i_pipelined.srcs/sources_1/bd/RV32I_pipelined/ip/RV32I_pipelined_blk_mem_gen_0_0/RV32I_pipelined_blk_mem_gen_0_0_ooc.xdc}}]

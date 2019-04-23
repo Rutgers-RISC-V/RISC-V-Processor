@@ -194,11 +194,11 @@ li   x31 0	#clean x31
 
 ############## CLEAR SCREEN ################
 li  x10 2400	#number of characters in the terminal
+li  x7 0	# load the ASCII value of 'null' into a register.
 clean:		#clean the screen backwards for the contrarians out there
 add x8 x6 x10 	#add into x8 the base address + offset
-li  x7 0	# load the ASCII value of 'null' into a register.
 sb  x7 0(x8)  	#store at location x8
-addi x5 x5 -1	#subtract 1 from x5
+addi x10 x10 -1	#subtract 1 from x5
 bne x10 x0 clean #keep going if not done cleaning
 
 ############## PROGRAM LOOP START ##########

@@ -173,7 +173,7 @@
             "value": "8"
           },
           "Coe_File": {
-            "value": "../../../../../../../Dumps_and_Assembly/Dumps/printMaze.coe"
+            "value": "../../../../../../../Dumps_and_Assembly/Dumps/mazeinput.coe"
           },
           "Enable_32bit_Address": {
             "value": "false"
