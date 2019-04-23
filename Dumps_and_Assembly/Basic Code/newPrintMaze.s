@@ -2,13 +2,16 @@
 li x6 32768 # load base address of terminal into a register.
 
 #Store wall character in register
-li x22 48
-#Store space character in register
-li x23 0
+li x7 48 # load the ASCII value of block into a register. ASCII value of block is the decimal number 127
 #Store goal position in register
 li x24 1919
-
-li x7 48 # load the ASCII value of '0' into a register. ASCII value of '0' is the decimal number 48
+#Store goal character in register
+li x23 88
+#write goal char to screen
+add x28 x6 x24
+sb x23 0(x28)
+#store player character in register
+li x28 127
 
 #Print the maze
 addi x8 x6 0
@@ -2297,8 +2300,8 @@ sb x7 0(x8)
 addi x8 x6 1003
 sb x7 0(x8)
 
-addi x8 x6 1007
-sb x7 0(x8)
+#addi x8 x6 1007
+#sb x7 0(x8)
 
 addi x8 x6 1008
 sb x7 0(x8)
@@ -3245,14 +3248,14 @@ sb x7 0(x8)
 addi x8 x6 1581
 sb x7 0(x8)
 
-addi x8 x6 1582
-sb x7 0(x8)
+#addi x8 x6 1582
+#sb x7 0(x8)
 
 addi x8 x6 1583
 sb x7 0(x8)
 
-addi x8 x6 1584
-sb x7 0(x8)
+#addi x8 x6 1584
+#sb x7 0(x8)
 
 addi x8 x6 1585
 sb x7 0(x8)
@@ -4563,8 +4566,7 @@ addi x8 x8 1000
 sb x7 0(x8)
 
 addi x27 x6 80 #add into x27 the base address + 80
-li x7 88
-sb x7 0(x27)
+sb x28 0(x27)
 
 #Button Values - Line 2
 start:
@@ -4585,37 +4587,29 @@ j wait
 left:
 sub  x31 x31 x21 #set the button to 0 by subtracting the mask
 sb x0 0(x27)  	#store the number at location x27
-srli x21 x21 3	#shift the masked bit to LSB
 addi x27 x27 -1 #modify location to one square left
 lb x25 0(x27) #load character occupying target space into x25
-beq x25 x22 resetl #undo location change
-addi x21 x21 87	#add the masked value to 87 (ascii W)
-sb   x21 0(x27)  	#store the number at location x27
-li x21 0	#clear x21
+beq x25 x7 resetl #undo location change
+sb x28 0(x27)  	#store the number at location x27
 j wait
+
 resetl:
 addi x27 x27 1 #modify location to one square right
-li x21 88
-sb x21 0(x27)  	#store the number at location x27
-li x21 0	#clear x21
+sb x28 0(x27)  	#store the number at location x27
 j wait
 
 up:
-sub  x31 x31 x20 #set the button to 0 by subtracting the mask
+sub x31 x31 x20 #set the button to 0 by subtracting the mask
 sb x0 0(x27)  	#store the number at location x27
 addi x27 x27 -80 #modify location to one square up
 lb x25 0(x27) #load character occupying target space into x25
-beq x25 x22 resetu #undo location change
-srli x20 x20 2	#shift the masked bit to LSB
-addi x20 x20 87	#add the masked value to 87 (ascii W)
-sb x20 0(x27)  	#store the number at location x27
-li x20 0 #clear x20
+beq x25 x7 resetu #undo location change
+sb x28 0(x27)  	#store the number at location x27
 j wait
+
 resetu:
 addi x27 x27 80 #modify location to one square down
-li x20 88
-sb x20 0(x27)  	#store the number at location x27
-li x20 0 #clear x20
+sb x28 0(x27)  	#store the number at location x27
 j wait
 
 down:
@@ -4623,17 +4617,13 @@ sub  x31 x31 x19 #set the button to 0 by subtracting the mask
 sb  x0 0(x27)  	#store the number at location x27
 addi x27 x27 80 #modify location to one square down
 lb x25 0(x27) #load character occupying target space into x25
-beq x25 x22 resetd #undo location change
-srli x19 x19 1	#shift the masked bit to LSB
-addi x19 x19 87	#add the masked value to 87 (ascii W)
-sb   x19 0(x27)  	#store the number at location x27
-li   x19 0	#clear x19
+beq x25 x7 resetd #undo location change
+sb  x28 0(x27)  	#store the number at location x27
 j wait
+
 resetd:
 addi x27 x27 -80 #modify location to one square up
-li x19 88
-sb   x19 0(x27)  	#store the number at location x27
-li   x19 0	#clear x19
+sb x28 0(x27)  	#store the number at location x27
 j wait
 
 right:
@@ -4641,28 +4631,34 @@ sub  x31 x31 x18 #set the button to 0 by subtracting the mask
 sb  x0 0(x27)  	#store the number at location x27
 addi x27 x27 1 #modify location to one square right
 lb x25 0(x27) #load character occupying target space into x25
-beq x25 x22 resetr #undo location change
-addi x18 x18 87	#add the masked value to 87 (ascii W)
-sb x18 0(x27)  	#store the number at location x27
-li x18 0 #clear x18
+beq x25 x7 resetr #undo location change
+sb x28 0(x27)  	#store the number at location x27
 j wait
+
 resetr:
 addi x27 x27 -1 #modify location to one square left
-li x18 88
-sb x18 0(x27)  	#store the number at location x27
-li x18 0 #clear x18
+sb x28 0(x27)  	#store the number at location x27
 j wait
 
 wait: 		#This should always be at the end of your program loop!
-andi x18 x31 256	#bitmask the vsync to x7
+sub x29 x27 x6
+beq x27 x29 reachedGoal
+resumewait:
+andi x18 x31 256	#bitmask the vsync
 srli x18 x18 8	#shift the masked bit to LSB
 beq  x18 x0 wait #wait for vsync
 andi x31 x31 255	#zero out vsync
-li   x18 0	#clear x7
 j start
+
+reachedGoal:
+li x29 1
+sb x29 0(x27)# make the goal a smiley face
+j resumewait
 
 reset:
 li x26 0
 andi x31 x31 15 # resets all switches
+sb x0 0(x27)
 addi x27 x6 80 #add into x27 the base address + 80 # reset pointer
+sb x28 0(x27)
 j start
