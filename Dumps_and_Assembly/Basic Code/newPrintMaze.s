@@ -4575,9 +4575,9 @@ andi x18 x31 1	#bitmask the first button to x18
 andi x19 x31 2	#bitmask the second button to x19
 andi x20 x31 4	#bitmask the third button to x20
 andi x21 x31 8	#bitmask the fourth button to x21
-#andi x26 x31 240 #bitmask the switches to x26
+andi x26 x31 240 #bitmask the switches to x26
 
-#bne x26 x0 reset
+bne x26 x0 reset
 bne x18 x0 right
 bne x19 x0 down
 bne x20 x0 up
@@ -4642,7 +4642,7 @@ j wait
 
 wait: 		#This should always be at the end of your program loop!
 sub x29 x27 x6
-beq x27 x29 reachedGoal
+beq x24 x29 reachedGoal
 resumewait:
 andi x18 x31 256	#bitmask the vsync
 srli x18 x18 8	#shift the masked bit to LSB
@@ -4656,9 +4656,13 @@ sb x29 0(x27)# make the goal a smiley face
 j resumewait
 
 reset:
-li x26 0
+addi x26 x6 80
 andi x31 x31 15 # resets all switches
+beq x27 x26 start
 sb x0 0(x27)
 addi x27 x6 80 #add into x27 the base address + 80 # reset pointer
 sb x28 0(x27)
+#write goal char to screen
+add x15 x6 x24
+sb x23 0(x15)
 j start
