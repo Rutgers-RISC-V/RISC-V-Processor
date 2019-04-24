@@ -14,8 +14,41 @@ li x6 32768	#load base address of terminal into a register.
 
 reset:
 
+li x7 0
+li x8 0
+li x9 0
+li x10 0
+li x11 0
+li x12 0
+li x13 0
+li x14 0
+li x15 0
+li x16 0
+li x17 0
+li x18 0
+li x19 0
+li x20 0
+li x21 0
+li x22 0
+li x23 0
+li x24 0
+li x25 0
+li x26 0
+li x27 0
+li x28 0
+li x29 0
+li x30 0
 
 ############## STARTUP #####################
+
+############## CLEAR SCREEN ################
+li  x10 2400	#number of characters in the terminal
+clean1:		#clean the screen backwards for the contrarians out there
+add x8 x6 x10 	#add into x8 the base address + offset
+li  x7 0	# load the ASCII value of 'null' into a register.
+sb  x7 0(x8)  	#store at location x8
+addi x10 x10 -1	#subtract 1 from x5
+bne x10 x0 clean1 #keep going if not done cleaning
 
 ############## SPLASH SCREEN ###############
 #Write "Rock Paper Scissors!" across the top line
@@ -176,27 +209,23 @@ sb x7 0(x8)  	#store at location x8
 addi x8 x6 208 	#add into x8 the base address + offset
 li x7 46 	# load the ASCII value of '.' into a register.
 sb x7 0(x8)  	#store at location x8
-li x7 48 	# load the ASCII value of '.' into a register.
-sb x7 0(x6)  	#store at location x8
 li x7 0		#clean x7
 li x8 0		#clean x8
 
 ############## SEED GENERATOR ##############
 seed:
 addi x7 x7 1	#increment the seed by 1
-andi x8 x31 255	#mask out the buttons from input (xxxxx0000)
+andi x8 x31 15	#mask out the buttons from input (xxxxx0000)
 beq  x8 x0 seed	#on no button press, keep waiting
 li   x13 0	#clean x13 , lucky number 13 for random values
 add  x13 x13 x7	#store the random seed
-li x7 49 	# load the ASCII value of '.' into a register.
-sb x7 0(x6)  	#store at location x8
 li   x31 0	#clean x31
 
 ############## CLEAR SCREEN ################
 li  x10 2400	#number of characters in the terminal
-li  x7 0	# load the ASCII value of 'null' into a register.
 clean:		#clean the screen backwards for the contrarians out there
 add x8 x6 x10 	#add into x8 the base address + offset
+li  x7 0	# load the ASCII value of 'null' into a register.
 sb  x7 0(x8)  	#store at location x8
 addi x10 x10 -1	#subtract 1 from x5
 bne x10 x0 clean #keep going if not done cleaning
@@ -248,7 +277,7 @@ sltu x5 x0 x5	#x5 is 1 if a button is pressed, 0 if not
 li   x7 0	#clear x7
 
 ############## GAME LOGIC TICK #############
-beq x5 x0 graphics #don't run the game if it's not time to
+beq x5 x0 graphicsbridge #don't run the game if it's not time to
 ##### Generate AI Decision
 generate:
 srai x14 x13 1	#shift x13 into a copy
@@ -257,19 +286,1966 @@ andi x14 x13 96	#mask out bits 6 and 7
 srli x14 x14 5	#make the bits LSB
 beq  x14 x0 generate #reroll if we got 0
 
+li x8 1
+bne x14 x8 cpunotrockdraw
+##### Draw the CPU Rock
+li x6 32768	#reset the vram address
+addi x6 x6 26	#shift over the vram base address
+li x8 819	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 820	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 821	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 822	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 823	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 824	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 825	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 826	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 827	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 828	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 900	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 901	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 902	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 903	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 904	#add into x8
+add x8 x8 x6
+li x7 96	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 905	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 906	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 907	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 908	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#####line 3
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 980	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 981	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 982	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 983	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 984	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 985	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 986	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 987	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 988	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 989	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 4
+li x8 1059	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1060	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1061	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1062	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1063	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1064	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1065	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1066	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1067	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1068	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1069	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 5
+li x8 1139	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1140	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1141	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1142	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1143	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1144	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1145	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1146	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1147	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1148	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1149	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 6
+li x8 1219	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1220	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1221	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1222	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1223	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1224	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1225	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1226	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1227	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1228	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1229	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 7
+li x8 1299	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1300	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1301	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1302	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1303	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1304	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1305	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1306	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1307	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1308	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+li x6 32768	#restore the vram base address
+
+
+###BRANCH LENGTH BRIDGE FIX
+j skipbridge
+
+graphicsbridge:
+j graphics
+
+skipbridge:
+
+
+cpunotrockdraw:
+
+li x8 2
+bne x14 x8 cpunotpaperdraw
+##### Draw the CPU Paper
+li x6 32768
+addi x6 x6 26
+
+li x8 819	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 820	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 821	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 822	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 823	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 824	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 825	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 826	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 827	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 828	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 900	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 901	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 902	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 903	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 904	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 905	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 906	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 907	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 908	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#####line 3
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 980	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 981	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 982	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 983	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 984	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 985	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 986	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 987	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 988	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 989	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 4
+li x8 1059	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1060	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1061	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1062	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1063	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1064	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1065	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1066	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1067	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1068	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1069	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 5
+li x8 1139	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1140	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1141	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1142	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1143	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1144	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1145	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1146	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1147	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1148	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1149	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 6
+li x8 1219	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1220	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1221	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1222	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1223	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1224	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1225	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1226	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1227	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1228	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1229	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 7
+li x8 1299	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1300	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1301	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1302	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1303	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1304	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1305	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1306	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1307	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1308	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x6 32768
+
+
+
+
+cpunotpaperdraw:
+
+li x8 3
+bne x14 x8 cpunotscissorsdraw
+
+li x6 32768
+addi x6 x6 26
+
+
+li x8 819	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 820	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 821	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 822	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 823	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 824	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 825	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 826	#add into x8
+add x8 x8 x6
+li x7 44	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 827	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 828	#add into x8
+add x8 x8 x6
+li x7 39	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 40	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 900	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 901	#add into x8
+add x8 x8 x6
+li x7 41	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 902	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 903	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 904	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 905	#add into x8
+add x8 x8 x6
+li x7 44	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 906	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 907	#add into x8
+add x8 x8 x6
+li x7 39	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 908	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#####line 3
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 980	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 981	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 982	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 983	#add into x8
+add x8 x8 x6
+li x7 58	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 984	#add into x8
+add x8 x8 x6
+li x7 58	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 985	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 986	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 987	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 988	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 989	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 4
+li x8 1059	#add into x8
+add x8 x8 x6
+li x7 40	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1060	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1061	#add into x8
+add x8 x8 x6
+li x7 41	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1062	#add into x8
+add x8 x8 x6
+li x7 39	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1063	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1064	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1065	#add into x8
+add x8 x8 x6
+li x7 96	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1066	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1067	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1068	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1069	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 5
+li x8 1139	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1140	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1141	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1142	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1143	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1144	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1145	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1146	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1147	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1148	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1149	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 6
+li x8 1219	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1220	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1221	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1222	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1223	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1224	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1225	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1226	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1227	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1228	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1229	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 7
+li x8 1299	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1300	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1301	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1302	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1303	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1304	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1305	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1306	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1307	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1308	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x6 32768
+cpunotscissorsdraw:
+
+
 ##### Calculate Winner
 beq x18 x0 glnorock
 #Rock selected
+
+##### Draw the rock
+
+li x8 819	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 820	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 821	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 822	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 823	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 824	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 825	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 826	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 827	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 828	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 900	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 901	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 902	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 903	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 904	#add into x8
+add x8 x8 x6
+li x7 96	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 905	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 906	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 907	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 908	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#####line 3
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 980	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 981	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 982	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 983	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 984	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 985	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 986	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 987	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 988	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 989	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 4
+li x8 1059	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1060	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1061	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1062	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1063	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1064	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1065	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1066	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1067	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1068	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1069	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 5
+li x8 1139	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1140	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1141	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1142	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1143	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1144	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1145	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1146	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1147	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1148	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1149	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 6
+li x8 1219	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1220	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1221	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1222	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1223	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1224	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1225	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1226	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1227	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1228	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1229	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 7
+li x8 1299	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1300	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1301	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1302	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1303	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1304	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1305	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1306	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1307	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1308	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+
 li x8 1
-beq x14 x8 draw #rock vs rock
+beq x14 x8 drawbridge #rock vs rock
 li x8 2		
-beq x14 x8 lose	#rock vs paper
+beq x14 x8 losebridge	#rock vs paper
 li x8 3
-beq x14 x8 win  #rock vs scissors
+beq x14 x8 winbridge  #rock vs scissors
 
 glnorock:
 beq x19 x0 glnopaper
 #Paper Selected
+
+li x8 819	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 820	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 821	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 822	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 823	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 824	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 825	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 826	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 827	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 828	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 900	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 901	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 902	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 903	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 904	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 905	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 906	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 907	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 908	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#####line 3
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 980	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 981	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 982	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 983	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 984	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 985	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 986	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 987	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 988	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 989	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 4
+li x8 1059	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1060	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1061	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1062	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1063	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1064	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1065	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1066	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1067	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1068	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1069	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 5
+li x8 1139	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1140	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1141	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1142	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1143	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1144	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1145	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1146	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1147	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1148	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1149	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 6
+li x8 1219	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1220	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1221	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1222	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1223	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1224	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1225	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1226	#add into x8
+add x8 x8 x6
+li x7 126	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1227	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1228	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1229	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 7
+li x8 1299	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1300	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1301	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1302	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1303	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1304	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1305	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1306	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1307	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1308	#add into x8
+add x8 x8 x6
+li x7 124	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
 
 li x8 1
 beq x14 x8 win #paper vs rock
@@ -279,7 +2255,404 @@ li x8 3
 beq x14 x8 lose  #paper vs scissors
 glnopaper:
 beq x20 x0 glnoscissor
+
+j skipscorebridges
+
+drawbridge:
+j draw
+
+winbridge:
+j win
+
+losebridge:
+j lose
+
+
+
+skipscorebridges:
 #Scissors Selected
+
+
+li x8 819	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 820	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 821	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 822	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 823	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 824	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 825	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 826	#add into x8
+add x8 x8 x6
+li x7 44	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 827	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 828	#add into x8
+add x8 x8 x6
+li x7 39	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 40	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 900	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 901	#add into x8
+add x8 x8 x6
+li x7 41	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 902	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 903	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 904	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 905	#add into x8
+add x8 x8 x6
+li x7 44	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 906	#add into x8
+add x8 x8 x6
+li x7 47	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 907	#add into x8
+add x8 x8 x6
+li x7 39	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 908	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#####line 3
+li x8 899	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 980	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 981	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 982	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 983	#add into x8
+add x8 x8 x6
+li x7 58	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 984	#add into x8
+add x8 x8 x6
+li x7 58	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 985	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 986	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 987	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 988	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 989	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 4
+li x8 1059	#add into x8
+add x8 x8 x6
+li x7 40	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1060	#add into x8
+add x8 x8 x6
+li x7 95	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1061	#add into x8
+add x8 x8 x6
+li x7 41	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1062	#add into x8
+add x8 x8 x6
+li x7 39	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1063	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1064	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1065	#add into x8
+add x8 x8 x6
+li x7 96	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1066	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1067	#add into x8
+add x8 x8 x6
+li x7 46	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1068	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1069	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 5
+li x8 1139	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1140	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1141	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1142	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1143	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1144	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1145	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1146	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1147	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1148	#add into x8
+add x8 x8 x6
+li x7 92	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1149	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 6
+li x8 1219	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1220	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1221	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1222	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1223	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1224	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1225	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1226	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1227	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1228	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1229	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#####line 7
+li x8 1299	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1300	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1301	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1302	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1303	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1304	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1305	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1306	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1307	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 1308	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
 
 li x8 1
 beq x14 x8 lose #scissors vs rock
@@ -291,6 +2664,8 @@ beq x14 x8 draw  #scissors vs scissors
 glnoscissor:
 
 draw:
+li x11 0
+li x12 0
 
 li x8 278	#add into x8
 add x8 x8 x6
@@ -320,7 +2695,7 @@ j scores
 
 
 win:
-addi x11 x11 1
+li x11 1
 
 li x8 278	#add into x8
 add x8 x8 x6
@@ -350,7 +2725,7 @@ j scores
 
 
 lose:
-addi x12 x12 1
+li x12 1
 
 li x8 278	#add into x8
 add x8 x8 x6
@@ -381,6 +2756,56 @@ j scores
 
 ##### Calculate and draw Scores
 scores:
+add x21 x21 x11
+li x7 10
+blt x21 x7 playerones
+#tens digit goes up
+addi x22 x22 1	#increment tens
+li x21 0	#reset ones
+li x21 0
+li x21 0
+li x8 667	#add into x8
+add x8 x8 x6
+li x7 48	# load the ASCII value of '0' into a register.
+add x7 x7 x22	#add the score
+sb x7 0(x8)  	#store at location x8
+li x11 0	#clear x11
+j cpuscore
+
+playerones:
+li x8 668	#add into x8
+add x8 x8 x6
+li x7 48	# load the ASCII value of '0' into a register.
+add x7 x7 x21	#add the score
+sb x7 0(x8)  	#store at location x8
+li x11 0	#clear x11
+
+cpuscore:
+add x23 x23 x12
+li x7 10
+blt x23 x7 cpuones
+#tens digit goes up
+addi x24 x24 1	#increment tens
+li x23 0	#reset ones
+li x23 0
+li x23 0
+li x8 698	#add into x8
+add x8 x8 x6
+li x7 48	# load the ASCII value of '0' into a register.
+add x7 x7 x24	#add the score
+sb x7 0(x8)  	#store at location x8
+li x12 0	#clear x11
+j scoredone
+
+cpuones:
+li x8 699	#add into x8
+add x8 x8 x6
+li x7 48	# load the ASCII value of '0' into a register.
+add x7 x7 x23	#add the score
+sb x7 0(x8)  	#store at location x8
+li x12 0	#clear x11
+
+scoredone:
 li x18 0
 li x19 0
 li x20 0
@@ -494,21 +2919,21 @@ li x7 114	# load the ASCII value of 'r' into a register.
 sb x7 0(x8)  	#store at location x8
 
 
-addi x8 x6 700 	#add into x8 the base address + offset
+addi x8 x6 694 	#add into x8 the base address + offset
 li x7 67	# load the ASCII value of 'C' into a register.
 sb x7 0(x8)  	#store at location x8
 
-addi x8 x6 701 	#add into x8 the base address + offset
+addi x8 x6 695 	#add into x8 the base address + offset
 li x7 80	# load the ASCII value of 'P' into a register.
 sb x7 0(x8)  	#store at location x8
 
-addi x8 x6 702 	#add into x8 the base address + offset
+addi x8 x6 696 	#add into x8 the base address + offset
 li x7 85	# load the ASCII value of 'U' into a register.
 sb x7 0(x8)  	#store at location x8
 
 #Divider
 
-li  x8 680	#add into x8
+li  x8 600	#add into x8
 add x8 x8 x6
 li  x7 124	# load the ASCII value of '|' into a register.
 sb  x7 0(x8)  	#store at location x8
@@ -528,9 +2953,14 @@ add x8 x8 x6
 li  x7 124	# load the ASCII value of '|' into a register.
 sb  x7 0(x8)  	#store at location x8
 
-li  x8 920	#add into x8
+li  x8 919	#add into x8
 add x8 x8 x6
-li  x7 124	# load the ASCII value of '|' into a register.
+li  x7 86	# load the ASCII value of 'V' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 921	#add into x8
+add x8 x8 x6
+li  x7 83	# load the ASCII value of 'S' into a register.
 sb  x7 0(x8)  	#store at location x8
 
 li  x8 1000	#add into x8
@@ -830,106 +3260,6 @@ li x8 2385	#add into x8
 add x8 x8 x6
 li x7 52	# load the ASCII value of '4' into a register.
 sb x7 0(x8)  	#store at location x8
-li   x7 0	#clear x7
-
-
-
-#Button Values - Line 2
-andi x7 x31 1	#bitmask the first button to x7
-sub  x31 x31 x7 #set the button to 0 by subtracting the mask
-addi x7 x7 48	#add the masked value to 48 (ascii 0)
-addi x8 x6 80 	#add into x8 the base address + 80
-sb   x7 0(x8)  	#store the number at location x8
-li   x7 0	#clear x7
-
-andi x7 x31 2	#bitmask the second button to x7
-sub  x31 x31 x7 #set the button to 0 by subtracting the mask
-srli x7 x7 1	#shift the masked bit to LSB
-addi x7 x7 48	#add the masked value to 48 (ascii 0)
-addi x8 x6 81 	#add into x8 the base address + 81
-sb   x7 0(x8)  	#store the number at location x8
-li   x7 0	#clear x7
-
-andi x7 x31 4	#bitmask the third button to x7
-sub  x31 x31 x7 #set the button to 0 by subtracting the mask
-srli x7 x7 2	#shift the masked bit to LSB
-addi x7 x7 48	#add the masked value to 48 (ascii 0)
-addi x8 x6 82 	#add into x8 the base address + 82
-sb   x7 0(x8)  	#store the number at location x8
-li   x7 0	#clear x7
-
-andi x7 x31 8	#bitmask the fourth button to x7
-sub  x31 x31 x7 #set the button to 0 by subtracting the mask
-srli x7 x7 3	#shift the masked bit to LSB
-addi x7 x7 48	#add the masked value to 48 (ascii 0)
-addi x8 x6 83 	#add into x8 the base address + 83
-sb   x7 0(x8)  	#store the number at location x8
-li   x7 0	#clear x7
-
-#Switches - Line 3
-addi x8 x6 240 	#add into x8 the base address + 240
-li x7 83 	# load the ASCII value of 'S' into a register.
-sb x7 0(x8)  	#store at location x8
-
-addi x8 x6 241 	#add into x8 the base address + 241
-li x7 119 	# load the ASCII value of 'w' into a register.
-sb x7 0(x8)  	#store at location x8
-
-addi x8 x6 242 	#add into x8 the base address + 242
-li x7 105 	# load the ASCII value of 'i' into a register.
-sb x7 0(x8)  	#store at location x8
-
-addi x8 x6 243 	#add into x8 the base address + 243
-li x7 116 	# load the ASCII value of 't' into a register.
-sb x7 0(x8)  	#store at location x8
-
-addi x8 x6 244 	#add into x8 the base address + 244
-li x7 99 	# load the ASCII value of 'c' into a register.
-sb x7 0(x8)  	#store at location x8
-
-addi x8 x6 245 	#add into x8 the base address + 245
-li x7 104 	# load the ASCII value of 'h' into a register.
-sb x7 0(x8)  	#store at location x8
-
-addi x8 x6 246 	#add into x8 the base address + 246
-li x7 101 	# load the ASCII value of 'e' into a register.
-sb x7 0(x8)  	#store at location x8
-
-addi x8 x6 247 	#add into x8 the base address + 247
-li x7 115 	# load the ASCII value of 's' into a register.
-sb x7 0(x8)  	#store at location x8
-
-#Switch Values - Line 4
-andi x7 x31 16	#bitmask the first switch to x7
-sub  x31 x31 x7 #set the button to 0 by subtracting the mask
-srli x7 x7 4	#shift the masked bit to LSB
-addi x7 x7 48	#add the masked value to 48 (ascii 0)
-addi x8 x6 320	#add into x8 the base address + 320
-sb   x7 0(x8)  	#store the number at location x8
-li   x7 0	#clear x7
-
-andi x7 x31 32	#bitmask the second switch to x7
-sub  x31 x31 x7 #set the button to 0 by subtracting the mask
-srli x7 x7 5	#shift the masked bit to LSB
-addi x7 x7 48	#add the masked value to 48 (ascii 0)
-addi x8 x6 321	#add into x8 the base address + 321
-sb   x7 0(x8)  	#store the number at location x8
-li   x7 0	#clear x7
-
-andi x7 x31 64	#bitmask the third switch to x7
-sub  x31 x31 x7 #set the button to 0 by subtracting the mask
-srli x7 x7 6	#shift the masked bit to LSB
-addi x7 x7 48	#add the masked value to 48 (ascii 0)
-addi x8 x6 322 	#add into x8 the base address + 322
-sb   x7 0(x8)  	#store the number at location x8
-li   x7 0	#clear x7
-
-andi x7 x31 128	#bitmask the fourth switch to x7
-sub  x31 x31 x7 #set the button to 0 by subtracting the mask
-srli x7 x7 7	#shift the masked bit to LSB
-addi x7 x7 48	#add the masked value to 48 (ascii 0)
-addi x8 x6 323 	#add into x8 the base address + 323
-sb   x7 0(x8)  	#store the number at location x8
 li   x7 0	#clear x7
 
 
