@@ -1,0 +1,943 @@
+# RISC-V Rock Paper Scissors
+# This program plays the game rock, paper, scissors on the terminal
+# Jonathan Colella | joncolella@gmail.com | Spring 2019
+
+#Requirements:
+#x31 has bit 9 represent video vertical sync
+#x31 has bits 0 through 8 represent 8 user buttons or switches
+#Terminal size is 80x30 characters loaded with ASCII codes
+#Designed for 25MHZ Rutgers RISC-V VHDL Core
+#32KB of Instruction Memory, 2.4KB of VRAM
+
+#Setup
+li x6 32768	#load base address of terminal into a register.
+
+reset:
+
+
+############## STARTUP #####################
+
+############## SPLASH SCREEN ###############
+#Write "Rock Paper Scissors!" across the top line
+addi x8 x6 30 	#add into x8 the base address + offset
+li x7 82	# load the ASCII value of 'B' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 31 	#add into x8 the base address + offset
+li x7 111	# load the ASCII value of 'u' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 32 	#add into x8 the base address + offset
+li x7 99	# load the ASCII value of 't' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 33 	#add into x8 the base address + offset
+li x7 107	# load the ASCII value of 't' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 34 	#add into x8 the base address + offset
+li x7 32	# load the ASCII value of 'o' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 35 	#add into x8 the base address + offset
+li x7 80	# load the ASCII value of 'n' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 36 	#add into x8 the base address + offset
+li x7 97	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 37 	#add into x8 the base address + offset
+li x7 112	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 38 	#add into x8 the base address + offset
+li x7 101	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 39 	#add into x8 the base address + offset
+li x7 114	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 40 	#add into x8 the base address + offset
+li x7 32	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 41 	#add into x8 the base address + offset
+li x7 83	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 42 	#add into x8 the base address + offset
+li x7 99	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 43 	#add into x8 the base address + offset
+li x7 105	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 44 	#add into x8 the base address + offset
+li x7 115 	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 45 	#add into x8 the base address + offset
+li x7 115 	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 46 	#add into x8 the base address + offset
+li x7 111	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 47 	#add into x8 the base address + offset
+li x7 114	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 48 	#add into x8 the base address + offset
+li x7 115 	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 49 	#add into x8 the base address + offset
+li x7 33	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#Press any button...
+addi x8 x6 190 	#add into x8 the base address + offset
+li x7 80	# load the ASCII value of 'P' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 191 	#add into x8 the base address + offset
+li x7 114	# load the ASCII value of 'r' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 192 	#add into x8 the base address + offset
+li x7 101	# load the ASCII value of 'e' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 193 	#add into x8 the base address + offset
+li x7 115	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 194 	#add into x8 the base address + offset
+li x7 115	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 195 	#add into x8 the base address + offset
+li x7 32	# load the ASCII value of ' ' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 196 	#add into x8 the base address + offset
+li x7 97	# load the ASCII value of 'a' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 197 	#add into x8 the base address + offset
+li x7 110	# load the ASCII value of 'n' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 198 	#add into x8 the base address + offset
+li x7 121	# load the ASCII value of 'y' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 199 	#add into x8 the base address + offset
+li x7 32	# load the ASCII value of ' ' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 200 	#add into x8 the base address + offset
+li x7 98	# load the ASCII value of 'b' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 201 	#add into x8 the base address + offset
+li x7 117	# load the ASCII value of 'u' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 202 	#add into x8 the base address + offset
+li x7 116	# load the ASCII value of 't' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 203 	#add into x8 the base address + offset
+li x7 116	# load the ASCII value of 't' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 204 	#add into x8 the base address + offset
+li x7 111 	# load the ASCII value of 'o' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 205 	#add into x8 the base address + offset
+li x7 110 	# load the ASCII value of 'n' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 206 	#add into x8 the base address + offset
+li x7 46	# load the ASCII value of '.' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 207 	#add into x8 the base address + offset
+li x7 46	# load the ASCII value of '.' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 208 	#add into x8 the base address + offset
+li x7 46 	# load the ASCII value of '.' into a register.
+sb x7 0(x8)  	#store at location x8
+li x7 48 	# load the ASCII value of '.' into a register.
+sb x7 0(x6)  	#store at location x8
+li x7 0		#clean x7
+li x8 0		#clean x8
+
+############## SEED GENERATOR ##############
+seed:
+addi x7 x7 1	#increment the seed by 1
+andi x8 x31 255	#mask out the buttons from input (xxxxx0000)
+beq  x8 x0 seed	#on no button press, keep waiting
+li   x13 0	#clean x13 , lucky number 13 for random values
+add  x13 x13 x7	#store the random seed
+li x7 49 	# load the ASCII value of '.' into a register.
+sb x7 0(x6)  	#store at location x8
+li   x31 0	#clean x31
+
+############## CLEAR SCREEN ################
+li  x10 2400	#number of characters in the terminal
+li  x7 0	# load the ASCII value of 'null' into a register.
+clean:		#clean the screen backwards for the contrarians out there
+add x8 x6 x10 	#add into x8 the base address + offset
+sb  x7 0(x8)  	#store at location x8
+addi x10 x10 -1	#subtract 1 from x5
+bne x10 x0 clean #keep going if not done cleaning
+
+############## PROGRAM LOOP START ##########
+loop:
+
+
+############## USER INPUT ##################
+
+##### Poll Buttons
+li   x7 0		#clear x7
+
+andi x7 x31 1	#bitmask the first button to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+bne  x7 x0 reset #reset if the button is pressed
+
+li   x7 0	#clear x7
+
+andi x7 x31 2	#bitmask the second button to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 1	#shift the masked bit to LSB
+add  x20 x20 x7 #store x7 in x20 (S4) SCISSORS
+
+li   x7 0	#clear x7
+
+andi x7 x31 4	#bitmask the third button to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 2	#shift the masked bit to LSB
+add  x19 x19 x7 #store x7 in x19 (S3) PAPER
+
+li   x7 0	#clear x7
+
+andi x7 x31 8	#bitmask the fourth button to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 3	#shift the masked bit to LSB
+add  x18 x18 x7 #store x7 in x18 (S2) ROCK
+
+li x7 0
+
+
+li  x5 0
+add x5 x5 x18	#accumulate all button presses
+add x5 x5 x19
+add x5 x5 x20	
+
+sltu x5 x0 x5	#x5 is 1 if a button is pressed, 0 if not
+
+li   x7 0	#clear x7
+
+############## GAME LOGIC TICK #############
+beq x5 x0 graphics #don't run the game if it's not time to
+##### Generate AI Decision
+generate:
+srai x14 x13 1	#shift x13 into a copy
+xor x13 x13 x14	#mix it up with XOR
+andi x14 x13 96	#mask out bits 6 and 7
+srli x14 x14 5	#make the bits LSB
+beq  x14 x0 generate #reroll if we got 0
+
+##### Calculate Winner
+beq x18 x0 glnorock
+#Rock selected
+li x8 1
+beq x14 x8 draw #rock vs rock
+li x8 2		
+beq x14 x8 lose	#rock vs paper
+li x8 3
+beq x14 x8 win  #rock vs scissors
+
+glnorock:
+beq x19 x0 glnopaper
+#Paper Selected
+
+li x8 1
+beq x14 x8 win #paper vs rock
+li x8 2		
+beq x14 x8 draw	#paper vs paper
+li x8 3
+beq x14 x8 lose  #paper vs scissors
+glnopaper:
+beq x20 x0 glnoscissor
+#Scissors Selected
+
+li x8 1
+beq x14 x8 lose #scissors vs rock
+li x8 2		
+beq x14 x8 win	#scissors vs paper
+li x8 3
+beq x14 x8 draw  #scissors vs scissors
+
+glnoscissor:
+
+draw:
+
+li x8 278	#add into x8
+add x8 x8 x6
+li x7 68	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 279	#add into x8
+add x8 x8 x6
+li x7 114	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 280	#add into x8
+add x8 x8 x6
+li x7 97	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 281	#add into x8
+add x8 x8 x6
+li x7 119	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 282	#add into x8
+add x8 x8 x6
+li x7 33	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+j scores
+
+
+win:
+addi x11 x11 1
+
+li x8 278	#add into x8
+add x8 x8 x6
+li x7 87	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 279	#add into x8
+add x8 x8 x6
+li x7 105	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 280	#add into x8
+add x8 x8 x6
+li x7 110	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 281	#add into x8
+add x8 x8 x6
+li x7 33	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 282	#add into x8
+add x8 x8 x6
+li x7 32	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+j scores
+
+
+lose:
+addi x12 x12 1
+
+li x8 278	#add into x8
+add x8 x8 x6
+li x7 76	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 279	#add into x8
+add x8 x8 x6
+li x7 111	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 280	#add into x8
+add x8 x8 x6
+li x7 115	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 281	#add into x8
+add x8 x8 x6
+li x7 101	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 282	#add into x8
+add x8 x8 x6
+li x7 33	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+j scores
+
+
+##### Calculate and draw Scores
+scores:
+li x18 0
+li x19 0
+li x20 0
+############## GRAPHICS ####################
+graphics:
+#Write "Rock Paper Scissors!" across the top line
+addi x8 x6 30 	#add into x8 the base address + offset
+li x7 82	# load the ASCII value of 'B' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 31 	#add into x8 the base address + offset
+li x7 111	# load the ASCII value of 'u' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 32 	#add into x8 the base address + offset
+li x7 99	# load the ASCII value of 't' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 33 	#add into x8 the base address + offset
+li x7 107	# load the ASCII value of 't' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 34 	#add into x8 the base address + offset
+li x7 32	# load the ASCII value of 'o' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 35 	#add into x8 the base address + offset
+li x7 80	# load the ASCII value of 'n' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 36 	#add into x8 the base address + offset
+li x7 97	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 37 	#add into x8 the base address + offset
+li x7 112	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 38 	#add into x8 the base address + offset
+li x7 101	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 39 	#add into x8 the base address + offset
+li x7 114	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 40 	#add into x8 the base address + offset
+li x7 32	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 41 	#add into x8 the base address + offset
+li x7 83	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 42 	#add into x8 the base address + offset
+li x7 99	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 43 	#add into x8 the base address + offset
+li x7 105	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 44 	#add into x8 the base address + offset
+li x7 115 	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 45 	#add into x8 the base address + offset
+li x7 115 	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 46 	#add into x8 the base address + offset
+li x7 111	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 47 	#add into x8 the base address + offset
+li x7 114	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 48 	#add into x8 the base address + offset
+li x7 115 	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 49 	#add into x8 the base address + offset
+li x7 33	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#Player Labels
+
+addi x8 x6 660 	#add into x8 the base address + offset
+li x7 80	# load the ASCII value of 'P' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 661 	#add into x8 the base address + offset
+li x7 108	# load the ASCII value of 'l' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 662 	#add into x8 the base address + offset
+li x7 97	# load the ASCII value of 'a' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 663 	#add into x8 the base address + offset
+li x7 121	# load the ASCII value of 'y' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 664 	#add into x8 the base address + offset
+li x7 101	# load the ASCII value of 'e' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 665 	#add into x8 the base address + offset
+li x7 114	# load the ASCII value of 'r' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+addi x8 x6 700 	#add into x8 the base address + offset
+li x7 67	# load the ASCII value of 'C' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 701 	#add into x8 the base address + offset
+li x7 80	# load the ASCII value of 'P' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 702 	#add into x8 the base address + offset
+li x7 85	# load the ASCII value of 'U' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#Divider
+
+li  x8 680	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 680	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 760	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 840	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 920	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 1000	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 1080	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 1160	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 1240	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 1320	#add into x8
+add x8 x8 x6
+li  x7 124	# load the ASCII value of '|' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+
+
+#Button Options along the bottom of the screen
+
+li  x8 2255	#add into x8
+add x8 x8 x6
+li  x7 82	# load the ASCII value of 'R' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li x8 2256	#add into x8
+add x8 x8 x6
+li x7 111	# load the ASCII value of 'o' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2257	#add into x8
+add x8 x8 x6
+li x7 99	# load the ASCII value of 'c' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2258	#add into x8
+add x8 x8 x6
+li x7 107	# load the ASCII value of 'k' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#Selector
+li  x8 2254	#add into x8
+add x8 x8 x6
+li  x7 32	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 2259	#add into x8
+add x8 x8 x6
+li  x7 32	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+beq x18 x0 norock
+li  x8 2254	#add into x8
+add x8 x8 x6
+li  x7 91	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 2259	#add into x8
+add x8 x8 x6
+li  x7 93	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+norock:
+
+
+li x8 2270	#add into x8
+add x8 x8 x6
+li x7 80	# load the ASCII value of 'P' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2271	#add into x8
+add x8 x8 x6
+li x7 97	# load the ASCII value of 'a' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2272	#add into x8
+add x8 x8 x6
+li x7 112	# load the ASCII value of 'p' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2273	#add into x8
+add x8 x8 x6
+li x7 101	# load the ASCII value of 'e' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2274	#add into x8
+add x8 x8 x6
+li x7 114	# load the ASCII value of 'r' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#Selector
+#Selector
+li  x8 2269	#add into x8
+add x8 x8 x6
+li  x7 32	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 2275	#add into x8
+add x8 x8 x6
+li  x7 32	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+beq x19 x0 nopaper
+li  x8 2269	#add into x8
+add x8 x8 x6
+li  x7 91	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 2275	#add into x8
+add x8 x8 x6
+li  x7 93	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+nopaper:
+
+
+li x8 2285	#add into x8
+add x8 x8 x6
+li x7 83	# load the ASCII value of 'S' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2286	#add into x8
+add x8 x8 x6
+li x7 99	# load the ASCII value of 'c' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2287	#add into x8
+add x8 x8 x6
+li x7 105	# load the ASCII value of 'i' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2288	#add into x8
+add x8 x8 x6
+li x7 115	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2289	#add into x8
+add x8 x8 x6
+li x7 115	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2290	#add into x8
+add x8 x8 x6
+li x7 111	# load the ASCII value of 'o' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2291	#add into x8
+add x8 x8 x6
+li x7 114	# load the ASCII value of 'r' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2292	#add into x8
+add x8 x8 x6
+li x7 115	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#Selector
+li  x8 2284	#add into x8
+add x8 x8 x6
+li  x7 32	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 2293	#add into x8
+add x8 x8 x6
+li  x7 32	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+beq x20 x0 noscissors
+li  x8 2284	#add into x8
+add x8 x8 x6
+li  x7 91	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+
+li  x8 2293	#add into x8
+add x8 x8 x6
+li  x7 93	# load the ASCII value of ' ' into a register.
+sb  x7 0(x8)  	#store at location x8
+noscissors:
+
+
+li x8 2302	#add into x8
+add x8 x8 x6
+li x7 82	# load the ASCII value of 'R' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2303	#add into x8
+add x8 x8 x6
+li x7 101	# load the ASCII value of 'e' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2304	#add into x8
+add x8 x8 x6
+li x7 115	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2305	#add into x8
+add x8 x8 x6
+li x7 101	# load the ASCII value of 'e' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2306	#add into x8
+add x8 x8 x6
+li x7 116	# load the ASCII value of 't' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+#btn_ values on the bottom line
+
+li x8 2335	#add into x8
+add x8 x8 x6
+li x7 66	# load the ASCII value of 'B' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2336	#add into x8
+add x8 x8 x6
+li x7 84	# load the ASCII value of 'T' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2337	#add into x8
+add x8 x8 x6
+li x7 78	# load the ASCII value of 'N' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2338	#add into x8
+add x8 x8 x6
+li x7 49	# load the ASCII value of '1' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 2350	#add into x8
+add x8 x8 x6
+li x7 66	# load the ASCII value of 'B' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2351	#add into x8
+add x8 x8 x6
+li x7 84	# load the ASCII value of 'T' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2352	#add into x8
+add x8 x8 x6
+li x7 78	# load the ASCII value of 'N' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2353	#add into x8
+add x8 x8 x6
+li x7 50	# load the ASCII value of '2' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 2366	#add into x8
+add x8 x8 x6
+li x7 66	# load the ASCII value of 'B' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2367	#add into x8
+add x8 x8 x6
+li x7 84	# load the ASCII value of 'T' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2368	#add into x8
+add x8 x8 x6
+li x7 78	# load the ASCII value of 'N' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2369	#add into x8
+add x8 x8 x6
+li x7 51	# load the ASCII value of '3' into a register.
+sb x7 0(x8)  	#store at location x8
+
+
+li x8 2382	#add into x8
+add x8 x8 x6
+li x7 66	# load the ASCII value of 'B' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2383	#add into x8
+add x8 x8 x6
+li x7 84	# load the ASCII value of 'T' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2384	#add into x8
+add x8 x8 x6
+li x7 78	# load the ASCII value of 'N' into a register.
+sb x7 0(x8)  	#store at location x8
+
+li x8 2385	#add into x8
+add x8 x8 x6
+li x7 52	# load the ASCII value of '4' into a register.
+sb x7 0(x8)  	#store at location x8
+li   x7 0	#clear x7
+
+
+
+#Button Values - Line 2
+andi x7 x31 1	#bitmask the first button to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+addi x7 x7 48	#add the masked value to 48 (ascii 0)
+addi x8 x6 80 	#add into x8 the base address + 80
+sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
+
+andi x7 x31 2	#bitmask the second button to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 1	#shift the masked bit to LSB
+addi x7 x7 48	#add the masked value to 48 (ascii 0)
+addi x8 x6 81 	#add into x8 the base address + 81
+sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
+
+andi x7 x31 4	#bitmask the third button to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 2	#shift the masked bit to LSB
+addi x7 x7 48	#add the masked value to 48 (ascii 0)
+addi x8 x6 82 	#add into x8 the base address + 82
+sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
+
+andi x7 x31 8	#bitmask the fourth button to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 3	#shift the masked bit to LSB
+addi x7 x7 48	#add the masked value to 48 (ascii 0)
+addi x8 x6 83 	#add into x8 the base address + 83
+sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
+
+#Switches - Line 3
+addi x8 x6 240 	#add into x8 the base address + 240
+li x7 83 	# load the ASCII value of 'S' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 241 	#add into x8 the base address + 241
+li x7 119 	# load the ASCII value of 'w' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 242 	#add into x8 the base address + 242
+li x7 105 	# load the ASCII value of 'i' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 243 	#add into x8 the base address + 243
+li x7 116 	# load the ASCII value of 't' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 244 	#add into x8 the base address + 244
+li x7 99 	# load the ASCII value of 'c' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 245 	#add into x8 the base address + 245
+li x7 104 	# load the ASCII value of 'h' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 246 	#add into x8 the base address + 246
+li x7 101 	# load the ASCII value of 'e' into a register.
+sb x7 0(x8)  	#store at location x8
+
+addi x8 x6 247 	#add into x8 the base address + 247
+li x7 115 	# load the ASCII value of 's' into a register.
+sb x7 0(x8)  	#store at location x8
+
+#Switch Values - Line 4
+andi x7 x31 16	#bitmask the first switch to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 4	#shift the masked bit to LSB
+addi x7 x7 48	#add the masked value to 48 (ascii 0)
+addi x8 x6 320	#add into x8 the base address + 320
+sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
+
+andi x7 x31 32	#bitmask the second switch to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 5	#shift the masked bit to LSB
+addi x7 x7 48	#add the masked value to 48 (ascii 0)
+addi x8 x6 321	#add into x8 the base address + 321
+sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
+
+andi x7 x31 64	#bitmask the third switch to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 6	#shift the masked bit to LSB
+addi x7 x7 48	#add the masked value to 48 (ascii 0)
+addi x8 x6 322 	#add into x8 the base address + 322
+sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
+
+andi x7 x31 128	#bitmask the fourth switch to x7
+sub  x31 x31 x7 #set the button to 0 by subtracting the mask
+srli x7 x7 7	#shift the masked bit to LSB
+addi x7 x7 48	#add the masked value to 48 (ascii 0)
+addi x8 x6 323 	#add into x8 the base address + 323
+sb   x7 0(x8)  	#store the number at location x8
+li   x7 0	#clear x7
+
+
+wait: 		#This should always be at the end of your program loop! It burns up any leftover cycles for timing regulation.
+andi x7 x31 256	#bitmask the vsync to x7
+srli x7 x7 8	#shift the masked bit to LSB
+beq  x7 x0 wait #wait for vsync
+andi x7 x31 256	#bitmask the vsync to x7 again
+sub  x31 x31 x7 #set vsync to 0 by subtracting the mask
+li   x7 0	#clear x7
+j loop		#Frame complete, on to the next one
