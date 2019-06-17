@@ -1,0 +1,72 @@
+	li x18 121	#value to print
+	li x19 48	#ascii value 0
+	li x20 0	#Number of digits (referred to as 'n')
+	li x6 10	#check digit assuming >0
+	li x7 10	#hold 10 for incrementing
+	li x29 10	#hold to value of 10
+Digit:		#assess digit count
+	add x7 x6 x0	
+	li x28 1	#counter
+	sub x5 x18 x6	
+	addi x20 x20 1	
+	blt x5 x0 D_Out	
+	j Next_Digit	
+Next_Digit:		#adds 10^n 10 times to check next decimal value
+	add x6 x6 x7	
+	addi x28 x28 1	
+	beq x28 x29 Digit	
+	j Next_Digit	
+D_Out:		#Number of Digits in value succesfully obtained and stored in x20
+	li x27 1096	#Character Terminal location of value
+	addi x27 x27 1000	
+	addi x27 x27 1000	#Next step is to Store binary values of 10^0 to 10^n in memory
+	addi x27 x27 1000	
+	li x21 1000	
+	addi x21 x21 1000 	
+	addi x21 x21 1000 	#Memory address starts at 10000
+	addi x21 x21 1000 	#Store Memory value for end
+	addi x21 x21 1000 	
+	add x21 x21 x21	
+	addi x23 x21 -4	
+	sw x18 -4(x21)	#digit counter
+	li x5 1	#count to 10
+	sw x5 0(x21)	#Hold on to 10^n-1
+	li x28 1	
+	li x30 1	#Check if finished
+	add x7 x5 x0	
+Mem_digit:		
+	beq x28 x20 Calc_Dec	
+	add x5 x5 x7	
+	addi x30 x30 1	
+		
+	blt x30 x29 Mem_digit	#store next digit in next memory
+	addi x28 x28 1	
+	addi x21 x21 4	
+	sw x5 0(x21)	
+	add x7 x5 x0	
+	li x30 1	#counter
+	j Mem_digit	
+Calc_Dec:		#final series of loops
+	li x7 0	
+	li x26 10	
+	lw x5 0(x21)	
+	addi x25 x5 0	
+		
+		
+Loop1:		
+	addi x7 x7 1	#increment counter
+	sub x8 x18 x5	#compare MSB with current digit
+	blt x8 x0 Print	#branch on hit
+	add x5 x5 x25	
+		
+	j Loop1	
+Print:		
+	addi x7 x7 -1	
+	add x7 x7 x19	
+	sb x7 0(x27)	
+	addi x27 x27 1	
+	addi x21 x21 -4	
+	beq x21 x23 End	
+	add x18 x8 x25	
+	j Calc_Dec	
+End:		

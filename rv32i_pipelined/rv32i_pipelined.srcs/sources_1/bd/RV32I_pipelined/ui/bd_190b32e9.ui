@@ -36,8 +36,8 @@ preplace inst pc_logic_0 -pg 1 -lvl 1 -y 390 -defaultsOSRD
 preplace inst mux_reg_pc_alu_0 -pg 1 -lvl 7 -y 420 -defaultsOSRD
 preplace inst hazard_count_0 -pg 1 -lvl 6 -y 780 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 790 -defaultsOSRD
-preplace inst brach_logic_0 -pg 1 -lvl 10 -y 390 -defaultsOSRD
 preplace inst alu_signals_0 -pg 1 -lvl 9 -y 390 -defaultsOSRD
+preplace inst brach_logic_0 -pg 1 -lvl 10 -y 390 -defaultsOSRD
 preplace inst stage_MW_0 -pg 1 -lvl 13 -y 260 -defaultsOSRD
 preplace inst stage_DE_0 -pg 1 -lvl 6 -y 380 -defaultsOSRD
 preplace netloc clk_2 1 1 14 360 290 660 310 1050 350 1550 350 2130 140 N 140 N 140 N 140 N 140 4240 130 NJ 130 5220 450 5800J 320 N
